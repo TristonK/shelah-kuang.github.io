@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-03T14:34:28.461Z</updated>
+  <updated>2018-12-06T12:21:01.420Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,18 @@
     <link href="http://yoursite.com/2018/12/03/%E6%9C%80%E5%A4%A7%E6%B5%81/"/>
     <id>http://yoursite.com/2018/12/03/最大流/</id>
     <published>2018-12-03T14:25:33.000Z</published>
-    <updated>2018-12-03T14:34:28.461Z</updated>
+    <updated>2018-12-06T12:21:01.420Z</updated>
     
-    <content type="html"><![CDATA[<p>终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….</p>]]></content>
+    <content type="html"><![CDATA[<p>终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)</p><p>在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率</p><p><strong>26.1</strong></p><p>流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。</p><p>源节点s，汇点 t.</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….&lt;/p&gt;
-
+        &lt;p&gt;终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)&lt;/p&gt;
+&lt;p&gt;在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;26.1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;流网络：有向图，每条
       
     
     </summary>
