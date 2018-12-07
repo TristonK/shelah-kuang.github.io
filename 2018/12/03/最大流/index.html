@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面) 在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率 26.1 流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。 源节点s，汇点 t.">
+  <meta name="description" content="终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面) 2018.12.7 后悔挖坑了，笔记做的太痛苦了 在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率 26.1 流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。 源节点s，汇点 t. 容量限制：0 ≤ f(u,v) ≤ c(u,v) 流量守恒">
 <meta name="keywords" content="CLRS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最大流">
-<meta property="og:url" content="http://yoursite.com/2018/12/03/最大流/index.html">
+<meta property="og:url" content="http://shelah-kuang.github.io/2018/12/03/最大流/index.html">
 <meta property="og:site_name" content="少年游">
-<meta property="og:description" content="终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面) 在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率 26.1 流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。 源节点s，汇点 t.">
+<meta property="og:description" content="终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面) 2018.12.7 后悔挖坑了，笔记做的太痛苦了 在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率 26.1 流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。 源节点s，汇点 t. 容量限制：0 ≤ f(u,v) ≤ c(u,v) 流量守恒">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-06T12:21:01.420Z">
+<meta property="og:updated_time" content="2018-12-07T13:18:18.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大流">
-<meta name="twitter:description" content="终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面) 在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率 26.1 流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。 源节点s，汇点 t.">
+<meta name="twitter:description" content="终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面) 2018.12.7 后悔挖坑了，笔记做的太痛苦了 在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率 26.1 流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。 源节点s，汇点 t. 容量限制：0 ≤ f(u,v) ≤ c(u,v) 流量守恒">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/03/最大流/"/>
+  <link rel="canonical" href="http://shelah-kuang.github.io/2018/12/03/最大流/"/>
 
 
 
@@ -297,13 +297,15 @@
   
 
   
+    <div class="reading-progress-bar"></div>
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/最大流/">
+    <link itemprop="mainEntityOfPage" href="http://shelah-kuang.github.io/2018/12/03/最大流/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shelah-kuang">
@@ -362,7 +364,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-06 20:21:01" itemprop="dateModified" datetime="2018-12-06T20:21:01+08:00">2018-12-06</time>
+                <time title="修改时间：2018-12-07 21:18:18" itemprop="dateModified" datetime="2018-12-07T21:18:18+08:00">2018-12-07</time>
               
             
           </span>
@@ -406,11 +408,25 @@
       
 
       
-        <p>终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)</p>
+        <p><em>终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)</em></p>
+<p><em>2018.12.7</em></p>
+<p><em>后悔挖坑了，笔记做的太痛苦了</em></p>
 <p>在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率</p>
 <p><strong>26.1</strong></p>
 <p>流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。</p>
 <p>源节点s，汇点 t.</p>
+<p>容量限制：0 ≤ f(u,v) ≤ c(u,v)</p>
+<p>流量守恒：入 = 出</p>
+<p>定义<br>$$<br>|f|=\sum_{v \in V}f(s,v)-\sum_{v \in V}f(v,s)<br>$$<br>如果要用反平行边来模拟一个流问题，必须将其转化为一个等价但是不包括平行边的网络，方式是在两点间新加入一个节点，该节点与 两点的容量与原容量相同。</p>
+<p>对于具有多个源节点和汇点的网络，可以构建一个超级源结点（连接每一个源节点并设置容量c为无穷）和一个超级汇点（连接每一个汇点并设置容量c为无穷）</p>
+<p><strong>26.2   Ford-Fulkerson方法</strong></p>
+<p>给定流网络G 和流量f，残存网络G_f由那些仍有空间对流量进行调整的边构成。设置<strong>残存容量</strong></p>
+<p>$$<br>c_f(u,v)=<br>\begin{cases}<br>c(u,v)-f(u,v)&amp; (u,v)\in E\<br>f(v,u)&amp; (v,u) \in E \<br>0&amp;其他<br>\end{cases}<br>$$<br>若一条边残存容量为0，则其不属于残存网络</p>
+<p>残存网络中的边可能是G中不存在的边，因为我们要增加总流量，所以可能消减某些正向边的流量，为此我们设置一个反向边与其抵消达到消减操作。</p>
+<p><em>TODO() ：公式很定义好长，..做完PA回来打</em></p>
+<p>增广路径p是残存网络中一条从源节点s到汇点t的简单路径。</p>
+<p>称一条增广路径上能够为每条边增加的流量的最大值为p的<strong>残存容量</strong></p>
+<p><em>TODO( )：懒癌发作了</em></p>
 
       
     </div>
@@ -432,7 +448,7 @@
     <strong>本文作者： </strong>shelah-kuang</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2018/12/03/最大流/" title="最大流">http://yoursite.com/2018/12/03/最大流/</a>
+    <a href="http://shelah-kuang.github.io/2018/12/03/最大流/" title="最大流">http://shelah-kuang.github.io/2018/12/03/最大流/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -694,6 +710,8 @@
 
 
 
+  
+
 
 
   
@@ -709,6 +727,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
   
 
 
@@ -769,7 +792,7 @@
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("<0F5wFIlevUVXsI2OTIaWdIIG-gzGzoHsz>", "<IPKzrYSzIDkdCzIRgiNACEzB>");</script>
+  <script>AV.initialize("0F5wFIlevUVXsI2OTIaWdIIG-gzGzoHsz", "IPKzrYSzIDkdCzIRgiNACEzB");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -926,6 +949,15 @@
   
 
   
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
 
   
 

@@ -5,9 +5,9 @@
   <subtitle>茫茫人海，却似荒野</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2018-12-06T12:21:01.420Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://shelah-kuang.github.io/"/>
+  <updated>2018-12-07T13:18:18.357Z</updated>
+  <id>http://shelah-kuang.github.io/</id>
   
   <author>
     <name>shelah-kuang</name>
@@ -18,34 +18,34 @@
   
   <entry>
     <title>最大流</title>
-    <link href="http://yoursite.com/2018/12/03/%E6%9C%80%E5%A4%A7%E6%B5%81/"/>
-    <id>http://yoursite.com/2018/12/03/最大流/</id>
+    <link href="http://shelah-kuang.github.io/2018/12/03/%E6%9C%80%E5%A4%A7%E6%B5%81/"/>
+    <id>http://shelah-kuang.github.io/2018/12/03/最大流/</id>
     <published>2018-12-03T14:25:33.000Z</published>
-    <updated>2018-12-06T12:21:01.420Z</updated>
+    <updated>2018-12-07T13:18:18.357Z</updated>
     
-    <content type="html"><![CDATA[<p>终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)</p><p>在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率</p><p><strong>26.1</strong></p><p>流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。</p><p>源节点s，汇点 t.</p>]]></content>
+    <content type="html"><![CDATA[<p><em>终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)</em></p><p><em>2018.12.7</em></p><p><em>后悔挖坑了，笔记做的太痛苦了</em></p><p>在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率</p><p><strong>26.1</strong></p><p>流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。</p><p>源节点s，汇点 t.</p><p>容量限制：0 ≤ f(u,v) ≤ c(u,v)</p><p>流量守恒：入 = 出</p><p>定义<br>$$<br>|f|=\sum_{v \in V}f(s,v)-\sum_{v \in V}f(v,s)<br>$$<br>如果要用反平行边来模拟一个流问题，必须将其转化为一个等价但是不包括平行边的网络，方式是在两点间新加入一个节点，该节点与 两点的容量与原容量相同。</p><p>对于具有多个源节点和汇点的网络，可以构建一个超级源结点（连接每一个源节点并设置容量c为无穷）和一个超级汇点（连接每一个汇点并设置容量c为无穷）</p><p><strong>26.2   Ford-Fulkerson方法</strong></p><p>给定流网络G 和流量f，残存网络G_f由那些仍有空间对流量进行调整的边构成。设置<strong>残存容量</strong></p><p>$$<br>c_f(u,v)=<br>\begin{cases}<br>c(u,v)-f(u,v)&amp; (u,v)\in E\<br>f(v,u)&amp; (v,u) \in E \<br>0&amp;其他<br>\end{cases}<br>$$<br>若一条边残存容量为0，则其不属于残存网络</p><p>残存网络中的边可能是G中不存在的边，因为我们要增加总流量，所以可能消减某些正向边的流量，为此我们设置一个反向边与其抵消达到消减操作。</p><p><em>TODO() ：公式很定义好长，..做完PA回来打</em></p><p>增广路径p是残存网络中一条从源节点s到汇点t的简单路径。</p><p>称一条增广路径上能够为每条边增加的流量的最大值为p的<strong>残存容量</strong></p><p><em>TODO( )：懒癌发作了</em></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)&lt;/p&gt;
-&lt;p&gt;在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;26.1&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;流网络：有向图，每条
+        &lt;p&gt;&lt;em&gt;终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2018.12.7&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;后悔挖坑了，笔记做的太痛苦了&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;在不违背任何容量限制的情况下
       
     
     </summary>
     
     
-      <category term="CLRS" scheme="http://yoursite.com/tags/CLRS/"/>
+      <category term="CLRS" scheme="http://shelah-kuang.github.io/tags/CLRS/"/>
     
   </entry>
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2018/08/06/%E6%9A%91%E5%81%87%E5%8D%8A%E6%9C%9F%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2018/08/06/暑假半期总结/</id>
+    <link href="http://shelah-kuang.github.io/2018/08/06/%E6%9A%91%E5%81%87%E5%8D%8A%E6%9C%9F%E6%80%BB%E7%BB%93/"/>
+    <id>http://shelah-kuang.github.io/2018/08/06/暑假半期总结/</id>
     <published>2018-08-06T11:53:00.799Z</published>
     <updated>2018-08-06T12:14:53.964Z</updated>
     
@@ -71,8 +71,8 @@
   
   <entry>
     <title>test1</title>
-    <link href="http://yoursite.com/2018/07/30/test1/"/>
-    <id>http://yoursite.com/2018/07/30/test1/</id>
+    <link href="http://shelah-kuang.github.io/2018/07/30/test1/"/>
+    <id>http://shelah-kuang.github.io/2018/07/30/test1/</id>
     <published>2018-07-30T07:13:26.000Z</published>
     <updated>2018-07-30T07:14:57.203Z</updated>
     
@@ -93,8 +93,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/07/30/hello-world/"/>
-    <id>http://yoursite.com/2018/07/30/hello-world/</id>
+    <link href="http://shelah-kuang.github.io/2018/07/30/hello-world/"/>
+    <id>http://shelah-kuang.github.io/2018/07/30/hello-world/</id>
     <published>2018-07-30T02:30:46.491Z</published>
     <updated>2017-10-28T00:39:58.000Z</updated>
     
