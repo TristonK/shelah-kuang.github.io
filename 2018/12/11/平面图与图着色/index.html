@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="暑假已经过半，在此对过去的半个暑期的生活做一个简短的总结：首先是原先预计的计划计划执行情况：   线性代数  概率论   python  数据结构基础  托福考试准备  csapp自学及习题练习 [ ] 减肥 事实证明，最后几乎没有进行任何事情，绝大多数内容仅仅只是开了一个头，在此对过去的失误进行一个反思：   1.惯于拖延，而不知行动。总是想着明天开始吧，明天开始也不迟，最后总是拖延至明天，">
-<meta name="keywords" content="-个人总结">
+  <meta name="description" content="CZ 9.1 平面图若G能够花在一个平面上使得任何两条边都不交叉，称G为一个平面图(planar graph)，若G已经被画在了一个平面上，且任意两条边不交叉，则称G为    平图(plane graph)。 一个平图把平面分为一些连通片，这些连通片被称为区域(regions), 在每个平图中总有一个区域是无界的，该区域称为外区域，在一个平图中，顶点与边都与某个给定区域R相关联的子图称为是R的边界">
+<meta name="keywords" content="-CZ -图论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="暑假半期总结">
-<meta property="og:url" content="http://shelah-kuang.github.io/2018/08/06/暑假半期总结/index.html">
+<meta property="og:title" content="平面图与图着色">
+<meta property="og:url" content="http://shelah-kuang.github.io/2018/12/11/平面图与图着色/index.html">
 <meta property="og:site_name" content="少年游">
-<meta property="og:description" content="暑假已经过半，在此对过去的半个暑期的生活做一个简短的总结：首先是原先预计的计划计划执行情况：   线性代数  概率论   python  数据结构基础  托福考试准备  csapp自学及习题练习 [ ] 减肥 事实证明，最后几乎没有进行任何事情，绝大多数内容仅仅只是开了一个头，在此对过去的失误进行一个反思：   1.惯于拖延，而不知行动。总是想着明天开始吧，明天开始也不迟，最后总是拖延至明天，">
+<meta property="og:description" content="CZ 9.1 平面图若G能够花在一个平面上使得任何两条边都不交叉，称G为一个平面图(planar graph)，若G已经被画在了一个平面上，且任意两条边不交叉，则称G为    平图(plane graph)。 一个平图把平面分为一些连通片，这些连通片被称为区域(regions), 在每个平图中总有一个区域是无界的，该区域称为外区域，在一个平图中，顶点与边都与某个给定区域R相关联的子图称为是R的边界">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-15T14:54:52.964Z">
+<meta property="og:updated_time" content="2018-12-14T14:37:32.679Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="暑假半期总结">
-<meta name="twitter:description" content="暑假已经过半，在此对过去的半个暑期的生活做一个简短的总结：首先是原先预计的计划计划执行情况：   线性代数  概率论   python  数据结构基础  托福考试准备  csapp自学及习题练习 [ ] 减肥 事实证明，最后几乎没有进行任何事情，绝大多数内容仅仅只是开了一个头，在此对过去的失误进行一个反思：   1.惯于拖延，而不知行动。总是想着明天开始吧，明天开始也不迟，最后总是拖延至明天，">
+<meta name="twitter:title" content="平面图与图着色">
+<meta name="twitter:description" content="CZ 9.1 平面图若G能够花在一个平面上使得任何两条边都不交叉，称G为一个平面图(planar graph)，若G已经被画在了一个平面上，且任意两条边不交叉，则称G为    平图(plane graph)。 一个平图把平面分为一些连通片，这些连通片被称为区域(regions), 在每个平图中总有一个区域是无界的，该区域称为外区域，在一个平图中，顶点与边都与某个给定区域R相关联的子图称为是R的边界">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://shelah-kuang.github.io/2018/08/06/暑假半期总结/"/>
+  <link rel="canonical" href="http://shelah-kuang.github.io/2018/12/11/平面图与图着色/"/>
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>暑假半期总结 | 少年游</title>
+  <title>平面图与图着色 | 少年游</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://shelah-kuang.github.io/2018/08/06/暑假半期总结/">
+    <link itemprop="mainEntityOfPage" href="http://shelah-kuang.github.io/2018/12/11/平面图与图着色/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shelah-kuang">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">暑假半期总结
+          <h1 class="post-title" itemprop="name headline">平面图与图着色
               
             
           </h1>
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-08-06 20:06:07" itemprop="dateCreated datePublished" datetime="2018-08-06T20:06:07+08:00">2018-08-06</time>
+              <time title="创建时间：2018-12-11 16:09:50" itemprop="dateCreated datePublished" datetime="2018-12-11T16:09:50+08:00">2018-12-11</time>
             
 
             
@@ -364,7 +364,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-15 22:54:52" itemprop="dateModified" datetime="2018-12-15T22:54:52+08:00">2018-12-15</time>
+                <time title="修改时间：2018-12-14 22:37:32" itemprop="dateModified" datetime="2018-12-14T22:37:32+08:00">2018-12-14</time>
               
             
           </span>
@@ -378,8 +378,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/06/暑假半期总结/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/06/暑假半期总结/" itemprop="commentCount"></span>
+                <a href="/2018/12/11/平面图与图着色/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/11/平面图与图着色/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -387,7 +387,7 @@
 
           
           
-             <span id="/2018/08/06/暑假半期总结/" class="leancloud_visitors" data-flag-title="暑假半期总结">
+             <span id="/2018/12/11/平面图与图着色/" class="leancloud_visitors" data-flag-title="平面图与图着色">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,19 +418,84 @@
       
 
       
-        <p>  暑假已经过半，在此对过去的半个暑期的生活做一个简短的总结：<br>首先是原先<strong>预计的计划</strong>计划执行情况：</p>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 线性代数</li>
-<li style="list-style: none"><input type="checkbox"> 概率论 </li>
-<li style="list-style: none"><input type="checkbox"> python</li>
-<li style="list-style: none"><input type="checkbox"> 数据结构基础</li>
-<li style="list-style: none"><input type="checkbox"> 托福考试准备</li>
-<li style="list-style: none"><input type="checkbox"> csapp自学及习题练习</li>
-<li><p>[ ] 减肥</p>
-<p>事实证明，最后几乎<strong>没有进行任何事情</strong>，绝大多数内容仅仅只是开了一个头，在此对过去的失误进行一个反思：</p>
-</li>
-</ul>
-<p><strong>1.惯于拖延，而不知行动。</strong><br>总是想着明天开始吧，明天开始也不迟，最后总是拖延至明天，而又往往容易因为外物所干扰，导致事情一拖再拖，事情难以进行开始。以减肥为例，开始的几天里坚持的非常不错，但是因为一次要交汇编作业导致没时间只能敷衍运动后，之后便逐渐减量，想着今天随便练练，明天再继续加量健身，最终导致不仅没瘦，运动量消耗的还不如吃的零食的热量。值得注意的是，该例子的起因汇编作业也是由于拖延而导致的。<br><strong>2.惯于新鲜，而不知坚持</strong><br>往往对于事情热衷于开始，以python学习为例，搜集下载了很多资料，导致时间往往浪费在搜集资料上面，形成了一种虚拟的满足感，而大多数资料往往仅看了一个开头，导致一样东西对开头段往往特别熟悉因为看过这个开头的很多版本，而对后面的东西一无所知，沉浸在了舒适区之内。<br><strong>3.惯于虚事，而不知先后</strong><br>由于计划铺的太大，很多时候往往面对学什么而不知所措。没有先后顺序，很多时候这个东西学个几十分钟觉得没意思好像另一个东西更有趣，就去学另一个东西。感觉自己越来越缺少一种长时间学习某一样事情的毅力。这也就导致看似做了很多事情，但是却都很浅，很浮，很虚。<br><strong>4.惯于娱乐，而不知学习</strong><br>这种心态其实从高三开始就一直就有。就是对于一个人的具体生活状态的认知，总是认为一个人如果只想着学习，那该是一个多么无趣的生活。其实这种观念现在我还是认为是正确的。生活必须得要有点有意思的事情。但是问题就在于自己往往以此为借口而不知学习。<strong>娱乐太多而学习太少</strong>，总是看似干了很多事情之后就觉得差不多了该休息休息，导致往往以玩游戏或者看视频结束一天的生活。<br><strong>….</strong><br>悟已往之不谏，知来者之可追。在后面的半个暑假中，希望自己能够分清轻重缓急，合理制定计划，分配时间，至少完成既定计划的一部分，为避免不知所措，各任务优先级与紧急程度如下：<br>托福学习与单词背诵：每日至少背诵300词 + 3道以上托福题之后再进行余下任务<br>汇编语言学习：非作业阶段每天一周视频或作业，非作业阶段每天复习一章或10道习题后  再进行余下任务<br>线性代数：每天看完课本20页后再进行余下任务<br>托福战团打卡：每天打卡后进行余下任务<br>数据结构基础：3个视频后再完成余下任务<br>python：教材30页后再完成余下任务<br>以上任务1.2必须进行，其余任务视当天时间与情况而进行酌情修改调整。<br>除此之外，每日必须完成30min+徒手健身<br><strong>自己常常在一群很优秀的人中间，却常常误以为自己也成了其中的一员</strong>，希望自己能够调整状态，跟上大佬们的步伐，以保证自己不会落下太多。先想着追赶吧，加油！</p>
+        <h3 id="CZ-9-1-平面图"><a href="#CZ-9-1-平面图" class="headerlink" title="CZ 9.1 平面图"></a>CZ 9.1 平面图</h3><p>若G<strong>能够</strong>花在一个平面上使得任何两条边都不交叉，称G为一个<strong><code>平面图(planar graph)</code></strong>，若G<strong>已经</strong>被画在了一个平面上，且任意两条边不交叉，则称G为    <strong><code>平图(plane graph)</code></strong>。</p>
+<p>一个平图把平面分为一些连通片，这些连通片被称为<strong><code>区域(regions)</code></strong>, 在每个平图中总有一个区域是无界的，该区域称为<strong>外区域</strong>，在一个平图中，顶点与边都与某个给定区域R相关联的子图称为是R的<strong><code>边界</code></strong>.</p>
+<blockquote>
+<p>如果G是一个至少含有三条边的连通平图，则G的每个区域的边界至少有三条边</p>
+</blockquote>
+<blockquote>
+<p><strong>定理9.1 Euler恒等式 </strong>：</p>
+<p>如果G是一个阶为n，边数为m且含有r个区域的连通平图，则n-m+r = 2</p>
+</blockquote>
+<p>​     [最小反例证法]</p>
+<p>​     –&gt; 若G是树，显然成立</p>
+<p>​    —&gt; 若G不是树，取一个含有最小边数且不满足Euler等式的图G，则存在一不是割边的边e，而G-e满足Euler等式，…</p>
+<blockquote>
+<p><strong>定理9.2</strong></p>
+<p>如果G是一个阶为$n\geq 3$且边数为m的平面图，则有$m\leq 3n-6$</p>
+</blockquote>
+<p>​    [直接证法] 计算每个区域的边数之和，割边只计算一次，非割边将计数两次，利用欧拉恒等式构建</p>
+<p>可以利用定理9.2证明有些图不是平面的</p>
+<blockquote>
+<p><strong>推论9.3</strong></p>
+<p>每个平面图都含有一个度小于或等于5的顶点</p>
+</blockquote>
+<p>​    [逆否证法] </p>
+<blockquote>
+<p><strong>推论9.4</strong></p>
+<p>完全图$K_5$是非平面的</p>
+</blockquote>
+<p>若G是平面的，且在G的任意两个不邻接的顶点之间添加一条边就可以产生一个非平面，则称G 是<strong><code>极大平面的(maximal planar)</code></strong>，另一种表述形式是：若G是平面的，但G不是其他任何平面图的一个生成子图</p>
+<blockquote>
+<p><strong>定理9.5</strong></p>
+<p>图$K_{3,3}$是非平面的</p>
+</blockquote>
+<p>​    [反证法] 利用欧拉恒等式，求出其区域数是5，然后计算每个区域的边数之和为2m，再根据其每个区域都不是三角形得出其边数和大于20，即$m\geq 10$,与m值矛盾   </p>
+<p>如果有一个或者多个度为2的顶点插入到了G的一条或者多条边中，则称G‘是G的一个<strong><code>细分(subdivision)</code></strong>    </p>
+<blockquote>
+<p><strong>定理9.7 Kuratowski定理</strong></p>
+<p>一个图G是平面的当且仅当G不含$K_5，K_{3，3}$，或者是$K_5，K_{3，3}$的一个细分作为子图</p>
+</blockquote>
+<h3 id="CZ-10-1-顶点染色"><a href="#CZ-10-1-顶点染色" class="headerlink" title="CZ 10.1 顶点染色"></a>CZ 10.1 顶点染色</h3><p>地图的<strong><code>对偶</code></strong>是指将一个地图上的一个区域视为图G中的一个点，区域相邻即对应的两个顶点是邻接的，每张地图的对偶都是平面图</p>
+<p>图的一个<strong><code>真染色(proper coloring)</code></strong>,或简称为<strong><code>染色(coloring)</code></strong>，指的是给图G每个顶点分配颜色且邻接顶点颜色不同，在所有染色中，使用颜色最少的颜色数称为是<strong><code>色数(chromatic number)</code></strong>, 记为<strong>$\chi (G)$</strong>, 若能用k中颜色的集合给G染色，则称G是<strong><code>k可染色的(k-colorable)</code></strong>,若$\chi(G)=k$,则也称G是<strong><code>k色的(k-chromatic)</code></strong>的，且G的每个k染色都是G的<strong><code>最小染色(minimum coloring)</code></strong></p>
+<blockquote>
+<p><strong>定理10.1 四色定理</strong></p>
+<p>每个平面图的色数至多是4</p>
+</blockquote>
+<p>$\chi(G)=1$当且仅当$G \cong \overline{K_n}$(n阶空图)</p>
+<p>若顶点集 S中任意两个顶点不邻接，则称其是独立的，最大独立集的点独立数记为$\alpha(G)$,</p>
+<p>若G是一个k色图，则可以把V(G)划分为k个独立集，此时这些独立集被称为<strong><code>色类(color classes)</code></strong></p>
+<blockquote>
+<p><strong>定理10.2</strong></p>
+<p>图G的色数是2当且仅当G是一个非空的二部图</p>
+</blockquote>
+<p>又由定理1.12，图G是二部的当且仅当没有奇圈，故而若图G有奇圈，则$\chi(G)\geq 3$</p>
+<p>图G的一个<strong><code>团(clique)</code></strong>是指G的一个完全子图，图G中最大团的阶数被称为是G的<strong><code>团数(clique number)</code></strong>,记为$\omega(G)$.</p>
+<p>事实上，我们有$\alpha(G)=k$ 当且仅当 $\omega(\overline{G})=k$</p>
+<blockquote>
+<p><strong>定理10.5 </strong></p>
+<p>对于每个n阶图G，我们都有</p>
+<p>​        $\chi(G)\geq\omega(G)$,  $\chi(G)\geq \frac{n}{\alpha(G)}$</p>
+</blockquote>
+<blockquote>
+<p><strong>定理10.7</strong></p>
+<p>对于每个图G，我们都有$\chi(G)\leq 1+\Delta(G)$      (其中$\Delta(G)$表示的是图G的最大度)</p>
+</blockquote>
+<blockquote>
+<p><strong>定理10.8   Brooks定理</strong></p>
+<p>对于每个非奇圈也非完全的连通图G，有$\chi(G)\leq\Delta(G)$</p>
+</blockquote>
+<blockquote>
+<p><strong>定理10.9</strong></p>
+<p>对于每个图G，</p>
+<p>​                $\chi(G)\leq 1+max{\delta(H)}$        （$\delta(G)$表示G的最小度）</p>
+<p>其中max取遍G的所有诱导子图H</p>
+</blockquote>
+<p>图G的<strong><code>影子图(shadow graph)</code></strong>S(G) 是指通过在G中，对每个顶点v，增加一个顶点v’，称为v的<strong><code>影子顶点(shadow vertex)</code></strong>，并连接v’在v中的所有邻点所得到的图（此时v不与原本G中对应的邻点相连）</p>
+<blockquote>
+<p><strong>定理 10.10</strong></p>
+<p>对于每个整数$k\geq 3$,都存在 一个色数为k的无三角的图</p>
+</blockquote>
 
       
     </div>
@@ -452,7 +517,7 @@
     <strong>本文作者： </strong>shelah-kuang</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://shelah-kuang.github.io/2018/08/06/暑假半期总结/" title="暑假半期总结">http://shelah-kuang.github.io/2018/08/06/暑假半期总结/</a>
+    <a href="http://shelah-kuang.github.io/2018/12/11/平面图与图着色/" title="平面图与图着色">http://shelah-kuang.github.io/2018/12/11/平面图与图着色/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -465,7 +530,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/个人总结/" rel="tag"># -个人总结</a>
+            <a href="/tags/CZ-图论/" rel="tag"># -CZ -图论</a>
           
         </div>
       
@@ -478,8 +543,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/30/test1/" rel="next" title="test1">
-                <i class="fa fa-chevron-left"></i> test1
+              <a href="/2018/12/03/最大流/" rel="next" title="最大流">
+                <i class="fa fa-chevron-left"></i> 最大流
               </a>
             
           </div>
@@ -488,8 +553,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/06/2018半期暑假总结/" rel="prev" title="2018半期暑假总结">
-                2018半期暑假总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/15/矩阵计算/" rel="prev" title="矩阵计算">
+                矩阵计算 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -538,8 +603,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -628,6 +702,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CZ-9-1-平面图"><span class="nav-number">1.</span> <span class="nav-text">CZ 9.1 平面图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CZ-10-1-顶点染色"><span class="nav-number">2.</span> <span class="nav-text">CZ 10.1 顶点染色</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
