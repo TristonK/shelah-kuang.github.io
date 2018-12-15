@@ -21,6 +21,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -108,16 +118,7 @@
 
 
 
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="CZ 9.1 平面图若G能够花在一个平面上使得任何两条边都不交叉，称G为一个平面图(planar graph)，若G已经被画在了一个平面上，且任意两条边不交叉，则称G为    平图(plane graph)。 一个平图把平面分为一些连通片，这些连通片被称为区域(regions), 在每个平图中总有一个区域是无界的，该区域称为外区域，在一个平图中，顶点与边都与某个给定区域R相关联的子图称为是R的边界">
 <meta name="keywords" content="-CZ -图论">
 <meta property="og:type" content="article">
