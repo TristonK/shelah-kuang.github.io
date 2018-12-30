@@ -131,13 +131,13 @@
 <meta property="og:site_name" content="少年游">
 <meta property="og:description" content="这一章  毫无打字的想法  最讨厌打公式了的说(╯°Д°)╯︵┻━┻ 28.1 求解线性方程组对于线性方程组，设$A=(a_{ij}),x=(x_i),b=(b_i)$,记为   $Ax=b$, 若A为非奇异矩阵，则其具有逆向量，于是$x=A^{-1}b$ 是其解向量。若A的秩为n， 若方程数目少于n，则其是欠定的，若多于，则为超定的 LUP分解综述LUP分解就是要找到三个$n \times n$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="d:/blogpic/jzjs-1.png">
-<meta property="og:image" content="d:/blogpic/jzjs-2.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2018/12/15/矩阵计算/D:/blogpic/jzjs-1.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2018/12/15/矩阵计算/D:/blogpic/jzjs-2.png">
 <meta property="og:updated_time" content="2018-12-19T12:24:18.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="矩阵计算">
 <meta name="twitter:description" content="这一章  毫无打字的想法  最讨厌打公式了的说(╯°Д°)╯︵┻━┻ 28.1 求解线性方程组对于线性方程组，设$A=(a_{ij}),x=(x_i),b=(b_i)$,记为   $Ax=b$, 若A为非奇异矩阵，则其具有逆向量，于是$x=A^{-1}b$ 是其解向量。若A的秩为n， 若方程数目少于n，则其是欠定的，若多于，则为超定的 LUP分解综述LUP分解就是要找到三个$n \times n$">
-<meta name="twitter:image" content="d:/blogpic/jzjs-1.png">
+<meta name="twitter:image" content="http://shelah-kuang.github.io/2018/12/15/矩阵计算/D:/blogpic/jzjs-1.png">
 
 
 
@@ -440,9 +440,9 @@
 <h3 id="28-1-求解线性方程组"><a href="#28-1-求解线性方程组" class="headerlink" title="28.1 求解线性方程组"></a>28.1 求解线性方程组</h3><p>对于线性方程组，设$A=(a_{ij}),x=(x_i),b=(b_i)$,记为   $Ax=b$, 若A为非奇异矩阵，则其具有逆向量，于是$x=A^{-1}b$ 是其解向量。若A的秩为n， 若方程数目少于n，则其是<strong><code>欠定的</code></strong>，若多于，则为<strong><code>超定的</code></strong></p>
 <h6 id="LUP分解综述"><a href="#LUP分解综述" class="headerlink" title="LUP分解综述"></a>LUP分解综述</h6><p>LUP分解就是要找到三个$n \times n$ 的矩阵L,U,P，从而满足 $PA=LU$, 其中L是一个单位下三角矩阵，U是一个上三角矩阵，P是一个置换矩阵。满足要求的L,U,P被称为是矩阵A的<strong><code>LUP分解</code></strong>，每一个非奇异矩阵A都有这样一种分解。</p>
 <p>求解Ax=b时，将其转化为$LUx=Pb$,  进而设$y=Ux$,  通过<strong><code>正向替换</code></strong>的方法求解下三角系统$Ly=Pb$ 得到未知向量y,  然后通过一种<strong><code>反向替换</code></strong>的方法来求解上三角系统$Ux=y$ 得到未知向量x，此时的x就是解向量。</p>
-<h5 id="正向替换与反向替换"><a href="#正向替换与反向替换" class="headerlink" title="正向替换与反向替换"></a>正向替换与反向替换</h5><p><img src="D:\blogpic\jzjs-1.png" alt="jzjs-1">                            </p>
+<h5 id="正向替换与反向替换"><a href="#正向替换与反向替换" class="headerlink" title="正向替换与反向替换"></a>正向替换与反向替换</h5><p><img src="/2018/12/15/矩阵计算/D:/blogpic\jzjs-1.png" alt="jzjs-1">                            </p>
 <p>重写等式，替换，代入。</p>
-<p><img src="D:\blogpic\jzjs-2.png" alt="jzjs-2"></p>
+<p><img src="/2018/12/15/矩阵计算/D:/blogpic\jzjs-2.png" alt="jzjs-2"></p>
 <p>上算法中，我们假定维数n出现在属性L.rows中，置换矩阵P使用数组$\pi$表示</p>
 <p><strong>计算一个LU分解</strong></p>
 <p>分解$A=LU$, 我们利用<strong><code>高斯消元法</code></strong>来创建一个LU分解</p>
