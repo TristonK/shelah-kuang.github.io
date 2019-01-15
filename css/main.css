@@ -1929,7 +1929,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffcbff;
+  background: #53e994;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3205,4 +3205,10 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("/images/back1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
 }
