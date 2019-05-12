@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shelah-kuang.github.io/"/>
-  <updated>2019-01-15T12:38:20.040Z</updated>
+  <updated>2019-05-08T09:21:03.271Z</updated>
   <id>http://shelah-kuang.github.io/</id>
   
   <author>
@@ -17,11 +17,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hjhnb</title>
-    <link href="http://shelah-kuang.github.io/2019/01/15/hjhnb/"/>
-    <id>http://shelah-kuang.github.io/2019/01/15/hjhnb/</id>
-    <published>2019-01-15T12:38:20.000Z</published>
-    <updated>2019-01-15T12:38:20.040Z</updated>
+    <title>R语言学习</title>
+    <link href="http://shelah-kuang.github.io/2019/05/06/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://shelah-kuang.github.io/2019/05/06/R语言学习/</id>
+    <published>2019-05-06T12:39:03.000Z</published>
+    <updated>2019-05-08T09:21:03.271Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="5-数据处理样例"><a href="#5-数据处理样例" class="headerlink" title="5 数据处理样例"></a>5 数据处理样例</h2><h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><p><code>匹配顺序：</code>圆括号括起来的表达式最优先，其次是表示重复次数的操作（即 * + { }）；再次是连接运算（即几个字符放在一起，如abc）；最后是表示可选项的运行（|）</p><p>常用的元字符</p><table><thead><tr><th><strong>符号</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>.</td><td>匹配除换行符“/n”以外的任意字符</td></tr><tr><td>\</td><td>转义字符，匹配元字符时，使用“\元字符”</td></tr><tr><td>\</td><td></td><td>表示可选项，即 \</td><td>前后的表达式任选一个</td></tr><tr><td>^</td><td>匹配字符串的开始</td></tr><tr><td>$</td><td>匹配字符串的结束</td></tr><tr><td>(   )</td><td>提取匹配的字符串，即括号内的看成一个整体，即指定子表达式</td></tr><tr><td>[   ]</td><td>可匹配方括号内任意一个字符</td></tr><tr><td>{}</td><td>前面的字符或表达式的重复次数：{n}表示重复n次；{n,}重复n次到更多次；{n,m}表示重复n次到m次</td></tr><tr><td>*</td><td>前面的字符或表达式重复0次或更多次</td></tr><tr><td>+</td><td>前面的字符或表达式重复1次或更多次</td></tr><tr><td>？</td><td>前面的字符或表达式重复0次或1次</td></tr></tbody></table><p>特殊字符与反义</p><table><thead><tr><th><strong>符号</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>\d与 \D</td><td>匹配1位数字字符，匹配非数字字符</td></tr><tr><td>\s 与 \S</td><td>匹配空白符，匹配非空白符</td></tr><tr><td>\w 与 \W</td><td>匹配字母或数字或下划线或汉字，匹配非\w字符</td></tr><tr><td>\b 与 \B</td><td>匹配单词的开始或结束的位置，匹配非\b的位置</td></tr><tr><td>\h 与 \H</td><td>匹配水平间隔，匹配非水平间隔</td></tr><tr><td>\v 与 \V</td><td>匹配垂直间隔，匹配非垂直间隔</td></tr><tr><td>[^…]</td><td>匹配除了…以外的任意字符</td></tr></tbody></table><p>POSIX字符类</p><table><thead><tr><th><strong>符号</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>[[:lower:]]</td><td>小写字母</td></tr><tr><td>[[:upper:]]</td><td>大写字母</td></tr><tr><td>[[:alpha:]]</td><td>所有大小写字母</td></tr><tr><td>[[:digit:]]</td><td>数字0-9</td></tr><tr><td>[[:alnum:]]</td><td>字母和数字</td></tr><tr><td>[[:blank:]]</td><td>空白符：空格、制表符、换行符、中文全角空格等</td></tr><tr><td>[[:cntrl:]]</td><td>控制字符</td></tr><tr><td>[[:punct:]]</td><td>标点符号：! ” # % &amp; ’ () * + - . / : ;等</td></tr><tr><td>[[:space:]]</td><td>空格字符：空格, 制表符, 垂直制表符,   回车,   换行符,   换页符</td></tr><tr><td>[[:xdigit:]]</td><td>十六进制数字：0-9 A-F a-f</td></tr><tr><td>[[:print:]]</td><td>控制字符：[[:alpha:]], [[:punct:]],   [[:space:]]</td></tr><tr><td>[[:graph:]]</td><td>图形化字符：[[:alpha:]], [[:punct:]]</td></tr></tbody></table><p>在R语言中，如果需要匹配后替换，可以使用<code>sub()</code> 与 <code>gsub()</code>指令，如需匹配元字符，在前面加上<code>\\</code>符号。</p><h3 id="处理实例"><a href="#处理实例" class="headerlink" title="处理实例"></a>处理实例</h3><h4 id="读入数据"><a href="#读入数据" class="headerlink" title="读入数据"></a>读入数据</h4><p><code>readLines()</code> : 将文档转为以行为单位存放的list格式, <code>readLines(file,n=读入行数)</code></p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">txt = readLines(<span class="string">"d:/offline.final.trace.txt"</span>)</span><br><span class="line">length(txt)  <span class="comment"># 查看多少行数据</span></span><br><span class="line">substr(txt,<span class="number">1</span>,<span class="number">1</span>)==“<span class="comment">#” #查找注释行</span></span><br></pre></td></tr></table></figure><h4 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h4><p><strong><code>strsplit(x, split, fixed= F, perl= F, useBytes= F)</code></strong></p><p>  在R里面，strsplit一般用来进行字符串分割操作，strsplit函数有<strong>x、split、fixed、perl</strong>这四个选项。<br>参数x为字符串格式向量，函数依次对向量的每个元素进行拆分<br>参数split为拆分位置的字串向量，即在哪个字串处开始拆分；该参数默认是正则表达式匹配；若设置fixed= T则表示是用普通文本匹配或者正则表达式的精确匹配。用普通文本来匹配的运算速度要快些。<br>参数perl的设置和perl的版本有关，表示可以使用perl语言里面的正则表达式。如果正则表达式过长，则可以考虑使用perl的正则来提高运算速度。<br>参数useBytes表示是否逐字节进行匹配，默认为FALSE，表示是按字符匹配而不是按字节进行匹配。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;5-数据处理样例&quot;&gt;&lt;a href=&quot;#5-数据处理样例&quot; class=&quot;headerlink&quot; title=&quot;5 数据处理样例&quot;&gt;&lt;/a&gt;5 数据处理样例&lt;/h2&gt;&lt;h3 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>UTcode_learning</title>
+    <link href="http://shelah-kuang.github.io/2019/05/04/UTcode-learning/"/>
+    <id>http://shelah-kuang.github.io/2019/05/04/UTcode-learning/</id>
+    <published>2019-05-04T14:55:35.000Z</published>
+    <updated>2019-05-09T15:28:30.406Z</updated>
+    
+    <content type="html"><![CDATA[<p>此篇blog为看LARG团队的<a href="https://github.com/LARG/utaustinvilla3d" target="_blank" rel="noopener">UT框架代码</a>的学习笔记，仅作学习用。</p><h1 id="Main-cc"><a href="#Main-cc" class="headerlink" title="Main.cc"></a>Main.cc</h1><p>调用流程（整个过程中利用try-catch进行了异常处理）：<br>PrintGreeting() -&gt; ReadOptions( ) -&gt; Init( ) -&gt; Run( ) -&gt; Done( ) </p><h2 id="ReadOptions（）"><a href="#ReadOptions（）" class="headerlink" title="ReadOptions（）"></a>ReadOptions（）</h2><p>设置team名 -&gt; 对argv[i]字符串匹配 (下列举部分)</p><p>默认设置</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">outputFile</span><span class="params">(<span class="string">""</span>)</span></span>; <span class="comment">// For optimization</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">agentType</span><span class="params">(<span class="string">"naoagent"</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">rsg</span><span class="params">(<span class="string">"rsg/agent/nao/nao.rsg"</span>)</span></span>;</span><br></pre></td></tr></table></figure><h3 id="字符串匹配"><a href="#字符串匹配" class="headerlink" title="字符串匹配"></a>字符串匹配</h3><blockquote><p>string.substr(size_t pos = 0, size_t len = npos) :<br>    从第pos（默认为0）的位置复制 len长度的子字符串</p><p>strncmp()</p></blockquote><p>–team：<br>    设置argv[i+1] 为teamname<br>–paramsfile<br>    设置inputsFile = argv[i+1]，并调用 <code>LoadParams(inputsFile)</code><br>–experimentout<br>    设置outputFile = argv[i+1]<br>–optimize<br>    设置agentType = argv[i+1]<br>– type<br>    设置rsg = “rsg/agent/nao/nao_hetero.rsg “ + string(argv[i+1])，并令agentBodyType = atoi(argv[i+1])<br>–rsg<br>    设置rsg = argv[i+1]<br>–pkgoalie \ –pkshooter \ –gazebo \ –recordstats<br>    设置agentType 为对应输入</p><h2 id="Run"><a href="#Run" class="headerlink" title="Run( )"></a>Run( )</h2><p>根据agentType的不同类型决定不同的Behavior子类</p><p>然后进入循环，执行以下操作</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (gLoop)</span><br><span class="line">&#123;</span><br><span class="line">    GetMessage(msg);</span><br><span class="line">    <span class="built_in">string</span> msgToServer = behavior-&gt;Think(msg);</span><br><span class="line">    <span class="comment">// To support agent sync mode</span></span><br><span class="line">    msgToServer.append(<span class="string">"(syn)"</span>);</span><br><span class="line">    PutMessage(msgToServer);</span><br><span class="line">    <span class="keyword">if</span> (mPort != <span class="number">-1</span>) &#123;</span><br><span class="line">        PutMonMessage(behavior-&gt;getMonMessage());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="GetMessage"><a href="#GetMessage" class="headerlink" title="GetMessage()"></a>GetMessage()</h3><p>挖坑，之后补</p><h3 id="PutMessage（）"><a href="#PutMessage（）" class="headerlink" title="PutMessage（）"></a>PutMessage（）</h3><p>挖坑，之后补</p><h1 id="Behavior"><a href="#Behavior" class="headerlink" title="Behavior"></a>Behavior</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Behavior</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Behavior();<span class="comment">//构造函数</span></span><br><span class="line">    <span class="keyword">virtual</span> ~Behavior();<span class="comment">//析构函数</span></span><br><span class="line">    <span class="comment">/** called once when the initially connected to the server */</span></span><br><span class="line">    <span class="keyword">virtual</span> <span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">Init</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">    <span class="comment">/** called for every message received from the server; should</span></span><br><span class="line"><span class="comment">        return an action string */</span></span><br><span class="line">    <span class="keyword">virtual</span> <span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">Think</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; message)</span> </span>= <span class="number">0</span>;</span><br><span class="line">    <span class="comment">/** Get message for sending to the server through the monitor port */</span></span><br><span class="line">    <span class="keyword">virtual</span> <span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">getMonMessage</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><blockquote><p><strong>虚函数</strong> 是在基类中使用关键字 <strong>virtual</strong> 声明的函数。在派生类中重新定义基类中定义的虚函数时，会告诉编译器不要静态链接到该函数。我们想要的是在程序中任意点可以根据所调用的对象类型来选择调用的函数，这种操作被称为<strong>动态链接</strong>，或<strong>后期绑定</strong>。</p></blockquote><p>在几种类型的behavior中，<code>GazeboBehavior,PKShooterBehavior,PKGoalieBehavior</code> 都以public的方式<code>NaoBehavior</code>基类，</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;此篇blog为看LARG团队的&lt;a href=&quot;https://github.com/LARG/utaustinvilla3d&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UT框架代码&lt;/a&gt;的学习笔记，仅作学习用。&lt;/p&gt;
+&lt;h1 id=&quot;Main-c
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习-wed</title>
+    <link href="http://shelah-kuang.github.io/2019/02/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-wed/"/>
+    <id>http://shelah-kuang.github.io/2019/02/11/机器学习-wed/</id>
+    <published>2019-02-11T08:04:35.000Z</published>
+    <updated>2019-02-15T08:53:58.428Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="we"><a href="#we" class="headerlink" title="we"></a>we</h2><h4 id="监督学习：我们教计算机（supervised-learning）"><a href="#监督学习：我们教计算机（supervised-learning）" class="headerlink" title="监督学习：我们教计算机（supervised learning）"></a>监督学习：我们教计算机（supervised learning）</h4><p>给予数据集，希望得到更多的正确答案 </p><p>回归问题（regression problem）：预测连续值输出 predict continuous valued output</p><p>分类问题（classification problem）：试图预测离散值输出（例如判断恶性肿瘤与良性肿瘤）</p><h4 id="无监督学习-计算机自行学习（unsupervised-learning）"><a href="#无监督学习-计算机自行学习（unsupervised-learning）" class="headerlink" title="无监督学习: 计算机自行学习（unsupervised learning）"></a>无监督学习: 计算机自行学习（unsupervised learning）</h4><p>给了数据集，试图对其进行分类</p><p>聚类算法（clustering algorithms）：给了一个数据集，但是没有特征 ，可能把数据分成几个簇（例如给了客户数据判断细分市场）</p><p>cocktail party problem（有两个录音，每个录音都混合了两种声音，但是由于每个录音都与其中一个音源近，试图分离两种声音）</p><h2 id="week-2-单变量线性回归（univariate-linear-regreesion）"><a href="#week-2-单变量线性回归（univariate-linear-regreesion）" class="headerlink" title="week 2 单变量线性回归（univariate linear regreesion）"></a>week 2 单变量线性回归（univariate linear regreesion）</h2><p>课程中使用的符号</p><p>​    m：训练样本数量</p><pre><code>x：输入变量\特征</code></pre><p>​    y：输出</p><p>​    $x^{(i)},y^{(i)}$ : 第i个训练样本</p><p>​    h：假设函数（hypothesis）$h_\theta(x)=\theta_0+\theta_1x$</p><p>代价函数（cost function）</p><p>​    Hypothesis: $h_\theta(x)=\theta_0+\theta_1x​$</p><p>​        $\theta_i$’s: parameters of model 模型参数    </p><p> 我们想要让估计值与真实值的差最小，即(其中的1/2只是为了便于计算)</p><p>​                                $${\mathop{minimize}\limits_{\theta_0,\theta_1} \frac{1}{2m}\sum_{i=0}^m\left(h_\theta(x^{(i)})-y^{(i)}\right)^2}$$</p><p>记${J(\theta_0,\theta_1)=\frac{1}{2m}\sum_{i=0}^m\left(h_\theta(x^{(i)})-y^{(i)}\right)^2}​$为代价函数（cost function）（平方误差函数）</p><p>假设$\theta_0$为0，可以画出$J(\theta_1)$的图像（类似于一个碗状函数的基本形状）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;we&quot;&gt;&lt;a href=&quot;#we&quot; class=&quot;headerlink&quot; title=&quot;we&quot;&gt;&lt;/a&gt;we&lt;/h2&gt;&lt;h4 id=&quot;监督学习：我们教计算机（supervised-learning）&quot;&gt;&lt;a href=&quot;#监督学习：我们教计算机（supervise
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python学习</title>
+    <link href="http://shelah-kuang.github.io/2019/01/31/python%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://shelah-kuang.github.io/2019/01/31/python学习/</id>
+    <published>2019-01-31T14:22:26.000Z</published>
+    <updated>2019-01-31T14:22:26.826Z</updated>
     
     <summary type="html">
     
@@ -174,28 +238,6 @@
     
     
       <category term="-个人总结" scheme="http://shelah-kuang.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test1</title>
-    <link href="http://shelah-kuang.github.io/2018/07/30/test1/"/>
-    <id>http://shelah-kuang.github.io/2018/07/30/test1/</id>
-    <published>2018-07-30T07:13:26.000Z</published>
-    <updated>2018-07-30T07:14:57.203Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是一篇测试文章</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;这是一篇测试文章&lt;/p&gt;
-
-      
-    
-    </summary>
-    
     
   </entry>
   
