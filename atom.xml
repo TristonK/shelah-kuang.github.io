@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shelah-kuang.github.io/"/>
-  <updated>2019-06-18T13:44:55.922Z</updated>
+  <updated>2019-06-19T12:54:42.969Z</updated>
   <id>http://shelah-kuang.github.io/</id>
   
   <author>
@@ -17,16 +17,72 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>随机算法</title>
+    <link href="http://shelah-kuang.github.io/2019/06/19/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/"/>
+    <id>http://shelah-kuang.github.io/2019/06/19/随机算法/</id>
+    <published>2019-06-19T07:15:49.000Z</published>
+    <updated>2019-06-19T12:54:42.969Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>$RandomA(x):$ 对于所有A在x上的随机计算中使用的random bits的最大数量<br>$Prob_{A,x}(C)$: 某一次AA对输入xx的计算CC, 由相应的随机序列的概率决定<br>$Prob(A(x)=y)$: A 对于输入x输出y的概率<br>$Time(C)$: the time complexity of the run C of A on x</p><h2 id="随机算法"><a href="#随机算法" class="headerlink" title="随机算法"></a>随机算法</h2><h3 id="Las-Vegas-Algorithms"><a href="#Las-Vegas-Algorithms" class="headerlink" title="Las Vegas Algorithms"></a>Las Vegas Algorithms</h3><p>要么给出问题的正确答案，要么得不到答案</p><p>$$Prob(A(x)=F(x))⩾ \frac{1}{2}$$,and $$Prob(A(x) = “?”) = 1 - Prob(A(x) = F(x)) \leqslant \dfrac{1}{2}.$$</p><h3 id="One-Sided-Error-Monte-Carlo-Algorithms"><a href="#One-Sided-Error-Monte-Carlo-Algorithms" class="headerlink" title="One-Sided-Error Monte Carlo Algorithms"></a>One-Sided-Error Monte Carlo Algorithms</h3><p>for every $x \in L$, $Prob(A(x) = 1) \geqslant \dfrac{1}{2}$, and  for every $x \notin L$, $Prob(A(x) = 0) = 1$<br>跑k次，只要有一次输出1，则其必然为1，若均为0，则出错概率小于$(1/2)^k$, (只会单向出错)</p><h3 id="Two-Sided-Error-Monte-Carlo-Algorithms"><a href="#Two-Sided-Error-Monte-Carlo-Algorithms" class="headerlink" title="Two-Sided-Error Monte Carlo Algorithms"></a>Two-Sided-Error Monte Carlo Algorithms</h3><p>$Prob(A(x)=F(x))⩾ \dfrac{1}{2}+ε$.</p><p>跑t次，输出至少出现了$\lceil t/2 \rceil$ 次的结果</p><h3 id="Unbounded-Error-Monte-Carlo-Algorithms"><a href="#Unbounded-Error-Monte-Carlo-Algorithms" class="headerlink" title="Unbounded-Error Monte Carlo Algorithms"></a>Unbounded-Error Monte Carlo Algorithms</h3><p>$Prob(A(x)=F(x)) &gt; \dfrac{1}{2}$.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;p&gt;$RandomA(x):$ 对于所有A在x上的随机计算中使用的random bits的最大数量&lt;br&gt;$Prob_{A,x}
+      
+    
+    </summary>
+    
+    
+      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>近似算法</title>
+    <link href="http://shelah-kuang.github.io/2019/06/19/%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95/"/>
+    <id>http://shelah-kuang.github.io/2019/06/19/近似算法/</id>
+    <published>2019-06-19T07:15:37.000Z</published>
+    <updated>2019-06-19T13:47:31.166Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>$$ε_A(x)=\dfrac{|cost(A(x))−OptU(x)∣}{Opt_U(x)}$$</p><p>$$R_A(x)=max{OptU(x)/cost(A(x)),costA(x)/OptU(x)}.$$</p><h2 id="NPO问题分类"><a href="#NPO问题分类" class="headerlink" title="NPO问题分类"></a>NPO问题分类</h2><p><img src="/2019/06/19/近似算法/def.png" alt="def"></p><p>NPO(I): NPO中所有存在FPTAS的最优化问题(e.g.背包问题)</p><p>NPO(II): NPO中所有存在PTAS的最优化问题(e.g. MS)</p><p>NPO(III): 包含所有$U∈NPO$ 满足：</p><ul><li>对某些δ&gt;1存在多项式时间的δ−近似算法</li><li>对某些d&lt;δ不存在多项式时间的的d−近似算法</li><li>i.e.U没有PTAS</li></ul><p>NPO(IV): 包含所有$U∈NPO$满足：</p><p>满足：</p><ul><li>对某些f:N→R+,存在多项式时间的f(n)−近似算法,其中f以某个多项式函数为界<ul><li>对任意$δ∈R^+$不存在任何多项式时间的δ−近似算法<br>e.g.集合覆盖问题</li></ul></li></ul><p>NPO(V): 包含所有$U∈NPO$，满足若存在多项式时间的f(n)−近似算法，则f(n)不以任何多项式函数为界(e.g. TSP, 最大团问题)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;p&gt;$$ε_A(x)=\dfrac{|cost(A(x))−OptU(x)∣}{Opt_U(x)}$$&lt;/p&gt;
+&lt;p&gt;$$R_A
+      
+    
+    </summary>
+    
+    
+      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数论基础及数论算法</title>
     <link href="http://shelah-kuang.github.io/2019/06/18/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80%E5%8F%8A%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95/"/>
     <id>http://shelah-kuang.github.io/2019/06/18/数论基础及数论算法/</id>
     <published>2019-06-18T13:44:55.000Z</published>
-    <updated>2019-06-18T13:44:55.922Z</updated>
+    <updated>2019-06-19T14:38:14.722Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一些基本定理"><a href="#一些基本定理" class="headerlink" title="一些基本定理"></a>一些基本定理</h2><p><strong>除法定理</strong> ： 对于任何整数a与任何正整数n，存在唯一整数q和r，满足$0 \leq r &lt; n$, 且 $a = qn +r$</p><p>$gcd(a,b) = ar+bs$</p><p>如果任意整数a，b都不为0，那么$gcd(a,b)$为a和b的线性组合集{$ax+by: x,y \in Z$}中的最小正元素</p><p>$gcd(a,0) = |a|$</p><p><strong>gcd递归定理</strong>： $gcd(a,b) = gcd (b, a\mod b)$</p><p>若x，y为满足$ax+ny=1$的整数，则a在$Z_n$中的乘法逆元是 x mod n</p><h2 id="扩展欧几里得算法"><a href="#扩展欧几里得算法" class="headerlink" title="扩展欧几里得算法"></a>扩展欧几里得算法</h2><p>求解$d = gcd(a,b) = ax+by$, 算法返回值为$(d,x,y)$</p><h2 id="模运算"><a href="#模运算" class="headerlink" title="模运算"></a>模运算</h2><p>$Z^*_n = {[a]_n : gcd(a,n)=1}$</p><p>$Z^*_n $的规模表示为$\phi(n)$, 且</p><p>$$\phi(n) = n \prod_{p为能整除n的素数}(1-\frac{1}{p})$$</p><h2 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h2><p>计算满足$a_i = a\mod n_i$的a：</p><p>​    取$m_i = n / n_i$(其中$n=n_1n_2<em>…</em>n_k$)<br>​    定义$c_i = m_i(m_i^{-1} \mod n_i)$<br>​    $a = (a_1c_1+a_2c_2+..)\mod n$</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h2 id=&quot;一些基本定理&quot;&gt;&lt;a href=&quot;#一些基本定理&quot; class=&quot;headerlink&quot; title=&quot;一些基本定理&quot;&gt;&lt;/a&gt;一些基本定理&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;除法定理&lt;/strong&gt; ： 对于任何整数a与任何正整数n，存在唯一整数q和r，满足$0 
+      
+    
     </summary>
     
+    
+      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
     
   </entry>
   
