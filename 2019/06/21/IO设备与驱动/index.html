@@ -155,18 +155,25 @@
 
 
 
-  <meta name="description" content="test">
+  <meta name="description" content="System Architecture  A Canonical device  硬件接口 + 内部结构 A Canonical protocol如上图，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。 一种典型的协议如下： 对于第一步的while循环，我们称为polling the device (轮询)，在第二步的写数据的时候，如果有main cpu的参与,即称为是prog">
 <meta name="keywords" content="-review">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IO设备与驱动">
+<meta property="og:title" content="少年游">
 <meta property="og:url" content="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/index.html">
 <meta property="og:site_name" content="少年游">
-<meta property="og:description" content="test">
+<meta property="og:description" content="System Architecture  A Canonical device  硬件接口 + 内部结构 A Canonical protocol如上图，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。 一种典型的协议如下： 对于第一步的while循环，我们称为polling the device (轮询)，在第二步的写数据的时候，如果有main cpu的参与,即称为是prog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-21T02:19:09.444Z">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/361.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/n362.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/362.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/prot.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/dma.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/364.png">
+<meta property="og:updated_time" content="2019-06-21T13:31:38.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IO设备与驱动">
-<meta name="twitter:description" content="test">
+<meta name="twitter:title" content="少年游">
+<meta name="twitter:description" content="System Architecture  A Canonical device  硬件接口 + 内部结构 A Canonical protocol如上图，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。 一种典型的协议如下： 对于第一步的while循环，我们称为polling the device (轮询)，在第二步的写数据的时候，如果有main cpu的参与,即称为是prog">
+<meta name="twitter:image" content="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/361.png">
 
 
 
@@ -185,7 +192,7 @@
   };
 </script>
 
-  <title>IO设备与驱动 | 少年游</title>
+  <title> | 少年游</title>
   
 
 
@@ -369,7 +376,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">IO设备与驱动
+          <h1 class="post-title" itemprop="name headline">
               
             
           </h1>
@@ -394,7 +401,7 @@
                 
               
 
-              <time title="创建时间：2019-06-21 10:13:42 / 修改时间：10:19:09" itemprop="dateCreated datePublished" datetime="2019-06-21T10:13:42+08:00">2019-06-21</time>
+              <time title="创建时间：2019-06-21 10:13:42 / 修改时间：21:31:38" itemprop="dateCreated datePublished" datetime="2019-06-21T10:13:42+08:00">2019-06-21</time>
             
 
             
@@ -440,7 +447,7 @@
 
           
           
-             <span id="/2019/06/21/IO设备与驱动/" class="leancloud_visitors" data-flag-title="IO设备与驱动">
+             <span id="/2019/06/21/IO设备与驱动/" class="leancloud_visitors" data-flag-title="">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -471,7 +478,35 @@
       
 
       
-        <p>test</p>
+        <h2 id="System-Architecture"><a href="#System-Architecture" class="headerlink" title="System Architecture"></a>System Architecture</h2><p><img src="/2019/06/21/IO设备与驱动/361.png" width="65%" height="50%"></p>
+<p><img src="/2019/06/21/IO设备与驱动/n362.png" width="65%" height="50%"></p>
+<h2 id="A-Canonical-device"><a href="#A-Canonical-device" class="headerlink" title="A Canonical device"></a>A Canonical device</h2><p> <img src="/2019/06/21/IO设备与驱动/362.png" width="65%" height="50%"></p>
+<p>硬件接口 + 内部结构</p>
+<h2 id="A-Canonical-protocol"><a href="#A-Canonical-protocol" class="headerlink" title="A Canonical protocol"></a>A Canonical protocol</h2><p>如上图，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。</p>
+<p>一种典型的协议如下：<br><img src="/2019/06/21/IO设备与驱动/prot.png" width="65%" height="50%"></p>
+<p>对于第一步的while循环，我们称为<strong><code>polling the device (轮询)</code></strong>，在第二步的写数据的时候，如果有main cpu的参与,即称为是<strong><code>programmed I/O(PIO)</code></strong>, 即通过CPU执行I/O端口指令来进行数据的读写的数据交换，</p>
+<h2 id="Lowering-CPU-Overhead-With-Interrupts"><a href="#Lowering-CPU-Overhead-With-Interrupts" class="headerlink" title="Lowering CPU Overhead With Interrupts"></a>Lowering CPU Overhead With Interrupts</h2><p>为了避免PIO模式下，cpu处于轮询状态而导致资源的浪费，可能有以下几种措施：</p>
+<ol>
+<li>加入中断操作（但如果device执行操作很快，加入中断反而可能是效率下降）</li>
+<li>（hybrid，如无法确定device速度）先轮询一会，如果没结束则执行中断</li>
+</ol>
+<h2 id="More-Efficient-Data-Movement-With-DMA"><a href="#More-Efficient-Data-Movement-With-DMA" class="headerlink" title="More Efficient Data Movement With DMA"></a>More Efficient Data Movement With DMA</h2><p><strong><code>DMA(Direct Memory Access)</code></strong>并不负责与计算机系统外的I/O，它的出现主要是为了解决设备访问速度慢的一个缺点：试想我们希望从磁盘中读出海量的数据。</p>
+<p>DMA设备可以看成是只执行memcpy操作的设备</p>
+<blockquote>
+<p>To transfer data to the device, for example, the OS would program the DMA engine by telling it where the data lives in memory, how much data to copy, and which device to send it to. At that point, the OS is done with the transfer and can proceed with other work. When the DMA is complete, the DMA controller raises an interrupt, and the OS thus knows the transfer is complete.</p>
+<p><img src="/2019/06/21/IO设备与驱动/dma.png"></p>
+</blockquote>
+<h2 id="Methods-Of-Device-Interaction"><a href="#Methods-Of-Device-Interaction" class="headerlink" title="Methods Of Device Interaction"></a>Methods Of Device Interaction</h2><p>how the OS actually  communicates with the device</p>
+<blockquote>
+<p>来源：jyy讲义</p>
+<ul>
+<li>端口I/O (Port IO, PIO)，相当于是为I/O设备提供了一个单独的地址空间，通过读/写端口的方式实现设备控制。通常，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。顾名思义，我们可以通过控制寄存器实现设备控制(例如设置设备的模式等)，从数据寄存器读写数据，并且读取状态寄存器来查看设备执行命令的状态。（教材上写的是IO instruction）</li>
+<li>内存映射I/O (Memory-Mapped I/O, MMIO)。给特定的内存地址赋予特殊的含义，从而读/写内存地址就能实现设备的访问。在PA中，显存就是通过这种方式实现的。一方面，内存映射I/O完全可以用来实现状态/控制/数据寄存器，另一方面，在设备从外部看来是一段连续数据时(例如显存)，MMIO能减少I/O指令的数量。</li>
+</ul>
+</blockquote>
+<h2 id="Fitting-Into-The-OS-The-Device-Driver"><a href="#Fitting-Into-The-OS-The-Device-Driver" class="headerlink" title="Fitting Into The OS: The Device Driver"></a>Fitting Into The OS: The Device Driver</h2><p><strong><code>device driver(设备驱动程序)</code></strong>: 用于对设备进行抽象使得更加上层的部分（通常为文件系统）能够以统一的接口来访问这些设备</p>
+<p>设备驱动层帮助我们屏蔽了底层设备的具体实现细节(例如寄存器的含义)。同理，如果我们想创建“虚拟”设备，也是非常容易的，只需要为它编写一个驱动程序即可，实现设备的读接口。Linux系统中就有一些虚拟的设备，如<code>/dev/random</code>, <code>/dev/null</code></p>
+<p><img src="/2019/06/21/IO设备与驱动/364.png" height="75%" width="75%"></p>
 
       
     </div>
@@ -493,7 +528,7 @@
     <strong>本文作者： </strong>kuangsl</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/" title="IO设备与驱动">http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/</a>
+    <a href="http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/" title="">http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -589,8 +624,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -726,6 +770,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Architecture"><span class="nav-number">1.</span> <span class="nav-text">System Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Canonical-device"><span class="nav-number">2.</span> <span class="nav-text">A Canonical device</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Canonical-protocol"><span class="nav-number">3.</span> <span class="nav-text">A Canonical protocol</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lowering-CPU-Overhead-With-Interrupts"><span class="nav-number">4.</span> <span class="nav-text">Lowering CPU Overhead With Interrupts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-Efficient-Data-Movement-With-DMA"><span class="nav-number">5.</span> <span class="nav-text">More Efficient Data Movement With DMA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Methods-Of-Device-Interaction"><span class="nav-number">6.</span> <span class="nav-text">Methods Of Device Interaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fitting-Into-The-OS-The-Device-Driver"><span class="nav-number">7.</span> <span class="nav-text">Fitting Into The OS: The Device Driver</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -772,7 +832,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.6k字</span>
+  <span class="post-count">博客全站共16.4k字</span>
 </div>
         
 

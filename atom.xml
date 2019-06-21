@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shelah-kuang.github.io/"/>
-  <updated>2019-06-21T02:19:09.444Z</updated>
+  <updated>2019-06-21T13:31:38.198Z</updated>
   <id>http://shelah-kuang.github.io/</id>
   
   <author>
@@ -17,20 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>IO设备与驱动</title>
+    <title></title>
     <link href="http://shelah-kuang.github.io/2019/06/21/IO%E8%AE%BE%E5%A4%87%E4%B8%8E%E9%A9%B1%E5%8A%A8/"/>
     <id>http://shelah-kuang.github.io/2019/06/21/IO设备与驱动/</id>
     <published>2019-06-21T02:13:42.000Z</published>
-    <updated>2019-06-21T02:19:09.444Z</updated>
+    <updated>2019-06-21T13:31:38.198Z</updated>
     
-    <content type="html"><![CDATA[<p>test</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="System-Architecture"><a href="#System-Architecture" class="headerlink" title="System Architecture"></a>System Architecture</h2><p><img src="/2019/06/21/IO设备与驱动/361.png" width="65%" height="50%"></p><p><img src="/2019/06/21/IO设备与驱动/n362.png" width="65%" height="50%"></p><h2 id="A-Canonical-device"><a href="#A-Canonical-device" class="headerlink" title="A Canonical device"></a>A Canonical device</h2><p> <img src="/2019/06/21/IO设备与驱动/362.png" width="65%" height="50%"></p><p>硬件接口 + 内部结构</p><h2 id="A-Canonical-protocol"><a href="#A-Canonical-protocol" class="headerlink" title="A Canonical protocol"></a>A Canonical protocol</h2><p>如上图，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。</p><p>一种典型的协议如下：<br><img src="/2019/06/21/IO设备与驱动/prot.png" width="65%" height="50%"></p><p>对于第一步的while循环，我们称为<strong><code>polling the device (轮询)</code></strong>，在第二步的写数据的时候，如果有main cpu的参与,即称为是<strong><code>programmed I/O(PIO)</code></strong>, 即通过CPU执行I/O端口指令来进行数据的读写的数据交换，</p><h2 id="Lowering-CPU-Overhead-With-Interrupts"><a href="#Lowering-CPU-Overhead-With-Interrupts" class="headerlink" title="Lowering CPU Overhead With Interrupts"></a>Lowering CPU Overhead With Interrupts</h2><p>为了避免PIO模式下，cpu处于轮询状态而导致资源的浪费，可能有以下几种措施：</p><ol><li>加入中断操作（但如果device执行操作很快，加入中断反而可能是效率下降）</li><li>（hybrid，如无法确定device速度）先轮询一会，如果没结束则执行中断</li></ol><h2 id="More-Efficient-Data-Movement-With-DMA"><a href="#More-Efficient-Data-Movement-With-DMA" class="headerlink" title="More Efficient Data Movement With DMA"></a>More Efficient Data Movement With DMA</h2><p><strong><code>DMA(Direct Memory Access)</code></strong>并不负责与计算机系统外的I/O，它的出现主要是为了解决设备访问速度慢的一个缺点：试想我们希望从磁盘中读出海量的数据。</p><p>DMA设备可以看成是只执行memcpy操作的设备</p><blockquote><p>To transfer data to the device, for example, the OS would program the DMA engine by telling it where the data lives in memory, how much data to copy, and which device to send it to. At that point, the OS is done with the transfer and can proceed with other work. When the DMA is complete, the DMA controller raises an interrupt, and the OS thus knows the transfer is complete.</p><p><img src="/2019/06/21/IO设备与驱动/dma.png"></p></blockquote><h2 id="Methods-Of-Device-Interaction"><a href="#Methods-Of-Device-Interaction" class="headerlink" title="Methods Of Device Interaction"></a>Methods Of Device Interaction</h2><p>how the OS actually  communicates with the device</p><blockquote><p>来源：jyy讲义</p><ul><li>端口I/O (Port IO, PIO)，相当于是为I/O设备提供了一个单独的地址空间，通过读/写端口的方式实现设备控制。通常，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。顾名思义，我们可以通过控制寄存器实现设备控制(例如设置设备的模式等)，从数据寄存器读写数据，并且读取状态寄存器来查看设备执行命令的状态。（教材上写的是IO instruction）</li><li>内存映射I/O (Memory-Mapped I/O, MMIO)。给特定的内存地址赋予特殊的含义，从而读/写内存地址就能实现设备的访问。在PA中，显存就是通过这种方式实现的。一方面，内存映射I/O完全可以用来实现状态/控制/数据寄存器，另一方面，在设备从外部看来是一段连续数据时(例如显存)，MMIO能减少I/O指令的数量。</li></ul></blockquote><h2 id="Fitting-Into-The-OS-The-Device-Driver"><a href="#Fitting-Into-The-OS-The-Device-Driver" class="headerlink" title="Fitting Into The OS: The Device Driver"></a>Fitting Into The OS: The Device Driver</h2><p><strong><code>device driver(设备驱动程序)</code></strong>: 用于对设备进行抽象使得更加上层的部分（通常为文件系统）能够以统一的接口来访问这些设备</p><p>设备驱动层帮助我们屏蔽了底层设备的具体实现细节(例如寄存器的含义)。同理，如果我们想创建“虚拟”设备，也是非常容易的，只需要为它编写一个驱动程序即可，实现设备的读接口。Linux系统中就有一些虚拟的设备，如<code>/dev/random</code>, <code>/dev/null</code></p><p><img src="/2019/06/21/IO设备与驱动/364.png" height="75%" width="75%"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;test&lt;/p&gt;
-
+        &lt;h2 id=&quot;System-Architecture&quot;&gt;&lt;a href=&quot;#System-Architecture&quot; class=&quot;headerlink&quot; title=&quot;System Architecture&quot;&gt;&lt;/a&gt;System Architecture&lt;/h2&gt;&lt;p&gt;&lt;i
       
     
     </summary>
