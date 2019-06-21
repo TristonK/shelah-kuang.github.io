@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://shelah-kuang.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-06-21T02:40:23.024Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://shelah-kuang.github.io/2019/06/21/IO%E8%AE%BE%E5%A4%87%E4%B8%8E%E9%A9%B1%E5%8A%A8/</loc>
     
     <lastmod>2019-06-21T02:19:09.444Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>http://shelah-kuang.github.io/tags/index.html</loc>
     
     <lastmod>2018-12-03T14:32:02.621Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://shelah-kuang.github.io/categories/index.html</loc>
-    
-    <lastmod>2018-08-06T11:15:18.609Z</lastmod>
     
   </url>
   
