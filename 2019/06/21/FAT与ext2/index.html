@@ -155,14 +155,18 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="本blog基本搬运jyy的讲义和slides  FATFAT文件系统的基本思想是使用链表管理所有的数据块。FAT文件系统把若干个连续的扇区(sector)作为一个簇(cluster) 希望表示一个文件，我们只需要知道：文件的第一块的编号,对于每一块，它下一块的编号 FAT文件系统专门在磁盘中开辟一个区域(File Allocation Table, FAT)，来存储每一块的下一块编号。除了编号之">
+<meta name="keywords" content="-review">
+<meta property="og:type" content="article">
 <meta property="og:title" content="FAT与ext2">
 <meta property="og:url" content="http://shelah-kuang.github.io/2019/06/21/FAT与ext2/index.html">
 <meta property="og:site_name" content="少年游">
+<meta property="og:description" content="本blog基本搬运jyy的讲义和slides  FATFAT文件系统的基本思想是使用链表管理所有的数据块。FAT文件系统把若干个连续的扇区(sector)作为一个簇(cluster) 希望表示一个文件，我们只需要知道：文件的第一块的编号,对于每一块，它下一块的编号 FAT文件系统专门在磁盘中开辟一个区域(File Allocation Table, FAT)，来存储每一块的下一块编号。除了编号之">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-21T13:41:38.882Z">
+<meta property="og:updated_time" content="2019-06-22T09:12:27.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FAT与ext2">
+<meta name="twitter:description" content="本blog基本搬运jyy的讲义和slides  FATFAT文件系统的基本思想是使用链表管理所有的数据块。FAT文件系统把若干个连续的扇区(sector)作为一个簇(cluster) 希望表示一个文件，我们只需要知道：文件的第一块的编号,对于每一块，它下一块的编号 FAT文件系统专门在磁盘中开辟一个区域(File Allocation Table, FAT)，来存储每一块的下一块编号。除了编号之">
 
 
 
@@ -394,8 +398,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-22 17:12:27" itemprop="dateModified" datetime="2019-06-22T17:12:27+08:00">2019-06-22</time>
+              
+            
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -445,7 +483,18 @@
       
 
       
-        
+        <blockquote>
+<p>本blog基本搬运jyy的讲义和slides</p>
+</blockquote>
+<h2 id="FAT"><a href="#FAT" class="headerlink" title="FAT"></a>FAT</h2><p>FAT文件系统的基本思想是使用链表管理所有的数据块。FAT文件系统把若干个连续的扇区(sector)作为一个簇(cluster)</p>
+<p>希望表示一个文件，我们只需要知道：文件的第一块的编号,对于每一块，它下一块的编号</p>
+<p>FAT文件系统专门在磁盘中开辟一个区域(File Allocation Table, FAT)，来存储每一块的下一块编号。除了编号之外，还有两种特殊的编号：free (0, 该块可以使用),EOF (-1, 该块代表了某个文件的末尾)</p>
+<p>缺点是文件系统可能碎片化，不利用I/O优化，lseek需要读取大量FAT数据块</p>
+<h2 id="ext2"><a href="#ext2" class="headerlink" title="ext2"></a>ext2</h2><p>与上一篇博客中的vsfs基本类似</p>
+<p>采用bitmap进行内存管理</p>
+<p>inode中用多个级别的索引（direct blocks、indirect blocks、double indirect…..）</p>
+<p>目录中顺序存储文件/子目录名字 inode编号<br>inode–rec_len–name_len–file_type–name</p>
+
       
     </div>
 
@@ -476,6 +525,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/review/" rel="tag"># -review</a>
+          
+        </div>
       
 
       
@@ -560,8 +615,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -580,7 +644,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -697,6 +761,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#FAT"><span class="nav-number">1.</span> <span class="nav-text">FAT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ext2"><span class="nav-number">2.</span> <span class="nav-text">ext2</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -743,7 +823,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共16.5k字</span>
+  <span class="post-count">博客全站共19.5k字</span>
 </div>
         
 

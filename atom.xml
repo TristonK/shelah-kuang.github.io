@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shelah-kuang.github.io/"/>
-  <updated>2019-06-21T13:42:10.248Z</updated>
+  <updated>2019-06-22T13:19:32.854Z</updated>
   <id>http://shelah-kuang.github.io/</id>
   
   <author>
@@ -17,16 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>终端与shell</title>
+    <link href="http://shelah-kuang.github.io/2019/06/22/%E7%BB%88%E7%AB%AF%E4%B8%8Eshell/"/>
+    <id>http://shelah-kuang.github.io/2019/06/22/终端与shell/</id>
+    <published>2019-06-22T12:59:01.000Z</published>
+    <updated>2019-06-22T13:19:32.854Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><a href="https://www.gnu.org/software/libc/manual/html_node/Implementing-a-Shell.html#Implementing-a-Shell" target="_blank" rel="noopener">参考阅读</a></p></blockquote><p>终端默认是“cooked mode”，即自带一个“行编辑器”，只有按下回车键，read系统调用才返回</p><h2 id="shell执行程序"><a href="#shell执行程序" class="headerlink" title="shell执行程序"></a>shell执行程序</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> pid = fork();</span><br><span class="line"><span class="keyword">if</span> (pid == <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="comment">// 管道、重定向、……</span></span><br><span class="line">  execve(...);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (!endswith(<span class="string">"&amp;"</span>)) &#123;</span><br><span class="line">    wait(<span class="literal">NULL</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gnu.org/software/libc/manual/html_node/Implementing-a-Shell.html#Implementing-a-Shell&quot; target=&quot;_blank&quot; 
+      
+    
+    </summary>
+    
+      <category term="OS" scheme="http://shelah-kuang.github.io/categories/OS/"/>
+    
+    
+      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
+    
+  </entry>
+  
+  <entry>
     <title>崩溃恢复与日志</title>
     <link href="http://shelah-kuang.github.io/2019/06/21/%E5%B4%A9%E6%BA%83%E6%81%A2%E5%A4%8D%E4%B8%8E%E6%97%A5%E5%BF%97/"/>
     <id>http://shelah-kuang.github.io/2019/06/21/崩溃恢复与日志/</id>
     <published>2019-06-21T13:42:10.000Z</published>
-    <updated>2019-06-21T13:42:10.248Z</updated>
+    <updated>2019-06-22T12:22:00.610Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="FSCK-The-File-System-Checker"><a href="#FSCK-The-File-System-Checker" class="headerlink" title="FSCK(The File System Checker)"></a>FSCK(The File System Checker)</h2><p>检查的对象：</p><ul><li><p>superblock: making sure the file system size is greater than the number of blocks that have been allocated</p></li><li><p>free blocks: 检查inode指向的block和inode本身的状态，确认和bitmap一致，如果不一致，选择相信inode</p></li><li><p>inode state：检查其数据是否看起来合法，如检查文件类型是否有效，如果出错则删除inode并且随之更改bitmap</p></li><li><p>inode links： 检查链接情况（遍历文件树中看link count与inode中是否一致） (没有链接的inode被移到lost+found目录中)</p></li><li><p>duplicates：checks for duplicate pointers, i.e., cases where two different inodes refer to the same block</p></li><li><p>bad blocks：A pointer is considered “bad” if it obviously points to something outside its valid range</p></li><li><p>directory checks：performs additional integrity checks on the contents of each directory, making sure that “.” and “..” are the first entries, that each inode referred to in a directory entry is allocated, and ensuring that no directory is linked to more than once in the entire hierarchy.</p></li></ul><h2 id="Journaling-write-ahead-logging"><a href="#Journaling-write-ahead-logging" class="headerlink" title="Journaling(write-ahead logging)"></a>Journaling(write-ahead logging)</h2><p>在写之前，在disk的某个确定的位置记录你要做什么，如果发生崩溃，则可以继续执行</p><ol><li><p>Journal write: Write the transaction, including a transaction-begin block, all pending data and metadata updates, and a transaction-end block, to the log; wait for these writes to complete.</p></li><li><p>Checkpoint: Write the pending metadata and data updates to their final locations in the file system.</p></li></ol><p>为了节约时间，可以让前几个并发的一起写</p><ol><li>Journal write: Write the contents of the transaction (including TxB, metadata, and data) to the log; wait for these writes to complete.</li><li>Journal commit: Write the transaction commit block (containing TxE) to the log; wait for write to complete; transaction is said to be committed.</li><li>Checkpoint: Write the contents of the update (metadata and data) to their final on-disk locations.</li></ol><h4 id="Metadata-Journaling"><a href="#Metadata-Journaling" class="headerlink" title="Metadata Journaling"></a>Metadata Journaling</h4><ol><li>Data write: Write data to final location; wait for completion (the wait is optional; see below for details).</li><li>Journal metadata write: Write the begin block and metadata to the log; wait for writes to complete.</li><li>Journal commit: Write the transaction commit block (containing TxE) to the log; wait for the write to complete; the transaction (including data) is now committed.</li><li>Checkpoint metadata: Write the contents of the metadata update to their final locations within the file system.</li><li>Free: Later, mark the transaction free in journal superblock.</li></ol>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h2 id=&quot;FSCK-The-File-System-Checker&quot;&gt;&lt;a href=&quot;#FSCK-The-File-System-Checker&quot; class=&quot;headerlink&quot; title=&quot;FSCK(The File System Checker)&quot;&gt;&lt;/a&gt;F
+      
+    
     </summary>
     
+      <category term="OS" scheme="http://shelah-kuang.github.io/categories/OS/"/>
+    
+    
+      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
     
   </entry>
   
@@ -35,12 +72,24 @@
     <link href="http://shelah-kuang.github.io/2019/06/21/%E6%8C%81%E4%B9%85%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/"/>
     <id>http://shelah-kuang.github.io/2019/06/21/持久数据的可靠性/</id>
     <published>2019-06-21T13:41:53.000Z</published>
-    <updated>2019-06-21T13:41:53.405Z</updated>
+    <updated>2019-06-22T09:32:09.043Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><code>Redundant Array of Inexpensive Disks(RAID)</code></strong>: 独立磁盘冗余阵列，通常简称为磁盘阵列</p><p><img src="/2019/06/21/持久数据的可靠性/raid.png"></p><h2 id="评价维度"><a href="#评价维度" class="headerlink" title="评价维度"></a>评价维度</h2><p><strong>capacity</strong>：given a set of N disks each with B blocks, how much useful capacity is available to clients of the RAID</p><p><strong>reliability</strong>：How many disk faults can the given design tolerate</p><p><strong>performance</strong></p><h2 id="RAID-0：striping"><a href="#RAID-0：striping" class="headerlink" title="RAID-0：striping"></a>RAID-0：striping</h2><p>RAID-0 是一种简单的、无数据校验的数据条带化技术。实际上不是一种真正的 RAID ，因为它并不提供任何形式的冗余策略。 </p><p><img src="/2019/06/21/持久数据的可靠性/r0.png" height="75%" width="75%"></p><p>将每一行的block称为是一个<strong>stripe</strong></p><p>也可能是按照chunk来排列，比如一个block为4kb，如果我一个chunk取8kb，将是如下情况：</p><p><img src="/2019/06/21/持久数据的可靠性/r01.png" height="50%" width="50%"></p><h2 id="RAID-1-Mirroring"><a href="#RAID-1-Mirroring" class="headerlink" title="RAID-1:Mirroring"></a>RAID-1:Mirroring</h2><p>RAID-1 采用镜像技术,同时在阵列中产生两个完全相同的数据副本，分布在两个不同的磁盘驱动器组上。镜像提供了完全的数据冗余能力，当一个数据副本失效不可用时，外部系统仍可正常访问另一副本，不会对应用系统运行和性能产生影响。</p><p><img src="/2019/06/21/持久数据的可靠性/r1.png" height="75%" width="75%"></p><h3 id="RAID1-0"><a href="#RAID1-0" class="headerlink" title="RAID1+0"></a>RAID1+0</h3><p><img src="/2019/06/21/持久数据的可靠性/1+0.png"></p><h3 id="RAID0-1"><a href="#RAID0-1" class="headerlink" title="RAID0+1"></a>RAID0+1</h3><p><img src="/2019/06/21/持久数据的可靠性/0+1.png"></p><h2 id="RAID-Level-4-Saving-Space-With-Parity"><a href="#RAID-Level-4-Saving-Space-With-Parity" class="headerlink" title="RAID Level 4: Saving Space With Parity"></a>RAID Level 4: Saving Space With Parity</h2><p><img src="/2019/06/21/持久数据的可靠性/r4.png" height="75%" width="75%"></p><p>对每一bit做奇偶校验存在一个专门的磁盘的对应bit上</p><p>对于sequential write，先计算出P，然后直接一次写一个stripe</p><p>对于random wirte，将面临如何一边写一边改P，对应的有两种方式：<br><strong><code>additive parity</code></strong>: 先将其余盘的所有对应的block读出来然后计算P，然后同时写对应block与P，这样的缺点是当disk比较多的时候需要大量的读次数<br><strong><code>subtractive parity</code></strong>: 就是看要覆盖的block和要写的block对应bit是否相同，如相同，则对应p不变，如不同则翻转p值，即$P_{new} = (C_{old} ⊕ C_{new}) ⊕ P_{old}$<br>在性能分析时，我们分析subtractive parity， 虽然可以并行的读data disk 但是由于parity disk只有一个，故而只能依次来进行（small-write problem），同时每个周期需要读一次写一次，故而只有r/2</p><h2 id="RAID-Level-5-Rotating-Parity"><a href="#RAID-Level-5-Rotating-Parity" class="headerlink" title="RAID Level 5: Rotating Parity"></a>RAID Level 5: Rotating Parity</h2><p><img src="/2019/06/21/持久数据的可靠性/r5.png" height="75%" width="75%"></p><h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>To conclude, if you strictly want performance and do not care about reliability, striping is obviously best. If, however, you want random I/O performance and reliability, mirroring is the best; the cost you pay is in lost capacity. If capacity and reliability are your main goals, then RAID-5 is the winner; the cost you pay is in small-write performance. Finally,if you are always doing sequential I/O and want to maximize capacity,RAID-5 also makes the most sense.</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;&lt;strong&gt;&lt;code&gt;Redundant Array of Inexpensive Disks(RAID)&lt;/code&gt;&lt;/strong&gt;: 独立磁盘冗余阵列，通常简称为磁盘阵列&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/06/21/持久数据的可靠性/raid.p
+      
+    
     </summary>
     
+      <category term="OS" scheme="http://shelah-kuang.github.io/categories/OS/"/>
+    
+    
+      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
     
   </entry>
   
@@ -49,12 +98,26 @@
     <link href="http://shelah-kuang.github.io/2019/06/21/FAT%E4%B8%8Eext2/"/>
     <id>http://shelah-kuang.github.io/2019/06/21/FAT与ext2/</id>
     <published>2019-06-21T13:41:38.000Z</published>
-    <updated>2019-06-21T13:41:38.882Z</updated>
+    <updated>2019-06-22T09:12:27.978Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本blog基本搬运jyy的讲义和slides</p></blockquote><h2 id="FAT"><a href="#FAT" class="headerlink" title="FAT"></a>FAT</h2><p>FAT文件系统的基本思想是使用链表管理所有的数据块。FAT文件系统把若干个连续的扇区(sector)作为一个簇(cluster)</p><p>希望表示一个文件，我们只需要知道：文件的第一块的编号,对于每一块，它下一块的编号</p><p>FAT文件系统专门在磁盘中开辟一个区域(File Allocation Table, FAT)，来存储每一块的下一块编号。除了编号之外，还有两种特殊的编号：free (0, 该块可以使用),EOF (-1, 该块代表了某个文件的末尾)</p><p>缺点是文件系统可能碎片化，不利用I/O优化，lseek需要读取大量FAT数据块</p><h2 id="ext2"><a href="#ext2" class="headerlink" title="ext2"></a>ext2</h2><p>与上一篇博客中的vsfs基本类似</p><p>采用bitmap进行内存管理</p><p>inode中用多个级别的索引（direct blocks、indirect blocks、double indirect…..）</p><p>目录中顺序存储文件/子目录名字 inode编号<br>inode–rec_len–name_len–file_type–name</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;本blog基本搬运jyy的讲义和slides&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;FAT&quot;&gt;&lt;a href=&quot;#FAT&quot; class=&quot;headerlink&quot; title=&quot;FAT&quot;&gt;&lt;/a&gt;FAT&lt;/h2&gt;&lt;p&gt;FAT文件系统的基
+      
+    
     </summary>
     
+      <category term="OS" scheme="http://shelah-kuang.github.io/categories/OS/"/>
+    
+    
+      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
     
   </entry>
   
@@ -63,12 +126,23 @@
     <link href="http://shelah-kuang.github.io/2019/06/21/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
     <id>http://shelah-kuang.github.io/2019/06/21/文件系统/</id>
     <published>2019-06-21T13:41:14.000Z</published>
-    <updated>2019-06-21T13:41:14.953Z</updated>
+    <updated>2019-06-22T08:54:29.100Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>每一个file都有一个<code>low-level name</code>， 一般我们指<strong><code>inode number</code></strong>, </p><p><strong><code>directory</code></strong>：存储a list of pairs  (user-readable name, low-level name)</p><blockquote><p>UNIX/Linux的File System Hierarchy标准规定了文件系统目录树中各个目录的功能：</p><ul><li>/boot - 系统启动数据</li><li>/bin - 应用程序 (bash, ps, grep, …)</li><li>/dev - 设备文件</li><li>/sbin - 系统程序 (mkfs, fdisk, ifconfig, dhclient, …)</li><li>/etc - 配置文件 (= “etcetera”)</li><li>/home - 用户目录</li><li>/lib - 库文件 (libc.so, libpthread.so, …)</li><li>/media - 可移动设备 (cdrom, USB flash ,…)</li><li>/usr - 用户程序 (/usr/bin/, /usr/lib/, /usr/local/)</li><li>/var - 可变文件 (logs, snapshots, …)</li><li>/tmp - 临时文件</li></ul></blockquote><h2 id="File-System-Interface"><a href="#File-System-Interface" class="headerlink" title="File System Interface"></a>File System Interface</h2><h3 id="Creating-files"><a href="#Creating-files" class="headerlink" title="Creating files"></a>Creating files</h3><p>int fd = <strong><code>open</code></strong>(“foo”, O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR|S_IWUSR);</p><p>O_CREAT :creates the file  if it does not exist,<br>O_WRONLY: ensures that the file can only be written to, and,<br>O_TRUNC: if the file already exists, truncates it to a size of zero bytes thus removing any existing<br>content </p><h3 id="Reading-And-Writing-Files"><a href="#Reading-And-Writing-Files" class="headerlink" title="Reading And Writing Files"></a>Reading And Writing Files</h3><p><strong><code>cat</code></strong> :dump the contents of the file to the screen.</p><p>…(还有一些 不想抄了)</p><h3 id="Shared-File-Table-Entries-fork-And-dup"><a href="#Shared-File-Table-Entries-fork-And-dup" class="headerlink" title="Shared File Table Entries: fork() And dup()"></a>Shared File Table Entries: fork() And dup()</h3><p>dup() call allows a process to create a new file descriptor that refers to the same underlying open file as an existing descriptor.</p><h3 id="Writing-Immediately-With-fsync"><a href="#Writing-Immediately-With-fsync" class="headerlink" title="Writing Immediately With fsync()"></a>Writing Immediately With fsync()</h3><p><strong><code>fsync(int fd)</code></strong>. When a process calls fsync() for a particular file descriptor, the file system responds by forcing all dirty (i.e., not yet written) data to disk, for the file referred to by the specified file descriptor.</p><h3 id="rename"><a href="#rename" class="headerlink" title="rename"></a>rename</h3><p><strong><code>rename(char*old, char *new),</code></strong> call is that it is (usually) implemented as an atomic call</p><h3 id="Getting-Information-About-Files"><a href="#Getting-Information-About-Files" class="headerlink" title="Getting Information About Files"></a>Getting Information About Files</h3><p><strong><code>stat()</code></strong> or <strong><code>fstat()</code></strong></p><h3 id="Reading-Directories"><a href="#Reading-Directories" class="headerlink" title="Reading Directories"></a>Reading Directories</h3><p>opendir(), readdir(), and closedir()</p><p>readdir()得到以下结构体：<br><img src="/2019/06/21/文件系统/dirent.png"></p><h3 id="Hard-Links"><a href="#Hard-Links" class="headerlink" title="Hard Links"></a>Hard Links</h3><p><strong><code>link()</code></strong> system call takes two arguments, an old pathname and a new one; when you “link” a new file name to an old one, you essentially create another way to refer to the same file. The command-line program <code>ln</code> is used to do this</p><p>link后的两个指向相同的inode number，对于文件系统而言，对用户可见的名字不同没有关系，因为他们指向相同的内部的结构metadata，这个是根据inode number来查找的</p><p>当你删除一个文件的时候，会调用unlink()，将检查对应inode number对应的reference count（link count），并将其减少1，只有其变为0的时候，才会free掉对应的数据结构</p><h3 id="Symbolic-Links-soft-links"><a href="#Symbolic-Links-soft-links" class="headerlink" title="Symbolic Links(soft links)"></a>Symbolic Links(soft links)</h3><p>The way a symbolic link is formed is by holding the pathname of the linked-to file as the data of the<br>link file</p><h3 id="Making-And-Mounting-A-File-System"><a href="#Making-And-Mounting-A-File-System" class="headerlink" title="Making And Mounting A File System"></a>Making And Mounting A File System</h3><p><strong><code>mkfs</code></strong>：give the tool, as input, a device (such as a disk partition, e.g., /dev/sda1) and a file system type (e.g., ext3), and it simply writes an empty file system, starting with a root directory, onto that disk partition.</p><p><strong><code>mount</code></strong>完成的工作是<strong>把一个设备和一个文件系统实现联系起来，在设备上创建一个文件系统实例，并且把创建的文件系统“放置”到文件系统中的一个路径里</strong>。</p><h2 id="文件系统实现"><a href="#文件系统实现" class="headerlink" title="文件系统实现"></a>文件系统实现</h2><h3 id="VSFS-Very-Simple-File-System"><a href="#VSFS-Very-Simple-File-System" class="headerlink" title="VSFS(Very Simple File System)"></a>VSFS(Very Simple File System)</h3><h4 id="Overall-Organization"><a href="#Overall-Organization" class="headerlink" title="Overall Organization"></a>Overall Organization</h4><p><img src="/2019/06/21/文件系统/rg.png"></p><p>我们假设以4kb为一个block，现在我们假设有一个非常小的disk，只有64个block，考虑其应该有的组成<br>a)  首先必然存储数据且应该是大部分block都存储数据<br>b）对于每一个文件，都应该有一个inode<br>c）需要有一个分配结构来追踪每一个data或者inode的block是否为free，有多种实现方式，如链表，此处采用<code>bitmap</code>的方式，每一个bit为0/1表示对应的block是否被占用，此处应有两个bitmap，data和inode各一个<br>d）一个superblock， 用于存储关于这个文件系统的信息，如有多少各inode和data blocks，inode table从哪里开始等（当挂载一个文件系统的时候，首先读superblock的信息来初始化各种参数）</p><h4 id="File-Organization-The-Inode"><a href="#File-Organization-The-Inode" class="headerlink" title="File Organization: The Inode"></a>File Organization: The Inode</h4><p><strong><code>Inode</code></strong>: index node</p><p>每一个inode都会被一个数字所指代（i-number），在操作系统中，给你这个数字，你可以直接计算出在这个磁盘中对应inode的位置</p><p><img src="/2019/06/21/文件系统/nt.png"></p><p>inode有多种存储方式，如下：</p><ul><li>连续存储在文件系统中的某个区域，这样可以直接根据inode的编号计算出inode在磁盘中的位置，这也是实现文件唯一id的一个途径；（上图采用的方式）</li><li>存储在文件头部，文件唯一id = 第一个数据块的编号；</li><li>存储在目录文件中，文件唯一id = 第一个数据块的编号，在支持链接的文件系统中，文件的元数据会有多份拷贝。</li></ul><p>在inode中，几乎存储了所有关于其对应文件的信息，我们将这些信息称为<strong><code>metadata</code></strong>,</p><p>包括</p><ul><li>文件的唯一id；</li><li>文件的类型，用于区分普通文件和目录文件；</li><li>访问权限，就是大家熟知的rwxrwxrwx；</li><li>所有者信息 (uid, gid)，但这在跨系统访问时成为很大的麻烦；</li><li>文件大小；</li><li>文件访问的时间信息：创建时间、访问时间、修改时间；</li><li>链接数量 (刚才已经提到)；</li><li>一些其他信息，例如文件的第一个数据块的编号等</li></ul><p>一种inode存储的信息示例如下：</p><p><img src="/2019/06/21/文件系统/inode.png" height="75%" width="75%"></p><p>在inode中有一个重要信息是指向文件data所在block的地址的指针，一种实现方式是采用<strong><code>direct pointer</code></strong>，但是这样对于较大的文件，存储在多个不同的block中时会比较麻烦，此时一种方式时采用<strong><code>indirect pointer</code></strong>,这个指针指向一个全部存储对应的direct pointer的block，而如果还要更大的话，则可以采用<strong><code>double indirect pointer</code></strong>(即指向一个全是indirect pointer的block)，如果还要更多，可以以此类推<strong><code>triple indirect pointer</code></strong></p><h4 id="Directory-Organization"><a href="#Directory-Organization" class="headerlink" title="Directory Organization"></a>Directory Organization</h4><p>each entry has an inode number, record length (the total bytes for the name plus any left over space), string length (the actual length of the name), and finally the name of the entry.</p><p>目录同样被操作系统认为是一个文件，有对应的inode，只是inode中其类型为directory</p><h4 id="Free-Space-Management"><a href="#Free-Space-Management" class="headerlink" title="Free Space Management"></a>Free Space Management</h4><p>在vsfs中，用的是bitmap，还可以用链表来实现，现代操作系统中有更多的实现方式如b-tree</p><h4 id="Access-Paths-Reading-and-Writing"><a href="#Access-Paths-Reading-and-Writing" class="headerlink" title="Access Paths: Reading and Writing"></a>Access Paths: Reading and Writing</h4><p>对于一个路径，如果我们想找到对应的文件或目录的inode值，其值一般会存储在其父目录中，而<strong>/</strong>没有父目录，故而一般在unix系统中设置其inode值为2，找到父目录的inode之后，就根据指针找到其data区域，在data中找到其对应文件的入口，找到后，文件系统就获取的该文件的inode number，之后类似的重复直到找到对应文件为止。在open（）操作中，找到文件后，会把文件的inode读入，并在pre-process open-file table中分配一个fd给这个process。</p><p>打开文件后如执行read操作，则会更新inode中的存储的时间变量，然后回更新fd对应的in-memory open file table，修改文件偏移量</p><p>如果要写文件的话，要先读inode，再读bitmap，再写bitmap，分配后再写data，写完后更新inode</p><h3 id="FAT与ext2"><a href="#FAT与ext2" class="headerlink" title="FAT与ext2"></a>FAT与ext2</h3><p>断章了，见下一篇blog</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h2 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;p&gt;每一个file都有一个&lt;code&gt;low-level name&lt;/code&gt;， 一般我们指&lt;strong&gt;&lt;code&gt;ino
+      
+    
     </summary>
     
+      <category term="OS" scheme="http://shelah-kuang.github.io/categories/OS/"/>
+    
+    
+      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
     
   </entry>
   
@@ -413,32 +487,6 @@
     
     
       <category term="-CZ -图论" scheme="http://shelah-kuang.github.io/tags/CZ-%E5%9B%BE%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最大流</title>
-    <link href="http://shelah-kuang.github.io/2018/12/03/%E6%9C%80%E5%A4%A7%E6%B5%81/"/>
-    <id>http://shelah-kuang.github.io/2018/12/03/最大流/</id>
-    <published>2018-12-03T14:25:33.000Z</published>
-    <updated>2018-12-07T13:18:18.357Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)</em></p><p><em>2018.12.7</em></p><p><em>后悔挖坑了，笔记做的太痛苦了</em></p><p>在不违背任何容量限制的情况下，计算从源节点运送物料到汇点的最大速率</p><p><strong>26.1</strong></p><p>流网络：有向图，每条边有一个非负的容量值c，如果边集合包括（u，v），则不包括（v,u）。</p><p>源节点s，汇点 t.</p><p>容量限制：0 ≤ f(u,v) ≤ c(u,v)</p><p>流量守恒：入 = 出</p><p>定义<br>$$<br>|f|=\sum_{v \in V}f(s,v)-\sum_{v \in V}f(v,s)<br>$$<br>如果要用反平行边来模拟一个流问题，必须将其转化为一个等价但是不包括平行边的网络，方式是在两点间新加入一个节点，该节点与 两点的容量与原容量相同。</p><p>对于具有多个源节点和汇点的网络，可以构建一个超级源结点（连接每一个源节点并设置容量c为无穷）和一个超级汇点（连接每一个汇点并设置容量c为无穷）</p><p><strong>26.2   Ford-Fulkerson方法</strong></p><p>给定流网络G 和流量f，残存网络G_f由那些仍有空间对流量进行调整的边构成。设置<strong>残存容量</strong></p><p>$$<br>c_f(u,v)=<br>\begin{cases}<br>c(u,v)-f(u,v)&amp; (u,v)\in E\<br>f(v,u)&amp; (v,u) \in E \<br>0&amp;其他<br>\end{cases}<br>$$<br>若一条边残存容量为0，则其不属于残存网络</p><p>残存网络中的边可能是G中不存在的边，因为我们要增加总流量，所以可能消减某些正向边的流量，为此我们设置一个反向边与其抵消达到消减操作。</p><p><em>TODO() ：公式很定义好长，..做完PA回来打</em></p><p>增广路径p是残存网络中一条从源节点s到汇点t的简单路径。</p><p>称一条增广路径上能够为每条边增加的流量的最大值为p的<strong>残存容量</strong></p><p><em>TODO( )：懒癌发作了</em></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;em&gt;终于…重新开始写blog了，先挖个坑，等看完慢慢补一下….(这个没写完。。只是更新了一下网站界面)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;2018.12.7&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;后悔挖坑了，笔记做的太痛苦了&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;在不违背任何容量限制的情况下
-      
-    
-    </summary>
-    
-    
-      <category term="CLRS" scheme="http://shelah-kuang.github.io/tags/CLRS/"/>
     
   </entry>
   
