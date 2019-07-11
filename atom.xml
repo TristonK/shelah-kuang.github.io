@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shelah-kuang.github.io/"/>
-  <updated>2019-06-22T13:19:32.854Z</updated>
+  <updated>2019-07-03T06:20:16.826Z</updated>
   <id>http://shelah-kuang.github.io/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RL2</title>
+    <link href="http://shelah-kuang.github.io/2019/07/03/RL2/"/>
+    <id>http://shelah-kuang.github.io/2019/07/03/RL2/</id>
+    <published>2019-07-03T06:20:16.000Z</published>
+    <updated>2019-07-03T06:20:16.826Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>强化学习-介绍</title>
+    <link href="http://shelah-kuang.github.io/2019/07/03/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A01/"/>
+    <id>http://shelah-kuang.github.io/2019/07/03/强化学习1/</id>
+    <published>2019-07-03T06:19:50.000Z</published>
+    <updated>2019-07-03T07:40:10.626Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p> 对应教材：Sutton &amp; Barto’s book <a href="http://incompleteideas.net/book/the-book-2nd.html" target="_blank" rel="noopener">Reinforcement Learning: An Introduction (2nd Edition)</a> Chap1</p></blockquote><p>Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numerical reward signal</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt; 对应教材：Sutton &amp;amp; Barto’s book &lt;a href=&quot;http://incompleteideas.net/book/the-book-2nd.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;R
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java学习(1)-基础语法</title>
+    <link href="http://shelah-kuang.github.io/2019/06/27/java%E5%AD%A6%E4%B9%A01/"/>
+    <id>http://shelah-kuang.github.io/2019/06/27/java学习1/</id>
+    <published>2019-06-27T15:19:57.000Z</published>
+    <updated>2019-06-27T16:04:19.257Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>教材：Core Java Volume I-Fundamentals (10th edition)</p></blockquote><blockquote><p>Tips:   对于有c++基础的同学而言，这一章挺简单的，建议瞟一眼跳了就行</p></blockquote><h2 id="一个简单的java程序"><a href="#一个简单的java程序" class="headerlink" title="一个简单的java程序"></a>一个简单的java程序</h2><p>源代码的文件名必须与公共类的文件名字相同，并用<code>.java</code>作为文件扩展名</p><p>java中的main函数必须是静态的</p><p>java中的所有函数都属于某个类的方法</p><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>与c++一致 <code>\\</code> <code>\**\</code></p><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="整形"><a href="#整形" class="headerlink" title="整形"></a>整形</h3><p><strong>byte：</strong></p><ul><li>byte 数据类型是8位、有符号的，以二进制补码表示的整数；</li><li>最小值是 <strong>-128（-2^7）</strong>；</li><li>最大值是 <strong>127（2^7-1）</strong>；</li><li>默认值是 <strong>0</strong>；</li></ul><p><strong>short：</strong></p><ul><li>short 数据类型是 16 位、有符号的以二进制补码表示的整数</li><li>最小值是 <strong>-32768（-2^15）</strong>；</li><li>最大值是 <strong>32767（2^15 - 1）</strong>；</li><li>默认值是 <strong>0</strong>；</li></ul><p><strong>int：</strong></p><ul><li>int 数据类型是32位、有符号的以二进制补码表示的整数；</li><li>最小值是 <strong>-2,147,483,648（-2^31）</strong>；</li><li>最大值是 <strong>2,147,483,647（2^31 - 1）</strong>；</li><li>一般地整型变量默认为 int 类型；</li><li>默认值是 <strong>0</strong> ；</li></ul><p><strong>long：</strong></p><ul><li>long 数据类型是 64 位、有符号的以二进制补码表示的整数；</li><li>最小值是 <strong>-9,223,372,036,854,775,808（-2^63）</strong>；</li><li>最大值是 <strong>9,223,372,036,854,775,807（2^63 -1）</strong>；</li><li>默认值是 <strong>0L</strong>；</li></ul><p><strong>java 整型变量大小与平台无关（32位/64位），且不存在无符号整数类型</strong></p><p>在java7之后可以给数字字面加上下划线更加易读，如<code>1_000_000</code>表示1百万，编译器会去掉这些下划线</p><h4 id="8-16-2进制表示"><a href="#8-16-2进制表示" class="headerlink" title="8/16/2进制表示"></a>8/16/2进制表示</h4><p>十六进制<code>0x</code> 或者<code>0X</code></p><p> 八进制：前缀0（易混淆不建议使用）</p><p>二进制：从java7开始，可以用<code>0b</code>或<code>0B</code>开头表示二进制</p><h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><p>float：+/- 3.40282347E+38F （有效数字6-7位）</p><p>double：+/- 1.79769313486231570E + 308 (有效数字15位)</p><p>float类型的数值有一个后缀<code>f</code>或<code>F</code>，没有后缀的浮点数值默认为double类型</p><p><code>Double.POSITIVE_INFINITY</code> 表示正无穷大， <code>Double_NEGATIVE_INFINITY</code>表示负无穷大， <code>Double.NaN</code>表示不是一个数字（但是注意不能直接用<code>==</code>来检测一个值是不是NaN，这个判断是永不成立的，应当使用<code>Double.isNaN()</code>方法）</p><h3 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h3><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><h3 id="读取输入"><a href="#读取输入" class="headerlink" title="读取输入"></a>读取输入</h3><h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>输出后换行：<code>System.out.println()</code><br>输出后不换行：<code>System.out.print()</code></p><h2 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a>控制流程</h2><h2 id="大数值"><a href="#大数值" class="headerlink" title="大数值"></a>大数值</h2><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;教材：Core Java Volume I-Fundamentals (10th edition)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tips:   对于有c++基础的同学而言，这一章挺简单的，建议瞟一眼跳了就行&lt;
+      
+    
+    </summary>
+    
+      <category term="coding" scheme="http://shelah-kuang.github.io/categories/coding/"/>
+    
+    
+      <category term="-java" scheme="http://shelah-kuang.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>终端与shell</title>
@@ -416,77 +481,6 @@
     
     
       <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>近代史复习</title>
-    <link href="http://shelah-kuang.github.io/2018/12/28/%E8%BF%91%E4%BB%A3%E5%8F%B2%E5%A4%8D%E4%B9%A0/"/>
-    <id>http://shelah-kuang.github.io/2018/12/28/近代史复习/</id>
-    <published>2018-12-28T12:12:01.000Z</published>
-    <updated>2019-01-15T09:16:26.059Z</updated>
-    
-    <content type="html"><![CDATA[<p>开坑开坑 ，一日一更，大概一天三到四个知识点的样子似乎刚刚好卡到考试前</p><p>文中引用部分为<a href="https://mengzelev.github.io/" target="_blank" rel="noopener">mengzelev</a>与<a href="https://marukohe.github.io/" target="_blank" rel="noopener">hw巨巨</a>所总结的部分</p><p><strong>考试时间</strong> ：1.3   16:30-18:30</p><p><strong>考试题型</strong>：名词解释   简答题  论述题</p><p><strong>近代史重点大纲</strong>：</p><ul><li><p>[x]  不平等条约：南京条约 马关条约 辛丑条约 </p></li><li><p>[x]  领事裁判权</p></li><li><p>[x] 早期维新思想的代表人物以及看法</p></li><li><p>[x]  太平天国 天朝田亩制度</p></li><li><p>[x] 洋务运动的历史作用</p></li><li><p>[x]  清末的新政</p></li><li><p>[x]  同盟会</p></li><li><p>[x]  新文化运动的口号</p></li><li><p>[x]  国共合作  如何形成  如何破裂</p></li><li><p>[x]  北伐</p></li><li><p>[x] 南昌起义</p></li><li><p>[x]  伪满政权</p></li><li><p>[x]  抗争初期 上海 八百壮士 </p></li></ul><p><strong>知识点清单</strong></p><h4 id="几个不平等条约"><a href="#几个不平等条约" class="headerlink" title="几个不平等条约"></a>几个不平等条约</h4><p>这个不知道怎么整理，先附上网址吧，感觉讲的还比较详细了</p><h5 id="南京条约"><a href="#南京条约" class="headerlink" title="南京条约"></a>南京条约</h5><p>部分内容：</p><ul><li><p>大清和英国停战并缔结永久和平及对等关系。</p></li><li><p>清政府向英方开放沿海的广州、福州、厦门、宁波、上海五处港口，进行贸易通商。</p></li><li><p>清政府将香港岛割让予英国治理。</p></li><li><p>清政府向英国共赔偿2千1百万银圆。</p></li><li><p>两国各自释放对方军民。</p></li><li><p>英军撤出南京、定海等处江面和岛屿。</p></li><li><p>两国共同订立进出口关税。</p><p><a href="https://zh.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E6%9D%A1%E7%BA%A6" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E6%9D%A1%E7%BA%A6</a></p></li></ul><blockquote><h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><ul><li>1842年</li></ul><h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><ul><li>割地：割香港岛给英国</li><li>赔款：赔偿英国2100万银元</li><li>开五口： 开放广州、厦门、福州、宁波、上海五个通商口岸</li><li>协定关税：英商进出口货物缴纳的关税，中国须与英国商定</li></ul><h3 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h3><ul><li>是近代西方资本主义国家强加在中国人民身上的第一个不平等条约</li><li>英国以武力侵略的方式迫使中国接受其侵略要求，使中国主权国家的独立地位遭到了破坏</li><li>英国强占香港岛，损害了中国领土的完整</li><li>通商口岸成为西方资本主义对中国进行殖民掠夺和不等价交换的中心</li><li>巨额赔款加重了清政府的财政负担，使劳动人民的生活更加艰苦</li><li>《南京条约》签订后，西方列强趁火打劫，相继强迫清政府签订了一系列不平等条约。</li><li>从此中国逐步沦为半殖民地半封建社会。</li></ul></blockquote><h5 id="马关条约"><a href="#马关条约" class="headerlink" title="马关条约"></a>马关条约</h5><blockquote><h3 id="时间-1"><a href="#时间-1" class="headerlink" title="时间"></a>时间</h3><ul><li>1895年</li></ul><h3 id="内容-1"><a href="#内容-1" class="headerlink" title="内容"></a>内容</h3><ul><li>割地：割辽东半岛、台湾及其附属岛屿、澎湖列岛给日本</li><li>赔款：赔偿日本军费2亿两白银</li><li>开四口：开沙市、重庆、苏州、杭州为商埠</li><li>日本可以在中国通商口岸投资设厂，产品运销中国内地面的内地税</li></ul><h3 id="意义-1"><a href="#意义-1" class="headerlink" title="意义"></a>意义</h3><ul><li>掀起了帝国主义瓜分中国的狂潮</li><li>赔款加重了人民的负担</li><li>列强势力进一步深入中国内地</li><li>阻碍了中国民间资本主义的发展</li><li>中国半殖民地化程度大大加深</li></ul></blockquote><p><a href="https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%85%B3%E6%9D%A1%E7%BA%A6" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%85%B3%E6%9D%A1%E7%BA%A6</a></p><h5 id="辛丑条约"><a href="#辛丑条约" class="headerlink" title="辛丑条约"></a>辛丑条约</h5><p>是大清帝国与英国、美国、日本、俄国、法国、德国、意大利、奥匈、比利时、西班牙和荷兰十一国在义和团运动结束、八国联军攻入北京后签定的一个和平协定。是中国近代史上赔款数目最庞大，皇权丧失最严重的条约。</p><blockquote><h3 id="时间-2"><a href="#时间-2" class="headerlink" title="时间"></a>时间</h3><ul><li>1901年</li></ul><h3 id="内容-2"><a href="#内容-2" class="headerlink" title="内容"></a>内容</h3><ul><li>中国向各国赔偿白银4.5亿两，分39年还清，本息合计</li><li>拆毁北京至大沽的炮台，准许各国派兵驻守北京至山海关沿线的铁路</li><li>划定北京东交民巷为“使馆界”，界内不允许中国人居住，由各国派兵保护</li><li>惩办义和团中参加反帝斗争的官吏，永远禁止中国人民成立反帝性质的组织，对反帝运动镇压不力的官员，“即行革职，记不叙用”</li><li>改总理衙门为外务部，位居六部之首</li></ul><h3 id="意义-2"><a href="#意义-2" class="headerlink" title="意义"></a>意义</h3><ul><li>巨额赔款本息合计达白银9.8亿两,给中国人民增加了新的负担</li><li>关于禁止中国人民反侵略和允许帝国主义在华驻军的规定,严重损害了中国主权</li><li>清政府完全成为帝国主义统治中国的工具</li><li>中国完全沦为半殖民地半封建社会</li></ul></blockquote><p><a href="https://zh.wikipedia.org/wiki/%E8%BE%9B%E4%B8%91%E6%9D%A1%E7%BA%A6" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E8%BE%9B%E4%B8%91%E6%9D%A1%E7%BA%A6</a></p><hr><h4 id="领事裁判权"><a href="#领事裁判权" class="headerlink" title="领事裁判权"></a>领事裁判权</h4><p>1843年中英《五口通商章程》裁定，在通商口岸，中国人如与英侨“遇有交涉诉讼”，英国领事有“查察”“听诉”之权，英国人如何治罪，由英国议定章程、法律，发给管事官照办。</p><p>1844年中美《望厦条约》，扩大了领事裁判权的范围，所有美国人在华一切之民事、刑事诉讼，均由本国领事等官询明办理</p><p>wiki：<strong>领事裁判权</strong>（英语：consular jurisdiction）即在一国家内，非该国籍人士在当地犯罪，可不接受该国法律审判，而审判权归属于外国派来的领事官。</p><hr><h4 id="早期维新思想的代表人物及其看法"><a href="#早期维新思想的代表人物及其看法" class="headerlink" title="早期维新思想的代表人物及其看法"></a>早期维新思想的代表人物及其看法</h4><blockquote><ul><li>王韬、薛福成、马建忠、郑观应：主张学习西放先进的科学技术，同时也要求吸纳西方的政治、经济学说。他们的共同特点，就是具有比较强烈的反对外国侵略、追求中国独立富强的爱国思想，以及具有一定程度反对封建专制的民主思想。如，郑观应在所著《盛世危言》中提出大力发证民族工商业，同西方国家进行“商战”，设立议院，实行“君民共主”制度等主张。这些主张具有重要的思想启蒙的意义。</li></ul></blockquote><hr><h4 id="太平天国的天朝田亩制度"><a href="#太平天国的天朝田亩制度" class="headerlink" title="太平天国的天朝田亩制度"></a>太平天国的天朝田亩制度</h4><p><strong>时间</strong></p><p>太平天国定都天京后（1853年）</p><p><strong><code>天朝田亩制度是最能体现太平天国社会理想与这次农民起义特色的纲领性文件</code></strong></p><p><strong>内容</strong></p><p>确立了平均分配土地的方案，“凡天下田，天下人同耕”，按人口平均分配土地</p><p><strong>目的</strong></p><p>其图建立理想社会，这个制度实际上是一个以<strong>解决土地问题</strong>为中心的比较完整的社会改革方案</p><p><strong>意义</strong></p><ul><li>从根本上否定了封建社会的基础，即封建地主的土地所有制，体现了广大农民要求平均分配土地的强烈愿望，是对以往的农民战争中“均贫富，等贵贱”，“均平”“均田”思想的发展与超越，具有进步意义。</li><li>（失败原因）但是其没有超过农民小生产者的狭隘眼界。其所描绘的理想天国仍然是闭塞的自给自足的自然经济，是小农业与家庭手工夜所相结合的传统生活方式，同时也是一个没有商品交换与绝对平均的社会。很大程度上具有不切实际的空想的性质。</li></ul><hr><h4 id="洋务运动的历史作用"><a href="#洋务运动的历史作用" class="headerlink" title="洋务运动的历史作用"></a>洋务运动的历史作用</h4><ul><li>提出了自强、求富的主张，通过所掌握的国家权力集中力量优先发展军事工业，同时也试图发展若干民用企业，<code>在客观上对中国的早期工业和民族资本主义的发展起了某些促进作用</code>,<em>但是其主要目的是维护封建统治，而不是要使中国朝着独立的资本主义方向发展</em></li><li>开办了一批新式学堂，派出了最早的官派留学生，这是<code>中国近代教育的开始</code>。</li><li>翻译了一批书籍，给当时的中国带来了新的知识，使人们开阔了眼界</li><li>随着资本主义生产方式的出现，传统的“重农抑商”的观念受到冲击，<code>社会风气与价值观念发生了变化</code>,工商业者的地位上升。</li><li>对一部分人而言，其将西方的技术与器物视为模仿与学习的对象，这有利于资本主义的发展与社会风气的改变。</li></ul><hr><h4 id="清末的新政"><a href="#清末的新政" class="headerlink" title="清末的新政"></a>清末的新政</h4><p><strong>背景</strong></p><p>1901年辛丑条约的牵动标志着慈禧为首的清政府放弃了抵抗外国侵略者的念头，也使得国人对清政府更加失望，国内要求改革的呼声日渐高涨，清政府内外交困</p><p><strong>时间</strong></p><p>1901年4月成立督办政务处，宣布实施新政</p><p><strong>措施</strong></p><ul><li>设立商务部、学部、巡警部等中央行政机构</li><li>裁撤绿营，建立新军</li><li>颁布商法商律，奖励工商</li><li>鼓励留学，颁布新的学制，并下令从1906年起废除科举考试</li><li>迫于内外压力，清政府又于1906年宣布“预备仿行宪政”，并于1908年颁布了《钦定宪法大纲》，制定了一个仿效日本实行君主立宪的方案，但又规定了9年的预备立宪期限。</li></ul><p><strong>最终结果与失败原因</strong></p><p>不仅没有挽救清王朝，反而激化了社会矛盾，加重了危机，其主要原因在于清政府改革的根本目的是为了延续其反动统治。不仅没有答应资产阶级立宪派的关于立即召开国会的请求，还镇压了立宪派的国会请愿活动，并借立宪的目的巩固皇权。这不仅使立宪派大失所望，还使得统治集团内部的满汉矛盾和中央与地方之间的矛盾日渐尖锐而分离崩析。</p><hr><h4 id="同盟会"><a href="#同盟会" class="headerlink" title="同盟会"></a>同盟会</h4><p><strong>时间</strong></p><p>1905年8月20日</p><p><strong>相关事件</strong></p><p>孙中山、黄兴、宋教仁等人在日本东京成立中国同盟会，孙中山被公举为总理，黄兴被任命执行部庶务</p><p>同盟会以<strong><code>《民报》</code></strong>为机关报，并确认革命纲领。</p><p><strong>同盟会的政治纲领</strong></p><p><code>驱除鞑虏，恢复中华，创立民国，平均地权</code></p><p><strong>三民主义</strong></p><p>1905年11月，孙中山将其纲领概括为民族主义（驱除鞑虏，恢复中华），民权主义（创立民国），民生主义（平均地权），后被称为三民主义</p><p><strong>意义</strong></p><p>近代中国<code>第一个</code>领导<code>资产阶级革命</code>的全国性政党</p><p>他的成立标志着中国资产阶级民主革命进入了一个新的阶段</p><hr><h4 id="新文化运动的口号"><a href="#新文化运动的口号" class="headerlink" title="新文化运动的口号"></a>新文化运动的口号</h4><p><em>陈独秀等人把主要的注意力集中在了清除旧思想方面，改造国民性，故而新文化运动的倡导者提出了<code>破除迷信</code>的口号，以反对旧道德提倡新道德、反对旧文学提倡新文学为文化革命的两大旗帜。</em></p><p><strong>基本口号</strong>：<code>民主与科学</code>，即所谓的拥护德先生与赛先生</p><p><strong>具体含义</strong>：</p><p>民主： 资产阶级民主主义的制度、资产阶级民主主义的思想</p><p>科学：狭义的是自然科学，广义的是社会科学，用自然科学一样的科学精神与科学方法来研究社会（但是他也把创造进化论等资产阶级唯心主义思想体系算作了科学的范畴）</p><p><em>目的：在中国“建设西洋式之新国家”</em></p><hr><h4 id="国共合作-如何形成-如何破裂"><a href="#国共合作-如何形成-如何破裂" class="headerlink" title="国共合作  如何形成  如何破裂"></a>国共合作  如何形成  如何破裂</h4><h6 id="国共合作的形成"><a href="#国共合作的形成" class="headerlink" title="国共合作的形成"></a>国共合作的形成</h6><ul><li>1923年2月7日京汉铁路罢工遭到了北洋政府的血腥镇压，中国工人运动暂时转入了低潮，中国共产党认识到，中国无产阶级单凭自己一个阶级的力量是无法取得胜利的，他们必须要在各种不同情形下团结一切可能团结的革命阶层与与阶级</li><li>中国当时现存的政党中，只有国民党是比较革命的民主派，于是决定首先争取与国民党合作</li><li>孙中山在晚年的时候，在俄国十月革命与五四运动的影响下，在苏俄、共产国际与中国共产党的帮助下，实现了伟大的思想转变。欢迎共产党人与其合作，欢迎苏联援助中国革命，实行联俄、联共、扶助农工三大政策。</li><li>中国共产党在二大提出实行“党外合作”（即所有合作均不涉及党内事务），但共产国际驻华代表马林却倡议实行“党内合作”（即中国共产党员以个人身份加入中国国民党），把中国国民党改造为各革命阶级联盟。</li><li><strong><code>国民党一大的召开，标志着第一次国共合作的形成</code></strong></li></ul><h6 id="国共合作的破裂"><a href="#国共合作的破裂" class="headerlink" title="国共合作的破裂"></a>国共合作的破裂</h6><ul><li>1926年三月蒋介石制造了“中山舰事件”，打击共产党与工农力量</li><li>1927年4月12日，蒋介石在上海发动了反共政变，以“清党”为名，在东南各省大规模捕杀共产党员和革命群众</li><li>同年7月15日，当时任武汉国民政府主席的汪精卫在武汉召开“分共”会议，并在其辖区内对共产党员和革命群众实行搜捕和屠杀，<strong><code>国共合作全面破裂</code></strong></li></ul><h6 id="大革命失败的原因（亦能算作合作破裂原因）"><a href="#大革命失败的原因（亦能算作合作破裂原因）" class="headerlink" title="大革命失败的原因（亦能算作合作破裂原因）"></a>大革命失败的原因（亦能算作合作破裂原因）</h6><ul><li>客观来说<ul><li>反革命力量的强大，资产阶级发生严重的动摇，统一战线出现剧烈的分化</li><li>蒋介石集团、汪精卫集团被帝国主义势力和地主阶级、买办资产姐姐拉近反革命营垒里去了</li></ul></li></ul><ul><li>主观来看<ul><li>中国共产党的中央领导机关在大革命的后期犯了以陈独秀为代表的右倾机会主义错误，放弃无产阶级对与农民、城市小资产阶级与民族资产阶级的领导权，尤其是武装力量的领导权</li><li>中国共产党还处于年幼时期，没有经验，缺乏对于中国社会与中国革命问题的深刻认识，还不善于将马克思列宁主义的基本原理与中国革命的时间结合起来，同时幼年的中国共产党还难以摆脱共产国际的那些错误的指导思想，导致了右倾机会主义 在大革命后期在中共领导机关中占据了通知地位</li></ul></li></ul><hr><h4 id="北伐"><a href="#北伐" class="headerlink" title="北伐"></a>北伐</h4><p><em>关于北伐与大革命的说明</em></p><blockquote><p>观点一(来源：维基百科)</p><p><strong>国民革命军北伐</strong>，又称<strong>国民政府北伐</strong>、<strong>中国国民党北伐</strong>、<strong>国民大革命</strong></p><p>观点二（来源：腾讯新闻）</p><p>这场“大革命”，包括政治革命和社会革命两个部分，前者指的是通过军事北伐推翻北洋军阀政权；后者则是指工、农群众运动。前者大致上处在国民党的控制之下；后者则完全由中共包办。</p></blockquote><h5 id="时间-3"><a href="#时间-3" class="headerlink" title="时间"></a>时间</h5><ul><li>1926年7月</li></ul><h5 id="内容-3"><a href="#内容-3" class="headerlink" title="内容"></a>内容</h5><ul><li>国民革命军 vs 北洋军阀吴佩孚、孙传芳、张作霖</li><li>目标：推翻北洋军阀统治</li></ul><h5 id="意义-3"><a href="#意义-3" class="headerlink" title="意义"></a>意义</h5><ul><li>随着北伐的胜利进军，中国形成了历史上空前广大的人民解放运动。</li><li>帝国主义、封建主义的统治收到了严重的打击。</li><li>1925年至1927年的中国反帝反封建的革命，比之以往任何一次革命，包括辛亥革命和五四运动，群众的动员程度更为广泛，斗争的规模更为宏伟，革命的社会内涵更为深刻，因此被称作大革命。</li><li>这场失败的革命，实际上是迎接未来革命胜利的一次伟大演习。因为正是在这个时期，中国共产党人开始探索马克思主义中国化的途径，初步提出了无产阶级领导的、人民大众的、反帝反封建的新民主主义革命的基本思想，并且从大革命的失败中汲取了严重的历史教训，开始懂得进行土地革命和掌握革命武装的重要性。也正是由于经历了这场大革命，中国人民的觉悟程度和组织程度有了明显的提高，中国共产党开始掌握了一部分革命武装。所有这些，为把中国革命推进到一个新的阶段——土地革命战争阶段准备了必要的条件。</li></ul><h5 id="大革命中的中国共产党"><a href="#大革命中的中国共产党" class="headerlink" title="大革命中的中国共产党"></a>大革命中的中国共产党</h5><ul><li>大革命实在反对帝国主义、反对军阀的政治口号下进行的，而提出这个口号的正是中国共产党。</li><li>大革命是在以国共合作为基础的统一战线的组织形式线下进行的，而中国共产党也是国共合作的倡导者与统一战线的组织者</li><li>大革命是近代中国历史上空前广发而深刻的群众运动，而中国共产党是人民群众的主要发动者与组织者</li><li>大革命的主要斗争形式是革命战争，共产党人不仅帮助与推动了国民革命军的建立并进行了卓有成效的政治工作，并在战斗中身先士卒起到了先锋作用与表率作用。</li></ul><hr><h4 id="南昌起义"><a href="#南昌起义" class="headerlink" title="南昌起义"></a>南昌起义</h4><p>南昌起义指在1927年8月1日以周恩来为书记等率领共产党掌握或者影响下的北伐军2万多人在南昌举行的武装起义，这次起义打响了武装反抗国民党反动统治的第一枪，是中国共产党独立领导革命战争、创建人民军队和武装夺取政权的开端。</p><hr><h4 id="伪满政权"><a href="#伪满政权" class="headerlink" title="伪满政权"></a>伪满政权</h4><p>1931年日本占领了东北后，开始了对东北长达14年的殖民统治。</p><p>伪满洲国（1932年3月1日－1945年8月18日），是日本占领中国东北三省后，所扶植的一个傀儡伪政权。因国民政府和中共及国际社会对伪满政权均不予承认，故被称作“伪满洲国”（まんしゅうこく（嗯，假装自己有文化的样子））或“伪满”。</p><p>这是<strong><code>日本军国主义侵略势力与中国封建复辟残余势力相结合而催生出来的一个怪胎</code></strong>，其在“日满共同防卫”的借口下，确认日本在东北的一切权益</p><p>“伪满洲国”初期为“共和”体制，不久后以立清废帝溥仪为“元首”，初期称号为“执政”，两年后改称“皇帝”</p><hr><h4 id="抗争初期-上海-八百壮士"><a href="#抗争初期-上海-八百壮士" class="headerlink" title="抗争初期 上海 八百壮士"></a>抗争初期 上海 八百壮士</h4><p>八百壮士指的是在1937年10月26日淞沪会战中，第88师第524团团附谢晋元率孤军据守四行仓库，被上海市民誉为“八百壮士”。</p><blockquote><p>来源：百度百科</p><p>（P.S. 在一部分近代史应试上，百度百科真的比维基棒太多了！）</p><p>1937年8月13日，日军大举进攻上海(八一三事变)。战役进行到最后阶段，10月26日晚，守卫大场防线的中华民国国民革命军陆军第88师第524团400余人(报界宣传称“八百壮士”)，在副团长谢晋元指挥下，奉命据守苏州河北岸的四行仓库。 在日军的重重包围下，守卫四行仓库的“八百壮士”孤军奋战4昼夜。战至30日，接到撤退命令后，他们冲出重围，退入公共租界，困守孤军营。</p><p>一直到27日凌晨3点，从前线撤退到四行仓库参加掩护的共计420人，为了迷惑敌人，谢晋元对外仍用团的番号称有800人，八百壮士由此得名。</p></blockquote><hr><blockquote><p><strong>打开支付宝首页搜“627112961”领红包，领到大红包的小伙伴赶紧使用哦！</strong></p></blockquote><p><img src="/2018/12/28/近代史复习/D:/Git\blog\blog\source\_posts\近代史复习\hb1.jpg" style="zoom:50%"></p><p>考题回忆</p><p>1.名词解释6*5</p><p>天朝田亩制度     八百壮士   马关条约   北伐    领事裁判权</p><p>2.简答 15*2</p><p>1）洋务运动的作用</p><p>2）中国参与一战 的原因与形式</p><p>3.论述 40</p><p>国共第一次合作的过程</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;开坑开坑 ，一日一更，大概一天三到四个知识点的样子似乎刚刚好卡到考试前&lt;/p&gt;
-&lt;p&gt;文中引用部分为&lt;a href=&quot;https://mengzelev.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;mengzelev&lt;/a&gt;与&lt;a 
-      
-    
-    </summary>
-    
-    
-      <category term="-review" scheme="http://shelah-kuang.github.io/tags/review/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>矩阵计算</title>
-    <link href="http://shelah-kuang.github.io/2018/12/15/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97/"/>
-    <id>http://shelah-kuang.github.io/2018/12/15/矩阵计算/</id>
-    <published>2018-12-15T14:47:37.000Z</published>
-    <updated>2018-12-19T12:24:18.480Z</updated>
-    
-    <content type="html"><![CDATA[<p>这一章  毫无打字的想法  最讨厌打公式了的说(╯°Д°)╯︵┻━┻</p><h3 id="28-1-求解线性方程组"><a href="#28-1-求解线性方程组" class="headerlink" title="28.1 求解线性方程组"></a>28.1 求解线性方程组</h3><p>对于线性方程组，设$A=(a_{ij}),x=(x_i),b=(b_i)$,记为   $Ax=b$, 若A为非奇异矩阵，则其具有逆向量，于是$x=A^{-1}b$ 是其解向量。若A的秩为n， 若方程数目少于n，则其是<strong><code>欠定的</code></strong>，若多于，则为<strong><code>超定的</code></strong></p><h6 id="LUP分解综述"><a href="#LUP分解综述" class="headerlink" title="LUP分解综述"></a>LUP分解综述</h6><p>LUP分解就是要找到三个$n \times n$ 的矩阵L,U,P，从而满足 $PA=LU$, 其中L是一个单位下三角矩阵，U是一个上三角矩阵，P是一个置换矩阵。满足要求的L,U,P被称为是矩阵A的<strong><code>LUP分解</code></strong>，每一个非奇异矩阵A都有这样一种分解。</p><p>求解Ax=b时，将其转化为$LUx=Pb$,  进而设$y=Ux$,  通过<strong><code>正向替换</code></strong>的方法求解下三角系统$Ly=Pb$ 得到未知向量y,  然后通过一种<strong><code>反向替换</code></strong>的方法来求解上三角系统$Ux=y$ 得到未知向量x，此时的x就是解向量。</p><h5 id="正向替换与反向替换"><a href="#正向替换与反向替换" class="headerlink" title="正向替换与反向替换"></a>正向替换与反向替换</h5><p><img src="/2018/12/15/矩阵计算/D:/blogpic\jzjs-1.png" alt="jzjs-1">                            </p><p>重写等式，替换，代入。</p><p><img src="/2018/12/15/矩阵计算/D:/blogpic\jzjs-2.png" alt="jzjs-2"></p><p>上算法中，我们假定维数n出现在属性L.rows中，置换矩阵P使用数组$\pi$表示</p><p><strong>计算一个LU分解</strong></p><p>分解$A=LU$, 我们利用<strong><code>高斯消元法</code></strong>来创建一个LU分解</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;这一章  毫无打字的想法  最讨厌打公式了的说(╯°Д°)╯︵┻━┻&lt;/p&gt;
-&lt;h3 id=&quot;28-1-求解线性方程组&quot;&gt;&lt;a href=&quot;#28-1-求解线性方程组&quot; class=&quot;headerlink&quot; title=&quot;28.1 求解线性方程组&quot;&gt;&lt;/a&gt;28.1 求解线
-      
-    
-    </summary>
-    
-    
-      <category term="-CLRS" scheme="http://shelah-kuang.github.io/tags/CLRS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>平面图与图着色</title>
-    <link href="http://shelah-kuang.github.io/2018/12/11/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%8E%E5%9B%BE%E7%9D%80%E8%89%B2/"/>
-    <id>http://shelah-kuang.github.io/2018/12/11/平面图与图着色/</id>
-    <published>2018-12-11T08:09:50.000Z</published>
-    <updated>2018-12-14T14:37:32.679Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="CZ-9-1-平面图"><a href="#CZ-9-1-平面图" class="headerlink" title="CZ 9.1 平面图"></a>CZ 9.1 平面图</h3><p>若G<strong>能够</strong>花在一个平面上使得任何两条边都不交叉，称G为一个<strong><code>平面图(planar graph)</code></strong>，若G<strong>已经</strong>被画在了一个平面上，且任意两条边不交叉，则称G为    <strong><code>平图(plane graph)</code></strong>。</p><p>一个平图把平面分为一些连通片，这些连通片被称为<strong><code>区域(regions)</code></strong>, 在每个平图中总有一个区域是无界的，该区域称为<strong>外区域</strong>，在一个平图中，顶点与边都与某个给定区域R相关联的子图称为是R的<strong><code>边界</code></strong>.</p><blockquote><p>如果G是一个至少含有三条边的连通平图，则G的每个区域的边界至少有三条边</p></blockquote><blockquote><p><strong>定理9.1 Euler恒等式 </strong>：</p><p>如果G是一个阶为n，边数为m且含有r个区域的连通平图，则n-m+r = 2</p></blockquote><p>​     [最小反例证法]</p><p>​     –&gt; 若G是树，显然成立</p><p>​    —&gt; 若G不是树，取一个含有最小边数且不满足Euler等式的图G，则存在一不是割边的边e，而G-e满足Euler等式，…</p><blockquote><p><strong>定理9.2</strong></p><p>如果G是一个阶为$n\geq 3$且边数为m的平面图，则有$m\leq 3n-6$</p></blockquote><p>​    [直接证法] 计算每个区域的边数之和，割边只计算一次，非割边将计数两次，利用欧拉恒等式构建</p><p>可以利用定理9.2证明有些图不是平面的</p><blockquote><p><strong>推论9.3</strong></p><p>每个平面图都含有一个度小于或等于5的顶点</p></blockquote><p>​    [逆否证法] </p><blockquote><p><strong>推论9.4</strong></p><p>完全图$K_5$是非平面的</p></blockquote><p>若G是平面的，且在G的任意两个不邻接的顶点之间添加一条边就可以产生一个非平面，则称G 是<strong><code>极大平面的(maximal planar)</code></strong>，另一种表述形式是：若G是平面的，但G不是其他任何平面图的一个生成子图</p><blockquote><p><strong>定理9.5</strong></p><p>图$K_{3,3}$是非平面的</p></blockquote><p>​    [反证法] 利用欧拉恒等式，求出其区域数是5，然后计算每个区域的边数之和为2m，再根据其每个区域都不是三角形得出其边数和大于20，即$m\geq 10$,与m值矛盾   </p><p>如果有一个或者多个度为2的顶点插入到了G的一条或者多条边中，则称G‘是G的一个<strong><code>细分(subdivision)</code></strong>    </p><blockquote><p><strong>定理9.7 Kuratowski定理</strong></p><p>一个图G是平面的当且仅当G不含$K_5，K_{3，3}$，或者是$K_5，K_{3，3}$的一个细分作为子图</p></blockquote><h3 id="CZ-10-1-顶点染色"><a href="#CZ-10-1-顶点染色" class="headerlink" title="CZ 10.1 顶点染色"></a>CZ 10.1 顶点染色</h3><p>地图的<strong><code>对偶</code></strong>是指将一个地图上的一个区域视为图G中的一个点，区域相邻即对应的两个顶点是邻接的，每张地图的对偶都是平面图</p><p>图的一个<strong><code>真染色(proper coloring)</code></strong>,或简称为<strong><code>染色(coloring)</code></strong>，指的是给图G每个顶点分配颜色且邻接顶点颜色不同，在所有染色中，使用颜色最少的颜色数称为是<strong><code>色数(chromatic number)</code></strong>, 记为<strong>$\chi (G)$</strong>, 若能用k中颜色的集合给G染色，则称G是<strong><code>k可染色的(k-colorable)</code></strong>,若$\chi(G)=k$,则也称G是<strong><code>k色的(k-chromatic)</code></strong>的，且G的每个k染色都是G的<strong><code>最小染色(minimum coloring)</code></strong></p><blockquote><p><strong>定理10.1 四色定理</strong></p><p>每个平面图的色数至多是4</p></blockquote><p>$\chi(G)=1$当且仅当$G \cong \overline{K_n}$(n阶空图)</p><p>若顶点集 S中任意两个顶点不邻接，则称其是独立的，最大独立集的点独立数记为$\alpha(G)$,</p><p>若G是一个k色图，则可以把V(G)划分为k个独立集，此时这些独立集被称为<strong><code>色类(color classes)</code></strong></p><blockquote><p><strong>定理10.2</strong></p><p>图G的色数是2当且仅当G是一个非空的二部图</p></blockquote><p>又由定理1.12，图G是二部的当且仅当没有奇圈，故而若图G有奇圈，则$\chi(G)\geq 3$</p><p>图G的一个<strong><code>团(clique)</code></strong>是指G的一个完全子图，图G中最大团的阶数被称为是G的<strong><code>团数(clique number)</code></strong>,记为$\omega(G)$.</p><p>事实上，我们有$\alpha(G)=k$ 当且仅当 $\omega(\overline{G})=k$</p><blockquote><p><strong>定理10.5 </strong></p><p>对于每个n阶图G，我们都有</p><p>​        $\chi(G)\geq\omega(G)$,  $\chi(G)\geq \frac{n}{\alpha(G)}$</p></blockquote><blockquote><p><strong>定理10.7</strong></p><p>对于每个图G，我们都有$\chi(G)\leq 1+\Delta(G)$      (其中$\Delta(G)$表示的是图G的最大度)</p></blockquote><blockquote><p><strong>定理10.8   Brooks定理</strong></p><p>对于每个非奇圈也非完全的连通图G，有$\chi(G)\leq\Delta(G)$</p></blockquote><blockquote><p><strong>定理10.9</strong></p><p>对于每个图G，</p><p>​                $\chi(G)\leq 1+max{\delta(H)}$        （$\delta(G)$表示G的最小度）</p><p>其中max取遍G的所有诱导子图H</p></blockquote><p>图G的<strong><code>影子图(shadow graph)</code></strong>S(G) 是指通过在G中，对每个顶点v，增加一个顶点v’，称为v的<strong><code>影子顶点(shadow vertex)</code></strong>，并连接v’在v中的所有邻点所得到的图（此时v不与原本G中对应的邻点相连）</p><blockquote><p><strong>定理 10.10</strong></p><p>对于每个整数$k\geq 3$,都存在 一个色数为k的无三角的图</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;CZ-9-1-平面图&quot;&gt;&lt;a href=&quot;#CZ-9-1-平面图&quot; class=&quot;headerlink&quot; title=&quot;CZ 9.1 平面图&quot;&gt;&lt;/a&gt;CZ 9.1 平面图&lt;/h3&gt;&lt;p&gt;若G&lt;strong&gt;能够&lt;/strong&gt;花在一个平面上使得任何两条边都不交
-      
-    
-    </summary>
-    
-    
-      <category term="-CZ -图论" scheme="http://shelah-kuang.github.io/tags/CZ-%E5%9B%BE%E8%AE%BA/"/>
     
   </entry>
   
