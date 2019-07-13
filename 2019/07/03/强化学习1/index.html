@@ -20,7 +20,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -156,13 +156,14 @@
 
 
   <meta name="description" content="对应教材：Sutton &amp;amp; Barto’s book Reinforcement Learning: An Introduction (2nd Edition) Chap1  Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numeric">
+<meta name="keywords" content="-RL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="强化学习-介绍">
 <meta property="og:url" content="http://shelah-kuang.github.io/2019/07/03/强化学习1/index.html">
 <meta property="og:site_name" content="少年游">
 <meta property="og:description" content="对应教材：Sutton &amp;amp; Barto’s book Reinforcement Learning: An Introduction (2nd Edition) Chap1  Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numeric">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-03T07:40:10.626Z">
+<meta property="og:updated_time" content="2019-07-11T09:08:10.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="强化学习-介绍">
 <meta name="twitter:description" content="对应教材：Sutton &amp;amp; Barto’s book Reinforcement Learning: An Introduction (2nd Edition) Chap1  Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numeric">
@@ -220,7 +221,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
 </head>
 
@@ -231,7 +232,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -393,16 +394,46 @@
                 
               
 
-              <time title="创建时间：2019-07-03 14:19:50 / 修改时间：15:40:10" itemprop="dateCreated datePublished" datetime="2019-07-03T14:19:50+08:00">2019-07-03</time>
+              <time title="创建时间：2019-07-03 14:19:50" itemprop="dateCreated datePublished" datetime="2019-07-03T14:19:50+08:00">2019-07-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-11 17:08:10" itemprop="dateModified" datetime="2019-07-11T17:08:10+08:00">2019-07-11</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/强化学习/" itemprop="url" rel="index"><span itemprop="name">强化学习</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -456,6 +487,12 @@
 <p> 对应教材：Sutton &amp; Barto’s book <a href="http://incompleteideas.net/book/the-book-2nd.html" target="_blank" rel="noopener">Reinforcement Learning: An Introduction (2nd Edition)</a> Chap1</p>
 </blockquote>
 <p>Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numerical reward signal</p>
+<p>The <strong><code>history</code></strong> is the sequence of observations, actions, rewards<br>$$Ht = O_1, R_1, A_1, …, A_{t−1}, O_t, Rt$$</p>
+<p><strong><code>State</code></strong> is the information used to determine what happens next, Formally, state is a function of the history:<br>$$S_t = f (H_t)$$</p>
+<p>An RL agent may include one or more of these components:<br>    <strong><code>Policy</code></strong>: agent’s behaviour function<br>    Value function: how good is each state and/or action<br>    Model: agent’s representation of the environment</p>
+<p>Deterministic policy: $a = π(s)$<br>Stochastic policy: $π(a|s) = P[A_t = a|S_t = s]$</p>
+<p><strong><code>Value function</code></strong> is a prediction of future reward. Used to evaluate the goodness/badness of states</p>
+<p>A model predicts what the environment will do next<br>    $P$ predicts the next state<br>    $R$ predicts the next (immediate) reward, e.g.<br>    $$P^a_{ss’} = P[S_{t+1} = s’| S_t = s, A_t = a]$$<br>    $$R^a_s = E [R_{t+1} | S_t = s, A_t = a]$$</p>
 
       
     </div>
@@ -488,6 +525,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/RL/" rel="tag"># -RL</a>
+          
+        </div>
+      
 
       
       
@@ -519,8 +562,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/03/RL2/" rel="prev" title="RL2">
-                RL2 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/03/RL2/" rel="prev" title="强化学习-Multi-armed Bandits">
+                强化学习-Multi-armed Bandits <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -591,7 +634,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -608,7 +651,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -633,7 +678,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -758,7 +807,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.1k字</span>
+  <span class="post-count">博客全站共20.5k字</span>
 </div>
         
 
@@ -1033,7 +1082,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
   <script>
   $("body").backstretch("https://pic3.zhimg.com/80/v2-78dfe120c4f516da57a7c3a5c094789a_hd.jpg");
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
 </body>
 </html>
 <!-- 页面点击小红心 -->

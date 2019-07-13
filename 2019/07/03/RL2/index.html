@@ -20,7 +20,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -155,14 +155,18 @@
 
 
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="RL2">
+  <meta name="description" content="对应章节：《Reinforcement Learning: An Introduction》第二版  Chap 2   这个读书笔记建立在已经看完了西瓜书第16章的基础上，略过了很多东西  部分该章节西瓜书笔记可点击  nonsassociative problem: one that does not involve learning to act in more than one situa">
+<meta name="keywords" content="-RL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="强化学习-Multi-armed Bandits">
 <meta property="og:url" content="http://shelah-kuang.github.io/2019/07/03/RL2/index.html">
 <meta property="og:site_name" content="少年游">
+<meta property="og:description" content="对应章节：《Reinforcement Learning: An Introduction》第二版  Chap 2   这个读书笔记建立在已经看完了西瓜书第16章的基础上，略过了很多东西  部分该章节西瓜书笔记可点击  nonsassociative problem: one that does not involve learning to act in more than one situa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-03T06:20:16.826Z">
+<meta property="og:updated_time" content="2019-07-13T07:07:38.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RL2">
+<meta name="twitter:title" content="强化学习-Multi-armed Bandits">
+<meta name="twitter:description" content="对应章节：《Reinforcement Learning: An Introduction》第二版  Chap 2   这个读书笔记建立在已经看完了西瓜书第16章的基础上，略过了很多东西  部分该章节西瓜书笔记可点击  nonsassociative problem: one that does not involve learning to act in more than one situa">
 
 
 
@@ -181,7 +185,7 @@
   };
 </script>
 
-  <title>RL2 | 少年游</title>
+  <title>强化学习-Multi-armed Bandits | 少年游</title>
   
 
 
@@ -217,7 +221,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
 </head>
 
@@ -228,7 +232,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -365,7 +369,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RL2
+          <h1 class="post-title" itemprop="name headline">强化学习-Multi-armed Bandits
               
             
           </h1>
@@ -394,8 +398,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-13 15:07:38" itemprop="dateModified" datetime="2019-07-13T15:07:38+08:00">2019-07-13</time>
+              
+            
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/强化学习/" itemprop="url" rel="index"><span itemprop="name">强化学习</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -414,7 +452,7 @@
 
           
           
-             <span id="/2019/07/03/RL2/" class="leancloud_visitors" data-flag-title="RL2">
+             <span id="/2019/07/03/RL2/" class="leancloud_visitors" data-flag-title="强化学习-Multi-armed Bandits">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -445,7 +483,16 @@
       
 
       
-        
+        <blockquote>
+<p>对应章节：<a href="http://www.incompleteideas.net/book/the-book-2nd.html" target="_blank" rel="noopener">《Reinforcement Learning: An Introduction》第二版</a>  Chap 2 </p>
+</blockquote>
+<p><strong>这个读书笔记建立在已经看完了西瓜书第16章的基础上，略过了很多东西</strong></p>
+<blockquote>
+<p>部分该章节西瓜书笔记可<a href="https://shelah-kuang.github.io/docs/RLzzh.pdf">点击</a></p>
+</blockquote>
+<p><strong><code>nonsassociative</code></strong> problem: one that does not involve learning to act in more than one situation<br><strong><code>associative</code></strong> problem:  when actions are taken in more than one situation</p>
+<p>本章主要围绕Multi-armed Bandits（多臂老虎机问题）展开讨论，以此为例介绍几种算法</p>
+
       
     </div>
 
@@ -466,7 +513,7 @@
     <strong>本文作者： </strong>kuangsl</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://shelah-kuang.github.io/2019/07/03/RL2/" title="RL2">http://shelah-kuang.github.io/2019/07/03/RL2/</a>
+    <a href="http://shelah-kuang.github.io/2019/07/03/RL2/" title="强化学习-Multi-armed Bandits">http://shelah-kuang.github.io/2019/07/03/RL2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -476,6 +523,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/RL/" rel="tag"># -RL</a>
+          
+        </div>
       
 
       
@@ -507,6 +560,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/13/博客上传pdf文件/" rel="prev" title="博客上传pdf文件">
+                博客上传pdf文件 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -576,7 +633,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -593,7 +650,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -618,7 +677,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -743,7 +806,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.1k字</span>
+  <span class="post-count">博客全站共20.5k字</span>
 </div>
         
 
@@ -1018,7 +1081,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
   <script>
   $("body").backstretch("https://pic3.zhimg.com/80/v2-78dfe120c4f516da57a7c3a5c094789a_hd.jpg");
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
 </body>
 </html>
 <!-- 页面点击小红心 -->
