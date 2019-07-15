@@ -155,14 +155,26 @@
 
 
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="RL5">
+  <meta name="description" content="对应章节：《Reinforcement Learning: An Introduction》第二版  Chap 5  蒙特卡洛方法不需要环境的信息，只需要经验（experience—sample sequences of states, actions, and rewards from actual or simulated interaction with an environment.）">
+<meta name="keywords" content="-RL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="强化学习-Monte Carlo Methods">
 <meta property="og:url" content="http://shelah-kuang.github.io/2019/07/13/RL5/index.html">
 <meta property="og:site_name" content="少年游">
+<meta property="og:description" content="对应章节：《Reinforcement Learning: An Introduction》第二版  Chap 5  蒙特卡洛方法不需要环境的信息，只需要经验（experience—sample sequences of states, actions, and rewards from actual or simulated interaction with an environment.）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-13T07:09:46.528Z">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=s">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/07/13/RL5/51.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/07/13/RL5/52.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/07/13/RL5/53.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/07/13/RL5/54.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/07/13/RL5/55.png">
+<meta property="og:image" content="http://shelah-kuang.github.io/2019/07/13/RL5/56.png">
+<meta property="og:updated_time" content="2019-07-15T10:17:01.347Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RL5">
+<meta name="twitter:title" content="强化学习-Monte Carlo Methods">
+<meta name="twitter:description" content="对应章节：《Reinforcement Learning: An Introduction》第二版  Chap 5  蒙特卡洛方法不需要环境的信息，只需要经验（experience—sample sequences of states, actions, and rewards from actual or simulated interaction with an environment.）">
+<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=s">
 
 
 
@@ -181,7 +193,7 @@
   };
 </script>
 
-  <title>RL5 | 少年游</title>
+  <title>强化学习-Monte Carlo Methods | 少年游</title>
   
 
 
@@ -365,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RL5
+          <h1 class="post-title" itemprop="name headline">强化学习-Monte Carlo Methods
               
             
           </h1>
@@ -394,8 +406,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-15 18:17:01" itemprop="dateModified" datetime="2019-07-15T18:17:01+08:00">2019-07-15</time>
+              
+            
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/强化学习/" itemprop="url" rel="index"><span itemprop="name">强化学习</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -414,7 +460,7 @@
 
           
           
-             <span id="/2019/07/13/RL5/" class="leancloud_visitors" data-flag-title="RL5">
+             <span id="/2019/07/13/RL5/" class="leancloud_visitors" data-flag-title="强化学习-Monte Carlo Methods">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -445,7 +491,44 @@
       
 
       
-        
+        <blockquote>
+<p>对应章节：<a href="http://www.incompleteideas.net/book/the-book-2nd.html" target="_blank" rel="noopener">《Reinforcement Learning: An Introduction》第二版</a>  Chap 5</p>
+</blockquote>
+<p>蒙特卡洛方法不需要环境的信息，只需要经验（experience—sample sequences of states, actions, and rewards from actual or simulated interaction with an environment.）</p>
+<p>Monte Carlo methods are ways of solving the reinforcement learning problem based on averaging sample returns. To ensure that well-defined returns are available, here we define Monte Carlo methods only for episodic tasks.</p>
+<h2 id="5-1-Monte-Carlo-Prediction"><a href="#5-1-Monte-Carlo-Prediction" class="headerlink" title="5.1 Monte Carlo Prediction"></a>5.1 Monte Carlo Prediction</h2><p>有两种方法，一种是“<strong><code>first-visit</code></strong>“,把整个片段集所有第一次访问到状态<img src="https://www.zhihu.com/equation?tex=s" alt="[公式]">时的returns做平均化处理，来估计$v_\pi(s)$的值另一种是”<strong><code>every visit</code></strong>”，把整个片段集中所有访问到s状态时的returns取平均，来估计$v_\pi(s)$的值。两种方法都有应用，下给出first-visit，在9和12章介绍every-visit</p>
+<p><img src="/2019/07/13/RL5/51.png"></p>
+<p>每一次返回平均值都是其本身的无偏估计，标准偏差在$\sqrt{\frac{1}{n}}$内</p>
+<p>蒙特卡洛算法每一次运行都是独立的，也就是说他不是”bootstrap”的</p>
+<h2 id="5-2-Monte-Carlo-Estimation-of-Action-Values"><a href="#5-2-Monte-Carlo-Estimation-of-Action-Values" class="headerlink" title="5.2 Monte Carlo Estimation of Action Values"></a>5.2 Monte Carlo Estimation of Action Values</h2><p>如何估计$q_\pi(s,a)$, 同上一小节一样也是first-visit与every-visit两种方式</p>
+<p>不过有一个问题在于如何保证所有的action都被考虑到，这就是之前第二章提到的如何保持exploit和explore的关系的问题，称为“<strong><code>maintaining exloration</code></strong>“问题，一种解决方式是对于每一个state–action pair，都给予其一定的概率作为一个episode的起点，这样当取样次数趋于无限的时候，每一个pair的取样次数也趋于无限了，这种方式的假设称为<strong><code>exploring starts</code></strong>.<br>但是这样有一个问题就是”it cannot be relied upon in general, particularly when learning directly from actual interaction with an environment.”, 此时一种常见的策略是调整policy，使得对于一个状态，所有的action都有一定的概率发生</p>
+<h2 id="5-3-Monte-Carlo-Control"><a href="#5-3-Monte-Carlo-Control" class="headerlink" title="5.3 Monte Carlo Control"></a>5.3 Monte Carlo Control</h2><p>蒙特卡洛方法估计最优policies的方法和DP差不多：先迭代value function使之逼近当前policy的真实value function，然后基于更新后的value function进行policy improvement，直到最终policy基本不再变化</p>
+<p><img src="/2019/07/13/RL5/52.png"></p>
+<p>由于我们在此处估计的是$q_\pi(s,a)$，就不需要额外的model来确定最优的action了，可以直接根据$\pi(s)=\arg \max_a q(s, a)$来确定</p>
+<p>为了更具备实际意义，我们要考虑如何去掉infinte number of episodes 的假设 ，一种方式是设立一个极小值，当两次policy evaluation的差别小于这个值的时候，认为此次policy evaluation结束，这种方式在小规模情况下很好，但是数据规模较大时仍然会需要比较多次。另一种方式就是放弃完整的policy evaluation，类似于4.6中的value  iteration</p>
+<p>以下算法仍然基于了exploring starts 假设</p>
+<p><img src="/2019/07/13/RL5/53.png"></p>
+<h2 id="5-4-Monte-Carlo-Control-without-Exploring-Starts"><a href="#5-4-Monte-Carlo-Control-without-Exploring-Starts" class="headerlink" title="5.4 Monte Carlo Control without Exploring Starts"></a>5.4 Monte Carlo Control without Exploring Starts</h2><p><strong><code>on-policy</code></strong>: 直接优化或评价目标策略</p>
+<p>对于on-policy策略而言，对于所有的pair有$\pi(a|s) \ge \frac{\varepsilon}{|\mathcal A(s)|}$</p>
+<p>采取第二章中提到的类似的方法，以$p= 1- \varepsilon + \frac{\varepsilon}{|\mathcal A(s)|}$的概率选取原先确定的action</p>
+<p><img src="/2019/07/13/RL5/54.png"></p>
+<p><del>此处省略一大段，如果有兴趣看相关证明的可以自己看书</del></p>
+<h2 id="5-5-Off-policy-Prediction-via-Importance-Sampling"><a href="#5-5-Off-policy-Prediction-via-Importance-Sampling" class="headerlink" title="5.5 Off-policy Prediction via Importance Sampling"></a>5.5 Off-policy Prediction via Importance Sampling</h2><p>在on-policy中，由于我们需要explore所有的action，这也就导致我们在一些时候会选择非最优的情况，故而我们有了off-policy的想法</p>
+<p><strong><code>off-policy</code></strong>: 有两个策略，一个叫行为策略 $b$（behavior policy），另一个叫做目标策略$\pi$（target policy），从behavior policy生成的episodes中学习target policy的过程，叫做off-policy learning。</p>
+<blockquote>
+<p>关于off-policy与on-policy的应用比较</p>
+<p>Throughout the rest of this book we consider both on-policy and off-policy methods. On-policy methods are generally simpler and are considered first. Off-policy methods require additional concepts and notation, and because the data is due to a di↵erent policy, off-policy methods are often of greater variance and are slower to converge. On the other hand, off-policy methods are more powerful and general.They include on-policy methods as the special case in which the target and behavior policies are the same. Off-policy methods also have a variety of additional uses in applications. For example, they can often be applied to learn from data generated by a conventional non-learning controller, or from a human expert. Off-policy learning is also seen by some as key to learning multi-step predictive models of the world’s dynamics</p>
+</blockquote>
+<p><del>下面又是一大波我不想看的数学知识</del></p>
+<p>TODO()<del>以后一定补</del></p>
+<p>因此有两种方式，可以取：</p>
+<p>一种是取平均（ordinary importance sampling）</p>
+<p>$$V(s) = \frac{\sum_{t \in \mathcal T(s)} \rho_t G_t}{|\mathcal T(s)|}$$</p>
+<p>另一种是加权平均（weighted average）</p>
+<p>$$V(s) = \frac{\sum_{t \in \mathcal T(s)} \rho_t G_t}{\sum_{t \in \mathcal T(s)} \rho_t}$$</p>
+<h2 id="5-6-Incremental-Implementation"><a href="#5-6-Incremental-Implementation" class="headerlink" title="5.6 Incremental Implementation"></a>5.6 Incremental Implementation</h2><p><img src="/2019/07/13/RL5/55.png"></p>
+<h2 id="5-7-Off-policy-Monte-Carlo-Control"><a href="#5-7-Off-policy-Monte-Carlo-Control" class="headerlink" title="5.7 Off-policy Monte Carlo Control"></a>5.7 Off-policy Monte Carlo Control</h2><p><img src="/2019/07/13/RL5/56.png"></p>
+
       
     </div>
 
@@ -466,7 +549,7 @@
     <strong>本文作者： </strong>kuangsl</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://shelah-kuang.github.io/2019/07/13/RL5/" title="RL5">http://shelah-kuang.github.io/2019/07/13/RL5/</a>
+    <a href="http://shelah-kuang.github.io/2019/07/13/RL5/" title="强化学习-Monte Carlo Methods">http://shelah-kuang.github.io/2019/07/13/RL5/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -476,6 +559,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/RL/" rel="tag"># -RL</a>
+          
+        </div>
       
 
       
@@ -560,8 +649,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -707,6 +805,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Monte-Carlo-Prediction"><span class="nav-number">1.</span> <span class="nav-text">5.1 Monte Carlo Prediction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-Monte-Carlo-Estimation-of-Action-Values"><span class="nav-number">2.</span> <span class="nav-text">5.2 Monte Carlo Estimation of Action Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-Monte-Carlo-Control"><span class="nav-number">3.</span> <span class="nav-text">5.3 Monte Carlo Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-Monte-Carlo-Control-without-Exploring-Starts"><span class="nav-number">4.</span> <span class="nav-text">5.4 Monte Carlo Control without Exploring Starts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-Off-policy-Prediction-via-Importance-Sampling"><span class="nav-number">5.</span> <span class="nav-text">5.5 Off-policy Prediction via Importance Sampling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-Incremental-Implementation"><span class="nav-number">6.</span> <span class="nav-text">5.6 Incremental Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-Off-policy-Monte-Carlo-Control"><span class="nav-number">7.</span> <span class="nav-text">5.7 Off-policy Monte Carlo Control</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -753,7 +867,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.5k字</span>
+  <span class="post-count">博客全站共25.4k字</span>
 </div>
         
 
