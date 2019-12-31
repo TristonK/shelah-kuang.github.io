@@ -22,30 +22,21 @@
     </item>
     
     <item>
+      <title>无线网络与移动网络</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</link>
+      <pubDate>Tue, 31 Dec 2019 16:54:46 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</guid>
+      <description>无线网络与移动网络 概述 无线主机(wireless host): 类似于有线主机，运行应用程序的端设备。 无线链路： 主机通过无线通信链路来连接到一个基站。 基站</description>
+    </item>
+    
+    <item>
       <title>fuck</title>
       <link>http://shelah-kuang.github.io/notes/section1/</link>
       <pubDate>Tue, 31 Dec 2019 16:24:15 +0800</pubDate>
       
       <guid>http://shelah-kuang.github.io/notes/section1/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</guid>
-      <description>无线网络与移动网络 概述 无线主机(wireless host): 类似于有线主机，运行应用程序的端设备。
-无线链路： 主机通过无线通信链路来连接到一个基站。
-基站(base station): 负责向与之关联的无线主机发送数据和从主机那里获得数据(例如分组)。基站通常负责协调与之相关联的多个无线主机的传输。
-与基站相关联的主机通常称为以基础设施模式运行，在自组织网络中，无线主机没有这样的基础设施与之相连，在这种情况下，主机本身必须提供包括路由选择、地址分配等服务。
-当一台移动主机的移动超出一个基站的覆盖范围并到达另一个基站的覆盖范围之后，它将改变其接入到更大网络的连接点。这一过程称为切换(handoff)
-&amp;hellip;
-无线链路和网络特征 &amp;hellip;
-WIFI: 802.11无线LAN 802.11体系结构 802.11体系结构的基本构件时基本服务集(Basic Service Set,BSS), 一个BSS包括一个或者多个的无线站点和一个接入点(Access Point,AP),
-与以太网设备类似，每个802.11无线站点都有一个6字节的MAC地址，这个地址存储在该站适配器的固件中。
-配置AP的无线LAN通常被称为时基础设施无线LAN，其中的基础设施指的是AP连同互联AP和一台路由器的有线以太网。</description>
     </item>
     
   </channel>
