@@ -7,17 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>CC BY-NC 4.0</copyright>
-    <lastBuildDate>Tue, 31 Dec 2019 16:54:46 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 17:12:27 +0800</lastBuildDate>
     
 	<atom:link href="http://shelah-kuang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>1. Name</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/section1/</link>
-      <pubDate>Tue, 31 Dec 2019 16:54:46 +0800</pubDate>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/section1/</link>
+      <pubDate>Tue, 31 Dec 2019 17:12:27 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/section1/</guid>
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/section1/</guid>
       <description></description>
     </item>
     
@@ -28,15 +28,6 @@
       
       <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</guid>
       <description>无线网络与移动网络 概述 无线主机(wireless host): 类似于有线主机，运行应用程序的端设备。 无线链路： 主机通过无线通信链路来连接到一个基站。 基站</description>
-    </item>
-    
-    <item>
-      <title>fuck</title>
-      <link>http://shelah-kuang.github.io/notes/section1/</link>
-      <pubDate>Tue, 31 Dec 2019 16:24:15 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/section1/</guid>
-      <description></description>
     </item>
     
   </channel>
