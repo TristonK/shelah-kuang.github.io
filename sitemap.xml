@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-01-03T20:18:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/section1/</loc>
+    <lastmod>2020-01-03T20:18:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/</loc>
+    <lastmod>2020-01-03T20:18:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/combinatorics/section1/</loc>
+    <lastmod>2020-01-03T20:11:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/combinatorics/</loc>
+    <lastmod>2020-01-03T20:11:23+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/section1/</loc>
     <lastmod>2019-12-31T17:12:27+08:00</lastmod>
   </url>
@@ -10,11 +35,6 @@
   <url>
     <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/</loc>
     <lastmod>2019-12-31T17:12:27+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</loc>
-    <lastmod>2019-12-31T16:54:46+08:00</lastmod>
   </url>
   
   <url>
@@ -29,7 +49,12 @@
   
   <url>
     <loc>http://shelah-kuang.github.io/</loc>
-    <lastmod>2019-12-31T17:12:27+08:00</lastmod>
+    <lastmod>2020-01-03T20:18:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

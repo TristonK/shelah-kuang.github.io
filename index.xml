@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>CC BY-NC 4.0</copyright>
-    <lastBuildDate>Tue, 31 Dec 2019 17:12:27 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2020 20:18:39 +0800</lastBuildDate>
     
 	<atom:link href="http://shelah-kuang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1. Name</title>
+      <link>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/section1/</link>
+      <pubDate>Fri, 03 Jan 2020 20:18:39 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/section1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>1. Name</title>
+      <link>http://shelah-kuang.github.io/notes/combinatorics/section1/</link>
+      <pubDate>Fri, 03 Jan 2020 20:11:23 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/combinatorics/section1/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>1. Name</title>
@@ -22,12 +40,22 @@
     </item>
     
     <item>
-      <title>无线网络与移动网络</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</link>
-      <pubDate>Tue, 31 Dec 2019 16:54:46 +0800</pubDate>
+      <title></title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</guid>
-      <description>无线网络与移动网络 概述 无线主机(wireless host): 类似于有线主机，运行应用程序的端设备。 无线链路： 主机通过无线通信链路来连接到一个基站。 基站</description>
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</guid>
+      <description>事务管理、并发与故障处理  5.1 事务处理（概念）
+  事务的定义与ACID性质
+  事务活动及其状态转换图
+  事务控制及相关的参数设置语句：事务的提交与回滚，事务的读/写类型与隔离级别
+  事务的语句组成成分
+5.2 并发控制技术（概念）
+  事务
+ 事务的并发性，并发控制 调度，串行调度，可串行化调度，冲突与冲突可串行化，视图可串行化 冲突可串行化的判定方法 不正确的事务并发所导致的数据不一致现象：丢失修改lost-update，脏读dirty-read，不可重复读unrepeatable-read    封锁
+ 共享锁（S锁），排它锁（X锁），锁相容矩阵，锁申请/锁释放算法 基于封锁技术的并发控制实现方法  三级封锁协议，三级封锁协议与数据不一致现象之间的关系 两阶段封锁协议 两阶段封锁协议与冲突可串行化的关系      多粒度封锁
+ 封锁粒度/并发度/并发控制实现开销 之间的关系 多粒度树，多粒度封锁 基于意向锁的多粒度封锁协议  意向锁：IS, IX, SIX 意向锁锁相容矩阵：S，X，IS, IX, SIX 意向锁锁申请算法，意向锁锁释放算法      死锁的检测与预防
+ 死锁 &amp;amp; 活锁 死锁的检测及其处理办法   等待图法</description>
     </item>
     
   </channel>
