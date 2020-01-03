@@ -53,6 +53,21 @@
   </url>
   
   <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</loc>
     <priority>0</priority>
   </url>

@@ -22,6 +22,33 @@
     </item>
     
     <item>
+      <title>数据库设计</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</guid>
+      <description>数据库设计 9.1 数据库设计概述 数据库设计的基本任务 数据库的生命周期 9.2 数据库设计的需求分析 需求说明书 9.3 数据库的概念设计 数据库概念设计的过程 E-R模</description>
+    </item>
+    
+    <item>
+      <title>数据模型</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</guid>
+      <description>数据模型 第二章 数据模型 2.1 数据模型的基本概念 数据模型及其组成成分：数据结构，数据操作，数据约束 数据模型的核心，不同类型数据模型的区分依据 三个抽</description>
+    </item>
+    
+    <item>
+      <title>游标管理与索引</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</guid>
+      <description>游标管理与索引 游标管理 游标的作用 游标的定义、打开、使用、关闭 可滚动游标的定义及其在数据更新命令中的使用 索引 (index) B+索引的数据结构，搜索算法 游标</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
