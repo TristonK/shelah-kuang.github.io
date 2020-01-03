@@ -28,8 +28,8 @@
   </url>
   
   <url>
-    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/section1/</loc>
-    <lastmod>2019-12-31T17:12:27+08:00</lastmod>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
   </url>
   
   <url>
@@ -48,17 +48,27 @@
   </url>
   
   <url>
-    <loc>http://shelah-kuang.github.io/</loc>
-    <lastmod>2020-01-03T20:18:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</loc>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</loc>
     <lastmod>2020-01-01T00:13:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</loc>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</loc>
     <lastmod>2020-01-01T00:13:14+08:00</lastmod>
   </url>
   
@@ -68,8 +78,28 @@
   </url>
   
   <url>
-    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</loc>
-    <priority>0</priority>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/</loc>
+    <lastmod>2020-01-03T20:18:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/</loc>
+    <lastmod>2020-01-01T00:13:14+08:00</lastmod>
   </url>
   
   <url>

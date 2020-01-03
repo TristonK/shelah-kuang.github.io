@@ -10,56 +10,28 @@
 
 
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="事务管理、并发与故障处理  5.1 事务处理（概念）
-  事务的定义与ACID性质
-  事务活动及其状态转换图
-  事务控制及相关的参数设置语句：事务的提交与回滚，事务的读/写类型与隔离级别
-  事务的语句组成成分
-5.2 并发控制技术（概念）
-  事务
- 事务的并发性，并发控制 调度，串行调度，可串行化调度，冲突与冲突可串行化，视图可串行化 冲突可串行化的判定方法 不正确的事务并发所导致的数据不一致现象：丢失修改lost-update，脏读dirty-read，不可重复读unrepeatable-read    封锁
- 共享锁（S锁），排它锁（X锁），锁相容矩阵，锁申请/锁释放算法 基于封锁技术的并发控制实现方法  三级封锁协议，三级封锁协议与数据不一致现象之间的关系 两阶段封锁协议 两阶段封锁协议与冲突可串行化的关系      多粒度封锁
- 封锁粒度/并发度/并发控制实现开销 之间的关系 多粒度树，多粒度封锁 基于意向锁的多粒度封锁协议  意向锁：IS, IX, SIX 意向锁锁相容矩阵：S，X，IS, IX, SIX 意向锁锁申请算法，意向锁锁释放算法      死锁的检测与预防
- 死锁 &amp; 活锁 死锁的检测及其处理办法   等待图法">
-
-<meta itemprop="wordCount" content="320">
+<meta itemprop="name" content="事务管理、并发控制与故障恢复">
+<meta itemprop="description" content="事务管理、并发与故障处理 5.1 事务处理（概念） 事务的定义与ACID性质 事务活动及其状态转换图 事务控制及相关的参数设置语句：事务的提交与回滚，事务">
+<meta itemprop="datePublished" content="2020-01-01T00:13:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-01T00:13:14&#43;08:00" />
+<meta itemprop="wordCount" content="8641">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="事务管理、并发与故障处理  5.1 事务处理（概念）
-  事务的定义与ACID性质
-  事务活动及其状态转换图
-  事务控制及相关的参数设置语句：事务的提交与回滚，事务的读/写类型与隔离级别
-  事务的语句组成成分
-5.2 并发控制技术（概念）
-  事务
- 事务的并发性，并发控制 调度，串行调度，可串行化调度，冲突与冲突可串行化，视图可串行化 冲突可串行化的判定方法 不正确的事务并发所导致的数据不一致现象：丢失修改lost-update，脏读dirty-read，不可重复读unrepeatable-read    封锁
- 共享锁（S锁），排它锁（X锁），锁相容矩阵，锁申请/锁释放算法 基于封锁技术的并发控制实现方法  三级封锁协议，三级封锁协议与数据不一致现象之间的关系 两阶段封锁协议 两阶段封锁协议与冲突可串行化的关系      多粒度封锁
- 封锁粒度/并发度/并发控制实现开销 之间的关系 多粒度树，多粒度封锁 基于意向锁的多粒度封锁协议  意向锁：IS, IX, SIX 意向锁锁相容矩阵：S，X，IS, IX, SIX 意向锁锁申请算法，意向锁锁释放算法      死锁的检测与预防
- 死锁 &amp; 活锁 死锁的检测及其处理办法   等待图法" />
+<meta property="og:title" content="事务管理、并发控制与故障恢复" />
+<meta property="og:description" content="事务管理、并发与故障处理 5.1 事务处理（概念） 事务的定义与ACID性质 事务活动及其状态转换图 事务控制及相关的参数设置语句：事务的提交与回滚，事务" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/" />
-
+<meta property="article:published_time" content="2020-01-01T00:13:14+08:00" />
+<meta property="article:modified_time" content="2020-01-01T00:13:14+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="事务管理、并发与故障处理  5.1 事务处理（概念）
-  事务的定义与ACID性质
-  事务活动及其状态转换图
-  事务控制及相关的参数设置语句：事务的提交与回滚，事务的读/写类型与隔离级别
-  事务的语句组成成分
-5.2 并发控制技术（概念）
-  事务
- 事务的并发性，并发控制 调度，串行调度，可串行化调度，冲突与冲突可串行化，视图可串行化 冲突可串行化的判定方法 不正确的事务并发所导致的数据不一致现象：丢失修改lost-update，脏读dirty-read，不可重复读unrepeatable-read    封锁
- 共享锁（S锁），排它锁（X锁），锁相容矩阵，锁申请/锁释放算法 基于封锁技术的并发控制实现方法  三级封锁协议，三级封锁协议与数据不一致现象之间的关系 两阶段封锁协议 两阶段封锁协议与冲突可串行化的关系      多粒度封锁
- 封锁粒度/并发度/并发控制实现开销 之间的关系 多粒度树，多粒度封锁 基于意向锁的多粒度封锁协议  意向锁：IS, IX, SIX 意向锁锁相容矩阵：S，X，IS, IX, SIX 意向锁锁申请算法，意向锁锁释放算法      死锁的检测与预防
- 死锁 &amp; 活锁 死锁的检测及其处理办法   等待图法"/>
+<meta name="twitter:title" content="事务管理、并发控制与故障恢复"/>
+<meta name="twitter:description" content="事务管理、并发与故障处理 5.1 事务处理（概念） 事务的定义与ACID性质 事务活动及其状态转换图 事务控制及相关的参数设置语句：事务的提交与回滚，事务"/>
 
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title></title>
+<title>事务管理、并发控制与故障恢复</title>
 <link rel="stylesheet" href="/css/bootstrap.materia.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_z93lvlj24ja.css">
@@ -135,13 +107,7 @@
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/section1/">1. Name</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/">数据库系统概述</a>
             </li>
             
             
@@ -153,7 +119,19 @@
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/">关系数据库系统</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/">SQL语言</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/">数据库安全性与完整性</a>
             </li>
             
             
@@ -161,8 +139,38 @@
             <li class="active">
                 <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/">
                     <i class="fad fa-chevron-right mr-1"></i>
-                    
+                    事务管理、并发控制与故障恢复
                 </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/">关系数据库规范化理论</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/">思考题与作业题</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/">样卷整理</a>
             </li>
             
             
@@ -188,15 +196,15 @@
 					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content" role="main">
 						<div id="title" class="my-4 border-bottom">
 							<span>数据库概论</span>
-							<h2></h2>
+							<h2>事务管理、并发控制与故障恢复</h2>
 							<footer>
 								<span>
 									<i class="fad fa-calendar-alt mr-2"></i>
-									0001-01-01 08:00 CST
+									2020-01-01 00:13 CST
 								</span> <br />
 								<span>
 									<i class="fad fa-calendar-edit mr-2"></i>
-									0001-01-01 08:00 CST
+									2020-01-01 00:13 CST
 								</span> <br />
 								<span>
 									<i class="fad fa-copyright mr-2"></i>

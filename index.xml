@@ -31,21 +31,12 @@
     </item>
     
     <item>
-      <title>1. Name</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/section1/</link>
-      <pubDate>Tue, 31 Dec 2019 17:12:27 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/section1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>数据库设计</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</link>
+      <title>数据库系统概述</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</link>
       <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</guid>
-      <description>数据库设计 9.1 数据库设计概述 数据库设计的基本任务 数据库的生命周期 9.2 数据库设计的需求分析 需求说明书 9.3 数据库的概念设计 数据库概念设计的过程 E-R模</description>
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</guid>
+      <description>数据库系统概述 复习重点 1.1基本概念 数据库，数据库管理系统，数据库系统，数据库管理员 相互之间的关系 1.2数据库系统的特点 数据集成化，数据独立</description>
     </item>
     
     <item>
@@ -58,6 +49,42 @@
     </item>
     
     <item>
+      <title>关系数据库系统</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</guid>
+      <description>关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论</description>
+    </item>
+    
+    <item>
+      <title>SQL语言</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/</guid>
+      <description>SQL语言 3.4 关系数据库语言SQL’92 3.4.1 SQL概貌 SQL的基本概念与使用方式：表（基表/虚表），行，列 3.4.2 SQL数据定义功能 3.4.3 SQL数据操纵功</description>
+    </item>
+    
+    <item>
+      <title>数据库安全性与完整性</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</guid>
+      <description>数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S</description>
+    </item>
+    
+    <item>
+      <title>事务管理、并发控制与故障恢复</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</guid>
+      <description>事务管理、并发与故障处理 5.1 事务处理（概念） 事务的定义与ACID性质 事务活动及其状态转换图 事务控制及相关的参数设置语句：事务的提交与回滚，事务</description>
+    </item>
+    
+    <item>
       <title>游标管理与索引</title>
       <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</link>
       <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
@@ -67,22 +94,39 @@
     </item>
     
     <item>
-      <title></title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>关系数据库规范化理论</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</guid>
-      <description>事务管理、并发与故障处理  5.1 事务处理（概念）
-  事务的定义与ACID性质
-  事务活动及其状态转换图
-  事务控制及相关的参数设置语句：事务的提交与回滚，事务的读/写类型与隔离级别
-  事务的语句组成成分
-5.2 并发控制技术（概念）
-  事务
- 事务的并发性，并发控制 调度，串行调度，可串行化调度，冲突与冲突可串行化，视图可串行化 冲突可串行化的判定方法 不正确的事务并发所导致的数据不一致现象：丢失修改lost-update，脏读dirty-read，不可重复读unrepeatable-read    封锁
- 共享锁（S锁），排它锁（X锁），锁相容矩阵，锁申请/锁释放算法 基于封锁技术的并发控制实现方法  三级封锁协议，三级封锁协议与数据不一致现象之间的关系 两阶段封锁协议 两阶段封锁协议与冲突可串行化的关系      多粒度封锁
- 封锁粒度/并发度/并发控制实现开销 之间的关系 多粒度树，多粒度封锁 基于意向锁的多粒度封锁协议  意向锁：IS, IX, SIX 意向锁锁相容矩阵：S，X，IS, IX, SIX 意向锁锁申请算法，意向锁锁释放算法      死锁的检测与预防
- 死锁 &amp;amp; 活锁 死锁的检测及其处理办法   等待图法</description>
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</guid>
+      <description>关系数据库规范化理论 8.1 概述 模式设计质量的评价指标：数据冗余度，插入/删除等更新异常 为什么要研究关系的规划化设计：规范化的目的与手段 8.2 规范化理</description>
+    </item>
+    
+    <item>
+      <title>数据库设计</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</guid>
+      <description>数据库设计 9.1 数据库设计概述 数据库设计的基本任务 数据库的生命周期 9.2 数据库设计的需求分析 需求说明书 9.3 数据库的概念设计 数据库概念设计的过程 E-R模</description>
+    </item>
+    
+    <item>
+      <title>思考题与作业题</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/</guid>
+      <description>思考题与作业题 出于考虑，我们删掉了此部分</description>
+    </item>
+    
+    <item>
+      <title>样卷整理</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/</guid>
+      <description>样卷复习法 出于考虑，我们删掉了此部分</description>
     </item>
     
   </channel>

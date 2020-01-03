@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta name="generator" content="Hugo 0.62.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+<meta itemprop="name" content="关系数据库系统">
+<meta itemprop="description" content="关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论">
+<meta itemprop="datePublished" content="2020-01-01T00:13:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-01T00:13:14&#43;08:00" />
+<meta itemprop="wordCount" content="3250">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="关系数据库系统" />
+<meta property="og:description" content="关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/" />
+<meta property="article:published_time" content="2020-01-01T00:13:14+08:00" />
+<meta property="article:modified_time" content="2020-01-01T00:13:14+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="关系数据库系统"/>
+<meta name="twitter:description" content="关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论"/>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<title>关系数据库系统</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_z93lvlj24ja.css">
+
+<link rel="stylesheet" href="/sass/main.min.28c01c661befd515dddc5c231b0895ce15c078e0b7f29c8c9a3ebe3847d4557c.min.f26af5aa60d3988015c49059001da55420563ad7781f34b06765e2a8c3dcec75.css" integity="sha256-8mr1qmDTmIAVxJBZAB2lVCBWOtd4HzSwZ2XiqMPc7HU=" media="screen">
+</head>
+
+<body style="overflow-x: unset;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-md-3 col-lg-2 bd-sidebar d-print-none">
+				<div class="d-flex mt-3 border-bottom">
+        <span class="navbar-brand w-100" style="display: grid;">
+            <small>
+                <a href="/" class="text-black-50">
+                    <i class="iconfont icon-back-arrow-"></i>
+                </a>
+                TristonK's
+            </small>
+            <a class="text-dark" href="/notes/">
+                Documents
+            </a>
+        </span>
+        <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
+            data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="true"
+            aria-label="Toggle docs navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+				<nav id="bd-docs-nav" class="collapse bd-links">
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            深度学习
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            社会学概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/combinatorics/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            Combinatorics
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item active bg-light">
+        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+            <i class="iconfont icon-back-arrow-reverse"></i>
+            数据库概论
+        </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/">数据库系统概述</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/">数据模型</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    关系数据库系统
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/">SQL语言</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/">数据库安全性与完整性</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/">事务管理、并发控制与故障恢复</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/">关系数据库规范化理论</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/">思考题与作业题</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/">样卷整理</a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            计算机网络
+        </a>
+    </div>
+    
+    
+</nav>
+			</div>
+			<div class="col-12 col-md-9 col-lg-10 d-print-block">
+				<div class="row">
+					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content" role="main">
+						<div id="title" class="my-4 border-bottom">
+							<span>数据库概论</span>
+							<h2>关系数据库系统</h2>
+							<footer>
+								<span>
+									<i class="fad fa-calendar-alt mr-2"></i>
+									2020-01-01 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-calendar-edit mr-2"></i>
+									2020-01-01 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-copyright mr-2"></i>
+									CC BY-NC 4.0
+								</span>
+							</footer>
+						</div>
+						<div id="content" class="hl-h2">
+							<h1 id="heading">关系数据库系统<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<blockquote>
+<p>关系数据库系统</p>
+<p>3.1 关系数据库系统概述</p>
+<p>3.2 关系数据库系统的衡量准则</p>
+<ul>
+<li>完全关系型的十二条衡量准则</li>
+<li>空值（NULL）的定义</li>
+</ul>
+<p>3.3 关系模型数学理论—关系代数</p>
+<p>3.3.0 关系模型（概念）</p>
+<ul>
+<li>关系数据结构</li>
+<li>表结构（表头）：表框架，表的元数与基数</li>
+<li>关系：关系的性质</li>
+<li>关键字：候选关键字，主关键字，外关键字</li>
+<li>关系数据库：关系子模式-视图（view）</li>
+<li>关系操纵</li>
+<li>数据查询：两个关系的合并，单个关系内的元组选择，单个关系内的属性指定</li>
+<li>元组的删除、插入、修改</li>
+<li>空值的处理</li>
+<li>关系中的数据约束</li>
+<li>实体完整性约束，参照完整性约束，用户定义的完整性</li>
+</ul>
+<p>3.3.1 关系的表示</p>
+<ul>
+<li>关系的表示，迪卡尔乘积</li>
+</ul>
+<p>3.3.2 关系操纵的表示</p>
+<ul>
+<li>关系代数中的五种基本运算：选择，投影，笛卡儿积，并，差（请注意每个运算符的执行条件和结果关系的关系模式）</li>
+<li>基本运算的应用</li>
+</ul>
+<p>3.3.3 关系模型与关系代数</p>
+<p>3.3.4 关系代数中的扩充运算</p>
+<ul>
+<li>交，除法，联接与自然联接，θ-联接</li>
+<li>扩充运算与基本运算之间的关系</li>
+<li>扩充运算的应用实例</li>
+</ul>
+<p>3.3.5 关系代数的应用</p>
+<ul>
+<li>综合的关系代数应用表示，复杂查询的关系代数表达式</li>
+<li>关系代数的应用</li>
+<li>单个关系上的选择与投影</li>
+<li>两个关系的并、交、差</li>
+<li>两个关系的迪卡尔乘积、自然联接、θ-联接</li>
+<li>两个关系的除法</li>
+</ul>
+<p>难点</p>
+<ul>
+<li>查询条件带有‘否定’语义：‘不等’比较 &amp; 减法运算</li>
+<li>使用表联接查询，还是使用除法?</li>
+<li>正确使用自然连接运算 和 除法运算</li>
+<li>表的自联接</li>
+</ul>
+<p>3.3.6 关系演算</p>
+<ul>
+<li>原子公式，公式的定义</li>
+<li>基于关系演算的数据查询表示：单表查询，多表连接查询，复杂查询的表示（逻辑非、蕴涵操作符）</li>
+</ul>
+</blockquote>
+<h2 id="heading-1">关系数据库系统衡量准则<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>十二条标准：</p>
+<ul>
+<li>信息准则（关系数据库中的所有信息都能在逻辑一级唯一的用表中的值显示表示，结构描述信息在逻辑上组织成关系形式）</li>
+<li>确保访问准则（能够用逻辑方式依靠表名、关键字值与列名的组合来访问数据库中每一个原子数据）</li>
+<li>空值的关系处理准则（系统应当具有处理空值的能力，空值：无意义或当前未知的值）</li>
+<li>基于资源管理的动态联机目录（数据库的描述信息<strong>数据字典</strong>与用户数据有着相应的形式与操作方式）</li>
+<li>统一易用的数据子语言（数据定义、视图定义、数据操纵、完整性约束能力、授权机制、事务处理能力）</li>
+<li>视图更新准则</li>
+<li>高级的插入、删除及修改操作</li>
+<li>物理数据独立性</li>
+<li>逻辑数据独立性</li>
+<li>数据完整性准则</li>
+<li>分布独立性</li>
+<li>无损害准则</li>
+</ul>
+<h2 id="heading-2">关系代数<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="heading-3">关系模型<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>二维表的组成：</p>
+<ul>
+<li>表框架（n个命名的属性，n被称为表的<strong>元数</strong>）</li>
+<li>元组(一个表框架存放了m个元组，m称为表的<strong>基数</strong>)</li>
+</ul>
+<p>满足以下7个性质的二维表称为<strong>关系</strong>：</p>
+<ul>
+<li>元组个数有限</li>
+<li>元组唯一</li>
+<li>元组次序无关</li>
+<li>元组分量的原子性</li>
+<li>属性名唯一性</li>
+<li>属性名次序无关性</li>
+<li>分量值域同一性</li>
+</ul>
+<p>Relational Rules：</p>
+<ul>
+<li>Rule 1. First Normal Form Rule：Can't have multi-valued fields.</li>
+<li>Rule 2. Access Rows by Content Only Rule
+<ul>
+<li>No order to the rows</li>
+<li>No order to the columns</li>
+</ul>
+</li>
+<li>Rule 3. The Unique Row Rule
+<ul>
+<li>Two rows can't be same in all attributes at once. So that a relation is an unordered SET of tuples.</li>
+<li>But many products allow this for efficiency of load.</li>
+</ul>
+</li>
+</ul>
+<p>每个<strong>关系</strong>都有一个名称<strong>关系名</strong>，关系中的每一个属性有一个名称<strong>属性名</strong>，关系名和所有的属性名构成了<strong>关系框架</strong></p>
+<p>超键：set of colunms that has the uniqueness property</p>
+<p>键：minimal superkey</p>
+<p>候选关键字，主关键字，外关键字</p>
+<p><strong>待补充：关系数据库：关系子模式-视图（view）</strong></p>
+<h4 id="heading-4">关系操纵<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>查询：单表查询可以有<strong>纵向定位（行选择）<strong>和</strong>横向定位（选择列）</strong>，多表查询先将多张表合并再用单表查询操作。可以被分解为三个基本操作：两个关系的合并，单个关系内元组指定，单个关系内属性指定</p>
+<p>插入：一条数据插入操作只能向一个关系中增加元组</p>
+<p>删除：删除的基本单位是元组，一次操作只能删除一个关系内的元组</p>
+<p>修改：不是一个基本操作，可以通过先删再插的操作实现</p>
+<p>操纵对象是关系</p>
+<h4 id="heading-5">空值处理<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>关系的主键中不允许出现空值（完整性约束）</p>
+<p>算数表达式中出现空值，结果为空值</p>
+<p>逻辑表达式中出现空值，为逻辑假</p>
+<p>如果是出现了集合中的空值元素，那么仍可使用SUM,AVG,MAX,MIN,COUNT等统计运算，空值不被计算</p>
+<p>如果是对空集进行统计运算，则SUM,AVG,MAX,MIN为空值,COUNT为0</p>
+<p>注意：COUNT(*)是统计元组个数，不存在空值元素问题</p>
+<h4 id="heading-6">三类数据完整性约束<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>实体完整性约束：主键中的属性不为空</p>
+<p>参照完整性约束：外键要么取空值，要么是被引用表中当前存在的某元组上的主键值</p>
+<p>用户定义的完整性：用户自己定义的属性取值约束</p>
+<h3 id="heading-7">关系操纵的表示<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>n元关系R是一个n元有序组的集合，关系R是n个属性的属性域的笛卡尔乘积的子集</p>
+<p>关系上的基本操作与关系代数中的五种基本运算：</p>
+<ul>
+<li>元组选择-选择运算</li>
+<li>属性指定-投影运算</li>
+<li>关系的合并-笛卡尔乘积</li>
+<li>元组的插入-并运算</li>
+<li>元组的删除-差运算</li>
+</ul>
+<p><strong>相容表(compatible tables)</strong>:Head(R)=Head(S),属性值域相同(不代表一个表中这个属性的所有值要在另一个表中出现)且有相同的意思</p>
+<p><strong>并运算</strong>：</p>
+<ul>
+<li>条件：参与运算的两个关系为同类关系(具有相同属性个数且值域相同)</li>
+<li>结果：关系模式不变</li>
+</ul>
+<p><strong>差运算</strong>（R-S）：</p>
+<ul>
+<li>条件：参与运算的为同类关系</li>
+<li>结果：关系模式不变，由所有属于关系R但是不属于关系S的元组所构成的集合</li>
+</ul>
+<p><strong>差运算不满足结合律</strong></p>
+<p><strong>投影运算</strong>：略去关系中某些列而重新安排剩余列的排列次序的运算 $\pi_{B_1,B_2,..B_m}$</p>
+<ul>
+<li>运算结果：一个由 $B_1,B_2,..B_m$ 组成的m元关系，注意<strong>消除结果中可能出现的重复元组</strong></li>
+</ul>
+<p><strong>选择运算</strong>：根据给定条件F从关系R中选出符合条件的元组, $\sigma_F(R)$</p>
+<ul>
+<li>结果：关系模式不变，由属于R且满足F的元组组成</li>
+</ul>
+<p>可以解和投影与选择来实现单张表中的数据查询，在没有括号的情况下，运算顺序从右到左</p>
+<p><strong>笛卡尔乘积</strong>：两个关系的合并运算，$R\times S$,若R，S分别有n,m个属性，p,q个元组，则笛卡尔乘积有$n+m$ 个属性，$pq$ 个元组</p>
+<p><strong>如果笛卡尔乘积中存在相同的属性名，必须在结果中选择一个进行换名</strong></p>
+<h3 id="heading-8">关系模型与关系代数<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>关系：n元有序组的集合</p>
+<p>关系操纵：关系上的集合运算</p>
+<p>关系代数：$(A,\pi,\sigma,\times,\cup,-)$</p>
+<p><strong>注意最大最小的比较的时候用$&lt; \text{or},\leq$</strong>.</p>
+<h3 id="heading-9">关系代数中的扩充运算<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>交运算：</p>
+<ul>
+<li>条件：同类关系</li>
+<li>结果：关系模式不变，既属于R也属于S的元组</li>
+<li>可以用差运算实现 $ R-(R-S) $</li>
+</ul>
+<p>除运算（$R\div S$）：</p>
+<ul>
+<li>运算条件：$Head(S)\subset Head(R)$</li>
+<li>运算结果：$ Head(T)=Head(R)-Head(S) $ ,结果元组T中的元组在S和R中对应同一个值</li>
+<li>$$R\div S = \pi_{A_1,..A_n}(R)-\pi_{A_1,..,A_n}((\pi_{A_1,..,A_n}(R)\times S)-R)$$</li>
+</ul>
+<p>注意的是用商和除数进行笛卡尔乘积，得到的是原被除数的一个<strong>子集</strong></p>
+<p>连接运算（$\theta-连接$，$R {\bowtie}_{F}S$）:对满足条件F的R中和S中的元组合并为一个关系</p>
+<ul>
+<li>结果：$Head(T)=Head(R)\cup Head(S)$，不必消除同名属性但是要换名</li>
+<li>推导：$\sigma_F(R\times S)$</li>
+</ul>
+<p>自然连接：( $R\bowtie S$ ):自动根据两个关系中的同名属性进行等值连接(即把R和S中同名属性相同的连接在一起)</p>
+<h3 id="heading-10">关系代数的应用<a href="#heading-10" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>在订单类的题目中，如果需要使用减法，注意从订单中减还是顾客/供应商减</p>
+<h2 id="heading-11">关系演算<a href="#heading-11" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<blockquote>
+<p>原子公式，公式的定义</p>
+</blockquote>
+<p>在关系演算中，关系用谓词来表示，关系上的操作可以用**关系演算公式(简称公式)**来表示</p>
+<p>元组关系演算：公式中的每个变元都是一个元组</p>
+<p>域关系演算：每个变元的取值都是单个的属性值</p>
+<p>关系演算就是对于所有在关系中的元组对这个谓词是成真指派，其余全是成假指派</p>
+<p>原子公式：</p>
+<ul>
+<li>谓词R(t)是原子公式</li>
+<li>$ u(i)\theta v(j)$是原子公式，其中u,v为元组变量，u(i)表示元组u上的第i个属性</li>
+<li>$u(i)\theta a$是原子公式，其中a为常量</li>
+</ul>
+<p>所有的目标属性以自由变元的形式出现，其他属性以约束变元的形式出现，如检索学生的学号姓名，可以$\exist sd,sa(S(sno,sn,sd,sa))$.</p>
+<p>当变元与常量进行<strong>相等</strong>比较的时候，可以直接用常量值代替变元出现在谓词中，如$\exist cn,pno(C(cno,cn,pno)\wedge pno='C2&rsquo;)$和$\exist cn(C(cno,cn,&lsquo;C2&rsquo;))$是等价的</p>
+<p>关系的联结：</p>
+<ul>
+<li>可以通过相关谓词的逻辑与运算实现两个关系的笛卡儿乘积：R(p) ∧ S(q)</li>
+<li>在1)的基础上再通过选择条件 F 实现两个关系的θ-联结：$R(p) ∧ S(q) ∧ F$</li>
+<li>可以通过两个谓词中的公共变元（同名变元）实现两个关系的自然联结：$R(x,y,z) ∧ S(y,u,v)$</li>
+</ul>
+<p>自联结：谓词名不变，对部分变元进行重命名，从而实现关系的自联结（同名变元取值相等）</p>
+<p>关系演算与关系代数：假设公式$\phi1$代表关系R1,$\phi2$对应R2</p>
+<ul>
+<li>$\phi1 \wedge \phi2$:
+<ul>
+<li>有公共变元表示R1,R2的自然连接</li>
+<li>无公共变元表示笛卡尔积</li>
+</ul>
+</li>
+<li>$\phi1 \rightarrow \phi2$: $R2 \div R1$</li>
+</ul>
+
+						</div>
+					</main>
+					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
+						<div class="btn-group-vertical w-100 my-3">
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/commits/master" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
+</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading-1">关系数据库系统衡量准则</a></li>
+    <li><a href="#heading-2">关系代数</a>
+      <ul>
+        <li><a href="#heading-3">关系模型</a></li>
+        <li><a href="#heading-7">关系操纵的表示</a></li>
+        <li><a href="#heading-8">关系模型与关系代数</a></li>
+        <li><a href="#heading-9">关系代数中的扩充运算</a></li>
+        <li><a href="#heading-10">关系代数的应用</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-11">关系演算</a></li>
+  </ul>
+</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/leon.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js "></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(
+            document.body, {
+                delimiters: [{
+                        left: "$$",
+                        right: "$$",
+                        display: true
+                    },
+                    {
+                        left: "\\[",
+                        right: "\\]",
+                        display: true
+                    },
+                    {
+                        left: "$",
+                        right: "$",
+                        display: false
+                    },
+                    {
+                        left: "\\(",
+                        right: "\\)",
+                        display: false
+                    }
+                ]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
+</body>
+
+</html>
