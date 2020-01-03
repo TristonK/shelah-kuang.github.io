@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta name="generator" content="Hugo 0.62.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+<meta itemprop="name" content="运输层">
+<meta itemprop="description" content="运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实">
+<meta itemprop="datePublished" content="2020-01-02T00:13:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-02T00:13:14&#43;08:00" />
+<meta itemprop="wordCount" content="6783">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="运输层" />
+<meta property="og:description" content="运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/" />
+<meta property="article:published_time" content="2020-01-02T00:13:14+08:00" />
+<meta property="article:modified_time" content="2020-01-02T00:13:14+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="运输层"/>
+<meta name="twitter:description" content="运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实"/>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<title>运输层</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_z93lvlj24ja.css">
+
+<link rel="stylesheet" href="/sass/main.min.28c01c661befd515dddc5c231b0895ce15c078e0b7f29c8c9a3ebe3847d4557c.min.f26af5aa60d3988015c49059001da55420563ad7781f34b06765e2a8c3dcec75.css" integity="sha256-8mr1qmDTmIAVxJBZAB2lVCBWOtd4HzSwZ2XiqMPc7HU=" media="screen">
+</head>
+
+<body style="overflow-x: unset;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-md-3 col-lg-2 bd-sidebar d-print-none">
+				<div class="d-flex mt-3 border-bottom">
+        <span class="navbar-brand w-100" style="display: grid;">
+            <small>
+                <a href="/" class="text-black-50">
+                    <i class="iconfont icon-back-arrow-"></i>
+                </a>
+                TristonK's
+            </small>
+            <a class="text-dark" href="/notes/">
+                Documents
+            </a>
+        </span>
+        <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
+            data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="true"
+            aria-label="Toggle docs navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+				<nav id="bd-docs-nav" class="collapse bd-links">
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            深度学习
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            社会学概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/combinatorics/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            组合数学
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            数据库概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item active bg-light">
+        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            <i class="iconfont icon-back-arrow-reverse"></i>
+            计算机网络
+        </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/">计算机网络与因特网</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/">应用层</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    运输层
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-shu-ju-ping-mian/">网络层-数据平面</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/">网络层-控制平面</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/lian-lu-ceng-yu-ju-yu-wang/">链路层与局域网</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/">无线网络与移动网络</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-zhong-de-an-quan/">计算机网络中的安全</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/duo-mei-ti-wang-luo/">多媒体网络</a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+    
+</nav>
+			</div>
+			<div class="col-12 col-md-9 col-lg-10 d-print-block">
+				<div class="row">
+					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content" role="main">
+						<div id="title" class="my-4 border-bottom">
+							<span>计算机网络</span>
+							<h2>运输层</h2>
+							<footer>
+								<span>
+									<i class="fad fa-calendar-alt mr-2"></i>
+									2020-01-02 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-calendar-edit mr-2"></i>
+									2020-01-02 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-copyright mr-2"></i>
+									CC BY-NC 4.0
+								</span>
+							</footer>
+						</div>
+						<div id="content" class="hl-h2">
+							<h1 id="heading">运输层<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<p>该层位运行在不同主机上的应用经称提供直接的通信服务</p>
+<h2 id="31-">3.1 概述与运输层服务<a href="#31-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>运输层协议位不同主机上的应用进程提供了<strong>逻辑通信</strong>的功能</p>
+<p>网络路由器不实现运输层协议，网络路由器只检查网络层字段，不检查运输层报文段的字段，在接收端，网络层从数据报中提取运输层报文段，并将该报文段向上交给运输层。</p>
+<h3 id="311-">3.1.1 运输层和网络层的关系<a href="#311-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<ul>
+<li>运输层：提供运行在不同主机上的进程之间的逻辑通信</li>
+<li>网络层：提供主机之间的逻辑通信</li>
+</ul>
+<p>运输层协议只运行在端系统中</p>
+<p>运输协议能够提供的服务常常会受制于底层网络层协议的服务模型</p>
+<h3 id="312-">3.1.2 因特网运输层概述<a href="#312-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>UDP(用户数据报协议)：为调用它的应用程序提供一种不可靠(不能保证一个进程发送的数据能完整到达)、无连接(无握手)的服务。提供数据交付与差错检测</p>
+<p>TCP(传输控制协议)：提供一种可靠的、面向连接的服务，通过流量控制、序号、确认和定时器确保按序交付</p>
+<p>虽然RFC中将UDP分组称为datagram数据报，但是本书中运输层分组统称<strong>报文段</strong></p>
+<p>TCP有拥塞控制，防止一条TCP连接用过多的流量淹没通信主机之间的链路和交换设备，但是UDP传输的应用程序可以按照其需要以任意的速率发送数据</p>
+<h2 id="32-">3.2 多路复用与多路分解<a href="#32-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>多路复用与多路分解：将由网络层提供的主机到主机交付服务延申到为运行在主机上的应用程序提供进程到进程的交付服务。</p>
+<ul>
+<li>多路分解：将运输层报文段的数据交付正确的套接字</li>
+<li>多路复用：从源主机的不同套接字收集数据块，并为每个数据块封装上首部信息生成报文段，并将报文段传送给网络层</li>
+</ul>
+<p>一个进程由一个或者多个套接字，运输层不是直接将数据交付给进程而是交给了一个中间的套接字。每个套接字都有一个唯一的<strong>标识符</strong>。</p>
+<p>每个报文段的首部信息的前32个比特都是<strong>源端口号字段</strong>和<strong>目的端口号字段</strong>，每个字段16比特，端口号从1-65535之间，其中0-1023范围内的端口号是<strong>周知端口号</strong>，是受限制保留给一些周知应用层协议来使用的</p>
+<ul>
+<li>一个UDP套接字由一个二元组(目的IP地址,目的端口号)定义</li>
+<li>TCP套接字由一个四元组(源IP地址,源端口号,目的IP地址,目的端口号)标识。</li>
+<li>所以不同主机发送相同目的IP地址和目的端口号的报文，在UDP中会给同一个套接字，而TCP中不会</li>
+</ul>
+<p>如果使用非持续HTTP服务，那么每一对请求/响应都创建一个新的TCP连接并关闭</p>
+<h2 id="33-udp">3.3 无连接运输：UDP<a href="#33-udp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>UDP：做运输协议能做的最少的工作，只在IP上增加了复用/分解功能和差错检测功能</p>
+<p>使用UDP时，发送报文段之前，发送方和接收方的运输层没有握手，故而被称为是<strong>无连接的</strong></p>
+<p>DNS是一个使用UDP的典型例子</p>
+<p>部分应用更适合使用UDP的原因：</p>
+<ul>
+<li>关于发送什么数据以及何时发送的应用层控制更加精细：因为TCP有拥塞控制并且需要可靠有序交付，而一些实时应用通常要求最小发送速率且不希望过分延迟报文段的发送，并且能够容忍一些数据丢失</li>
+<li>无需建立连接：UDP没有建立连接的时延(这是DNS采用UDP的主要原因)</li>
+<li>无连接状态：TCP需要在端系统中维护连接状态(接收和发送缓存，拥塞控制参数及序号和确认好的参数)，采用UDP可以支持更多的活跃用户</li>
+<li>分组首部开销小。<strong>TCP报文首部20字节，UDP8字节</strong></li>
+</ul>
+<p>还有一些如网络管理数据的(SNMP)这些在网络重压状态下运行，这时候可靠的拥塞受控的数据传输难以实现</p>
+<p>多媒体开发人员通常将应用运行在UDP上而不是TCP上</p>
+<h3 id="331-udp">3.3.1 UDP报文结构<a href="#331-udp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>首部只有四个字段(<strong>8字节</strong>)，每个字段16比特(2字节)。</p>
+<ul>
+<li>源端口号</li>
+<li>目的端口号</li>
+<li>长度：UDP报文段的字节数(首部+数据)</li>
+<li>检验和</li>
+</ul>
+<h3 id="332-udp">3.3.2 UDP校验和<a href="#332-udp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>对报文段中所有16比特字的和进行反码运算，求和时遇到的任何溢出都被回卷(最高位进位的数加到最低位去)。接收方收到后，把所有比特字和校验和相加，将会得到全1.</p>
+<p>提供差错检测的原因在于无法保证所有的链路都提供差错检测，同时存储在某台路由器的内存中的时候也可能引入比特差错，故而要在<strong>端到端</strong>基础上在运输层提供差错检测</p>
+<p>但是，UDP的差错检测<strong>没有恢复能力</strong>，只能对报文段进行丢弃或者交给应用程序并给出警告</p>
+<h2 id="34-">3.4 可靠数据传输原理<a href="#34-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="35-tcp">3.5 面向连接的传输：TCP<a href="#35-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="351-tcp">3.5.1 TCP连接<a href="#351-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>TCP是<strong>面向连接的</strong>，因为在一个应用进程可以开始向另一个应用进程发送数据前，两个进程必须先握手，即呼想发送某些预备报文段，以建立确保数据传输的参数。</p>
+<p>连接状态只在两个通信端系统的TCP程序中保留</p>
+<p>TCP连接提供<strong>全双工服务</strong>：应用数据可以从B流向A，也可以从A流向B</p>
+<p>TCP连接是<strong>点对点</strong>的，即多播是不可能的</p>
+<p>客户进程通过套接字传输数据流，数据通过套接字后，被TCP导入<strong>发送缓存</strong>中，发送缓存时发起三次握手期间设置的缓存之一。接下来TCP不时的从发送缓存中取出一块数据并将数据传入网络层。</p>
+<p>取出数据的长度受限于<strong>最大报文段长度(MSS)</strong>,而MSS根据本地发送主机的<strong>最大链路层帧长度(即最大传输单元MTU)<strong>来设置。MSS要保证一个TCP报文段加上TCP/IP首部长度(通常40字节)适合单个链路层帧。注意MSS指的是报文段中</strong>应用层数据的长度</strong></p>
+<p>TCP接收端收到报文段后放入接收缓存中，应用程序从缓存中读取数据流。</p>
+<h3 id="352-tcp">3.5.2 TCP报文段结构<a href="#352-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">|                     源端口号                   |               目的端口号                 |
+|                                             序号                                         |
+|                                            确认号                                        |
+|首部长度|保留未用|SWR|ECE|URG|ACK|PSH|RST|SYN|FIN|              接收窗口                    |
+|                       因特网校验和              |              紧急数据指针                |
+|                                              选项                                        |
+|                                              数据                                        |
+</code></pre></div><ul>
+<li>序号(seq):32 bits</li>
+<li>确认号(ACK)：32 bits</li>
+<li>接收窗口字段：16 bits，用于流量控制</li>
+<li>首部长度字段: 4 bits</li>
+<li>选项字段：可选、变长</li>
+<li>标志字段：6 bits
+<ul>
+<li>ACK：指示确认字段的值有效</li>
+<li>RST,SYN,FIN: 连接建立与拆除</li>
+<li>SWR,ECE: 明确拥塞通告</li>
+<li>PSH：置位时标识接收方应当立即将数据交给上层</li>
+<li>URG：指示报文段里存在着发送端上层实体置为紧急的数据，紧急数据的最后一个字节由紧急数据指针字段指出</li>
+</ul>
+</li>
+</ul>
+<h4 id="heading-1">序号与确认号<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>TCP把数据看成一个无结构、有序的字节流，序号是<strong>建立在传送的字节流之上，而不是报文段序列上</strong>，主机A填充到报文段的<strong>确认号是希望从主机B收到的下一字节的序号</strong></p>
+<p>TCP：累计确认</p>
+<p>收到失序的报文段的处理方式取决于编程人员：</p>
+<ul>
+<li>立刻丢弃失序报文段</li>
+<li>保留失序字节，并等待确少的字节以填补间隔</li>
+</ul>
+<p>一条TCP连接的双方均可随机的选择初始序号</p>
+<h3 id="353-">3.5.3 往返事件的估计与超时<a href="#353-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>采用超时/重传机制来处理报文段的丢失问题</p>
+<p>RTT：往返时间</p>
+<p>报文段的样本RTT就是从某报文段被发出到对该报文段的确认被收到之间的时间量。大多数的实现是某个时刻做一次测量而不是每个发送的报文段测量一个。TCP绝不为已经重传的报文段计算SampleRTT。</p>
+<p>SampleRTT的平均值(加权移动平均)EstimatedRTT：$$EstimatedRTT=(1-\alpha)EstimatedRTT + \alpha SampleRTT$$</p>
+<p>在RFC6298中给出的推荐值是$\alpha = 0.125$</p>
+<p>RTT偏差：$$DevRTT=(1-\beta)DevRTT+\beta |SampleRTT-EstimateRTT|$$$\beta$的推荐值是0.25</p>
+<p>设置重传时间间隔不能太小，否则会造成不必要重传，也不能太大，否则不能很快的重传报文段造成数据传输时延较大。一般设置为$$TimeoutInterval = EstimatedRTT+4*DevRTT$$只要超时了就将其加倍，但是再次收到报文段后就仍然按照上面的公式对其进行更新</p>
+<h3 id="354-">3.5.4 可靠数据传输<a href="#354-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>可靠数据传输保证一个进程从其接收缓存中读出的数据流是无损坏、无间隙、非冗余和按序的数据流。</p>
+<p>推荐的定时器管理过程是使用单一的重传定时器，即使有多个已发送但是仍未被确认的报文。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">/*假设发送方不受TCP流量控制和拥塞控制，每一个数据小于MSS.*/
+NextSeqNum = InitialSeqNum
+SendBase = InitialSeqNum
+
+loop(永远){
+    switch(event):
+        case 从上层应用接收数据：
+            生成序号为NextSeqNum的报文;
+            if(定时器没有启动){
+              启动定时器;
+            }
+            向IP传递报文;
+            NextSeqNum += 数据字节数;
+            break;
+
+        case 超时：
+            重传SendBase对应的TCP报文; /*和GBN不同之处*/
+            TimeoutInterval *= 2;
+            重启定时器; /*每次重传一个报文后都会重新启动定时器*/
+            break;
+
+        case 接收ACK, AN = y:
+            if(y &gt; SendBase){
+                SendBase = y; /*采取累计确认*/
+                重新计算TimeoutInterval;
+                if(仍有发送且未确认报文){
+                    重启定时器;
+                }
+            }
+            else{/*实际上此时y == SendBase*/
+                y的冗余数量 += 1;
+                if(y的冗余数量 == 3){
+                    /*快速重传*/
+                    立即重传序号为y对应的报文;
+                }
+            }
+            break;
+}
+</code></pre></div><p>对于接收端而言：</p>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">具有所期望序号的按序报文段到达且在此之前的报文段都已经被确认，即本报文段是当前状态下第一个接收但未被确认的报文</td>
+<td align="left">Delayed ACK，延迟的ACK。对另一个按序报文段的到达最多等待500ms。如果下一个按序报文段在这个时间间隔内没有到达，则发送一个ACK。</td>
+</tr>
+<tr>
+<td align="left">具有所期望序号的按需报文段到达且当前有一个报文段等待ACK传输，即此时处于事件一的状态</td>
+<td align="left">立马发送单个累计ACK，确认这两个报文</td>
+</tr>
+<tr>
+<td align="left">比所期望序号大的失序报文段到达，即接收产生了间隔</td>
+<td align="left">立即发送冗余ACK，指示下一个期待字节的序号（其为间隔的低端的序号）</td>
+</tr>
+<tr>
+<td align="left">能部分或完全填充接收数据间隔的报文段到达</td>
+<td align="left">如果该报文段序号起始于间隔的低端，则立即发送ACK</td>
+</tr>
+</tbody>
+</table>
+<h4 id="heading-2">一些有趣的情况<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<ol>
+<li>
+<p>主机A发送的报文在主机B上收到，但从主机B发往主机A的确认报文丢失了。超时事件发生，主机A会重传相</p>
+<p>同的报文段。</p>
+</li>
+<li>
+<p>主机A发送了两个报文段，都被主机B接收，但是在超时之前B发送的两个确认报文没有一个到达A。A重传第</p>
+<p>一个报文，在超时间隔内B发送的第二个确认到达了A。第二个报文段不会被重传。</p>
+</li>
+<li>
+<p>同2，但是在超时之前，A收到了第二个确认报文，第一个确认报文丢失，A不会重传任何报文。</p>
+</li>
+</ol>
+<h4 id="heading-3">超时间隔加倍<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>每次重传将下一次的超时间隔设为之前的两倍(指数级增长)，收到后再恢复公式计算</p>
+<h4 id="heading-4">快速重传<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>为了避免一个超时周期过长，当一个报文段丢失的时候，长超时周期使得发送方延迟重传丢失的分组增加了端到端时延。</p>
+<p>认为如果收到了三个冗余的ACK，那么就执行快速重传，即在该报文段的定时器过期前重传丢失的报文段</p>
+<p>一个修改建议是选择重传：即允许TCP接收方有选择的确认而不是累计确认</p>
+<h3 id="355-">3.5.5 流量控制<a href="#355-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>流量控制是一个速度匹配服务，使发送方的发送速率和接收方的应用程序读取速率匹配，消除接收方缓存溢出的可能性</p>
+<p>TCP让<strong>发送方</strong>维护一个**接收窗口(rwnd)**的变量来提供流量控制，接收方给发送方一个指示：接收方还有多少可用的缓存空间</p>
+<ul>
+<li>RcvBuffer: 接收缓存大小</li>
+<li>LastByteRead：主机B上的应用进程从缓存中读出的数据流的最后一个字节的编号。</li>
+<li>LastByteRcvd：从网络中到达的并且已放入主机B接收缓存中的数据流的最后一个字节的编号。</li>
+<li>由于TCP不允许已分配的缓存溢出，下式必须成立：LastByteRcvd-LastByteRead&lt;= RcvBuffer</li>
+</ul>
+<p>设置$rwnd=RcvBuffer-(LastByteRcvd-LastByteRead)$</p>
+<ul>
+<li>以下假设A向B发送报文段</li>
+<li>初始时B将rwnd设置为RcvBuffer大小</li>
+<li>主机B会见rwnd的大小放在报文段首部中的<strong>接收窗口</strong>字段中</li>
+<li>如果通报了rwnd为0之后B不向A发送报文(不发送确认报文且无向A传输的数据)，可能导致后续B缓存清空后A仍然无法发送报文，故而规定B的接收窗口为0后，A将向B发送只有一个字节数据的报文段。但缓存开始清空后，确认报文中将含有一个非0的rwnd值</li>
+</ul>
+<h3 id="356-tcp">3.5.6 TCP连接管理<a href="#356-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>三次握手：</p>
+<ul>
+<li>第一步：(SYN报文段)客户端发送报文段,报文段中应用数据为空，报文段首部的标志位SYN置为1,客户随机生成序号，并将其放在序号字段中。</li>
+<li>第二步:（SYNACK报文段）服务器为TCP连接分配TCP缓存与变量，并向客户发送允许连接报文段，此报文段应用数据为空，SYN位置1，确认号为客户随机生成的序号+1，并随机选择自己的序号</li>
+<li>第三步：收到SYNACK报文段后，客户给连接分配TCP缓存与变量，这个报文段SYN置0.且可以含有应用数据</li>
+</ul>
+<p>客户关闭连接：</p>
+<ul>
+<li>向服务器发送特殊报文段，FIN置1</li>
+<li>服务器收到后发送一个确认报文段</li>
+<li>服务器在发送一个FIN置1的他的终止报文段</li>
+<li>客户进行确认，连接资源释放(客户发送ACK后定时等待后关闭)</li>
+</ul>
+<h2 id="36-">3.6 拥塞控制原理<a href="#36-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>分组重传可以作为网络拥塞的征兆，我们需要一定的机制在网络拥塞时抑制发送方</p>
+<h3 id="361-">3.6.1 拥塞原因与代价<a href="#361-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>分组的到达速率接近链路容量时，分组经历巨大的排队时延</p>
+<p>发送方必须执行重传以补偿因为缓存溢出而丢弃的分组</p>
+<p>发送方在遇到大时延时所进行的不必要重传会引起路由器利用其链路带宽来转发不必要的分组副本</p>
+<p>当一个分组沿一条路径被丢弃时，每个上游路由器用于转发该分组到丢弃该分组而使用的传输流量最终被浪费了</p>
+<h3 id="362-">3.6.2 拥塞控制办法<a href="#362-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<ul>
+<li>端到端拥塞控制：网络层没有对运输层控制提供显式支持，即使网络中存在拥塞端系统也必须通过对网络行为的观察来推断。TCP报文段的丢失被认为是网络拥塞的一个征兆</li>
+<li>网络辅助的拥塞控制：路由器向发送方提供关于网络中拥塞状态的显式反馈信息。例如在ATM可用比特率拥塞控制中，路由器显式的通知发送方路由器能够在输出链路上支持的最大主机发送速率
+<ul>
+<li>一种是采用阻塞分组(choke packet)的形式 \</li>
+<li>一种是路由器标记或更新从发送方流向接收方的分组中的某个字段来指示拥塞的产生</li>
+</ul>
+</li>
+</ul>
+<h2 id="37-tcp">3.7 TCP拥塞控制<a href="#37-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>TCP：让每一个发送方根据所感知到的网络拥塞程度来限制其能向连接发送流量的速率</p>
+<p>运行在发送方的TCP用户拥塞控制机制额外跟踪一个变量，也就是<strong>拥塞窗口(cwnd)</strong>.在一个发送方中未确定的数据量不能够超过cwnd和rwnd的最小值</p>
+<p>如何控制速率：每个RTT的起始点，允许发送cwnd个字节的数据，该RTT结束的时候收到确认报文，因此该发送方的发送速率是cwnd/RTT字节/秒</p>
+<p>将丢包事件定义为：要么出现超时，要么收到了来自接收方的三个冗余ACK</p>
+<p>因为TCP使用确认来出发增大他的拥塞窗口长度，故而可以说TCP是<strong>自计时</strong>的</p>
+<p>TCP的指导性原则：</p>
+<ul>
+<li>一个丢失的报文段意味着拥塞，因此丢失报文段时应当降低TCP发送方的速率</li>
+<li>一个确认报文段表示该网络正在向接收方交付发送方的报文段，因此对向前未确认报文段的确认到达时，能够增加发送方的速率</li>
+<li>带宽探测，增加速率以响应到达的ACK，除非出现丢包事件才减小速率</li>
+</ul>
+<p>TCP拥塞控制算法：慢启动，拥塞避免，快速恢复</p>
+<h4 id="heading-5">慢启动<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>cwnd的初始值通常设置一个MSS的比较小的值，使得初始速率大概只有MSS/RTT，在慢启动状态，cwnd以一个MSS开始并且每当传输的报文段首次被确认就增加一个MSS。之后每过一个RTT，发送速率就翻番。</p>
+<p>如果存在一个丢包事件就把cwnd设置为1并重新启动慢启动过程，并且把<strong>慢启动阈值ssthresh</strong>置为拥塞窗口值的一半·</p>
+<p>当cwnd上升到ssthresh时，将结束慢启动并且将TCP转移到拥塞避免模式。另一种结束方式是如果是三个冗余ACK，TCP将执行一种快速重传并进入快速恢复状态</p>
+<h4 id="heading-6">拥塞避免<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>cwnd在每个RTT线性增加</p>
+<p>超时后，cwnd设置为一个MSS，丢包后ssthresh被设置为原来cwnd的一半。</p>
+<p>如果是三个冗余ACK导致的超时，则将cwnd减半后加三，并且当收到三个冗余ACK，将ssthresh设置为cwnd的一半，然后进入快速恢复状态</p>
+<h4 id="heading-7">快速恢复<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>对每个冗余的ACK增加一个MSS，当对丢失报文段的一个ACK到达后，TCP降低cwnd后进入拥塞避免状态。如果在快速恢复种遇到了超时事件，将迁移到慢启动状态并将cwnd设置为1，ssthresh设置为一半</p>
+<p>早期的TCP Tahoe版本是没有快速恢复的，3个冗余ACK也进入慢启动，TCP Reno版本有</p>
+<h4 id="heading-8">回顾<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>加性增，乘性减</p>
+<p>TCP Vegas算法：</p>
+<ul>
+<li>分组丢失之前在源和目的地之间检测路由器种的拥塞</li>
+<li>检测出快要发生的分组丢失时，线性的降低发送速率，快要发生的分组丢失通过观察RTT来预测</li>
+</ul>
+<h4 id="heading-9">吞吐量的宏观描述<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>TCP的传输速率在$W/(2*RTT)$和$W/RTT$之间变化（W：当前窗口长度）</p>
+<p>平均吞吐量：$$\frac{0.75*W}{RTT}$$</p>
+<h4 id="tcp">经高带宽路径的TCP<a href="#tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>$$平均吞吐量 = \frac{1.22<em>MSS}{RTT</em>\sqrt{L}}$$ 其中，L为丢包率，MSS为最大报文段长度</p>
+<h3 id="371-">3.7.1 公平性<a href="#371-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>如果K条连接都经过一个传输速率为R bps的瓶颈链路，如果每个传输的平均传输速率都接近R/K，那么认为这个拥塞机制是公平的</p>
+<p>实际上那些具有更小的RTT的传输能够更快的抢到可用带宽，因而比那些具有较大RTT的连接先用更高的吞吐量</p>
+<p>由于UDP没有拥塞控制，将挤压TCP资源</p>
+<p>如今许多Web应用使用多个并行TCP连接来抢占链路传输中的带宽</p>
+<h3 id="372-">3.7.2 明确拥塞警告:网络辅助拥塞控制<a href="#372-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>允许网络明确向TCP发送方和接收方发出拥塞信号，这种形式的网络辅助拥塞控制称为<strong>明确拥塞通告(ECN)</strong></p>
+<p>在IP数据报的首部服务类型字段中2个比特用于ECN(4种状态)</p>
+<p>路由器判断拥塞后使用ECN比特设置指示该路由器正在历经拥塞，接受主机收到报文后在TCP ACK中设置ECE发送到主机，通知发送方TCP收到拥塞指示，接下来TCPP发送方通过减半cwnd来对一个具有ECE拥塞指示的ACK作出反应。并在下一个发送给接收方的报文首部中设置CWR比特</p>
+
+						</div>
+					</main>
+					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
+						<div class="btn-group-vertical w-100 my-3">
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/commits/master" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
+</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#31-">3.1 概述与运输层服务</a>
+      <ul>
+        <li><a href="#311-">3.1.1 运输层和网络层的关系</a></li>
+        <li><a href="#312-">3.1.2 因特网运输层概述</a></li>
+      </ul>
+    </li>
+    <li><a href="#32-">3.2 多路复用与多路分解</a></li>
+    <li><a href="#33-udp">3.3 无连接运输：UDP</a>
+      <ul>
+        <li><a href="#331-udp">3.3.1 UDP报文结构</a></li>
+        <li><a href="#332-udp">3.3.2 UDP校验和</a></li>
+      </ul>
+    </li>
+    <li><a href="#34-">3.4 可靠数据传输原理</a></li>
+    <li><a href="#35-tcp">3.5 面向连接的传输：TCP</a>
+      <ul>
+        <li><a href="#351-tcp">3.5.1 TCP连接</a></li>
+        <li><a href="#352-tcp">3.5.2 TCP报文段结构</a></li>
+        <li><a href="#353-">3.5.3 往返事件的估计与超时</a></li>
+        <li><a href="#354-">3.5.4 可靠数据传输</a></li>
+        <li><a href="#355-">3.5.5 流量控制</a></li>
+        <li><a href="#356-tcp">3.5.6 TCP连接管理</a></li>
+      </ul>
+    </li>
+    <li><a href="#36-">3.6 拥塞控制原理</a>
+      <ul>
+        <li><a href="#361-">3.6.1 拥塞原因与代价</a></li>
+        <li><a href="#362-">3.6.2 拥塞控制办法</a></li>
+      </ul>
+    </li>
+    <li><a href="#37-tcp">3.7 TCP拥塞控制</a>
+      <ul>
+        <li></li>
+        <li><a href="#371-">3.7.1 公平性</a></li>
+        <li><a href="#372-">3.7.2 明确拥塞警告:网络辅助拥塞控制</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/leon.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js "></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(
+            document.body, {
+                delimiters: [{
+                        left: "$$",
+                        right: "$$",
+                        display: true
+                    },
+                    {
+                        left: "\\[",
+                        right: "\\]",
+                        display: true
+                    },
+                    {
+                        left: "$",
+                        right: "$",
+                        display: false
+                    },
+                    {
+                        left: "\\(",
+                        right: "\\)",
+                        display: false
+                    }
+                ]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
+</body>
+
+</html>

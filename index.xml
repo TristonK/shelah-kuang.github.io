@@ -31,12 +31,39 @@
     </item>
     
     <item>
+      <title>计算机网络与因特网</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/</guid>
+      <description>计算机网络与因特网 1.1 什么是因特网 回答什么是因特网： 因特网的具体构成，即因特网的基本硬件与软件组件 根据为分布式应用提供服务的联网基础设施来描述</description>
+    </item>
+    
+    <item>
       <title>数据库系统概述</title>
       <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</link>
       <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
       
       <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</guid>
       <description>数据库系统概述 复习重点 1.1基本概念 数据库，数据库管理系统，数据库系统，数据库管理员 相互之间的关系 1.2数据库系统的特点 数据集成化，数据独立</description>
+    </item>
+    
+    <item>
+      <title>社会学概论-社会学的视角</title>
+      <link>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/</guid>
+      <description>{% note info no-icon %} 社会学的学习是激情之旅，让我们一起努力，接触那些饱受争议的概念与理论，试图打开那些紧闭着的大门，去发现我们非常熟悉的日常世界之幽暗</description>
+    </item>
+    
+    <item>
+      <title>应用层</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</guid>
+      <description>应用层 不考</description>
     </item>
     
     <item>
@@ -49,12 +76,57 @@
     </item>
     
     <item>
+      <title>强化学习-Multi-armed Bandits</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl2/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 2 这个读书笔记建立在已经看完了西瓜书第16章的基础上，略过了很多</description>
+    </item>
+    
+    <item>
+      <title>社会学概论-社会与文化</title>
+      <link>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl2/</guid>
+      <description>{% note primary %} 阅读文献 金耀基：“中国人对私隐权的-中国人文鼎细等线的公私观念” 林语堂：《中国人》第四章 “人生的理想” Horace Miner. Body Ritual among the Nacirema {% endnote %} 汉语中的社</description>
+    </item>
+    
+    <item>
+      <title>运输层</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/</guid>
+      <description>运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实</description>
+    </item>
+    
+    <item>
       <title>关系数据库系统</title>
       <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</link>
       <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
       
       <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</guid>
       <description>关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论</description>
+    </item>
+    
+    <item>
+      <title>强化学习-Finite Markov Decision Processes</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl3/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 3 感觉这一章就给了一些基础概念，看西瓜书也成啊 3.1 The Agent–E</description>
+    </item>
+    
+    <item>
+      <title>网络层-数据平面</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-shu-ju-ping-mian/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-shu-ju-ping-mian/</guid>
+      <description>网络层：数据平面 重点：4.2、4.3 网络传输中ipv4报文首部哪些不会改变 网络层：实现主机到主机之间的通信服务，与运输层和应用层不同的是，网</description>
     </item>
     
     <item>
@@ -67,12 +139,48 @@
     </item>
     
     <item>
+      <title>强化学习-Dynamic Programming</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl4/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 4 The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies. 如果看完了西</description>
+    </item>
+    
+    <item>
+      <title>网络层-控制平面</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/</guid>
+      <description>网络层：控制平面 5.2 路由选择算法 BGP协议报文使用TCP报文封装，RIP使用UDP，OSPF使用IP报文封装 路由选择算法的目的：从发送方到接收</description>
+    </item>
+    
+    <item>
       <title>数据库安全性与完整性</title>
       <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</link>
       <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
       
       <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</guid>
       <description>数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S</description>
+    </item>
+    
+    <item>
+      <title>强化学习-Monte Carlo Methods</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl5/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 5 蒙特卡洛方法不需要环境的信息，只需要经验（experience</description>
+    </item>
+    
+    <item>
+      <title>链路层与局域网</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/lian-lu-ceng-yu-ju-yu-wang/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/lian-lu-ceng-yu-ju-yu-wang/</guid>
+      <description>链路层与局域网 两种链路层信道： 广播信道：连接有线局域网、卫星网和混合光纤同轴电缆(HFC)接入网中的多台主机，因为许多主机与相同广播信道连接</description>
     </item>
     
     <item>
@@ -85,6 +193,24 @@
     </item>
     
     <item>
+      <title>强化学习-Temporal-Difference Learning</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl6/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 6 TD：时序差分方法，是一种综合了蒙特卡洛与DP的特点的方法 6.1 TD</description>
+    </item>
+    
+    <item>
+      <title>无线网络与移动网络</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</guid>
+      <description>无线网络与移动网络 7.1 概述 无线主机(wireless host): 类似于有线主机，运行应用程序的端设备。 无线链路： 主机通过无线通信链路来连接到一个基站。 基</description>
+    </item>
+    
+    <item>
       <title>游标管理与索引</title>
       <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</link>
       <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
@@ -94,12 +220,39 @@
     </item>
     
     <item>
+      <title>强化学习-n-step Bootstraping</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl7/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 7</description>
+    </item>
+    
+    <item>
+      <title>计算机网络中的安全</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-zhong-de-an-quan/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-zhong-de-an-quan/</guid>
+      <description>计算机网络中的安全 RSA MD5</description>
+    </item>
+    
+    <item>
       <title>关系数据库规范化理论</title>
       <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</link>
       <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
       
       <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</guid>
       <description>关系数据库规范化理论 8.1 概述 模式设计质量的评价指标：数据冗余度，插入/删除等更新异常 为什么要研究关系的规划化设计：规范化的目的与手段 8.2 规范化理</description>
+    </item>
+    
+    <item>
+      <title>多媒体网络</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/duo-mei-ti-wang-luo/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/duo-mei-ti-wang-luo/</guid>
+      <description>多媒体网络 9.1 多媒体网络应用 视频最显著的特点：高比特率 9.2 流式存储视频 流式存储视频：UDP流、HTTP流、适应性HTTP流 广泛应用客户端应用缓存</description>
     </item>
     
     <item>

@@ -12,5 +12,59 @@
 	<atom:link href="http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>强化学习-Multi-armed Bandits</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl2/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 2 这个读书笔记建立在已经看完了西瓜书第16章的基础上，略过了很多</description>
+    </item>
+    
+    <item>
+      <title>强化学习-Finite Markov Decision Processes</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl3/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 3 感觉这一章就给了一些基础概念，看西瓜书也成啊 3.1 The Agent–E</description>
+    </item>
+    
+    <item>
+      <title>强化学习-Dynamic Programming</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl4/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 4 The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies. 如果看完了西</description>
+    </item>
+    
+    <item>
+      <title>强化学习-Monte Carlo Methods</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl5/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 5 蒙特卡洛方法不需要环境的信息，只需要经验（experience</description>
+    </item>
+    
+    <item>
+      <title>强化学习-Temporal-Difference Learning</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl6/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 6 TD：时序差分方法，是一种综合了蒙特卡洛与DP的特点的方法 6.1 TD</description>
+    </item>
+    
+    <item>
+      <title>强化学习-n-step Bootstraping</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl7/</guid>
+      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 7</description>
+    </item>
+    
   </channel>
 </rss>

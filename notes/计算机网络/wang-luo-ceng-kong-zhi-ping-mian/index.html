@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta name="generator" content="Hugo 0.62.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+<meta itemprop="name" content="网络层-控制平面">
+<meta itemprop="description" content="网络层：控制平面 5.2 路由选择算法 BGP协议报文使用TCP报文封装，RIP使用UDP，OSPF使用IP报文封装 路由选择算法的目的：从发送方到接收">
+<meta itemprop="datePublished" content="2020-01-02T00:13:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-02T00:13:14&#43;08:00" />
+<meta itemprop="wordCount" content="3086">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="网络层-控制平面" />
+<meta property="og:description" content="网络层：控制平面 5.2 路由选择算法 BGP协议报文使用TCP报文封装，RIP使用UDP，OSPF使用IP报文封装 路由选择算法的目的：从发送方到接收" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/" />
+<meta property="article:published_time" content="2020-01-02T00:13:14+08:00" />
+<meta property="article:modified_time" content="2020-01-02T00:13:14+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="网络层-控制平面"/>
+<meta name="twitter:description" content="网络层：控制平面 5.2 路由选择算法 BGP协议报文使用TCP报文封装，RIP使用UDP，OSPF使用IP报文封装 路由选择算法的目的：从发送方到接收"/>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<title>网络层-控制平面</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_z93lvlj24ja.css">
+
+<link rel="stylesheet" href="/sass/main.min.28c01c661befd515dddc5c231b0895ce15c078e0b7f29c8c9a3ebe3847d4557c.min.f26af5aa60d3988015c49059001da55420563ad7781f34b06765e2a8c3dcec75.css" integity="sha256-8mr1qmDTmIAVxJBZAB2lVCBWOtd4HzSwZ2XiqMPc7HU=" media="screen">
+</head>
+
+<body style="overflow-x: unset;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-md-3 col-lg-2 bd-sidebar d-print-none">
+				<div class="d-flex mt-3 border-bottom">
+        <span class="navbar-brand w-100" style="display: grid;">
+            <small>
+                <a href="/" class="text-black-50">
+                    <i class="iconfont icon-back-arrow-"></i>
+                </a>
+                TristonK's
+            </small>
+            <a class="text-dark" href="/notes/">
+                Documents
+            </a>
+        </span>
+        <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
+            data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="true"
+            aria-label="Toggle docs navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+				<nav id="bd-docs-nav" class="collapse bd-links">
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            深度学习
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            社会学概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/combinatorics/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            组合数学
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            数据库概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item active bg-light">
+        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            <i class="iconfont icon-back-arrow-reverse"></i>
+            计算机网络
+        </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/">计算机网络与因特网</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/">应用层</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/">运输层</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-shu-ju-ping-mian/">网络层-数据平面</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    网络层-控制平面
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/lian-lu-ceng-yu-ju-yu-wang/">链路层与局域网</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/">无线网络与移动网络</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-zhong-de-an-quan/">计算机网络中的安全</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/duo-mei-ti-wang-luo/">多媒体网络</a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+    
+</nav>
+			</div>
+			<div class="col-12 col-md-9 col-lg-10 d-print-block">
+				<div class="row">
+					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content" role="main">
+						<div id="title" class="my-4 border-bottom">
+							<span>计算机网络</span>
+							<h2>网络层-控制平面</h2>
+							<footer>
+								<span>
+									<i class="fad fa-calendar-alt mr-2"></i>
+									2020-01-02 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-calendar-edit mr-2"></i>
+									2020-01-02 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-copyright mr-2"></i>
+									CC BY-NC 4.0
+								</span>
+							</footer>
+						</div>
+						<div id="content" class="hl-h2">
+							<h1 id="heading">网络层：控制平面<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<h2 id="52-">5.2 路由选择算法<a href="#52-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>BGP协议报文使用TCP报文封装，RIP使用UDP，OSPF使用IP报文封装</p>
+<p>路由选择算法的目的：从发送方到接收方的过程中确定一条通过路由器网络的好的路径</p>
+<p>路由选择算法的分类：</p>
+<ul>
+<li>集中式路由选择算法：用完整的全局的网络知识来计算，具有全局状态信息的算法叫做<strong>链路状态算法(LS)</strong></li>
+<li>分散式路由选择算法：路由器使用迭代、分布式的算法计算出最低开销。如<strong>距离向量(DV)算法</strong></li>
+<li>静态路由选择算法：路由随时间变化缓慢，通常人工配置</li>
+<li>动态路由选择算法</li>
+<li>负载敏感算法</li>
+<li>负载迟钝算法：目前使用的(RIP,OSPF,BGP)都是负载迟钝的</li>
+</ul>
+<h3 id="521-">5.2.1 链路状态路由选择算法<a href="#521-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>如OSPF算法，这通常由**链路状态广播(link state broadcast)**算法完成，节点广播的结果就是所有节点都有该网络的统一、完整的视图</p>
+<p>一种链路状态路由选择算法是Dijkstra算法</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#888">/*
+</span><span style="color:#888">* D(v) 到本次迭代，从源节点到目的节点v的最小距离
+</span><span style="color:#888">* p(v) 源节点到点v的最短路径的前一节点
+</span><span style="color:#888">* N‘ 节点子集，包含了源到其点最短路径已知的所有点
+</span><span style="color:#888">*/</span>
+<span style="color:#970;font-weight:bold">Initialization</span>:
+    N<span style="color:#f00;background-color:#faa">’</span> <span style="color:#333">=</span> {u}
+    <span style="color:#080;font-weight:bold">for</span> all nodes v
+        <span style="color:#080;font-weight:bold">if</span> v is a neighbor of u
+            then D(v) <span style="color:#333">=</span> c(u, v)
+        <span style="color:#080;font-weight:bold">else</span> D(v) <span style="color:#333">=</span> <span style="color:#f00;background-color:#faa">∞</span>
+
+<span style="color:#970;font-weight:bold">Loop</span>:
+    find w not in N<span style="color:#f00;background-color:#faa">’</span> such that D(w) is a minimum
+    add w to N<span style="color:#f00;background-color:#faa">’</span>
+    update D(v) <span style="color:#080;font-weight:bold">for</span> each neighbor v of w and not in N<span style="color:#f00;background-color:#faa">’</span><span style="color:#333">:</span>
+        D(v) <span style="color:#333">=</span> min(D(v), D(w)<span style="color:#333">+</span> c(w, v) )
+    <span style="color:#888">/* new cost to v is either old cost to v or known
+</span><span style="color:#888">    least path cost to w plus cost from w to v */</span>
+    until N<span style="color:#f00;background-color:#faa">’</span><span style="color:#333">=</span> N
+</code></pre></div><h3 id="522-">5.2.2 距离向量路由选择算法<a href="#522-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>迭代的（一直要持续到邻居之间无更多信息交换为止）、异步的、分布式(每个节点要从一个或者多个直接邻居接收某些信息，执行计算，然后把结果分发给邻居)的算法</p>
+<p>使用的协议有BGP,RIP</p>
+<p>Bellman-Ford算法：$d_x(y)=min_v{c(x,v)+d_v(y)}$</p>
+<p>算法思路：每个节点从邻居节点处得到一个距离向量，他保存v的距离向量，然后使用Bellman-Ford方程更新自己的距离向量</p>
+<ul>
+<li>可能遇到的问题：当DV算法稳定后某条链路开销突然改变，可能出现路由选择环路问题，节点间的最短路径相互依赖，导致结果在节点间不断的来回变换直到最后稳定，称为无穷计数问题</li>
+<li>一种尝试解决的方式：增加毒性逆转：如果z通过y路由到达目的地x，那么z告诉y，z到x的距离无穷大。但是涉及三个或以上节点的环路毒性逆转无效</li>
+</ul>
+<h2 id="53-ospf">5.3 自治系统内部的路由选择：OSPF<a href="#53-ospf" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>为了解决1)互联网规模大，所有路由器之间更新链路开销的负担是巨大的2)ISP希望按照自己的意愿运行路由器或者对外部隐藏其网络的内部组织面貌，这两个问题可以通过将路由器组织进**自治系统(AS)**解决</p>
+<p>自治系统AS由一组通常处在相同管理控制下的路由器组成，通常在一个ISP中的路由器以及互联他们的链路构成一个AS。一个自治系统由其全局唯一的AS号(ASN)所标识,AS号由ICANN区域注册机构分配</p>
+<p>运行在一个自治系统内的路由选择算法叫做<strong>自治系统内部路由选择协议</strong></p>
+<p>OSPF:开放最短路优先，是一种链路状态协议，使用洪泛链路状态信息和Dijkstra最低开销路径算法。</p>
+<p>使用OSPF时，路由器向自治系统内所有其他路由器广播路由选择信息，每当一条链路的状态发生变化后，路由器就广播链路状态信息，<strong>即使不改变也要周期性(至少30min一次)的广播一次</strong>。</p>
+<p>OSPF的优点：</p>
+<ul>
+<li>安全：所有的OSPF消息经过身份验证，能够配置简单的和MD5(基于配置在所有路由器上共享秘密密钥，路由器对附加了秘密密钥的OSPF分组计算MD5散列值并包括在OSPF分组中，接收路由器根据预配置的秘密密钥计算MD5散列值与OSPF中携带的比较)的鉴别</li>
+<li>存在多条相同开销的路径时，允许使用多条路径</li>
+<li>对单播和多播综合支持</li>
+<li>支持在单个AS内的层次结构：允许AS内划分区域，有一个主干区域，每个区域运行自己的OSPF，如果要跨区域：区域1-&gt;主干区域-&gt;区域2</li>
+</ul>
+<h2 id="54-ispbgp">5.4 ISP之间的路由选择:BGP<a href="#54-ispbgp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>因特网中，所有的AS运行相同的AS间路由选择协议，称为<strong>边界网关协议(BGP)</strong></p>
+<h3 id="541-bgp">5.4.1 BGP的作用<a href="#541-bgp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>在BGP中，分组时路由到CIDR化的前缀，每个前缀表示一个子网或者一个子网的集合，因此一台路由器的转发表将具有(x,I)的表项，其中x为前缀，I时路由器的接口之一的接口号</p>
+<ul>
+<li>BGP提供的手段
+<ul>
+<li>从邻居AS获得前缀可达信息。BGP允许每个子网向因特网的其余全部部分通告他的存在</li>
+<li>确定到该前缀的最好的路由</li>
+</ul>
+</li>
+</ul>
+<h3 id="542-bgp">5.4.2 通告BGP路由信息<a href="#542-bgp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>对于每个AS，每台路由器要么是<strong>网关路由器</strong>，要么就是<strong>内部路由器</strong>，网关路由器直接连接到其他AS中一台或者多台路由器，内部路由器只连接AS内部路由器或者主机</p>
+<p>每队路由器使用179端口的半永久TCP连接来交换路由选择信息</p>
+<ul>
+<li>跨越两个AS的BGP连接：外部BGP连接(eBGP)</li>
+<li>AS内部的BGP连接：内部BGP连接(iBGP)</li>
+</ul>
+<p>传递可达信息：不断重复AS内部广播，网关传递到其他AS的过程</p>
+<h3 id="543-">5.4.3 确定最好的路由<a href="#543-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>路由器通过BGP连接通告前缀时，会在前缀中引入一些BGP属性。前缀及其属性称为<strong>路由</strong>。两个比较重要的属性是<strong>AS-PATH</strong>和<strong>NEXT-HOP</strong>。其中AS-PATH包含了通告已经通过的AS列表，NEXT-HOP是AS-PATH起始的路由器接口的IP地址。</p>
+<h4 id="heading-1">热土豆路由选择<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>转发表中增加AS外部目的地的步骤：</p>
+<ul>
+<li>从AS间协议学到经多个网关可到达子网x</li>
+<li>使用AS内部的路由选择信息，决定到达每个网关的最低开销路径的开销</li>
+<li>热土豆路由选择：选择具有最低最小开销的网关</li>
+<li>从转发表确定通往最低开销的网关接口I，在转发表中加入表项(x,I)</li>
+</ul>
+<p>热土豆选择：尽可能快的将分组送出其AS，使得他在AS内部的开销最小</p>
+<h4 id="heading-2">路由选择算法<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>如果有多条路径，顺序的按照以下规则消除直到只剩下一条：</p>
+<ul>
+<li>路由被指派一个本地偏好作为属性值之一，具有最高本地偏好的路由被选择</li>
+<li>如果多个具有相同的最高本地偏好，则从这些里面选择具有最短AS-PATH的路由(其中距离测量是AS的跳数)</li>
+<li>剩下路由中使用热土豆路由选择方式，即最靠近NEXT-HOP路由器的路由</li>
+<li>如果仍然剩下多条路由，则使用BGP标识符来选择路由</li>
+</ul>
+<h3 id="544-ip">5.4.4 IP任播<a href="#544-ip" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>多台服务器使用相同IP地址进行通告，路由器对于这多个通告，将会认为是到达同一个服务器的不同路径，在用户请求时选择较近的那个服务器</p>
+<p>利用BGP实现，可用于DNS和CDN服务</p>
+<h3 id="545-">5.4.5 路由选择策略<a href="#545-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>所有进入一个接入ISP网络的流量必然时以该网络为目的地，所有离开一个接入ISP的流量必然源于该网络</p>
+<h2 id="56-icmp">5.6 ICMP:因特网控制报文协议<a href="#56-icmp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>ICMP：被主机和路由器用来彼此沟通网络层的信息，最典型用途时差错检测</p>
+<p>ICMP会被作为IP有效载荷承载的，主机收到指明了上层协议为ICMP的数据报后会分解出内容给ICMP</p>
+<p>ICMP报文有一个类型字段和一个编码字段，并且包含了引起该ICMP报文首次生成的IP数据报的首部和前8个字节(方便确定引发差错的数据报)</p>
+<h3 id="ping">ping的实现<a href="#ping" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>ping程序发送一个ICMP类型8编码0(对此的表述是回显请求)的报文到指定主机，看到回显(echo)请求，目的主机发回一个类型0编码0的ICMP回显回答</p>
+<h3 id="traceroute">Traceroute的实现<a href="#traceroute" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>traceroute：允许跟踪一台主机到另外一台主机之间的路由</p>
+<p>源主机的traceroute向目的地主机发送一系列普通的IP数据报，这些数据报每个携带了一个具有不可达UDP端口号的UDP报文段，第一个数据报的TTL(寿命)为1，第二个为2，以此类推。该源主机为每个数据报启动定时器，第n个数据报到达第n个路由器的时候，第n台路由器观察到这个数据报的TTL刚好过期，按照IP协议规则，路由器丢弃这个数据报并发送一个ICMP警告给源主机(类型11编码0).该警告包含了路由器的名字与他的IP，当该ICMP报文返回源主机的时候，源主机从定时器得到往返时延，从ICMP报文得到第n台路由器的名字和IP地址</p>
+
+						</div>
+					</main>
+					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
+						<div class="btn-group-vertical w-100 my-3">
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/commits/master" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
+</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#52-">5.2 路由选择算法</a>
+      <ul>
+        <li><a href="#521-">5.2.1 链路状态路由选择算法</a></li>
+        <li><a href="#522-">5.2.2 距离向量路由选择算法</a></li>
+      </ul>
+    </li>
+    <li><a href="#53-ospf">5.3 自治系统内部的路由选择：OSPF</a></li>
+    <li><a href="#54-ispbgp">5.4 ISP之间的路由选择:BGP</a>
+      <ul>
+        <li><a href="#541-bgp">5.4.1 BGP的作用</a></li>
+        <li><a href="#542-bgp">5.4.2 通告BGP路由信息</a></li>
+        <li><a href="#543-">5.4.3 确定最好的路由</a></li>
+        <li><a href="#544-ip">5.4.4 IP任播</a></li>
+        <li><a href="#545-">5.4.5 路由选择策略</a></li>
+      </ul>
+    </li>
+    <li><a href="#56-icmp">5.6 ICMP:因特网控制报文协议</a>
+      <ul>
+        <li><a href="#ping">ping的实现</a></li>
+        <li><a href="#traceroute">Traceroute的实现</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/leon.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js "></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(
+            document.body, {
+                delimiters: [{
+                        left: "$$",
+                        right: "$$",
+                        display: true
+                    },
+                    {
+                        left: "\\[",
+                        right: "\\]",
+                        display: true
+                    },
+                    {
+                        left: "$",
+                        right: "$",
+                        display: false
+                    },
+                    {
+                        left: "\\(",
+                        right: "\\)",
+                        display: false
+                    }
+                ]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
+</body>
+
+</html>

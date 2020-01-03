@@ -10,28 +10,26 @@
 
 
 
-<meta itemprop="name" content="1. Name">
-<meta itemprop="description" content="">
-<meta itemprop="datePublished" content="2020-01-03T20:18:39&#43;08:00" />
-<meta itemprop="dateModified" content="2020-01-03T20:18:39&#43;08:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="name" content="强化学习-Temporal-Difference Learning">
+<meta itemprop="description" content="对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 6 TD：时序差分方法，是一种综合了蒙特卡洛与DP的特点的方法 6.1 TD">
+
+<meta itemprop="wordCount" content="341">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta property="og:title" content="1. Name" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="强化学习-Temporal-Difference Learning" />
+<meta property="og:description" content="对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 6 TD：时序差分方法，是一种综合了蒙特卡洛与DP的特点的方法 6.1 TD" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/section1/" />
-<meta property="article:published_time" content="2020-01-03T20:18:39+08:00" />
-<meta property="article:modified_time" content="2020-01-03T20:18:39+08:00" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl6/" />
+
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1. Name"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="强化学习-Temporal-Difference Learning"/>
+<meta name="twitter:description" content="对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 6 TD：时序差分方法，是一种综合了蒙特卡洛与DP的特点的方法 6.1 TD"/>
 
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title>1. Name</title>
+<title>强化学习-Temporal-Difference Learning</title>
 <link rel="stylesheet" href="/css/bootstrap.materia.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_z93lvlj24ja.css">
@@ -65,46 +63,64 @@
     
     
     
-    <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-            
-                <i class="iconfont icon-construction rawicon"></i>
-            
-            深度学习
-        </a>
-    </div>
-    
-    
-    
     <div class="bd-toc-item active bg-light">
-        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
             <i class="iconfont icon-back-arrow-reverse"></i>
-            社会学概论
+            深度学习
         </a>
         <ul class="nav bd-sidenav">
             
             
+            <li>
+                <a href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl2/">强化学习-Multi-armed Bandits</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl3/">强化学习-Finite Markov Decision Processes</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl4/">强化学习-Dynamic Programming</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl5/">强化学习-Monte Carlo Methods</a>
+            </li>
+            
+            
+            
             <li class="active">
-                <a href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/section1/">
+                <a href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl6/">
                     <i class="fad fa-chevron-right mr-1"></i>
-                    1. Name
+                    强化学习-Temporal-Difference Learning
                 </a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/">社会学概论-社会学的视角</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl2/">社会学概论-社会与文化</a>
+                <a href="/notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rl7/">强化学习-n-step Bootstraping</a>
             </li>
             
             
         </ul>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            社会学概论
+        </a>
     </div>
     
     
@@ -147,16 +163,16 @@
 				<div class="row">
 					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content" role="main">
 						<div id="title" class="my-4 border-bottom">
-							<span>社会学概论</span>
-							<h2>1. Name</h2>
+							<span>深度学习</span>
+							<h2>强化学习-Temporal-Difference Learning</h2>
 							<footer>
 								<span>
 									<i class="fad fa-calendar-alt mr-2"></i>
-									2020-01-03 20:18 CST
+									0001-01-01 08:00 CST
 								</span> <br />
 								<span>
 									<i class="fad fa-calendar-edit mr-2"></i>
-									2020-01-03 20:18 CST
+									0001-01-01 08:00 CST
 								</span> <br />
 								<span>
 									<i class="fad fa-copyright mr-2"></i>
@@ -165,7 +181,26 @@
 							</footer>
 						</div>
 						<div id="content" class="hl-h2">
-							
+							<blockquote>
+<p>对应章节：<a href="http://www.incompleteideas.net/book/the-book-2nd.html">《Reinforcement Learning: An Introduction》第二版</a>  Chap 6</p>
+</blockquote>
+<p>TD：时序差分方法，是一种综合了蒙特卡洛与DP的特点的方法</p>
+<h2 id="61-td-prediction">6.1 TD Prediction<a href="#61-td-prediction" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>对于$\alpha$-蒙特卡洛来说，其更新规则如下：</p>
+<p>$$V(S_t) \leftarrow V(S_t)+\alpha[G_t - V(S_t)]$$</p>
+<p>其对于每一个$S_t$所对应的value都需要等待对应的episode结束后才能够更新，而对于一种TD算法（以下为<code>TD(0)</code>或者叫<code>one-step TD</code>），可以如下的更新方式:</p>
+<p>$$V(S_t) \leftarrow V(S_t)+\alpha[R_{t+1} + \gamma V(S_{t+1})- V(S_t)]$$</p>
+<p>这就是把其中的$G_t$替换成立下一个时间点就能得到的reward信息来对其进行更新，这个事实上就是bootstrap（本意为自举，在此处即用后继的值函数来估计当前值函数），而这就是DP的思想
+下给出TD(0)的伪代码：</p>
+<!-- raw HTML omitted -->
+<h2 id="62-advantages-of-td-prediction-methods">6.2 Advantages of TD Prediction Methods<a href="#62-advantages-of-td-prediction-methods" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="63-optimality-of-td0">6.3 Optimality of TD(0)<a href="#63-optimality-of-td0" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="64-sarsa-on-policy-td-control">6.4 Sarsa: On-policy TD Control<a href="#64-sarsa-on-policy-td-control" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="65-q-learning-off-policy-td-control">6.5 Q-learning: Off-policy TD Control<a href="#65-q-learning-off-policy-td-control" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="66-expected-sarsa">6.6 Expected Sarsa<a href="#66-expected-sarsa" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="67-maximization-bias-and-double-learning">6.7 Maximization Bias and Double Learning<a href="#67-maximization-bias-and-double-learning" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="68-games-afterstates-and-other-special-cases">6.8 Games, Afterstates, and Other Special Cases<a href="#68-games-afterstates-and-other-special-cases" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+
 						</div>
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
@@ -178,7 +213,18 @@
         <i class="iconfont icon-discussion"></i><br />纠错与咨询
     </a>
 </div>
-						<nav id="TableOfContents"></nav>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#61-td-prediction">6.1 TD Prediction</a></li>
+    <li><a href="#62-advantages-of-td-prediction-methods">6.2 Advantages of TD Prediction Methods</a></li>
+    <li><a href="#63-optimality-of-td0">6.3 Optimality of TD(0)</a></li>
+    <li><a href="#64-sarsa-on-policy-td-control">6.4 Sarsa: On-policy TD Control</a></li>
+    <li><a href="#65-q-learning-off-policy-td-control">6.5 Q-learning: Off-policy TD Control</a></li>
+    <li><a href="#66-expected-sarsa">6.6 Expected Sarsa</a></li>
+    <li><a href="#67-maximization-bias-and-double-learning">6.7 Maximization Bias and Double Learning</a></li>
+    <li><a href="#68-games-afterstates-and-other-special-cases">6.8 Games, Afterstates, and Other Special Cases</a></li>
+  </ul>
+</nav>
 					</div>
 				</div>
 			</div>
