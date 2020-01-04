@@ -12,5 +12,14 @@
 	<atom:link href="http://shelah-kuang.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Now</title>
+      <link>http://shelah-kuang.github.io/blogs/now/</link>
+      <pubDate>Thu, 02 Jan 2020 15:06:37 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/blogs/now/</guid>
+      <description>正在迁移中，之后就好</description>
+    </item>
+    
   </channel>
 </rss>
