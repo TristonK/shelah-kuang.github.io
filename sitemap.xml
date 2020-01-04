@@ -63,11 +63,6 @@
   </url>
   
   <url>
-    <loc>http://shelah-kuang.github.io/blogs/</loc>
-    <lastmod>2019-12-31T16:24:15+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://shelah-kuang.github.io/notes/</loc>
     <lastmod>2019-12-31T16:24:15+08:00</lastmod>
   </url>
@@ -235,7 +230,12 @@
   </url>
   
   <url>
-    <loc>http://shelah-kuang.github.io/blogs/now/</loc>
+    <loc>http://shelah-kuang.github.io/blog/now/</loc>
+    <lastmod>2020-01-02T15:06:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/blog/</loc>
     <lastmod>2020-01-02T15:06:37+08:00</lastmod>
   </url>
   
