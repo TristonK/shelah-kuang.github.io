@@ -14,7 +14,7 @@
 <meta itemprop="description" content="基本的共射级，工作原理，如何估算静态工作点， 重要：负载线怎么来的，怎么画 失真与静态工作点的关系 温度的影响（定性的把握） 基极分压式要认识，稳定">
 <meta itemprop="datePublished" content="2020-01-04T19:24:51&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-04T19:24:51&#43;08:00" />
-<meta itemprop="wordCount" content="143">
+<meta itemprop="wordCount" content="1221">
 
 
 
@@ -101,13 +101,13 @@
             
             
             <li>
-                <a href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/">半导体存储器</a>
+                <a href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/">场效应管</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/">运算放大器</a>
+                <a href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/">半导体存储器</a>
             </li>
             
             
@@ -206,8 +206,74 @@
 <p>在输入为交流信号时，常常在输入输出处都加入一个电容用来阻隔直流信号，防止影响外部电路。</p>
 <h2 id="heading-1">工作原理<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <h3 id="heading-2">静态<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<p>输入信号$v_i=0$时</p>
-<img src="/images/fireworks.jpg">
+<img src="../images/4-2.png">
+<p>输入信号$v_i=0$,放大电路的工作状态称为静态或直流工作状态</p>
+<p>$I_{BQ}=\frac{V_{BB}−V_{BEQ}}{R_b}$</p>
+<p>$I_{CQ}=\beta I_{BQ}+I_{CBO} \approx \beta I_{BQ}$</p>
+<p>$V_{CEQ}=V_{CC}−R_c∗I_{CQ}$</p>
+<p>一般硅管的$V_{BE}=0.7V$,锗管的$V_{BE}=0.2V$</p>
+<p>求Q点时，一般先假设电路中BJT满足放大电路条件，求出相应的参数，然后观察是否满足放大条件。</p>
+<h3 id="heading-3">动态<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>输入正弦信号$V_s$后，电路处在动态工作状态，此时各极电流电压都会在静态值的基础上随输入信号变化</p>
+<ul>
+<li>先确定静态工作点$Q(I_{BQ},I_{CQ},V_{CEQ})$</li>
+<li>再动态确定性能指标$(A_V,R_i,R_o)$</li>
+</ul>
+<h2 id="heading-4">图解分析法<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="heading-5">静态工作点的图解分析<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>采用此方法的前提时必须已知三极管的输入输出特性曲线</p>
+<p>利用输入回路方程$V_{BE}=V_{BB}-i_BR_b$做出直线与输入特性曲线的交点得到$I_{BQ}$</p>
+<img src="../images/4-3.jpg">
+<p>再利用输出回路方程$V_{CE}=V_{CC}-i_CR_C$,在输出特性曲线上与$I_{BQ}$曲线对应的就是Q点。得到$V_{CEQ}$和$I_{CQ}$</p>
+<img src="../images/4-4.png">
+<h3 id="heading-6">动态工作的分析图解<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>根据$V_s$的波形，在BJT的输入特性曲线上画出$V_{BE}$和$i_B$的波形</p>
+<p>图中参数:
+$V_s=V_{sm}sin(wt)$
+$V_{BE}=V_{BB}+v_S-i_BR_b$</p>
+<img src="../images/4-5.jpg">
+<p>然后根据上图得到的$i_B$的变化范围在输出特性曲线上画出$i_c$和$V_{CE}$的波形(利用$V_{CE}=V_{CC}-i_CR_c$)</p>
+<img src="../images/4-6.jpg">
+<h3 id="heading-7">静态工作点对波形失真的影响<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h4 id="heading-8">静态工作点过高<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>静态工作点过高会导致<strong>饱和失真</strong></p>
+<img src="../images/4-7.png">
+<h4 id="heading-9">静态工作点太低<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<p>静态工作点太低会出现<strong>截止失真</strong></p>
+<img src="../images/4-8.png">
+<p>所以工作点要设置在输出特性曲线放大区的中间部位，要有合适的交流负载线</p>
+<p><strong>tbd:ppt上思考题</strong></p>
+<h2 id="heading-10">温度对工作点的影响<a href="#heading-10" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<ul>
+<li>
+<p>温度每升高10度，$I_{CBO}$约增加一倍</p>
+<ul>
+<li>温度上升，输出特性曲线上移</li>
+</ul>
+</li>
+<li>
+<p>温度每升高1度，$\beta$值增大$0.5%-1%$</p>
+<ul>
+<li>温度上升，输入特性曲线族间距加大</li>
+</ul>
+</li>
+<li>
+<p>$V_{BE}=V_{BE(T_0=25C)}-(T-T_0)*2.2*10^{-3}V$</p>
+<ul>
+<li>温度上升,输入特性曲线左移</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-11">基极分压式射极偏置电路<a href="#heading-11" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<img src="../images/4-9.jpg">
+<p>目标是：温度变化时使得$I_{CQ}$保持恒定。即我们需要**b点的电位能基本不变**，即可实现静态工作点的稳定</p>
+<p>稳定工作点的原理:</p>
+<ul>
+<li>保证b点电位基本不变：使$I_1&raquo;I_{BQ}$，$V_B&raquo;V_{BEQ}$,此时$V_{B}=\frac{R_{b2}}{R_{b1}+R_{b2}}V_{CC}$, 与温度无关</li>
+<li>通过反馈控制：温度上升 -&gt; $I_{CQ}$上升 -&gt; $I_{EQ}$上升 -&gt; $V_E$上升，$V_B$不变 -&gt; $V_{BEQ}$下降 -&gt; $I_{BQ}$下降 -&gt; $I_{CQ}$下降</li>
+<li>Re取值越大，反馈控制作用越强</li>
+<li>一般取 $I_1 =(5-10)I_{BQ}$， VB =3~5V</li>
+</ul>
 
 						</div>
 					</main>
@@ -226,8 +292,18 @@
     <li><a href="#heading-1">工作原理</a>
       <ul>
         <li><a href="#heading-2">静态</a></li>
+        <li><a href="#heading-3">动态</a></li>
       </ul>
     </li>
+    <li><a href="#heading-4">图解分析法</a>
+      <ul>
+        <li><a href="#heading-5">静态工作点的图解分析</a></li>
+        <li><a href="#heading-6">动态工作的分析图解</a></li>
+        <li><a href="#heading-7">静态工作点对波形失真的影响</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-10">温度对工作点的影响</a></li>
+    <li><a href="#heading-11">基极分压式射极偏置电路</a></li>
   </ul>
 </nav>
 					</div>
