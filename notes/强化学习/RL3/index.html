@@ -202,13 +202,13 @@
 <p>感觉这一章就给了一些基础概念，看西瓜书也成啊</p>
 <h2 id="31-the-agentenvironment-interface">3.1 The Agent–Environment Interface<a href="#31-the-agentenvironment-interface" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>The learner and decision maker is called the <strong><code>agent</code></strong>. The thing it interacts with, comprising everything outside the agent, is called the <strong><code>environment</code></strong>.</p>
-<!-- raw HTML omitted -->
+<img src="RL3/31.png">
 <p>One time step later, in part as a consequence of its action, the agent receives a numerical reward, $R_{t+1}\in \textbf{R}$, and finds itself in a new state, $S_{t+1}$.</p>
 <p>定义：$p(s&rsquo;, r|s, a)= Pr{S_t=s&rsquo;,R_t=r | S_{t−1}=s,A_{t−1}=a}$
 The function p defines the **<code>dynamics</code>** of the **<code>MDP</code>**</p>
 <p>可以看出在马尔可夫决策过程中，每一个的概率只依靠于前一次的状态于动作</p>
 <p>类似的，可以定义以下函数：</p>
-<!-- raw HTML omitted -->
+<img src="RL3/32.png" width=75% length=75%>
 <p>The general rule we follow is that anything that cannot be changed arbitrarily by the agent is considered to be outside of it and thus part of its environment.</p>
 <p>然后举了几个简单的例子，有兴趣可以去看</p>
 <h2 id="32-goals-and-rewards">3.2 Goals and Rewards<a href="#32-goals-and-rewards" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
@@ -225,7 +225,7 @@ The function p defines the **<code>dynamics</code>** of the **<code>MDP</code>**
 <h2 id="34-unified-notation-for-episodic-and-continuing-tasks">3.4 Unified Notation for Episodic and Continuing Tasks<a href="#34-unified-notation-for-episodic-and-continuing-tasks" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>在之后的介绍中，我们两种任务都会探讨，所以我们希望寻求一种能够通用的表示两种任务的记法</p>
 <p>我们可以考虑让episode tasks 在进入终止状态后进入一个特殊的 <strong><code>absorbing state</code></strong>，在这个状态下永远只转移到自身状态并且reward永为0，如下图深色方框：
-<!-- raw HTML omitted --></p>
+<img src="RL3/33.png"></p>
 <p>故而可定义$$Gt=\sum_{k=t+1}^T\gamma^{k−t−1}R_k$$，这个公式包含了$T = \infin$ or $\gamma = 1$ (but not both)的可能性.</p>
 <h2 id="35-policies-and-value-functions">3.5 Policies and Value Functions<a href="#35-policies-and-value-functions" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p><strong><code>value functions</code></strong>—functions of states (or of state–action pairs) that estimate how good it is for the agent to be in a given state (or how good it is to perform a given action in a given state).</p>
@@ -235,10 +235,10 @@ The function p defines the **<code>dynamics</code>** of the **<code>MDP</code>**
 <p>action-value function for policy: $q_\pi(s, a) = E_\pi(G_t | S_t = s, A_t = a) = E_\pi( \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} | S_t =s, A_t = a)$</p>
 <p>我们一般可以通过经验（大量随机实验样本的均值）来获取其估计值，（如Monte Carlo methods），但是当状态空间很大的时候，这是不现实的，那时可以将其当作参数方程，通过调参的方式来得到返回值，其精确度取决于近似方式</p>
 <p>满足递归关系, 称为是Bellman equation for $v_\pi$, It expresses a relationship between the value of a state and the values of its successor states.
-<!-- raw HTML omitted --></p>
+<img src="RL3/34.png"></p>
 <p>如果已知参数（p(s′,r|s,a),π等), 则可以视为线性方程组，对于小规模的状态集，可以直接求解，其解就是值函数</p>
 <p>对应的backup diagram：</p>
-<!-- raw HTML omitted -->
+<img src="RL3/35.png">
 <h2 id="36-optimal-policies-and-optimal-value-functions">3.6 Optimal Policies and Optimal Value Functions<a href="#36-optimal-policies-and-optimal-value-functions" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>optimal policy：$\pi_*$</p>
 <p>optimal state-value function, denoted $v_*$ and defined as $v_*(s) = \max_\pi v_\pi(s)$</p>
@@ -246,17 +246,17 @@ The function p defines the **<code>dynamics</code>** of the **<code>MDP</code>**
 <p>有关系： $q_*(s, a) = E[R_{t+1} + \gamma v_*(S_{t+1}) | S_t=s,A_t=a]$ .</p>
 <p>因为$v_*$也是policy的value-function，故而其也满足贝尔曼方程的条件，称为**<code>Bellman optimality equation</code>**.</p>
 <p>可以写作：
-<!-- raw HTML omitted --></p>
+<img src="RL3/36.png"></p>
 <p>最后两行（3.18，3.19）是两种常见的不同的表达形式</p>
 <p>对应的有：
-<!-- raw HTML omitted --></p>
+<img src="RL3/37.png"></p>
 <p>对应的backup diagram为：
-<!-- raw HTML omitted --></p>
+<img src="RL3/38.png" width=75%></p>
 <p>For finite MDPs, the Bellman optimality equation for $v_{*}$ has a unique solution。如果有n个状态，那么就得到一个n个变量的n个等式，如果知道必要的参数，可以通过解非线性方程组的方式对其进行求解</p>
 <p>解出来后：
 If you have the optimal value function, $v_{*}$, then the actions that appear best after a one-step search will be optimal actions. Another way of saying this is that any policy that is greedy with respect to the optimal evaluation function $v_{*}$ is an optimal policy.</p>
 <p>With $q_{*}$, the agent does not even have to do a one-step-ahead search: for any state s, it can simply find any action that maximizes $q_{*}(s, a)$.</p>
-<!-- raw HTML omitted -->
+<img src="RL3/39.png" width=75%>
 <p>但是这种方式的缺点在于：我们需要精确的知道环境的动态性质且有足够的计算资源去完成所有运算，同时环境需满足马尔科夫性质</p>
 <blockquote>
 <p>Many different decision-making methods can be viewed as ways of approximately solving the Bellman optimality equation. For example, heuristic search methods can be viewed as expanding the right-hand side of (3.19) several times, up to some depth, forming a “tree” of possibilities, and then using a heuristic evaluation function to approximate $v_{*}$ at the “leaf” nodes. (Heuristic search methods such as $A^*$ are almost always based on the episodic case.) The methods of dynamic programming can be related even more closely to the Bellman optimality equation. Many reinforcement learning methods can be clearly understood as approximately solving the Bellman optimality equation, using actual experienced transitions in place of knowledge of the expected transitions. We consider a variety of such methods in the following chapters.</p>
