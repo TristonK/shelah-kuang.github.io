@@ -13,11 +13,38 @@
     
     
     <item>
-      <title>1. Name</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/section1/</link>
-      <pubDate>Sat, 04 Jan 2020 19:22:36 +0800</pubDate>
+      <title>半导体物理基础</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 04 Jan 2020 19:23:07 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/section1/</guid>
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</guid>
+      <description>根据物体导电能力(电阻率)的不同，来划分导体、绝缘体、半导体 半导体是一种导电能力介于导体和绝缘体之间的物质，他的导电能力和温度，光照或掺杂浓</description>
+    </item>
+    
+    <item>
+      <title>二极管</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/</link>
+      <pubDate>Sat, 04 Jan 2020 19:24:29 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/</guid>
+      <description>二极管：功能，结构类型，符号， 重点：PN结的结构形成与他的工作原理，伏安特性 二极管的简化模型，如何运用模型分析 齐纳二极管的工作原理 二极管 在P</description>
+    </item>
+    
+    <item>
+      <title>半导体三极管</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%89%E6%9E%81%E7%AE%A1/</link>
+      <pubDate>Sat, 04 Jan 2020 19:24:39 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%89%E6%9E%81%E7%AE%A1/</guid>
+      <description>三极管的结构，工作原理，三种组态起码要认识（如何工作与分析不做太高要求），放大作用如何实现，伏安特性曲线（尤其输出，各种区与每种线的含义），</description>
+    </item>
+    
+    <item>
+      <title>半导体存储器</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/</link>
+      <pubDate>Sat, 04 Jan 2020 19:26:30 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/</guid>
       <description></description>
     </item>
     
