@@ -58,12 +58,66 @@
     </item>
     
     <item>
+      <title>场效应管放大电路</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/</link>
+      <pubDate>Sat, 04 Jan 2020 19:25:48 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/</guid>
+      <description>认识基本的共源极，知道工作原理就行了，公式不会要求记忆 图解法求静态工作点，工作的时候是怎么移动的，失真对于图像的影响 场效应管放大电路 基本共源</description>
+    </item>
+    
+    <item>
+      <title>放大电路模型</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Sat, 04 Jan 2020 19:25:57 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E6%A8%A1%E5%9E%8B/</guid>
+      <description>放大电路模型，基本定义，符号，几种争议的定义，主要的性能指标，频率响应的定义，认识图和图上的点，知道失真与非线性失真的概念（看到图知道什么回</description>
+    </item>
+    
+    <item>
+      <title>运算放大器</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/</link>
+      <pubDate>Sat, 04 Jan 2020 19:26:06 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/</guid>
+      <description>运算放大器:组成单元，参数特点，什么是理想运放与其模型，反馈的概念（不要求分析，即不要求判断正反），深度负反馈是什么回事 重要：虚断等 求差求和</description>
+    </item>
+    
+    <item>
+      <title>数字逻辑</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Sat, 04 Jan 2020 19:26:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/</guid>
+      <description>ppt上的概念怎么回事，基本运算的逻辑符号 与逻辑表达式认识就够了 数字逻辑 数字集成电路的分类 根据结构特点和输入信号的响应规则的不同 组合逻辑电路</description>
+    </item>
+    
+    <item>
+      <title>逻辑门电路</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF/</link>
+      <pubDate>Sat, 04 Jan 2020 19:26:23 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF/</guid>
+      <description>逻辑门电路：基本参数知道叫什么，不要求分析，但是反相器，与非门，或非门的电路要认识（不要求异或门），传输门要知道怎么回时，不要求分析TTL的</description>
+    </item>
+    
+    <item>
       <title>半导体存储器</title>
       <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/</link>
       <pubDate>Sat, 04 Jan 2020 19:26:30 +0800</pubDate>
       
       <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/</guid>
-      <description></description>
+      <description>半导体存储器是一种能大量存储二值信息的半导体器件 半导体存储器： RAM(Random-Access Memory)：在运行状态可以随时进行读/写操作，必须有电源供应才能保存，掉</description>
+    </item>
+    
+    <item>
+      <title>微电子学的新发展</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%AD%A6%E7%9A%84%E6%96%B0%E5%8F%91%E5%B1%95/</link>
+      <pubDate>Sat, 04 Jan 2020 19:26:43 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%AD%A6%E7%9A%84%E6%96%B0%E5%8F%91%E5%B1%95/</guid>
+      <description>微电子学的新发展 生物探测芯片 神经网络计算（人工智能） 忆阻器 超高频电路 石墨烯 超低功耗逻辑/存储 量子隧穿晶体管 自旋电子学晶体管 量子计算 自旋电子学</description>
     </item>
     
   </channel>

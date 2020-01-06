@@ -10,28 +10,28 @@
 
 
 
-<meta itemprop="name" content="半导体存储器">
-<meta itemprop="description" content="半导体存储器是一种能大量存储二值信息的半导体器件 半导体存储器： RAM(Random-Access Memory)：在运行状态可以随时进行读/写操作，必须有电源供应才能保存，掉">
-<meta itemprop="datePublished" content="2020-01-04T19:26:30&#43;08:00" />
-<meta itemprop="dateModified" content="2020-01-04T19:26:30&#43;08:00" />
-<meta itemprop="wordCount" content="1159">
+<meta itemprop="name" content="运算放大器">
+<meta itemprop="description" content="运算放大器:组成单元，参数特点，什么是理想运放与其模型，反馈的概念（不要求分析，即不要求判断正反），深度负反馈是什么回事 重要：虚断等 求差求和">
+<meta itemprop="datePublished" content="2020-01-04T19:26:06&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-04T19:26:06&#43;08:00" />
+<meta itemprop="wordCount" content="1375">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta property="og:title" content="半导体存储器" />
-<meta property="og:description" content="半导体存储器是一种能大量存储二值信息的半导体器件 半导体存储器： RAM(Random-Access Memory)：在运行状态可以随时进行读/写操作，必须有电源供应才能保存，掉" />
+<meta property="og:title" content="运算放大器" />
+<meta property="og:description" content="运算放大器:组成单元，参数特点，什么是理想运放与其模型，反馈的概念（不要求分析，即不要求判断正反），深度负反馈是什么回事 重要：虚断等 求差求和" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/" />
-<meta property="article:published_time" content="2020-01-04T19:26:30+08:00" />
-<meta property="article:modified_time" content="2020-01-04T19:26:30+08:00" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/" />
+<meta property="article:published_time" content="2020-01-04T19:26:06+08:00" />
+<meta property="article:modified_time" content="2020-01-04T19:26:06+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="半导体存储器"/>
-<meta name="twitter:description" content="半导体存储器是一种能大量存储二值信息的半导体器件 半导体存储器： RAM(Random-Access Memory)：在运行状态可以随时进行读/写操作，必须有电源供应才能保存，掉"/>
+<meta name="twitter:title" content="运算放大器"/>
+<meta name="twitter:description" content="运算放大器:组成单元，参数特点，什么是理想运放与其模型，反馈的概念（不要求分析，即不要求判断正反），深度负反馈是什么回事 重要：虚断等 求差求和"/>
 
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title>半导体存储器</title>
+<title>运算放大器</title>
 <link rel="stylesheet" href="/css/bootstrap.materia.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_z93lvlj24ja.css">
@@ -115,8 +115,11 @@
             
             
             
-            <li>
-                <a href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/">运算放大器</a>
+            <li class="active">
+                <a href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    运算放大器
+                </a>
             </li>
             
             
@@ -133,11 +136,8 @@
             
             
             
-            <li class="active">
-                <a href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/">
-                    <i class="fad fa-chevron-right mr-1"></i>
-                    半导体存储器
-                </a>
+            <li>
+                <a href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/">半导体存储器</a>
             </li>
             
             
@@ -213,7 +213,7 @@
 					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content" role="main">
 						<div id="title" class="my-4 border-bottom">
 							<span>微电子与电路</span>
-							<h2>半导体存储器</h2>
+							<h2>运算放大器</h2>
 							<footer>
 								<span>
 									<i class="fad fa-calendar-alt mr-2"></i>
@@ -230,91 +230,101 @@
 							</footer>
 						</div>
 						<div id="content" class="hl-h2">
-							<p>半导体存储器是一种能大量存储二值信息的半导体器件</p>
-<p>半导体存储器：</p>
+							<blockquote>
+<p>运算放大器:组成单元，参数特点，什么是理想运放与其模型，反馈的概念（不要求分析，即不要求判断正反），深度负反馈是什么回事
+重要：虚断等
+求差求和等电路的基本形式与特征，输入输出电阻啊等</p>
+</blockquote>
+<h1 id="heading">运算放大器<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<h2 id="heading-1">集成电路运算放大器<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>功能：</p>
 <ul>
-<li>RAM(Random-Access Memory)：在运行状态可以随时进行读/写操作，必须有电源供应才能保存，掉电后数据丢失
+<li>信号放大</li>
+<li>信号运算</li>
+<li>信号处理（滤波、调制）</li>
+<li>波形的产生和变换</li>
+</ul>
+<p>分类</p>
 <ul>
-<li>静态随机存储器SRAM</li>
-<li>动态随机存储器DRAM
+<li>通用运放和专用运放</li>
+<li>单运放、双运放、四运放</li>
+</ul>
+<h3 id="heading-2">内部组成单元<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<img src="../images/8-1.png">
+<p>不讨论集成运放的内部电路，仅从其电路模型和外特性出发，讨论运放构成的放大电路和典型的线性应用电路</p>
+<p>$v_p$称为同相输入端，因为当$v_n=0$时$v_o$和$v_P$同相，而$v_n$被称为反相输入端，因为$v_o$在$v_P$为0时的信号与$v_n$反相</p>
+<p>符号：</p>
+<img src="../images/8-2.png">
+<h3 id="heading-3">电路模型<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<img src="../images/8-3.jpg">
+<p>放大：在输入信号控制下，放大电路将供电电源能量转换为输出信号能量</p>
+<p>通常开环电压增益很高，输入电阻很大，输出电阻很小。</p>
+<p>$v_O=A_{vo}(v_p-v_N)$ $(V_-&lt;v_O&lt;V_+)$</p>
+<p>当$v_O$超过端值之后取端值，如下：</p>
+<img src="../images/8-4.png">
+<h2 id="heading-4">理想运算放大器<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>理想运算放大器的特点：</p>
 <ul>
-<li>异步存储</li>
-<li>同步存储</li>
-<li>伪静态随机存储器PSRAM</li>
+<li>开环差模电压增益无穷大</li>
+<li>差模输入电阻无穷大</li>
+<li>输出电阻为0</li>
+</ul>
+<p>其$V_P-V_N&gt;0$时取$V_+$,小于0时取$V_-$</p>
+<h2 id="heading-5">基本线性运算放大电路<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="heading-6">同相放大电路<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<img src="../images/8-5.png">
+<ul>
+<li><strong>反馈</strong>：系统的输出返回到输入端并以某种方式改变输入，进而影响系统功能的过程，即将输出量通过某种恰当的检测装置返回到输入端并与输入量进行比较的过程</li>
+<li>反馈通路：信号反向传输的渠道</li>
+<li>反馈形式：
+<ul>
+<li>正反馈：输入量不变，引入反馈后，输出量变大(也可以认为输出不变净输出量减小)</li>
+<li>负反馈：输入量不变，引入反馈后，输出量变小（也可以认为输出不变，净输出增大）</li>
+<li>判断方法：瞬时极性法</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>ROM(Read-Onlu Memory)：正常工作只能读出信息，断电后信息不丢失
+<p>同相放大电路的负反馈：$v_p(v_i)$上升导致，$v_o$上升，导致$v_n$上升，进而导致$v_{id}$下降从而导致$v_o$下降</p>
+<p>利用输出电压通过反馈元件对放大电路起自动调整作用</p>
+<img src="../images/8-6.png">
+<p>如上，其中$A_v$的分母$(1+𝐴_{vo}F_v)$被称为反馈深度，当其远大于1也就是$1+A_{vo}F_v \approx A_{vo}F_v$时，被称为**深度负反馈**</p>
+<p><strong>运放的两个重要概念</strong>：</p>
 <ul>
-<li>固定ROM-掩模ROM</li>
-<li>可编程ROM
-<ul>
-<li>PROM</li>
-<li>EPROM</li>
-<li>E2PROM</li>
-<li>FLASH</li>
+<li><strong>虚短</strong>：在深度负反馈作用下，$v_N$自动跟踪$v_P$,净输入电压$(v_P-v_N)\to 0$,即P端和N端相当于短路</li>
+<li><strong>虚断</strong>：由于虚短的存在，而输入电阻又很高，即流经两输入端之间的电流$i_P=i_n \approx 0$</li>
+<li>虚短是本质的，虚断是派生的</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>基本概念：</p>
+<p>在同向放大电路中，加到两输入端的电压接近相等，相位相同是它在闭环状态下工作的重要特征</p>
+<p>几项技术指标的近似计算：</p>
 <ul>
-<li>字长（位数）：表示一个信息的多位二级制码位一个字，字的位数位字长</li>
-<li>字数：字的总量。字数$=2^n$(n为存储器外部地址线的线数)</li>
-<li>地址：每个字的编号</li>
-<li>存储容量（M）：存储二值信息的总量 = 字数 $\times$ 位数</li>
-</ul>
-<h2 id="rom">ROM<a href="#rom" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<p>ROM的分类：</p>
+<li>电压增益 $A_v=1 + \frac{R_2}{R_1}$
 <ul>
-<li>按照存贮单元中器件划分
-<ul>
-<li>二极管ROM</li>
-<li>三极管ROM</li>
-<li>MOS管ROM</li>
+<li>根据虚短和虚断的概念，$v_p\approx v_n$,$i_p=i_n=0$,故而$v_i=v_p\approx v_n = v_f =\frac{R1}{R1+R2}v_o$</li>
 </ul>
 </li>
-<li>按写入情况
+<li>输入电阻$R_i = v_i/i_i \to \infty$</li>
+<li>输出电阻 $R_o = r_o||[(R_1||r_i)+R_2] \to 0$</li>
+</ul>
+<p>电压跟随器：</p>
 <ul>
-<li>固定ROM</li>
-<li>可编程ROM</li>
+<li>令$R_1=\infty, R_2=0$，电压增益为1，可以用于阻抗变换器和缓冲器</li>
 </ul>
-</li>
-</ul>
-<h3 id="rom-1">掩模ROM<a href="#rom-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<p>存储矩阵中的每个交叉点是一个存储单元，存储单元中有器件存入1，无器件存入0</p>
-<img src="../images/11-1.png">
-<p>特点：出厂时已经固定，不能更改，适合大量生产，便宜</p>
-<h3 id="romprom">可编程ROM（PROM）<a href="#romprom" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<p>总体结构与掩模ROM一样，但存储单元不同</p>
-<p>熔丝由易熔合金制成，出厂时每个结点上都有，编程时将不用的熔断。是一次性编程，不能改写</p>
-<p>写入时，要使用编程器</p>
-<h3 id="romeprom">可擦除的可编程ROM（EPROM）<a href="#romeprom" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<p>总体结构与掩模ROM一样，但存储单元不同</p>
-<p>用紫外线擦除的PROM（UVEPROM）
- </p>
-<img src="../images/11-2.png">
-<img src="../images/11-3.png">
-<p>EPROM是采用浮栅技术生产的可编程存储器，它的存储单元多采用N沟道叠栅MOS管（SIMOS），其结构及符号如图所示。除控制栅外，还有一个无外引线的栅极，称为浮栅。当浮栅上无电荷时，给控制栅（接在行选择线上）加上控制电压，MOS管导通；而当浮栅上带有负电荷时，则衬底表面感应的是正电荷，使得MOS管的开启电压变高，如图(b)所示，如果给控制栅加上同样的控制电压，MOS管仍处于截止状态。由此可见，SIMOS管可以利用浮栅是否积累有负电荷来存储二值数据。 
-在写入数据前，浮栅是不带电的，要使浮栅带负电荷，必须在SIMOS管的漏、栅极加上足够高的电压（如25V），使漏极及衬底之间的PN结反向击穿，产生大量的高能电子。这些电子穿过很薄的氧化绝缘层堆积在浮栅上，从而使浮栅带有负电荷。当移去外加电压后,浮栅上的电子没有放电回路，能够长期保存。当用紫外线或X射线照射时，浮栅上的电子形成光电流而泄放，从而恢复写入前的状态。照射一般需要15至20分钟。为了便于照射擦除，芯片的封装外壳装有透明的石英盖板。EPROM的擦除为一次全部擦除，数据写入需要通用或专用的编程器。</p>
-<h3 id="rome2prom">电可擦除的可编程ROM（$E^2PROM$）<a href="#rome2prom" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<p>为克服UVEPROM擦除慢，操作不便的缺点，采用FLOTOX（浮栅隧道氧化层MOS管）</p>
-<img src="../images/11-4.png">
-<h3 id="flash">快闪存储器：FLASH<a href="#flash" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<img src="../images/11-5.png">
-<h2 id="ram">RAM<a href="#ram" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<h3 id="sram">静态随机存储器SRAM<a href="#sram" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<img src="../images/11-6.png">
-<img src="../images/11-7.png">
-<h3 id="dram">动态随机存储器（DRAM）<a href="#dram" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<p>动态存储单元是利用<strong>MOS管栅极电容</strong>可以存储电荷的原理。</p>
-<img src="../images/11-8.png">
-<ul>
-<li>SRAM：速度快，贵</li>
-<li>DRAM：相对速度慢，便宜</li>
-</ul>
+<img src="../images/8-7.png">
+<h3 id="heading-7">反相放大电路<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>根据虚短和虚断的概念，有$v_n=v_p=0$,因此反相输入端电位接近地电位， 称为<strong>虚地</strong></p>
+<img src="../images/8-8.png">
+<p>$𝐴_𝑣 = 𝑣_𝑜/𝑣_𝑖 = −𝑅_2/𝑅_1$（负号表示和输入反向）</p>
+<p>输入电阻：$𝑅_𝑖=𝑣_𝑖/𝑖_𝑖 =𝑣_𝑖/(𝑣_𝑖/𝑅_1)=𝑅_1$</p>
+<p>输出电阻：$𝑅_𝑜=𝑟_𝑜||𝑅_2→0$</p>
+<p>如果信号源是非理想的电压信号源，应当采用同向放大电路，因为输入电阻更大(避免非理想信号源分压过大)</p>
+<h2 id="heading-8">同向输入和反向输入放大电路的其他应用<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="heading-9">求差电路<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>又称为是<strong>差分放大电路</strong>，是反相输入和同相输入相结合的放大电路</p>
+<img src="../images/8-9.png">
+<img src="../images/8-10.png">
+<h3 id="heading-10">求和电路<a href="#heading-10" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<img src="../images/8-11.png">
+<img src="../images/8-12.png">
 
 						</div>
 					</main>
@@ -330,19 +340,23 @@
 </div>
 						<nav id="TableOfContents">
   <ul>
-    <li><a href="#rom">ROM</a>
+    <li><a href="#heading-1">集成电路运算放大器</a>
       <ul>
-        <li><a href="#rom-1">掩模ROM</a></li>
-        <li><a href="#romprom">可编程ROM（PROM）</a></li>
-        <li><a href="#romeprom">可擦除的可编程ROM（EPROM）</a></li>
-        <li><a href="#rome2prom">电可擦除的可编程ROM（$E^2PROM$）</a></li>
-        <li><a href="#flash">快闪存储器：FLASH</a></li>
+        <li><a href="#heading-2">内部组成单元</a></li>
+        <li><a href="#heading-3">电路模型</a></li>
       </ul>
     </li>
-    <li><a href="#ram">RAM</a>
+    <li><a href="#heading-4">理想运算放大器</a></li>
+    <li><a href="#heading-5">基本线性运算放大电路</a>
       <ul>
-        <li><a href="#sram">静态随机存储器SRAM</a></li>
-        <li><a href="#dram">动态随机存储器（DRAM）</a></li>
+        <li><a href="#heading-6">同相放大电路</a></li>
+        <li><a href="#heading-7">反相放大电路</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-8">同向输入和反向输入放大电路的其他应用</a>
+      <ul>
+        <li><a href="#heading-9">求差电路</a></li>
+        <li><a href="#heading-10">求和电路</a></li>
       </ul>
     </li>
   </ul>
