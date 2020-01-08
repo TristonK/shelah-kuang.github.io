@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>博客目录 on Tristonk</title>
   <link rel="self" href="http://shelah-kuang.github.io/blog/"/>
-  <updated>2020-01-02T15:06:37+08:00</updated>
+  <updated>0001-01-01T00:00:00Z</updated>
   <author>
     <name>TristonK</name>
     <email></email>
@@ -15,7 +15,7 @@
     <link rel="alternate" href="http://shelah-kuang.github.io/blog/now/"/>
     <id>http://shelah-kuang.github.io/blog/now/</id>
     <published>2020-01-02T15:06:37+08:00</published>
-    <updated>2020-01-02T15:06:37+08:00</updated>
+    <updated>2020-01-08T19:57:08+08:00</updated>
 		<summary>正在迁移中，之后就好</summary>
     
     <content type="html"><![CDATA[<p>正在迁移中，之后就好</p>
