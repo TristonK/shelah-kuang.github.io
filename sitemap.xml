@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://shelah-kuang.github.io/notes/private-life-under-socialism/</loc>
+    <lastmod>2020-01-09T21:37:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://shelah-kuang.github.io/notes/private-life-under-socialism/section1/</loc>
+    <lastmod>2020-01-09T21:37:27+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-01-04T19:23:07+08:00</lastmod>
   </url>
@@ -265,8 +275,13 @@
   </url>
   
   <url>
+    <loc>http://shelah-kuang.github.io/notes/greattradition/</loc>
+    <lastmod>2020-01-09T21:37:27+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://shelah-kuang.github.io/</loc>
-    <lastmod>2020-01-08T19:57:08+08:00</lastmod>
+    <lastmod>2020-01-09T21:37:27+08:00</lastmod>
   </url>
   
   <url>
@@ -320,7 +335,7 @@
   
   <url>
     <loc>http://shelah-kuang.github.io/todos/</loc>
-    <lastmod>2020-01-09T21:30:48+08:00</lastmod>
+    <lastmod>2020-01-09T21:37:27+08:00</lastmod>
   </url>
   
 </urlset>
