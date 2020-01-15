@@ -66,5 +66,14 @@
       <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 7</description>
     </item>
     
+    <item>
+      <title>强化学习-介绍</title>
+      <link>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A01/</guid>
+      <description>对应教材：Sutton &amp;amp; Barto&#39;s book Reinforcement Learning: An Introduction (2nd Edition) Chap1 Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numerical reward signal The history is the sequence of observations, actions, rewards $$Ht = O_1, R_1, A_1, &amp;hellip;, A</description>
+    </item>
+    
   </channel>
 </rss>

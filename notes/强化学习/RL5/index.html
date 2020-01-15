@@ -64,6 +64,54 @@
     
     
     <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            Google代码规范
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            问题求解（三）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            问题求解（四）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            操作系统
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
@@ -136,6 +184,12 @@
             
             <li>
                 <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl7/">n-step Bootstraping</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A01/">强化学习-介绍</a>
             </li>
             
             
@@ -236,7 +290,7 @@
 <p>Monte Carlo methods are ways of solving the reinforcement learning problem based on averaging sample returns. To ensure that well-defined returns are available, here we define Monte Carlo methods only for episodic tasks.</p>
 <h2 id="51-monte-carlo-prediction">5.1 Monte Carlo Prediction<a href="#51-monte-carlo-prediction" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>有两种方法，一种是“<strong><code>first-visit</code></strong>“,把整个片段集所有第一次访问到状态<img src="https://www.zhihu.com/equation?tex=s" alt="[公式]">时的returns做平均化处理，来估计$v_\pi(s)$的值另一种是”**<code>every visit</code>**”，把整个片段集中所有访问到s状态时的returns取平均，来估计$v_\pi(s)$的值。两种方法都有应用，下给出first-visit，在9和12章介绍every-visit</p>
-<img src="RL5/51.png">
+<img src="../RL5/51.png">
 <p>每一次返回平均值都是其本身的无偏估计，标准偏差在$\sqrt{\frac{1}{n}}$内</p>
 <p>蒙特卡洛算法每一次运行都是独立的，也就是说他不是&quot;bootstrap&quot;的</p>
 <h2 id="52-monte-carlo-estimation-of-action-values">5.2 Monte Carlo Estimation of Action Values<a href="#52-monte-carlo-estimation-of-action-values" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
@@ -245,16 +299,16 @@
 但是这样有一个问题就是&quot;it cannot be relied upon in general, particularly when learning directly from actual interaction with an environment.&quot;, 此时一种常见的策略是调整policy，使得对于一个状态，所有的action都有一定的概率发生</p>
 <h2 id="53-monte-carlo-control">5.3 Monte Carlo Control<a href="#53-monte-carlo-control" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>蒙特卡洛方法估计最优policies的方法和DP差不多：先迭代value function使之逼近当前policy的真实value function，然后基于更新后的value function进行policy improvement，直到最终policy基本不再变化</p>
-<img src="RL5/52.png">
+<img src="../RL5/52.png">
 <p>由于我们在此处估计的是$q_\pi(s,a)$，就不需要额外的model来确定最优的action了，可以直接根据$\pi(s)=\arg \max_a q(s, a)$来确定</p>
 <p>为了更具备实际意义，我们要考虑如何去掉infinte number of episodes 的假设 ，一种方式是设立一个极小值，当两次policy evaluation的差别小于这个值的时候，认为此次policy evaluation结束，这种方式在小规模情况下很好，但是数据规模较大时仍然会需要比较多次。另一种方式就是放弃完整的policy evaluation，类似于4.6中的value  iteration</p>
 <p>以下算法仍然基于了exploring starts 假设</p>
-<img src="RL5/53.png">
+<img src="../RL5/53.png">
 <h2 id="54-monte-carlo-control-without-exploring-starts">5.4 Monte Carlo Control without Exploring Starts<a href="#54-monte-carlo-control-without-exploring-starts" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p><strong><code>on-policy</code></strong>: 直接优化或评价目标策略</p>
 <p>对于on-policy策略而言，对于所有的pair有$\pi(a|s) \ge \frac{\varepsilon}{|\mathcal A(s)|}$</p>
 <p>采取第二章中提到的类似的方法，以$p= 1- \varepsilon + \frac{\varepsilon}{|\mathcal A(s)|}$的概率选取原先确定的action</p>
-<img src="RL5/54.png">
+<img src="../RL5/54.png">
 <p><del>此处省略一大段，如果有兴趣看相关证明的可以自己看书</del></p>
 <h2 id="55-off-policy-prediction-via-importance-sampling">5.5 Off-policy Prediction via Importance Sampling<a href="#55-off-policy-prediction-via-importance-sampling" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>在on-policy中，由于我们需要explore所有的action，这也就导致我们在一些时候会选择非最优的情况，故而我们有了off-policy的想法</p>
@@ -271,9 +325,9 @@
 <p>另一种是加权平均（weighted average）</p>
 <p>$$V(s) = \frac{\sum_{t \in \mathcal T(s)} \rho_t G_t}{\sum_{t \in \mathcal T(s)} \rho_t}$$</p>
 <h2 id="56-incremental-implementation">5.6 Incremental Implementation<a href="#56-incremental-implementation" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<img src="RL5/55.png">
+<img src="../RL5/55.png">
 <h2 id="57-off-policy-monte-carlo-control">5.7 Off-policy Monte Carlo Control<a href="#57-off-policy-monte-carlo-control" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<img src="RL5/56.png">
+<img src="../RL5/56.png">
 						</div>
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">

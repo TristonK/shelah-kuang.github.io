@@ -64,6 +64,54 @@
     
     
     <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            Google代码规范
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            问题求解（三）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            问题求解（四）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            操作系统
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
@@ -136,6 +184,12 @@
             
             <li>
                 <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl7/">n-step Bootstraping</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A01/">强化学习-介绍</a>
             </li>
             
             
@@ -235,13 +289,13 @@
 <p>感觉这一章就给了一些基础概念，看西瓜书也成啊</p>
 <h2 id="31-the-agentenvironment-interface">3.1 The Agent–Environment Interface<a href="#31-the-agentenvironment-interface" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>The learner and decision maker is called the <strong><code>agent</code></strong>. The thing it interacts with, comprising everything outside the agent, is called the <strong><code>environment</code></strong>.</p>
-<img src="RL3/31.png">
+<img src="../RL3/31.png">
 <p>One time step later, in part as a consequence of its action, the agent receives a numerical reward, $R_{t+1}\in \textbf{R}$, and finds itself in a new state, $S_{t+1}$.</p>
 <p>定义：$p(s&rsquo;, r|s, a)= Pr{S_t=s&rsquo;,R_t=r | S_{t−1}=s,A_{t−1}=a}$
 The function p defines the **<code>dynamics</code>** of the **<code>MDP</code>**</p>
 <p>可以看出在马尔可夫决策过程中，每一个的概率只依靠于前一次的状态于动作</p>
 <p>类似的，可以定义以下函数：</p>
-<img src="RL3/32.png" width=75% length=75%>
+<img src="../RL3/32.png" width=75% length=75%>
 <p>The general rule we follow is that anything that cannot be changed arbitrarily by the agent is considered to be outside of it and thus part of its environment.</p>
 <p>然后举了几个简单的例子，有兴趣可以去看</p>
 <h2 id="32-goals-and-rewards">3.2 Goals and Rewards<a href="#32-goals-and-rewards" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
@@ -268,10 +322,10 @@ The function p defines the **<code>dynamics</code>** of the **<code>MDP</code>**
 <p>action-value function for policy: $q_\pi(s, a) = E_\pi(G_t | S_t = s, A_t = a) = E_\pi( \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} | S_t =s, A_t = a)$</p>
 <p>我们一般可以通过经验（大量随机实验样本的均值）来获取其估计值，（如Monte Carlo methods），但是当状态空间很大的时候，这是不现实的，那时可以将其当作参数方程，通过调参的方式来得到返回值，其精确度取决于近似方式</p>
 <p>满足递归关系, 称为是Bellman equation for $v_\pi$, It expresses a relationship between the value of a state and the values of its successor states.
-<img src="RL3/34.png"></p>
+<img src="../RL3/34.png"></p>
 <p>如果已知参数（p(s′,r|s,a),π等), 则可以视为线性方程组，对于小规模的状态集，可以直接求解，其解就是值函数</p>
 <p>对应的backup diagram：</p>
-<img src="RL3/35.png">
+<img src="../RL3/35.png">
 <h2 id="36-optimal-policies-and-optimal-value-functions">3.6 Optimal Policies and Optimal Value Functions<a href="#36-optimal-policies-and-optimal-value-functions" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>optimal policy：$\pi_*$</p>
 <p>optimal state-value function, denoted $v_*$ and defined as $v_*(s) = \max_\pi v_\pi(s)$</p>
@@ -279,12 +333,12 @@ The function p defines the **<code>dynamics</code>** of the **<code>MDP</code>**
 <p>有关系： $q_*(s, a) = E[R_{t+1} + \gamma v_*(S_{t+1}) | S_t=s,A_t=a]$ .</p>
 <p>因为$v_*$也是policy的value-function，故而其也满足贝尔曼方程的条件，称为**<code>Bellman optimality equation</code>**.</p>
 <p>可以写作：
-<img src="RL3/36.png"></p>
+<img src="../RL3/36.png"></p>
 <p>最后两行（3.18，3.19）是两种常见的不同的表达形式</p>
 <p>对应的有：
-<img src="RL3/37.png"></p>
+<img src="../RL3/37.png"></p>
 <p>对应的backup diagram为：
-<img src="RL3/38.png" width=75%></p>
+<img src="../RL3/38.png" width=75%></p>
 <p>For finite MDPs, the Bellman optimality equation for $v_{*}$ has a unique solution。如果有n个状态，那么就得到一个n个变量的n个等式，如果知道必要的参数，可以通过解非线性方程组的方式对其进行求解</p>
 <p>解出来后：
 If you have the optimal value function, $v_{*}$, then the actions that appear best after a one-step search will be optimal actions. Another way of saying this is that any policy that is greedy with respect to the optimal evaluation function $v_{*}$ is an optimal policy.</p>

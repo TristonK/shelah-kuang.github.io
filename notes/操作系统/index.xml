@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>操作系统 on Tristonk</title>
+    <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+    <description>Recent content in 操作系统 on Tristonk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>CC BY-NC 4.0</copyright>
+    <lastBuildDate>Wed, 15 Jan 2020 20:17:17 +0800</lastBuildDate>
+    
+	<atom:link href="http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FAT与ext2</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/fat%E4%B8%8Eext2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/fat%E4%B8%8Eext2/</guid>
+      <description>本blog基本搬运jyy的讲义和slides FAT FAT文件系统的基本思想是使用链表管理所有的数据块。FAT文件系统把若干个连续的扇区(sect</description>
+    </item>
+    
+    <item>
+      <title>IO设备与驱动</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/io%E8%AE%BE%E5%A4%87%E4%B8%8E%E9%A9%B1%E5%8A%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/io%E8%AE%BE%E5%A4%87%E4%B8%8E%E9%A9%B1%E5%8A%A8/</guid>
+      <description>System Architecture A Canonical device 硬件接口 + 内部结构 A Canonical protocol 如上图，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。 一种典型的协议如下： 对于第一步</description>
+    </item>
+    
+    <item>
+      <title>崩溃恢复与日志</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%B4%A9%E6%BA%83%E6%81%A2%E5%A4%8D%E4%B8%8E%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%B4%A9%E6%BA%83%E6%81%A2%E5%A4%8D%E4%B8%8E%E6%97%A5%E5%BF%97/</guid>
+      <description>FSCK(The File System Checker) 检查的对象： superblock: making sure the file system size is greater than the number of blocks that have been allocated free blocks: 检查inode指向的block和inode本身的状态，确认和bitmap一致，如</description>
+    </item>
+    
+    <item>
+      <title>持久数据的可靠性</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%8C%81%E4%B9%85%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%8C%81%E4%B9%85%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/</guid>
+      <description>Redundant Array of Inexpensive Disks(RAID): 独立磁盘冗余阵列，通常简称为磁盘阵列 评价维度 capacity：given a set of N disks each with B blocks, how much useful capacity is available to clients of the RAID reliabili</description>
+    </item>
+    
+    <item>
+      <title>文件系统</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</guid>
+      <description>基本概念 每一个file都有一个low-level name， 一般我们指inode number, directory：存储a list of pairs (user-readable name, low-level name) UNIX/Linux</description>
+    </item>
+    
+    <item>
+      <title>终端与shell</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%BB%88%E7%AB%AF%E4%B8%8Eshell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%BB%88%E7%AB%AF%E4%B8%8Eshell/</guid>
+      <description>参考阅读 终端默认是“cooked mode”，即自带一个“行编辑器”，只有按下回车键，read系统调用才返回 shell执行程序 int pid = fork(); if (pid == 0)</description>
+    </item>
+    
+  </channel>
+</rss>
