@@ -278,15 +278,15 @@
 						</div>
 						<div id="content" class="hl-h2">
 							<h2 id="system-architecture">System Architecture<a href="#system-architecture" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<img src="../IO设备与驱动/361.png" width="65%" height="50%">
-<img src="../IO设备与驱动/n362.png" width="65%" height="50%">
+<img src="../io设备与驱动/361.png" width="65%" height="50%">
+<img src="../io设备与驱动/n362.png" width="65%" height="50%">
 <h2 id="a-canonical-device">A Canonical device<a href="#a-canonical-device" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
- <img src="../IO设备与驱动/362.png" width="65%" height="50%">
+ <img src="../io设备与驱动/362.png" width="65%" height="50%">
 <p>硬件接口 + 内部结构</p>
 <h2 id="a-canonical-protocol">A Canonical protocol<a href="#a-canonical-protocol" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>如上图，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。</p>
 <p>一种典型的协议如下：
-<img src="../IO设备与驱动/prot.png" width="65%" height="50%"></p>
+<img src="../io设备与驱动/prot.png" width="65%" height="50%"></p>
 <p>对于第一步的while循环，我们称为<strong><code>polling the device (轮询)</code></strong>，在第二步的写数据的时候，如果有main cpu的参与,即称为是<strong><code>programmed I/O(PIO)</code></strong>, 即通过CPU执行I/O端口指令来进行数据的读写的数据交换，</p>
 <h2 id="lowering-cpu-overhead-with-interrupts">Lowering CPU Overhead With Interrupts<a href="#lowering-cpu-overhead-with-interrupts" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>为了避免PIO模式下，cpu处于轮询状态而导致资源的浪费，可能有以下几种措施：</p>
@@ -299,7 +299,7 @@
 <p>DMA设备可以看成是只执行memcpy操作的设备</p>
 <blockquote>
 <p>To transfer data to the device, for example, the OS would program the DMA engine by telling it where the data lives in memory, how much data to copy, and which device to send it to. At that point, the OS is done with the transfer and can proceed with other work. When the DMA is complete, the DMA controller raises an interrupt, and the OS thus knows the transfer is complete.</p>
-<img src="../IO设备与驱动/dma.png">
+<img src="../io设备与驱动/dma.png">
 </blockquote>
 <h2 id="methods-of-device-interaction">Methods Of Device Interaction<a href="#methods-of-device-interaction" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>how the OS actually  communicates with the device</p>
@@ -313,7 +313,7 @@
 <h2 id="fitting-into-the-os-the-device-driver">Fitting Into The OS: The Device Driver<a href="#fitting-into-the-os-the-device-driver" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p><strong><code>device driver(设备驱动程序)</code></strong>: 用于对设备进行抽象使得更加上层的部分（通常为文件系统）能够以统一的接口来访问这些设备, 设备驱动程序会将对这些接口的调用翻译成设备的指令发送给设备，并等设备完成.</p>
 <p>设备驱动层帮助我们屏蔽了底层设备的具体实现细节(例如寄存器的含义)。同理，如果我们想创建“虚拟”设备，也是非常容易的，只需要为它编写一个驱动程序即可，实现设备的读接口。Linux系统中就有一些虚拟的设备，如<code>/dev/random</code>, <code>/dev/null</code></p>
-<img src="../IO设备与驱动/364.png" height = 75% width=75%>
+<img src="../io设备与驱动/364.png" height = 75% width=75%>
 						</div>
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
