@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta name="generator" content="Hugo 0.62.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+<meta itemprop="name" content="Dynamic Programming">
+<meta itemprop="description" content="对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 4 The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies. 如果看完了西">
+
+<meta itemprop="wordCount" content="1014">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Dynamic Programming" />
+<meta property="og:description" content="对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 4 The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies. 如果看完了西" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl4/" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dynamic Programming"/>
+<meta name="twitter:description" content="对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 4 The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies. 如果看完了西"/>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<title>Dynamic Programming</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
+
+<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+</head>
+
+<body style="overflow-x: unset;">
+	<div class="container-fluid">
+		<div class="row d-print-block">
+			<div class="col-12 col-md-3 col-lg-2 bd-sidebar d-print-none">
+				<div class="d-flex mt-3 border-bottom">
+        <span class="navbar-brand w-100" style="display: grid;">
+            <small>
+                <a href="/" class="text-black-50">
+                    <i class="iconfont icon-back-arrow-"></i>
+                </a>
+                TristonK's
+            </small>
+            <a class="text-dark" href="/notes/">
+                Documents
+            </a>
+        </span>
+        <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
+            data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="true"
+            aria-label="Toggle docs navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+				<nav id="bd-docs-nav" class="collapse bd-links">
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            Google代码规范
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+            
+            
+                
+                    <span class="icontext">M</span>
+                
+            
+            
+            问题求解（三）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+            
+            
+                
+                    <span class="icontext">A</span>
+                
+            
+            
+            问题求解（四）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+            
+            
+                
+                    <span class="icontext">C</span>
+                
+            
+            
+            操作系统
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            私人生活的变革
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            微电子与电路
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item active bg-light">
+        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+            <i class="iconfont icon-back-arrow-reverse"></i>
+            强化学习
+        </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl2/">Multi-armed Bandits</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl3/">Finite Markov Decision Processes</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl4/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    Dynamic Programming
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl5/">Monte Carlo Methods</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl6/">Temporal-Difference Learning</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl7/">n-step Bootstraping</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A01/">强化学习-介绍</a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            社会学概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+            
+            
+                
+                    <span class="icontext">M</span>
+                
+            
+            
+            组合数学
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+            
+            
+                
+                    <span class="icontext">C</span>
+                
+            
+            
+            数据库概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            
+            
+                
+                    <span class="icontext">M</span>
+                
+            
+            
+            计算机网络
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            伟大传统系列
+        </a>
+    </div>
+    
+    
+</nav>
+			</div>
+			<div class="col-12 col-md-9 col-lg-10 d-print-block">
+				<div class="row d-print-block">
+					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content d-print-block" role="main">
+						<div id="title" class="my-4 border-bottom">
+							<span>强化学习</span>
+							<h2>Dynamic Programming</h2>
+							<footer>
+								<span>
+									<i class="fad fa-calendar-alt mr-2"></i>
+									0001-01-01 08:00 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-calendar-edit mr-2"></i>
+									0001-01-01 08:00 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-copyright mr-2"></i>
+									CC BY-NC 4.0
+									<a class="float-right" href="#" onclick="window.print()">
+											打印本页
+									</a>
+								</span>
+							</footer>
+						</div>
+						<div id="content" class="hl-h2">
+							<blockquote>
+<p>对应章节：<a href="http://www.incompleteideas.net/book/the-book-2nd.html">《Reinforcement Learning: An Introduction》第二版</a>  Chap 4</p>
+</blockquote>
+<p>The key idea of DP, and of reinforcement learning generally, is <strong>the use of value functions to organize and structure the search for good policies</strong>.</p>
+<blockquote>
+<p>如果看完了西瓜书，感觉这一章略读就好</p>
+</blockquote>
+<h2 id="41-policy-evaluation-prediction">4.1 Policy Evaluation (Prediction)<a href="#41-policy-evaluation-prediction" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>已知$\pi$, 估计value-function：</p>
+<img src="RL4/41.png">
+<h2 id="42-policy-improvement">4.2 Policy Improvement<a href="#42-policy-improvement" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>通过上面的算法，我们可以计算出一个policy的value函数，那么为了更好的提升policy，我们可以在当前状态s下选择另一个动作a，之后的行为仍然按照原policy执行，如果$q_\pi(s,a) &gt; v_\pi(s)$的话，可以说明替换后的策略更好。</p>
+<p>证明如下：
+<img src="RL4/44.png"></p>
+<p>那么我们可以得到一种greedy的策略：</p>
+<img src="RL4/45.png">
+<h2 id="43-policy-iteration">4.3 Policy Iteration<a href="#43-policy-iteration" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>利用之前的evaluation与improvement来得到最优的策略：</p>
+<img src="RL4/42.png" length=80% width = 80%>
+<p>Policy iteration often converges in surprisingly few iterations</p>
+<h2 id="44-value-iteration">4.4 Value Iteration<a href="#44-value-iteration" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>由于每进行一次improvement都要进行一次评估，可能导致比较慢，所以可以考虑每进行一步就直接improvement</p>
+<p><del>这些西瓜书都讲了，再看一遍太浪费时间了</del></p>
+<img src="RL4/43.png">
+<h2 id="45-asynchronous-dynamic-programming">4.5 Asynchronous Dynamic Programming<a href="#45-asynchronous-dynamic-programming" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>以上的DP算法 的一个缺点是需要遍历整个状态集多次，但是当状态集比较大的时候就耗时比较大了(比如举了无数次的例子的backgammon有$10^{20}$个状态)</p>
+<p><strong><code>Asynchronous DP algorithms</code></strong> are in-place iterative DP algorithms that are not organized in terms of systematic sweeps of the state set. These algorithms update the values of states in any order whatsoever, using whatever values of other states happen to be available. The values of some states may be updated several times before the values of others are updated once. To converge correctly, however, an asynchronous algorithm must continue to update the values of all the states: it can’t ignore any state after some point in the computation. Asynchronous DP algorithms allow great flexibility in selecting states to update.</p>
+<p><em><del>第八章有更详细的讨论，不多写了</del></em></p>
+<h2 id="46-generalized-policy-iteration">4.6 Generalized Policy Iteration<a href="#46-generalized-policy-iteration" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<blockquote>
+<p>Policy iteration consists of two simultaneous, interacting processes, one making the value function consistent with the current policy (policy evaluation), and the other making the policy greedy with respect to the current value function (policy improvement). In policy iteration, these two processes alternate, each completing before the other begins, but this is not really necessary. In value iteration, for example, only a single iteration of policy evaluation is performed in between each policy improvement. In asynchronous DP methods, the evaluation and improvement processes are interleaved at an even finer grain. In some cases a single state is updated in one process before returning to the other. As long as both processes continue to update all states, the ultimate result is typically the same—convergence to the optimal value function and an optimal policy.</p>
+</blockquote>
+<p>我们用generalized policy iteration (GPI）来表示上述两个子过程不断接触修改</p>
+<img src="RL4/46.png">
+<blockquote>
+<p><del>竞争中有合作，合作中有竞争</del></p>
+<p>The evaluation and improvement processes in GPI can be viewed as both competing and cooperating. They compete in the sense that they pull in opposing directions. Making the policy greedy with respect to the value function typically makes the value function incorrect for the changed policy, and making the value function consistent with the policy typically causes that policy no longer to be greedy. In the long run, however, these two processes interact to find a single joint solution: the optimal value function and an optimal policy.</p>
+<p>如下图：</p>
+</blockquote>
+<img src="RL4/47.png">
+<h2 id="47-efficiency-of-dynamic-programming">4.7 Efficiency of Dynamic Programming<a href="#47-efficiency-of-dynamic-programming" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>如果用n和k表示状态数与动作数的话，忽略一些实现细节的情况下，复杂度为$k^n$</p>
+<p>In practice, DP methods can be used with today’s computers to solve MDPs with millions of states</p>
+<h2 id="48--summary">4.8  Summary<a href="#48--summary" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>总结了一下前面的内容，然后引出了新概念：</p>
+<p>All of them update estimates of the values of states based on estimates of the values of successor states. That is, they update estimates on the basis of other estimates. We call this general idea <strong><code>bootstrapping</code></strong></p>
+
+						</div>
+					</main>
+					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
+						<div class="btn-group-vertical w-100 my-3">
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
+</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#41-policy-evaluation-prediction">4.1 Policy Evaluation (Prediction)</a></li>
+    <li><a href="#42-policy-improvement">4.2 Policy Improvement</a></li>
+    <li><a href="#43-policy-iteration">4.3 Policy Iteration</a></li>
+    <li><a href="#44-value-iteration">4.4 Value Iteration</a></li>
+    <li><a href="#45-asynchronous-dynamic-programming">4.5 Asynchronous Dynamic Programming</a></li>
+    <li><a href="#46-generalized-policy-iteration">4.6 Generalized Policy Iteration</a></li>
+    <li><a href="#47-efficiency-of-dynamic-programming">4.7 Efficiency of Dynamic Programming</a></li>
+    <li><a href="#48--summary">4.8  Summary</a></li>
+  </ul>
+</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/leon.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js "></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(
+            document.body, {
+                delimiters: [{
+                        left: "$$",
+                        right: "$$",
+                        display: true
+                    },
+                    {
+                        left: "\\[",
+                        right: "\\]",
+                        display: true
+                    },
+                    {
+                        left: "$",
+                        right: "$",
+                        display: false
+                    },
+                    {
+                        left: "\\(",
+                        right: "\\)",
+                        display: false
+                    }
+                ]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
+</body>
+
+</html>

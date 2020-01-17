@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta name="generator" content="Hugo 0.62.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+<meta itemprop="name" content="Matching Theroy">
+<meta itemprop="description" content="Matching theroy Systems of Distinct Representatives (SDR) A system of distinct representatives (SDR) (also called a transversal) for a sequence of (not necessarily distinct) sets $ S_{1},S_{2},\ldots ,S_{m}$ is a sequence of distinct elements $ x_{1},x_{2},\ldots ,x_{m}$ such that $ x_{i}\in S_{i}$ for all $i=1,2,\ldots ,m$. 就是指每个集合中找到一个代表的元素，这些元素各不">
+<meta itemprop="datePublished" content="2020-01-03T20:13:54&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-03T20:13:54&#43;08:00" />
+<meta itemprop="wordCount" content="215">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Matching Theroy" />
+<meta property="og:description" content="Matching theroy Systems of Distinct Representatives (SDR) A system of distinct representatives (SDR) (also called a transversal) for a sequence of (not necessarily distinct) sets $ S_{1},S_{2},\ldots ,S_{m}$ is a sequence of distinct elements $ x_{1},x_{2},\ldots ,x_{m}$ such that $ x_{i}\in S_{i}$ for all $i=1,2,\ldots ,m$. 就是指每个集合中找到一个代表的元素，这些元素各不" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/" />
+<meta property="article:published_time" content="2020-01-03T20:13:54+08:00" />
+<meta property="article:modified_time" content="2020-01-03T20:13:54+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Matching Theroy"/>
+<meta name="twitter:description" content="Matching theroy Systems of Distinct Representatives (SDR) A system of distinct representatives (SDR) (also called a transversal) for a sequence of (not necessarily distinct) sets $ S_{1},S_{2},\ldots ,S_{m}$ is a sequence of distinct elements $ x_{1},x_{2},\ldots ,x_{m}$ such that $ x_{i}\in S_{i}$ for all $i=1,2,\ldots ,m$. 就是指每个集合中找到一个代表的元素，这些元素各不"/>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<title>Matching Theroy</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
+
+<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+</head>
+
+<body style="overflow-x: unset;">
+	<div class="container-fluid">
+		<div class="row d-print-block">
+			<div class="col-12 col-md-3 col-lg-2 bd-sidebar d-print-none">
+				<div class="d-flex mt-3 border-bottom">
+        <span class="navbar-brand w-100" style="display: grid;">
+            <small>
+                <a href="/" class="text-black-50">
+                    <i class="iconfont icon-back-arrow-"></i>
+                </a>
+                TristonK's
+            </small>
+            <a class="text-dark" href="/notes/">
+                Documents
+            </a>
+        </span>
+        <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
+            data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="true"
+            aria-label="Toggle docs navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+				<nav id="bd-docs-nav" class="collapse bd-links">
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            Google代码规范
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+            
+            
+                
+                    <span class="icontext">M</span>
+                
+            
+            
+            问题求解（三）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+            
+            
+                
+                    <span class="icontext">A</span>
+                
+            
+            
+            问题求解（四）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+            
+            
+                
+                    <span class="icontext">C</span>
+                
+            
+            
+            操作系统
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            私人生活的变革
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            微电子与电路
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+            
+            
+                
+                    <span class="icontext">A</span>
+                
+            
+            
+            强化学习
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            社会学概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item active bg-light">
+        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+            <i class="iconfont icon-back-arrow-reverse"></i>
+            组合数学
+        </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/">Basic Enumeration</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/">Generating Functions</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/sieve-methods/">Sieve Methods</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/existence-problemms/">Existence Problemms</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/probablistic-methods/">Probablistic Methods</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-graph-theroy/">Extremal Graph Theroy</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-set-theroy/">Extremal Set Theroy</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/ramsey-theroy/">Ramsey Theroy</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    Matching Theroy
+                </a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+            
+            
+                
+                    <span class="icontext">C</span>
+                
+            
+            
+            数据库概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            
+            
+                
+                    <span class="icontext">M</span>
+                
+            
+            
+            计算机网络
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            伟大传统系列
+        </a>
+    </div>
+    
+    
+</nav>
+			</div>
+			<div class="col-12 col-md-9 col-lg-10 d-print-block">
+				<div class="row d-print-block">
+					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content d-print-block" role="main">
+						<div id="title" class="my-4 border-bottom">
+							<span>组合数学</span>
+							<h2>Matching Theroy</h2>
+							<footer>
+								<span>
+									<i class="fad fa-calendar-alt mr-2"></i>
+									2020-01-03 20:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-calendar-edit mr-2"></i>
+									2020-01-03 20:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-copyright mr-2"></i>
+									CC BY-NC 4.0
+									<a class="float-right" href="#" onclick="window.print()">
+											打印本页
+									</a>
+								</span>
+							</footer>
+						</div>
+						<div id="content" class="hl-h2">
+							<h1 id="matching-theroy">Matching theroy<a href="#matching-theroy" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<h2 id="systems-of-distinct-representatives-sdr">Systems of Distinct Representatives (SDR)<a href="#systems-of-distinct-representatives-sdr" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>A <strong>system of distinct representatives (SDR)</strong> (also called a transversal) for a sequence of (not necessarily distinct) sets $ S_{1},S_{2},\ldots ,S_{m}$ is a sequence of distinct elements $ x_{1},x_{2},\ldots ,x_{m}$ such that $ x_{i}\in S_{i}$  for all $i=1,2,\ldots ,m$.</p>
+<p>就是指每个集合中找到一个代表的元素，这些元素各不同。(代表元素也可以存在其他集合中)(相当于每个集合有一个元素与之匹配)</p>
+<h3 id="halls-marriage-theorem">Hall's marriage theorem<a href="#halls-marriage-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>Hall's Theorem：
+The sets $S_{1},S_{2},\ldots ,S_{m}$ have a system of distinct representatives (SDR) **if and only if** $\left|\bigcup _{i\in I}S_{i}\right|\geq |I|$ **for all** $I\subseteq {1,2,\ldots ,m}$.</p>
+<h3 id="min-max-theorems">Min-max theorems<a href="#min-max-theorems" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="knig-egervry-theorem">König-Egerváry theorem<a href="#knig-egervry-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="dilworths-theorem">Dilworth's theorem<a href="#dilworths-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="application-erds-szekeres-theorem">Application: Erdős-Szekeres Theorem<a href="#application-erds-szekeres-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="application-halls-theorem">Application: Hall's Theorem<a href="#application-halls-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="flow-and-cut">Flow and Cut<a href="#flow-and-cut" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="flows">Flows<a href="#flows" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="cuts">Cuts<a href="#cuts" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="augmenting-paths">Augmenting paths<a href="#augmenting-paths" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="max-flow-min-cut">Max-Flow Min-Cut<a href="#max-flow-min-cut" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="the-max-flow-min-cut-theorem">The max-flow min-cut theorem<a href="#the-max-flow-min-cut-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="flow-integrality-theorem">Flow Integrality Theorem<a href="#flow-integrality-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="applications-mengers-theorem">Applications: Menger's theorem<a href="#applications-mengers-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="applications-knig-egervry-theorem">Applications: König-Egerváry theorem<a href="#applications-knig-egervry-theorem" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+
+						</div>
+					</main>
+					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
+						<div class="btn-group-vertical w-100 my-3">
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
+</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#systems-of-distinct-representatives-sdr">Systems of Distinct Representatives (SDR)</a>
+      <ul>
+        <li><a href="#halls-marriage-theorem">Hall's marriage theorem</a></li>
+        <li><a href="#min-max-theorems">Min-max theorems</a></li>
+      </ul>
+    </li>
+    <li><a href="#knig-egervry-theorem">König-Egerváry theorem</a></li>
+    <li><a href="#dilworths-theorem">Dilworth's theorem</a>
+      <ul>
+        <li><a href="#application-erds-szekeres-theorem">Application: Erdős-Szekeres Theorem</a></li>
+        <li><a href="#application-halls-theorem">Application: Hall's Theorem</a></li>
+      </ul>
+    </li>
+    <li><a href="#flow-and-cut">Flow and Cut</a>
+      <ul>
+        <li><a href="#flows">Flows</a></li>
+        <li><a href="#cuts">Cuts</a></li>
+        <li><a href="#augmenting-paths">Augmenting paths</a></li>
+      </ul>
+    </li>
+    <li><a href="#max-flow-min-cut">Max-Flow Min-Cut</a>
+      <ul>
+        <li><a href="#the-max-flow-min-cut-theorem">The max-flow min-cut theorem</a></li>
+        <li><a href="#flow-integrality-theorem">Flow Integrality Theorem</a></li>
+        <li><a href="#applications-mengers-theorem">Applications: Menger's theorem</a></li>
+        <li><a href="#applications-knig-egervry-theorem">Applications: König-Egerváry theorem</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/leon.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js "></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(
+            document.body, {
+                delimiters: [{
+                        left: "$$",
+                        right: "$$",
+                        display: true
+                    },
+                    {
+                        left: "\\[",
+                        right: "\\]",
+                        display: true
+                    },
+                    {
+                        left: "$",
+                        right: "$",
+                        display: false
+                    },
+                    {
+                        left: "\\(",
+                        right: "\\)",
+                        display: false
+                    }
+                ]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
+</body>
+
+</html>

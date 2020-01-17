@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta name="generator" content="Hugo 0.62.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+<meta itemprop="name" content="Generating Functions">
+<meta itemprop="description" content="Generating functions 生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数 orinary generating function(OGF): $G(x)=\sum_{n\geq 0 }a_nx^n$ using &ldquo;&#43;&rdquo; to represent &ldquo;OR&rdquo;, using the multiplication to denote &ldquo;AND&rdquo; 例如如果">
+<meta itemprop="datePublished" content="2020-01-03T20:12:08&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-03T20:12:08&#43;08:00" />
+<meta itemprop="wordCount" content="681">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Generating Functions" />
+<meta property="og:description" content="Generating functions 生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数 orinary generating function(OGF): $G(x)=\sum_{n\geq 0 }a_nx^n$ using &ldquo;&#43;&rdquo; to represent &ldquo;OR&rdquo;, using the multiplication to denote &ldquo;AND&rdquo; 例如如果" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/" />
+<meta property="article:published_time" content="2020-01-03T20:12:08+08:00" />
+<meta property="article:modified_time" content="2020-01-03T20:12:08+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Generating Functions"/>
+<meta name="twitter:description" content="Generating functions 生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数 orinary generating function(OGF): $G(x)=\sum_{n\geq 0 }a_nx^n$ using &ldquo;&#43;&rdquo; to represent &ldquo;OR&rdquo;, using the multiplication to denote &ldquo;AND&rdquo; 例如如果"/>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<title>Generating Functions</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
+
+<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+</head>
+
+<body style="overflow-x: unset;">
+	<div class="container-fluid">
+		<div class="row d-print-block">
+			<div class="col-12 col-md-3 col-lg-2 bd-sidebar d-print-none">
+				<div class="d-flex mt-3 border-bottom">
+        <span class="navbar-brand w-100" style="display: grid;">
+            <small>
+                <a href="/" class="text-black-50">
+                    <i class="iconfont icon-back-arrow-"></i>
+                </a>
+                TristonK's
+            </small>
+            <a class="text-dark" href="/notes/">
+                Documents
+            </a>
+        </span>
+        <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
+            data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="true"
+            aria-label="Toggle docs navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+				<nav id="bd-docs-nav" class="collapse bd-links">
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            Google代码规范
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+            
+            
+                
+                    <span class="icontext">M</span>
+                
+            
+            
+            问题求解（三）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+            
+            
+                
+                    <span class="icontext">A</span>
+                
+            
+            
+            问题求解（四）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+            
+            
+                
+                    <span class="icontext">C</span>
+                
+            
+            
+            操作系统
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            私人生活的变革
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            微电子与电路
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+            
+            
+                
+                    <span class="icontext">A</span>
+                
+            
+            
+            强化学习
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            社会学概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item active bg-light">
+        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+            <i class="iconfont icon-back-arrow-reverse"></i>
+            组合数学
+        </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/">Basic Enumeration</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    Generating Functions
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/sieve-methods/">Sieve Methods</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/existence-problemms/">Existence Problemms</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/probablistic-methods/">Probablistic Methods</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-graph-theroy/">Extremal Graph Theroy</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-set-theroy/">Extremal Set Theroy</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/ramsey-theroy/">Ramsey Theroy</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/">Matching Theroy</a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+            
+            
+                
+                    <span class="icontext">C</span>
+                
+            
+            
+            数据库概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            
+            
+                
+                    <span class="icontext">M</span>
+                
+            
+            
+            计算机网络
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            伟大传统系列
+        </a>
+    </div>
+    
+    
+</nav>
+			</div>
+			<div class="col-12 col-md-9 col-lg-10 d-print-block">
+				<div class="row d-print-block">
+					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content d-print-block" role="main">
+						<div id="title" class="my-4 border-bottom">
+							<span>组合数学</span>
+							<h2>Generating Functions</h2>
+							<footer>
+								<span>
+									<i class="fad fa-calendar-alt mr-2"></i>
+									2020-01-03 20:12 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-calendar-edit mr-2"></i>
+									2020-01-03 20:12 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-copyright mr-2"></i>
+									CC BY-NC 4.0
+									<a class="float-right" href="#" onclick="window.print()">
+											打印本页
+									</a>
+								</span>
+							</footer>
+						</div>
+						<div id="content" class="hl-h2">
+							<h1 id="generating-functions">Generating functions<a href="#generating-functions" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<p>生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数</p>
+<p><strong>orinary generating function(OGF)</strong>: $G(x)=\sum_{n\geq 0 }a_nx^n$</p>
+<p>using &ldquo;+&rdquo; to represent &ldquo;OR&rdquo;, using the multiplication to denote &ldquo;AND&rdquo;</p>
+<p>例如如果有3个红球，4个蓝球，相同颜色球不可区分，那么我们的选择为$(1+x+x^2+x^3)(1+x+x^2+x^3+x^4)$，如果是需要选择k个球，则不同的选择方式种数就是 $x^k$ 的系数</p>
+<h2 id="sloving-recurrences">sloving recurrences<a href="#sloving-recurrences" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>求解生成函数的四步方法：</p>
+<ul>
+<li>写出 $a_n$ 的递归定义（如 $a_n = a_{n-1} + a_{n-2}$</li>
+<li>两边同时乘以$x^n$, ，左边即为生成函数G(x)，并将右边化为G(x)的形式</li>
+<li>求解G(x)，得到关于x的函数</li>
+<li>对G(x)进行级数展开，得到$a_n$</li>
+</ul>
+<h3 id="algebric-operations-on-generating-functions">algebric operations on generating functions<a href="#algebric-operations-on-generating-functions" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>Let $G(x)=\sum_{n\geq 0}g_nx^n$, $F(x)=\sum_{n\geq 0}f_nx^n$</p>
+<p><strong>shift</strong> :  $x^kG(x)=\sum_{n\geq k}g_{n-k}x^n$</p>
+<p><strong>addition</strong> : $F(x)+G(x)=\sum_{n\geq 0}(f_n+g_n)x^n$</p>
+<p><strong>convolution</strong> : $F(x)G(x)=\sum_{n\geq 0}\sum_{k=0}^nf_kg_{n-k}x^n$</p>
+<p><strong>differentiation</strong> : $G&rsquo;(x) = \sum_{n\geq 0}(n+1)g_{n+1}x^n$</p>
+<h3 id="expanding-generating-functions">expanding generating functions<a href="#expanding-generating-functions" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>泰勒级数：$G(x)=\sum_{n\geq 0}\frac{G^{(n)}(0)}{n!}x^n$</p>
+<p>几何级数：$\frac{1}{1-x}=\sum_{n\geq 0}x^n$，所以对于$\frac{a_1}{1-b_1x}+\frac{a_2}{1-b_2x}+..$对应的$x^k$的系数就是$a_1(b_1)^k+a_2(b_2)^k+..$</p>
+<p>Newton's formular：若$|x|&lt;1$,则$(1+x)^{\alpha}=\sum_{n\geq 0}\binom{\alpha}{n}x^n$</p>
+<h2 id="catalan-number">Catalan Number<a href="#catalan-number" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>$C_n$等价情况</p>
+<ul>
+<li>括号匹配</li>
+<li>有(n+1)个叶子的完全二叉树</li>
+<li>不越过对角线的大小为n的正方形格子的两个对点之间的路径数</li>
+<li>n个+1，n个-1数的排列顺序使得前缀和永远为非负数</li>
+</ul>
+<p>可以考虑完全二叉树的情况，假设对于根节点，左边有$k+1$个叶子,右边有$n+1-(k+1)$个叶子，那么也就对应着$$C_n=\sum_{k=0}^{n-1}C_kC_{n-1-k}$$</p>
+<p>可以利用生成函数解得：
+$$C_n=\frac{1}{n+1}\binom{2n}{n}$$</p>
+<h2 id="quicksort">Quicksort<a href="#quicksort" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>略</p>
+
+						</div>
+					</main>
+					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
+						<div class="btn-group-vertical w-100 my-3">
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
+</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#sloving-recurrences">sloving recurrences</a>
+      <ul>
+        <li><a href="#algebric-operations-on-generating-functions">algebric operations on generating functions</a></li>
+        <li><a href="#expanding-generating-functions">expanding generating functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#catalan-number">Catalan Number</a></li>
+    <li><a href="#quicksort">Quicksort</a></li>
+  </ul>
+</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/leon.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js "></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(
+            document.body, {
+                delimiters: [{
+                        left: "$$",
+                        right: "$$",
+                        display: true
+                    },
+                    {
+                        left: "\\[",
+                        right: "\\]",
+                        display: true
+                    },
+                    {
+                        left: "$",
+                        right: "$",
+                        display: false
+                    },
+                    {
+                        left: "\\(",
+                        right: "\\)",
+                        display: false
+                    }
+                ]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
+</body>
+
+</html>
