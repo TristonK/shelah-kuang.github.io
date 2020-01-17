@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta name="generator" content="Hugo 0.62.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+<meta itemprop="name" content="数据库安全性与完整性">
+<meta itemprop="description" content="数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S">
+<meta itemprop="datePublished" content="2020-01-01T00:13:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-01T00:13:14&#43;08:00" />
+<meta itemprop="wordCount" content="2714">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="数据库安全性与完整性" />
+<meta property="og:description" content="数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/" />
+<meta property="article:published_time" content="2020-01-01T00:13:14+08:00" />
+<meta property="article:modified_time" content="2020-01-01T00:13:14+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="数据库安全性与完整性"/>
+<meta name="twitter:description" content="数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S"/>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<title>数据库安全性与完整性</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
+
+<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+</head>
+
+<body style="overflow-x: unset;">
+	<div class="container-fluid">
+		<div class="row d-print-block">
+			<div class="col-12 col-md-3 col-lg-2 bd-sidebar d-print-none">
+				<div class="d-flex mt-3 border-bottom">
+        <span class="navbar-brand w-100" style="display: grid;">
+            <small>
+                <a href="/" class="text-black-50">
+                    <i class="iconfont icon-back-arrow-"></i>
+                </a>
+                TristonK's
+            </small>
+            <a class="text-dark" href="/notes/">
+                Documents
+            </a>
+        </span>
+        <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
+            data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="true"
+            aria-label="Toggle docs navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+				<nav id="bd-docs-nav" class="collapse bd-links">
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            Google代码规范
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            问题求解（三）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            问题求解（四）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            操作系统
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            私人生活的变革
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            微电子与电路
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            强化学习
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            社会学概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            组合数学
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item active bg-light">
+        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+            <i class="iconfont icon-back-arrow-reverse"></i>
+            数据库概论
+        </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/">数据库系统概述</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/">数据模型</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/">关系数据库系统</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/">SQL语言</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    数据库安全性与完整性
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/">事务管理、并发控制与故障恢复</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/">关系数据库规范化理论</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/">思考题与作业题</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/">样卷整理</a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            计算机网络
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            伟大传统系列
+        </a>
+    </div>
+    
+    
+</nav>
+			</div>
+			<div class="col-12 col-md-9 col-lg-10 d-print-block">
+				<div class="row d-print-block">
+					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content d-print-block" role="main">
+						<div id="title" class="my-4 border-bottom">
+							<span>数据库概论</span>
+							<h2>数据库安全性与完整性</h2>
+							<footer>
+								<span>
+									<i class="fad fa-calendar-alt mr-2"></i>
+									2020-01-01 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-calendar-edit mr-2"></i>
+									2020-01-01 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-copyright mr-2"></i>
+									CC BY-NC 4.0
+									<a class="float-right" href="#" onclick="window.print()">
+											打印本页
+									</a>
+								</span>
+							</footer>
+						</div>
+						<div id="content" class="hl-h2">
+							<h1 id="heading">数据库安全性与完整性<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<blockquote>
+<p>4.1 数据库的安全性保护</p>
+<ul>
+<li>数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计</li>
+<li>SQL对数据库安全的支持
+<ul>
+<li>SQL中的存取权限</li>
+<li>SQL中的授权命令GRANT和权限的回收命令REVOKE</li>
+</ul>
+</li>
+</ul>
+<p>4.2    数据库的完整性保护</p>
+<ul>
+<li>数据库完整性保护的功能：目的与常用实现措施</li>
+<li>实体完整性，参照完整性，用户定义完整性</li>
+<li>完整的CREATE TABLE命令</li>
+<li>基表的创建</li>
+<li>完整性约束的定义：主关键字，外关键字，CHECK约束，UNIQUE，NOT NULL, DEFAULT</li>
+<li>触发器及其创建命令</li>
+</ul>
+</blockquote>
+<p>数据库的保护：在数据库的管理系统内部设置一些必要的软件以达到数据保护的目的</p>
+<h2 id="heading-1">数据库的安全性保护<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>数据库的安全要求用户：通过规定的访问途径，按照规定的访问规则</p>
+<p>可信计算基TCB：为实现数据库安全所采用的所有实施策略与机制的集合</p>
+<p><strong>主体</strong>：数据库中数据的访问者</p>
+<p><strong>客体</strong>：数据库中的数据及其载体</p>
+<p><strong>身份标识与鉴别</strong>：每个主题有一个标识符与一个用于验证身份的访问口令，主体访问客体时，TCB将对主体所提交的身份标识符与口令进行鉴别，以防止非法访问</p>
+<p><strong>自主访问控制(DAC)</strong>：一种基于存取矩阵的安全控制模型，基于用户的鉴别与存取访问规则的确定。每个用户要给以对系统中每个存取对象的存取权限，一个主体访问客体时，系统检查该主体在该客体上是否拥有所需要的权限。</p>
+<p>对于存取权限，只有两种获取方式，一种是客体所有者自动拥有全部权限，另一种是拥有权限的用户自主的将他的权限传授给其他用户</p>
+<p>DAC将在登录和访问数据库时检查权限</p>
+<p>强制访问控制：主体无权将任何权限授予他人</p>
+<p><strong>审计</strong>：跟踪用户对数据的访问操作，如访问时间/访问内容/用户名/终端名/操作类型/操作结果，并可以根据审计结果给出报警信息</p>
+<p>这个安全策略需要一个网络中的实体完成，即访问监控器，在TCB中实现</p>
+<h3 id="heading-2">安全标准<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>用户自主保护级：自主访问控制、身份鉴别、数据完整性</p>
+<p>系统审计保护级：自主访问控制、身份鉴别、客体重用、审计、数据完整性</p>
+<p>安全标记保护级：自主访问控制、强制访问控制、标记、身份鉴别、客体重用、审计、数据完整性</p>
+<p>结构化保护级：自主访问控制、强制访问控制、标记、身份鉴别、客体重用、审计、数据完整性、隐蔽信道分析、可信路径</p>
+<p>访问验证保护级：自主访问控制、强制访问控制、标记、身份鉴别、客体重用、审计、数据完整性、隐蔽信道分析、可信路径、可信恢复</p>
+<h3 id="sql">SQL对安全的支持<a href="#sql" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>自主访问控制通过(用户，操作对象，操作权限)这样的三元组来定义用户对数据的访问权限</p>
+<p>授权范围：SELECT权、INSERT权、DELETE权、UPDATE权、REFERENCE权、EXECUTE权、USAGE权</p>
+<p>授权：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#080;font-weight:bold">Grant</span>  <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">权</span><span style="color:#f00;background-color:#faa">限</span><span style="color:#333">&gt;</span>  <span style="color:#080;font-weight:bold">on</span>  <span style="color:#f00;background-color:#faa">表</span><span style="color:#f00;background-color:#faa">名</span>[(<span style="color:#f00;background-color:#faa">列</span><span style="color:#f00;background-color:#faa">名</span>)]  <span style="color:#080;font-weight:bold">to</span>  <span style="color:#f00;background-color:#faa">用</span><span style="color:#f00;background-color:#faa">户</span> <span style="color:#080;font-weight:bold">With</span>  <span style="color:#080;font-weight:bold">grant</span>  <span style="color:#080;font-weight:bold">option</span>
+
+<span style="color:#080;font-weight:bold">GRANT</span> <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">权</span><span style="color:#f00;background-color:#faa">限</span><span style="color:#333">&gt;</span> <span style="color:#080;font-weight:bold">ON</span> <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">数</span><span style="color:#f00;background-color:#faa">据</span><span style="color:#f00;background-color:#faa">对</span><span style="color:#f00;background-color:#faa">象</span><span style="color:#333">&gt;</span> <span style="color:#080;font-weight:bold">FROM</span> <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">数</span><span style="color:#f00;background-color:#faa">据</span><span style="color:#f00;background-color:#faa">库</span><span style="color:#f00;background-color:#faa">用</span><span style="color:#f00;background-color:#faa">户</span><span style="color:#333">&gt;</span>
+</code></pre></div><p>回收语句：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#080;font-weight:bold">REVOKE</span>  <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">操</span><span style="color:#f00;background-color:#faa">作</span><span style="color:#f00;background-color:#faa">权</span><span style="color:#f00;background-color:#faa">限</span><span style="color:#f00;background-color:#faa">列</span><span style="color:#f00;background-color:#faa">表</span><span style="color:#333">&gt;</span>  <span style="color:#080;font-weight:bold">ON</span>  <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">操</span><span style="color:#f00;background-color:#faa">作</span><span style="color:#f00;background-color:#faa">对</span><span style="color:#f00;background-color:#faa">象</span><span style="color:#333">&gt;</span>
+<span style="color:#080;font-weight:bold">FROM</span>  <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">用</span><span style="color:#f00;background-color:#faa">户</span><span style="color:#f00;background-color:#faa">名</span><span style="color:#f00;background-color:#faa">列</span><span style="color:#f00;background-color:#faa">表</span><span style="color:#333">&gt;</span>  [<span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">CASCADE</span>]
+</code></pre></div><p>CASCADE：连锁回收</p>
+<p>RESTRICT：在不存在连锁回收问题时才能回收权限，否则拒绝回收</p>
+<h2 id="heading-3">数据库的完整性保护<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>完整性包括了正确性(数据有效有意义)与一致性（多用户访问时保证对数据的更新与访问保持一致）</p>
+<p>数据库完整性保护：</p>
+<ul>
+<li>执行更新操作时，检查是否违反完整性约束条件，防止又存取权的合法用户的误操作</li>
+<li>目的：
+<ul>
+<li>及时发现错误</li>
+<li>采取措施防之错误进一步蔓延</li>
+<li>最终将数据库恢复正确状态</li>
+</ul>
+</li>
+<li>常用实现措施
+<ul>
+<li>完整性约束条件的定义与检查</li>
+<li>触发器</li>
+<li>并发控制技术</li>
+</ul>
+</li>
+</ul>
+<p>保护基本功能：设置功能、检查功能、处理功能</p>
+<p>完整性规则的三个内容：</p>
+<ul>
+<li>实体完整性：基表主关键字不为空</li>
+<li>参照完整性：关系R中的每个元组在外键F上的值要么为被引用的关系中存在的值，要么为空值</li>
+<li>用户定义完整性：用户定义的数据完整性要求</li>
+</ul>
+<p>一条完整性约束规则由三个部分组成：</p>
+<ul>
+<li>完整性约束条件的设置：
+<ul>
+<li>属性级的约束（域约束）：数据类型、非空值约束、取值范围约束</li>
+<li>元组级别的约束（表约束）：主键、候选键定义(UNIQUE)、外键定义、基于元组的CHECK子句</li>
+<li>全局约束（断言assertion）：单个关系中设计统计操作的约束条件、多个关系之间复杂的约束条件</li>
+</ul>
+</li>
+<li>条件的检查（DBMS内部设置）</li>
+<li>条件的处理：如破坏完整性，可能拒绝执行并报警，也可能调用相应的函数处理如外键定义子句中的方法或者触发器中给出的方法</li>
+</ul>
+<p>约束的命名：<code>CONSTRAINT &lt;约束名&gt; &lt;完整性约束定义子句&gt;</code></p>
+<p>完整的CREATE TABLE命令需要定义：</p>
+<ul>
+<li>模式名&amp;表名</li>
+<li>属性的定义
+<ul>
+<li>属性名&amp;数据类型</li>
+<li>缺省值定义 DEFAULT{default_constant | NULL}</li>
+<li>属性的数据约束定义(见下)</li>
+</ul>
+</li>
+<li>表级（元组级）的数据约束定义(见下)</li>
+</ul>
+<p>属性的约束定义：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f00;background-color:#faa">{</span>    <span style="color:#080;font-weight:bold">NOT</span> <span style="color:#080;font-weight:bold">NULL</span>   <span style="color:#333">|</span>
+     [ <span style="color:#080;font-weight:bold">CONSTRAINT</span> <span style="color:#080;font-weight:bold">constraint_name</span> ]
+          <span style="color:#080;font-weight:bold">UNIQUE</span>
+        <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">PRIMARY</span> <span style="color:#080;font-weight:bold">KEY</span>
+        <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">CHECK</span> ( search_condition )
+        <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">REFERENCES</span> <span style="color:#080;font-weight:bold">table_name</span> [ ( <span style="color:#080;font-weight:bold">column_name</span> ) ]
+            [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">DELETE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]
+            [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">UPDATE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ] <span style="color:#f00;background-color:#faa">}</span>
+</code></pre></div><p>多个属性取值约束定义（表级约束定义），需要另起一行</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">[ <span style="color:#080;font-weight:bold">CONSTRAINT</span> <span style="color:#080;font-weight:bold">constraint_name</span> ]
+   <span style="color:#f00;background-color:#faa">{</span>   <span style="color:#080;font-weight:bold">UNIQUE</span> ( colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> )
+    <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">PRIMARY</span> <span style="color:#080;font-weight:bold">KEY</span> ( colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> )
+    <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">CHECK</span> ( search_condition )
+    <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">FOREIGN</span> <span style="color:#080;font-weight:bold">KEY</span> ( colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> )
+        <span style="color:#080;font-weight:bold">REFERENCES</span> <span style="color:#080;font-weight:bold">table_name</span> [ ( colname <span style="color:#f00;background-color:#faa">{</span> ,colname... <span style="color:#f00;background-color:#faa">}</span> ) ]
+            [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">DELETE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]
+            [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">UPDATE</span> <span style="color:#080;font-weight:bold">CASCADE</span><span style="color:#333">|</span><span style="color:#080;font-weight:bold">RESTRICT</span><span style="color:#333">|</span><span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]   <span style="color:#f00;background-color:#faa">}</span>
+</code></pre></div><p>UNIQUE可以取空值</p>
+<p>候选键：UNIQUE + NOT NULL</p>
+<p>对于外键REFERENCES KEY后面会加上取值约束与保证一致性的保证措施</p>
+<p>Forengen Key约束：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#080;font-weight:bold">FOREIGN</span> <span style="color:#080;font-weight:bold">KEY</span> ( colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> )
+  <span style="color:#080;font-weight:bold">REFERENCES</span> <span style="color:#080;font-weight:bold">table_name</span> [ ( colname <span style="color:#f00;background-color:#faa">{</span> ,colname... <span style="color:#f00;background-color:#faa">}</span> ) ]
+    [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">DELETE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]
+    [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">UPDATE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]   <span style="color:#f00;background-color:#faa">}</span>
+</code></pre></div><p>Foreign key &hellip;&hellip; References &hellip;&hellip;:定义主外键的引用关系。当对引用表中的外键进行赋值时，需要检查外键值的正确性。</p>
+<p>on delete &hellip;&hellip; / on update &hellip;&hellip;: 当在被引用表中删除元组或修改主键值时，需要维护引用表中外键值的正确性，具体方式如下：</p>
+<ul>
+<li>Cascade：同步做连带删除/更新</li>
+<li>Restrict：如果在引用表中存在与被删除或修改的主键相关的元组，则拒绝本次对被引用表的delete/update操作 (缺省的维护模式)</li>
+<li>Set Null：如果在引用表中存在与被删除或修改的主键相关的元组，则自动地将相关元组上的外键值置为空(NULL)</li>
+</ul>
+<p>CHECK:其他任意的属性取值约束</p>
+<p>定义断言 <code>CREATE ASSERTION &lt;name&gt; CHECK( &lt;condition&gt; )</code></p>
+<p>撤消断言 <code>DROP ASSERTION &lt;assertion-name-list&gt;</code></p>
+<p>触发器:某个事件的发生导致另外一些事情的发生，以消除前一个事件对数据完整性的影响</p>
+<p>触发器的组成：</p>
+<ul>
+<li>触发事件(用户定义)：为某个完整性约束条件的否定或者某种数据操纵事件</li>
+<li>结果事件(用户定义)：触发发生后，消除影响的程序，通常是一组SQL命令</li>
+<li>触发过程：DBMS自动调用并执行</li>
+</ul>
+<p>创建命令：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#080;font-weight:bold">CREATE</span> <span style="color:#080;font-weight:bold">TRIGGER</span> <span style="color:#080;font-weight:bold">trigger_name</span> <span style="color:#f00;background-color:#faa">{</span> <span style="color:#080;font-weight:bold">BEFORE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">AFTER</span> <span style="color:#f00;background-color:#faa">}</span>
+<span style="color:#f00;background-color:#faa">{</span> <span style="color:#080;font-weight:bold">INSERT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">DELETE</span>
+  <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">UPDATE</span> [ <span style="color:#080;font-weight:bold">OF</span> colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> ] <span style="color:#f00;background-color:#faa">}</span>
+    <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">table_name</span> 
+[ <span style="color:#080;font-weight:bold">REFERENCING</span> corr_name_def <span style="color:#f00;background-color:#faa">{</span> , ...... <span style="color:#f00;background-color:#faa">}</span> ] <span style="color:#888">/*</span><span style="color:#888">给新</span><span style="color:#888">/</span><span style="color:#888">之前的命名</span><span style="color:#888">*/</span>
+<span style="color:#888">/*</span><span style="color:#888">执行事件</span><span style="color:#888">*/</span>
+[ <span style="color:#080;font-weight:bold">FOR</span> <span style="color:#080;font-weight:bold">EACH</span> <span style="color:#080;font-weight:bold">ROW</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">FOR</span> <span style="color:#080;font-weight:bold">EACH</span> <span style="color:#080;font-weight:bold">STATEMENT</span> ]
+[ <span style="color:#080;font-weight:bold">WHEN</span> ( search_condition ) ]
+<span style="color:#f00;background-color:#faa">{</span> <span style="color:#080;font-weight:bold">statement</span>
+<span style="color:#333">|</span> <span style="color:#080;font-weight:bold">BEGIN</span> <span style="color:#080;font-weight:bold">ATOMIC</span> <span style="color:#080;font-weight:bold">statement</span>; <span style="color:#f00;background-color:#faa">{</span> <span style="color:#080;font-weight:bold">statement</span>; ... <span style="color:#f00;background-color:#faa">}</span> <span style="color:#080;font-weight:bold">END</span>
+</code></pre></div><p>命名方式：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f00;background-color:#faa">{</span>       <span style="color:#080;font-weight:bold">OLD</span> [ <span style="color:#080;font-weight:bold">ROW</span> ] [ <span style="color:#080;font-weight:bold">AS</span> ] old_row_corr_name
+<span style="color:#333">|</span> <span style="color:#080;font-weight:bold">NEW</span> [ <span style="color:#080;font-weight:bold">ROW</span> ] [ <span style="color:#080;font-weight:bold">AS</span> ] new_row_corr_name
+
+<span style="color:#333">|</span> <span style="color:#080;font-weight:bold">OLD</span> <span style="color:#080;font-weight:bold">TABLE</span> [ <span style="color:#080;font-weight:bold">AS</span> ] old_table_corr_name
+<span style="color:#333">|</span> <span style="color:#080;font-weight:bold">NEW</span> <span style="color:#080;font-weight:bold">TABLE</span> [ <span style="color:#080;font-weight:bold">AS</span> ] new_table_corr_name    <span style="color:#f00;background-color:#faa">}</span>
+</code></pre></div><p>删除触发器： <code>DROP TRIGGER trigger_name</code></p>
+<p>举例：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#888">/*</span><span style="color:#888">删除一个客户元组时，需要将该客户所有订单上的cid置为空值(set  null)</span><span style="color:#888">*/</span>
+<span style="color:#080;font-weight:bold">create</span>  <span style="color:#080;font-weight:bold">trigger</span>  foreign_cid  
+<span style="color:#080;font-weight:bold">after</span>  <span style="color:#080;font-weight:bold">delete</span>  <span style="color:#080;font-weight:bold">on</span>  customers
+<span style="color:#080;font-weight:bold">referencing</span>  <span style="color:#080;font-weight:bold">old</span>  <span style="color:#080;font-weight:bold">as</span>  old_custom
+<span style="color:#080;font-weight:bold">for</span>  <span style="color:#080;font-weight:bold">each</span>  <span style="color:#080;font-weight:bold">row</span>
+<span style="color:#080;font-weight:bold">begin</span>
+<span style="color:#080;font-weight:bold">update</span>  orders
+<span style="color:#080;font-weight:bold">set</span>  cid <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">null</span>
+<span style="color:#080;font-weight:bold">where</span>  cid <span style="color:#333">=</span> :old_custom.cid ;
+<span style="color:#080;font-weight:bold">end</span>;
+</code></pre></div>
+						</div>
+					</main>
+					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
+						<div class="btn-group-vertical w-100 my-3">
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
+</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading-1">数据库的安全性保护</a>
+      <ul>
+        <li><a href="#heading-2">安全标准</a></li>
+        <li><a href="#sql">SQL对安全的支持</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-3">数据库的完整性保护</a></li>
+  </ul>
+</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/leon.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js "></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(
+            document.body, {
+                delimiters: [{
+                        left: "$$",
+                        right: "$$",
+                        display: true
+                    },
+                    {
+                        left: "\\[",
+                        right: "\\]",
+                        display: true
+                    },
+                    {
+                        left: "$",
+                        right: "$",
+                        display: false
+                    },
+                    {
+                        left: "\\(",
+                        right: "\\)",
+                        display: false
+                    }
+                ]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
+</body>
+
+</html>

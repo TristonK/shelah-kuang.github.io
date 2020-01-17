@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta name="generator" content="Hugo 0.62.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+<meta itemprop="name" content="数据模型">
+<meta itemprop="description" content="数据模型 第二章 数据模型 2.1 数据模型的基本概念 数据模型及其组成成分：数据结构，数据操作，数据约束 数据模型的核心，不同类型数据模型的区分依据 三个抽">
+<meta itemprop="datePublished" content="2020-01-01T00:13:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-01T00:13:14&#43;08:00" />
+<meta itemprop="wordCount" content="2608">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="数据模型" />
+<meta property="og:description" content="数据模型 第二章 数据模型 2.1 数据模型的基本概念 数据模型及其组成成分：数据结构，数据操作，数据约束 数据模型的核心，不同类型数据模型的区分依据 三个抽" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/" />
+<meta property="article:published_time" content="2020-01-01T00:13:14+08:00" />
+<meta property="article:modified_time" content="2020-01-01T00:13:14+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="数据模型"/>
+<meta name="twitter:description" content="数据模型 第二章 数据模型 2.1 数据模型的基本概念 数据模型及其组成成分：数据结构，数据操作，数据约束 数据模型的核心，不同类型数据模型的区分依据 三个抽"/>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<title>数据模型</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
+
+<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+</head>
+
+<body style="overflow-x: unset;">
+	<div class="container-fluid">
+		<div class="row d-print-block">
+			<div class="col-12 col-md-3 col-lg-2 bd-sidebar d-print-none">
+				<div class="d-flex mt-3 border-bottom">
+        <span class="navbar-brand w-100" style="display: grid;">
+            <small>
+                <a href="/" class="text-black-50">
+                    <i class="iconfont icon-back-arrow-"></i>
+                </a>
+                TristonK's
+            </small>
+            <a class="text-dark" href="/notes/">
+                Documents
+            </a>
+        </span>
+        <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
+            data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="true"
+            aria-label="Toggle docs navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+				<nav id="bd-docs-nav" class="collapse bd-links">
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            Google代码规范
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            问题求解（三）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            问题求解（四）
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            操作系统
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            私人生活的变革
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            微电子与电路
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            强化学习
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            社会学概论
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            组合数学
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item active bg-light">
+        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+            <i class="iconfont icon-back-arrow-reverse"></i>
+            数据库概论
+        </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/">数据库系统概述</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    数据模型
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/">关系数据库系统</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/">SQL语言</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/">数据库安全性与完整性</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/">事务管理、并发控制与故障恢复</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/">关系数据库规范化理论</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/">思考题与作业题</a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/">样卷整理</a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            
+                <i class="iconfont icon-construction rawicon"></i>
+            
+            计算机网络
+        </a>
+    </div>
+    
+    
+    
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+            
+            
+                
+                    <span class="icontext">O</span>
+                
+            
+            
+            伟大传统系列
+        </a>
+    </div>
+    
+    
+</nav>
+			</div>
+			<div class="col-12 col-md-9 col-lg-10 d-print-block">
+				<div class="row d-print-block">
+					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content d-print-block" role="main">
+						<div id="title" class="my-4 border-bottom">
+							<span>数据库概论</span>
+							<h2>数据模型</h2>
+							<footer>
+								<span>
+									<i class="fad fa-calendar-alt mr-2"></i>
+									2020-01-01 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-calendar-edit mr-2"></i>
+									2020-01-01 00:13 CST
+								</span> <br />
+								<span>
+									<i class="fad fa-copyright mr-2"></i>
+									CC BY-NC 4.0
+									<a class="float-right" href="#" onclick="window.print()">
+											打印本页
+									</a>
+								</span>
+							</footer>
+						</div>
+						<div id="content" class="hl-h2">
+							<h1 id="heading">数据模型<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<blockquote>
+<p>第二章 数据模型</p>
+<p>2.1 数据模型的基本概念</p>
+<ul>
+<li>数据模型及其组成成分：数据结构，数据操作，数据约束</li>
+<li>数据模型的核心，不同类型数据模型的区分依据</li>
+<li>三个抽象层次上的数据模型概念：概念数据模型，逻辑数据模型，物理数据模型</li>
+</ul>
+<p>2.2 数据模型的四个世界</p>
+<ul>
+<li>现实世界，概念世界，信息世界，计算机世界</li>
+</ul>
+<p>2.3 概念世界与概念模型</p>
+<ul>
+<li>E-R模型与E-R图（包括扩充E-R模型）</li>
+<li>实体，属性，联系</li>
+<li>多值属性（multi-valued attribute） &amp; 组合属性（composite attribute）</li>
+<li>联系上的函数对应关系 &amp; 参与方式（Cardinality of Entity Participation in a Relationship）</li>
+<li>IS-A联系，弱实体</li>
+<li>面向对象模型：对象，对象标识符，类，方法，超类和子类，聚合和分解，继承和合成</li>
+</ul>
+<p>2.4 信息世界和逻辑模型</p>
+<ul>
+<li>关系模型：关系，属性，值域（域），元组，关系数据库，关键字</li>
+</ul>
+<p>2.5 计算机世界与物理模型</p>
+<ul>
+<li>逻辑模型的物理存储：项，记录，文件，索引，集簇</li>
+<li>提高文件访问效率的常用方法：索引，集簇，HASH</li>
+</ul>
+</blockquote>
+<h2 id="heading-1">数据模型的基本概念<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p><strong><code>数据模型</code></strong>： 描述数据的结构，定义在该数据结构上可执行的操作以及数据之间必须满足的约束条件</p>
+<p>组成：<strong>数据结构、数据操作、数据约束</strong></p>
+<h3 id="heading-2">数据结构<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>描述数据的类型、内容、性质以及数据间的联系</p>
+<p>是一个数据模型的基础，也被称为<strong>数据模式</strong>，数据模式是<strong>划分不同数据模型的依据</strong>，是<strong>数据模型的核心</strong></p>
+<h3 id="heading-3">数据操作<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>不同数据结构上不同的操作方式与操作类型</p>
+<h3 id="heading-4">数据约束<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>描述数据结构之间数据的相互联系，包括语法/语义关系，数据间的制约与依存关系、动态变化规则</p>
+<h3 id="heading-5">不同层次的数据模型<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>概念数据模型：按照用户的观点实现世界中的数据和信息进行建模，刻画内在结构与关系，但是不涉及具体的描述细节与实现，如实体-联系(E-R)模型、面向对象模型</p>
+<p>逻辑数据模型（对应了外模式与概念模式）：DBMS实现，按数据库系统观点对数据建模，现在一半分为结构化与非结构化，常见的有关系模型、对象关系模型</p>
+<p>物理数据模型（对应了内模式）：DBMS实现，按照计算机系统观点对数据进行建模</p>
+<h2 id="heading-6">数据模型的四个世界<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>使用数据模型概念可以将现实中的反映到计算机中数据库的实现，是一个逐步反映的过程，包括<strong>现实世界、概念世界、信息世界、计算机世界</strong></p>
+<p>现实世界：根据用户需求（数据需求与处理要求）而划定边界的一个应用环境</p>
+<p>概念世界：E-R模型，OO模型，这些与具体的DBMS和计算机无关</p>
+<p>信息世界：以概念世界为基础，选定特定的DBMS构造而成的逻辑数据模型</p>
+<p>计算机世界：在计算机中物理实现，侧重于数据库物理存储结构的描述，包括存储结构的设计、存取路径的设计(文件结构：堆/直接/索引)、存储空间的分配</p>
+<h2 id="heading-7">概念世界与概念模型<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>是一个较为抽象、概念化的世界</p>
+<h3 id="e-r-">E-R模型（实体-联系模型）<a href="#e-r-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>核心概念：<strong>实体、属性、联系</strong></p>
+<p>ER图：实体：矩形； 属性：椭圆形； 联系：菱形；连接实体集与属性，联系与属性，实体集与联系</p>
+<p>实体：客观存在且能相互区别的事物，概念世界中的基本单位，每个实体都有一个实体名用于区分</p>
+<p>属性：实体所具有的某种特性或者特征，属性可以有值，一个属性可以取的值的集合称作该属性的<strong>域</strong>，每个属性有一个属性名，所有属性的属性名构成了这个实体的<strong>实体型</strong>，<strong>具有共性的实体</strong>指的是有相同的实体型</p>
+<p>联系：一个实体集中的实体与另一个实体集中的实体存在的对应关系，包括二元联系，多元联系，单个实体集内部的联系</p>
+<p>函数对应关系：</p>
+<ul>
+<li>1:1</li>
+<li>1:m</li>
+<li>m:n</li>
+</ul>
+<p>联系也可以具有属性</p>
+<p>属性的描述：属性名</p>
+<p>实体的描述：实体+实体型</p>
+<p>实体集（具有相同实体型的实体的集合）的描述：实体名+实体型+关键字</p>
+<h3 id="e-r">扩充E-R模型<a href="#e-r" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p><strong>IS-A联系</strong>：若实体集B是实体集A的一个子集，且具有比实体集A更多的属性，称两者存在IS-A联系，其中实体集A称为超实体集，实体集B称为子实体集，实体集B可以继承A中所有属性</p>
+<p>在EE-R图中，用子实体集指向超实体集的单项箭头表示该联系</p>
+<p>IS-A具有继承性与传递性</p>
+<p>要求子实体集的并集等于超实体集(<strong>覆盖约束</strong>)与任意两个子实体集不相交（<strong>不相交约束</strong>）</p>
+<p><strong>弱实体</strong>：实体A的存在需要依赖其他某个实体（如职工vs家属），在EE-R图中表示为从弱实体到联系的有向箭头</p>
+<p><strong>属性的划分</strong>：<strong>标识符(关键字)</strong>、<strong>描述符</strong>、<strong>组合属性</strong>（多个简单的属性用来描述一个属性，如fname,lname用来描述name这个属性）、<strong>多值属性</strong>（多值的，如hobbies，双线段表示）</p>
+<p><strong>属性基数</strong>：二元组(x,y)描述属性上的取值数量特征</p>
+<ul>
+<li>(0,?) 可以取空值</li>
+<li>(1,?) 不允许取空值</li>
+<li>(?,1) 每一个实体在该属性上最多只有一个值，即单值属性</li>
+<li>(?,N) 每个实体在该属性上可以取多值，即多值属性</li>
+</ul>
+<p><strong>参与基数</strong>：（实体,联系）</p>
+<ul>
+<li>最大参与基数：max-card(E,R)，为1表示最多与F中实体一个有联系(<strong>单值参与</strong>)，为N是可能多个实体有联系(<strong>多值参与</strong>)</li>
+<li>min-card(E,R)：为0可能与另一个实体集中的无联系(<strong>可选参与</strong>)，为1至少与一个有联系(<strong>强制参与</strong>)</li>
+<li>参与基数：Card(E,R)=(min-card(),max-card())</li>
+</ul>
+<h3 id="heading-8">面向对象模型<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>对象：能相互区分的事物,由对象标识符、静态特性（对象中的属性）、动态特性（可以施加在对象上的方法/操作）组成</p>
+<p>对象标识符：每个对象均具有的一个能相互区别的名字</p>
+<p>类：具有相同属性、方法的对象集合</p>
+<p>方法</p>
+<p>超类和子类（IS-A关系）</p>
+<p>聚合和分解（IS-PART-OF关系）</p>
+<p>继承和合成：单继承/多继承（子类有1/多个超类）</p>
+<h3 id="heading-9">谓词模型<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>P(x,y,z):为true当且仅当存在一个元组(x,y,z)满足谓词P</p>
+<h2 id="heading-10">信息世界和逻辑模型<a href="#heading-10" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>E-R模型可以对应的逻辑模型：层次模型、网状模型、关系模型</p>
+<p>EE-R模型可以对应的逻辑模型：对象关系模型</p>
+<p>面向对象模型对应的逻辑模型：面向对象模型</p>
+<h3 id="heading-11">关系模型<a href="#heading-11" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>基本数据结构：二维表</p>
+<p>数据操纵：对一张表/多张表间的查询，对一张表的删除、插入与修改</p>
+<p>关系模式：关系的关系名及其属性名的集合</p>
+<p>关系数据库模式：关系数据库中所有关系的关系模式的集合</p>
+<p>元组：关系中的每一行</p>
+<p>关键字：属性集中唯一标识关系中的一个元组</p>
+<p>主关键字：候选关键字中选一个</p>
+<p>外关键字：关系R中的属性集F取值来自于关系S中的主关键字K，称属性集F是关系R的外关键字</p>
+<h2 id="heading-12">计算机世界与物理模型<a href="#heading-12" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>项：文件系统中最小基本单位，项内符号不能继续分割</p>
+<p>记录：若干项组成，记录内的各项间有内在语义联系</p>
+<p>文件：记录的集合</p>
+<h3 id="heading-13">提高读写操作效率<a href="#heading-13" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>索引：文件的记录与物理地址间建立一张对应关系表(可以有多级索引)</p>
+<p>集簇：查找记录时按照某项的项值查找，将具有相同或者相邻的项值的记录聚集在相同磁盘块内</p>
+<p>HASH：通过hash间查找的记录转换成物理地址</p>
+
+						</div>
+					</main>
+					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
+						<div class="btn-group-vertical w-100 my-3">
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
+</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading-1">数据模型的基本概念</a>
+      <ul>
+        <li><a href="#heading-2">数据结构</a></li>
+        <li><a href="#heading-3">数据操作</a></li>
+        <li><a href="#heading-4">数据约束</a></li>
+        <li><a href="#heading-5">不同层次的数据模型</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-6">数据模型的四个世界</a></li>
+    <li><a href="#heading-7">概念世界与概念模型</a>
+      <ul>
+        <li><a href="#e-r-">E-R模型（实体-联系模型）</a></li>
+        <li><a href="#e-r">扩充E-R模型</a></li>
+        <li><a href="#heading-8">面向对象模型</a></li>
+        <li><a href="#heading-9">谓词模型</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-10">信息世界和逻辑模型</a>
+      <ul>
+        <li><a href="#heading-11">关系模型</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-12">计算机世界与物理模型</a>
+      <ul>
+        <li><a href="#heading-13">提高读写操作效率</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/leon.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js "></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(
+            document.body, {
+                delimiters: [{
+                        left: "$$",
+                        right: "$$",
+                        display: true
+                    },
+                    {
+                        left: "\\[",
+                        right: "\\]",
+                        display: true
+                    },
+                    {
+                        left: "$",
+                        right: "$",
+                        display: false
+                    },
+                    {
+                        left: "\\(",
+                        right: "\\)",
+                        display: false
+                    }
+                ]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
+</body>
+
+</html>

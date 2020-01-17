@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机网络 on Tristonk</title>
+    <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 计算机网络 on Tristonk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>CC BY-NC 4.0</copyright>
+    <lastBuildDate>Tue, 31 Dec 2019 16:54:46 +0800</lastBuildDate>
+    
+	<atom:link href="http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>计算机网络与因特网</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/</guid>
+      <description>计算机网络与因特网 1.1 什么是因特网 回答什么是因特网： 因特网的具体构成，即因特网的基本硬件与软件组件 根据为分布式应用提供服务的联网基础设施来描述</description>
+    </item>
+    
+    <item>
+      <title>应用层</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</guid>
+      <description>应用层 不考</description>
+    </item>
+    
+    <item>
+      <title>运输层</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/</guid>
+      <description>运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实</description>
+    </item>
+    
+    <item>
+      <title>网络层-数据平面</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-shu-ju-ping-mian/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-shu-ju-ping-mian/</guid>
+      <description>网络层：数据平面 重点：4.2、4.3 网络传输中ipv4报文首部哪些不会改变 网络层：实现主机到主机之间的通信服务，与运输层和应用层不同的是，网</description>
+    </item>
+    
+    <item>
+      <title>网络层-控制平面</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/</guid>
+      <description>网络层：控制平面 5.2 路由选择算法 BGP协议报文使用TCP报文封装，RIP使用UDP，OSPF使用IP报文封装 路由选择算法的目的：从发送方到接收</description>
+    </item>
+    
+    <item>
+      <title>链路层与局域网</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/lian-lu-ceng-yu-ju-yu-wang/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/lian-lu-ceng-yu-ju-yu-wang/</guid>
+      <description>链路层与局域网 两种链路层信道： 广播信道：连接有线局域网、卫星网和混合光纤同轴电缆(HFC)接入网中的多台主机，因为许多主机与相同广播信道连接</description>
+    </item>
+    
+    <item>
+      <title>无线网络与移动网络</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</guid>
+      <description>无线网络与移动网络 7.1 概述 无线主机(wireless host): 类似于有线主机，运行应用程序的端设备。 无线链路： 主机通过无线通信链路来连接到一个基站。 基</description>
+    </item>
+    
+    <item>
+      <title>计算机网络中的安全</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-zhong-de-an-quan/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-zhong-de-an-quan/</guid>
+      <description>计算机网络中的安全 RSA MD5</description>
+    </item>
+    
+    <item>
+      <title>多媒体网络</title>
+      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/duo-mei-ti-wang-luo/</link>
+      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/duo-mei-ti-wang-luo/</guid>
+      <description>多媒体网络 9.1 多媒体网络应用 视频最显著的特点：高比特率 9.2 流式存储视频 流式存储视频：UDP流、HTTP流、适应性HTTP流 广泛应用客户端应用缓存</description>
+    </item>
+    
+  </channel>
+</rss>

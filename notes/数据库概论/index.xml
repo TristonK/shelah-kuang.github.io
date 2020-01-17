@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库概论 on Tristonk</title>
+    <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/</link>
+    <description>Recent content in 数据库概论 on Tristonk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>CC BY-NC 4.0</copyright>
+    <lastBuildDate>Tue, 31 Dec 2019 17:12:27 +0800</lastBuildDate>
+    
+	<atom:link href="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>数据库系统概述</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</guid>
+      <description>数据库系统概述 复习重点 1.1基本概念 数据库，数据库管理系统，数据库系统，数据库管理员 相互之间的关系 1.2数据库系统的特点 数据集成化，数据独立</description>
+    </item>
+    
+    <item>
+      <title>数据模型</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</guid>
+      <description>数据模型 第二章 数据模型 2.1 数据模型的基本概念 数据模型及其组成成分：数据结构，数据操作，数据约束 数据模型的核心，不同类型数据模型的区分依据 三个抽</description>
+    </item>
+    
+    <item>
+      <title>关系数据库系统</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</guid>
+      <description>关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论</description>
+    </item>
+    
+    <item>
+      <title>SQL语言</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/</guid>
+      <description>SQL语言 3.4 关系数据库语言SQL’92 3.4.1 SQL概貌 SQL的基本概念与使用方式：表（基表/虚表），行，列 3.4.2 SQL数据定义功能 3.4.3 SQL数据操纵功</description>
+    </item>
+    
+    <item>
+      <title>数据库安全性与完整性</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</guid>
+      <description>数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S</description>
+    </item>
+    
+    <item>
+      <title>事务管理、并发控制与故障恢复</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</guid>
+      <description>事务管理、并发与故障处理 5.1 事务处理（概念） 事务的定义与ACID性质 事务活动及其状态转换图 事务控制及相关的参数设置语句：事务的提交与回滚，事务</description>
+    </item>
+    
+    <item>
+      <title>游标管理与索引</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</guid>
+      <description>游标管理与索引 游标管理 游标的作用 游标的定义、打开、使用、关闭 可滚动游标的定义及其在数据更新命令中的使用 索引 (index) B+索引的数据结构，搜索算法 游标</description>
+    </item>
+    
+    <item>
+      <title>关系数据库规范化理论</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</guid>
+      <description>关系数据库规范化理论 8.1 概述 模式设计质量的评价指标：数据冗余度，插入/删除等更新异常 为什么要研究关系的规划化设计：规范化的目的与手段 8.2 规范化理</description>
+    </item>
+    
+    <item>
+      <title>数据库设计</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</guid>
+      <description>数据库设计 9.1 数据库设计概述 数据库设计的基本任务 数据库的生命周期 9.2 数据库设计的需求分析 需求说明书 9.3 数据库的概念设计 数据库概念设计的过程 E-R模</description>
+    </item>
+    
+    <item>
+      <title>思考题与作业题</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/</guid>
+      <description>思考题与作业题 出于考虑，我们删掉了此部分</description>
+    </item>
+    
+    <item>
+      <title>样卷整理</title>
+      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/</link>
+      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
+      
+      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/</guid>
+      <description>样卷复习法 出于考虑，我们删掉了此部分</description>
+    </item>
+    
+  </channel>
+</rss>
