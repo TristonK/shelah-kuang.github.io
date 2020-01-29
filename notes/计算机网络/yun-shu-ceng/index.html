@@ -6,9 +6,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="TristonK ">
+<meta name="description" content="运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 
-
-
+<link rel="canonical" href="http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/" />
 
 <meta itemprop="name" content="运输层">
 <meta itemprop="description" content="运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实">
@@ -30,13 +33,30 @@
 <meta name="twitter:title" content="运输层"/>
 <meta name="twitter:description" content="运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title>运输层</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<title>运输层</title>
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_st54q8xrgt9.css">
+
+
+    <link rel="stylesheet" href="/katex.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq">
+
+
+
+    
+    <link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+
 </head>
 
 <body style="overflow-x: unset;">
@@ -52,7 +72,7 @@
                 TristonK's
             </small>
             <a class="text-dark" href="/notes/">
-                Documents
+                Notes
             </a>
         </span>
         <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
@@ -69,10 +89,6 @@
         <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             Google代码规范
         </a>
@@ -83,10 +99,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
-            
-                
-                    <span class="icontext">M</span>
-                
             
             
             问题求解（三）
@@ -99,10 +111,6 @@
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             问题求解（四）
         </a>
@@ -113,10 +121,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
-            
-                
-                    <span class="icontext">C</span>
-                
             
             
             操作系统
@@ -129,10 +133,6 @@
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             私人生活的变革
         </a>
@@ -143,10 +143,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             微电子与电路
@@ -159,10 +155,6 @@
         <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             强化学习
         </a>
@@ -173,10 +165,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             社会学概论
@@ -189,10 +177,6 @@
         <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             组合数学
         </a>
@@ -203,10 +187,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">C</span>
-                
             
             
             数据库概论
@@ -288,10 +268,6 @@
         <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             伟大传统系列
         </a>
@@ -308,41 +284,46 @@
 							<h2>运输层</h2>
 							<footer>
 								<span>
-									<i class="fad fa-calendar-alt mr-2"></i>
+									<i class="iconfont icon-NewFile mr-2"></i>
 									2020-01-02 00:13 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-calendar-edit mr-2"></i>
+									<i class="iconfont icon-modify mr-2"></i>
 									2020-01-02 00:13 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-copyright mr-2"></i>
+									<i class="iconfont icon-copyright mr-2"></i>
 									CC BY-NC 4.0
-									<a class="float-right" href="#" onclick="window.print()">
-											打印本页
-									</a>
 								</span>
 							</footer>
 						</div>
 						<div id="content" class="hl-h2">
-							<h1 id="heading">运输层<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+							
+							
+							
+							
+							
+							
+							
+							
+							<h1 id="heading">运输层</h1>
 <p>该层位运行在不同主机上的应用经称提供直接的通信服务</p>
-<h2 id="31-">3.1 概述与运输层服务<a href="#31-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="31-">3.1 概述与运输层服务</h2>
 <p>运输层协议位不同主机上的应用进程提供了<strong>逻辑通信</strong>的功能</p>
 <p>网络路由器不实现运输层协议，网络路由器只检查网络层字段，不检查运输层报文段的字段，在接收端，网络层从数据报中提取运输层报文段，并将该报文段向上交给运输层。</p>
-<h3 id="311-">3.1.1 运输层和网络层的关系<a href="#311-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="311-">3.1.1 运输层和网络层的关系</h3>
 <ul>
 <li>运输层：提供运行在不同主机上的进程之间的逻辑通信</li>
 <li>网络层：提供主机之间的逻辑通信</li>
 </ul>
 <p>运输层协议只运行在端系统中</p>
 <p>运输协议能够提供的服务常常会受制于底层网络层协议的服务模型</p>
-<h3 id="312-">3.1.2 因特网运输层概述<a href="#312-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="312-">3.1.2 因特网运输层概述</h3>
 <p>UDP(用户数据报协议)：为调用它的应用程序提供一种不可靠(不能保证一个进程发送的数据能完整到达)、无连接(无握手)的服务。提供数据交付与差错检测</p>
 <p>TCP(传输控制协议)：提供一种可靠的、面向连接的服务，通过流量控制、序号、确认和定时器确保按序交付</p>
 <p>虽然RFC中将UDP分组称为datagram数据报，但是本书中运输层分组统称<strong>报文段</strong></p>
 <p>TCP有拥塞控制，防止一条TCP连接用过多的流量淹没通信主机之间的链路和交换设备，但是UDP传输的应用程序可以按照其需要以任意的速率发送数据</p>
-<h2 id="32-">3.2 多路复用与多路分解<a href="#32-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="32-">3.2 多路复用与多路分解</h2>
 <p>多路复用与多路分解：将由网络层提供的主机到主机交付服务延申到为运行在主机上的应用程序提供进程到进程的交付服务。</p>
 <ul>
 <li>多路分解：将运输层报文段的数据交付正确的套接字</li>
@@ -356,7 +337,7 @@
 <li>所以不同主机发送相同目的IP地址和目的端口号的报文，在UDP中会给同一个套接字，而TCP中不会</li>
 </ul>
 <p>如果使用非持续HTTP服务，那么每一对请求/响应都创建一个新的TCP连接并关闭</p>
-<h2 id="33-udp">3.3 无连接运输：UDP<a href="#33-udp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="33-udp">3.3 无连接运输：UDP</h2>
 <p>UDP：做运输协议能做的最少的工作，只在IP上增加了复用/分解功能和差错检测功能</p>
 <p>使用UDP时，发送报文段之前，发送方和接收方的运输层没有握手，故而被称为是<strong>无连接的</strong></p>
 <p>DNS是一个使用UDP的典型例子</p>
@@ -369,7 +350,7 @@
 </ul>
 <p>还有一些如网络管理数据的(SNMP)这些在网络重压状态下运行，这时候可靠的拥塞受控的数据传输难以实现</p>
 <p>多媒体开发人员通常将应用运行在UDP上而不是TCP上</p>
-<h3 id="331-udp">3.3.1 UDP报文结构<a href="#331-udp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="331-udp">3.3.1 UDP报文结构</h3>
 <p>首部只有四个字段(<strong>8字节</strong>)，每个字段16比特(2字节)。</p>
 <ul>
 <li>源端口号</li>
@@ -377,13 +358,13 @@
 <li>长度：UDP报文段的字节数(首部+数据)</li>
 <li>检验和</li>
 </ul>
-<h3 id="332-udp">3.3.2 UDP校验和<a href="#332-udp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="332-udp">3.3.2 UDP校验和</h3>
 <p>对报文段中所有16比特字的和进行反码运算，求和时遇到的任何溢出都被回卷(最高位进位的数加到最低位去)。接收方收到后，把所有比特字和校验和相加，将会得到全1.</p>
 <p>提供差错检测的原因在于无法保证所有的链路都提供差错检测，同时存储在某台路由器的内存中的时候也可能引入比特差错，故而要在<strong>端到端</strong>基础上在运输层提供差错检测</p>
 <p>但是，UDP的差错检测<strong>没有恢复能力</strong>，只能对报文段进行丢弃或者交给应用程序并给出警告</p>
-<h2 id="34-">3.4 可靠数据传输原理<a href="#34-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<h2 id="35-tcp">3.5 面向连接的传输：TCP<a href="#35-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<h3 id="351-tcp">3.5.1 TCP连接<a href="#351-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="34-">3.4 可靠数据传输原理</h2>
+<h2 id="35-tcp">3.5 面向连接的传输：TCP</h2>
+<h3 id="351-tcp">3.5.1 TCP连接</h3>
 <p>TCP是<strong>面向连接的</strong>，因为在一个应用进程可以开始向另一个应用进程发送数据前，两个进程必须先握手，即呼想发送某些预备报文段，以建立确保数据传输的参数。</p>
 <p>连接状态只在两个通信端系统的TCP程序中保留</p>
 <p>TCP连接提供<strong>全双工服务</strong>：应用数据可以从B流向A，也可以从A流向B</p>
@@ -391,7 +372,7 @@
 <p>客户进程通过套接字传输数据流，数据通过套接字后，被TCP导入<strong>发送缓存</strong>中，发送缓存时发起三次握手期间设置的缓存之一。接下来TCP不时的从发送缓存中取出一块数据并将数据传入网络层。</p>
 <p>取出数据的长度受限于<strong>最大报文段长度(MSS)</strong>,而MSS根据本地发送主机的<strong>最大链路层帧长度(即最大传输单元MTU)<strong>来设置。MSS要保证一个TCP报文段加上TCP/IP首部长度(通常40字节)适合单个链路层帧。注意MSS指的是报文段中</strong>应用层数据的长度</strong></p>
 <p>TCP接收端收到报文段后放入接收缓存中，应用程序从缓存中读取数据流。</p>
-<h3 id="352-tcp">3.5.2 TCP报文段结构<a href="#352-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="352-tcp">3.5.2 TCP报文段结构</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">|                     源端口号                   |               目的端口号                 |
 |                                             序号                                         |
 |                                            确认号                                        |
@@ -415,7 +396,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="heading-1">序号与确认号<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-1">序号与确认号</h4>
 <p>TCP把数据看成一个无结构、有序的字节流，序号是<strong>建立在传送的字节流之上，而不是报文段序列上</strong>，主机A填充到报文段的<strong>确认号是希望从主机B收到的下一字节的序号</strong></p>
 <p>TCP：累计确认</p>
 <p>收到失序的报文段的处理方式取决于编程人员：</p>
@@ -424,7 +405,7 @@
 <li>保留失序字节，并等待确少的字节以填补间隔</li>
 </ul>
 <p>一条TCP连接的双方均可随机的选择初始序号</p>
-<h3 id="353-">3.5.3 往返事件的估计与超时<a href="#353-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="353-">3.5.3 往返事件的估计与超时</h3>
 <p>采用超时/重传机制来处理报文段的丢失问题</p>
 <p>RTT：往返时间</p>
 <p>报文段的样本RTT就是从某报文段被发出到对该报文段的确认被收到之间的时间量。大多数的实现是某个时刻做一次测量而不是每个发送的报文段测量一个。TCP绝不为已经重传的报文段计算SampleRTT。</p>
@@ -432,7 +413,7 @@
 <p>在RFC6298中给出的推荐值是$\alpha = 0.125$</p>
 <p>RTT偏差：$$DevRTT=(1-\beta)DevRTT+\beta |SampleRTT-EstimateRTT|$$$\beta$的推荐值是0.25</p>
 <p>设置重传时间间隔不能太小，否则会造成不必要重传，也不能太大，否则不能很快的重传报文段造成数据传输时延较大。一般设置为$$TimeoutInterval = EstimatedRTT+4*DevRTT$$只要超时了就将其加倍，但是再次收到报文段后就仍然按照上面的公式对其进行更新</p>
-<h3 id="354-">3.5.4 可靠数据传输<a href="#354-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="354-">3.5.4 可靠数据传输</h3>
 <p>可靠数据传输保证一个进程从其接收缓存中读出的数据流是无损坏、无间隙、非冗余和按序的数据流。</p>
 <p>推荐的定时器管理过程是使用单一的重传定时器，即使有多个已发送但是仍未被确认的报文。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">/*假设发送方不受TCP流量控制和拥塞控制，每一个数据小于MSS.*/
@@ -500,7 +481,7 @@ loop(永远){
 </tr>
 </tbody>
 </table>
-<h4 id="heading-2">一些有趣的情况<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-2">一些有趣的情况</h4>
 <ol>
 <li>
 <p>主机A发送的报文在主机B上收到，但从主机B发往主机A的确认报文丢失了。超时事件发生，主机A会重传相</p>
@@ -514,13 +495,13 @@ loop(永远){
 <p>同2，但是在超时之前，A收到了第二个确认报文，第一个确认报文丢失，A不会重传任何报文。</p>
 </li>
 </ol>
-<h4 id="heading-3">超时间隔加倍<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-3">超时间隔加倍</h4>
 <p>每次重传将下一次的超时间隔设为之前的两倍(指数级增长)，收到后再恢复公式计算</p>
-<h4 id="heading-4">快速重传<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-4">快速重传</h4>
 <p>为了避免一个超时周期过长，当一个报文段丢失的时候，长超时周期使得发送方延迟重传丢失的分组增加了端到端时延。</p>
 <p>认为如果收到了三个冗余的ACK，那么就执行快速重传，即在该报文段的定时器过期前重传丢失的报文段</p>
 <p>一个修改建议是选择重传：即允许TCP接收方有选择的确认而不是累计确认</p>
-<h3 id="355-">3.5.5 流量控制<a href="#355-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="355-">3.5.5 流量控制</h3>
 <p>流量控制是一个速度匹配服务，使发送方的发送速率和接收方的应用程序读取速率匹配，消除接收方缓存溢出的可能性</p>
 <p>TCP让<strong>发送方</strong>维护一个**接收窗口(rwnd)**的变量来提供流量控制，接收方给发送方一个指示：接收方还有多少可用的缓存空间</p>
 <ul>
@@ -536,7 +517,7 @@ loop(永远){
 <li>主机B会见rwnd的大小放在报文段首部中的<strong>接收窗口</strong>字段中</li>
 <li>如果通报了rwnd为0之后B不向A发送报文(不发送确认报文且无向A传输的数据)，可能导致后续B缓存清空后A仍然无法发送报文，故而规定B的接收窗口为0后，A将向B发送只有一个字节数据的报文段。但缓存开始清空后，确认报文中将含有一个非0的rwnd值</li>
 </ul>
-<h3 id="356-tcp">3.5.6 TCP连接管理<a href="#356-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="356-tcp">3.5.6 TCP连接管理</h3>
 <p>三次握手：</p>
 <ul>
 <li>第一步：(SYN报文段)客户端发送报文段,报文段中应用数据为空，报文段首部的标志位SYN置为1,客户随机生成序号，并将其放在序号字段中。</li>
@@ -550,14 +531,14 @@ loop(永远){
 <li>服务器在发送一个FIN置1的他的终止报文段</li>
 <li>客户进行确认，连接资源释放(客户发送ACK后定时等待后关闭)</li>
 </ul>
-<h2 id="36-">3.6 拥塞控制原理<a href="#36-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="36-">3.6 拥塞控制原理</h2>
 <p>分组重传可以作为网络拥塞的征兆，我们需要一定的机制在网络拥塞时抑制发送方</p>
-<h3 id="361-">3.6.1 拥塞原因与代价<a href="#361-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="361-">3.6.1 拥塞原因与代价</h3>
 <p>分组的到达速率接近链路容量时，分组经历巨大的排队时延</p>
 <p>发送方必须执行重传以补偿因为缓存溢出而丢弃的分组</p>
 <p>发送方在遇到大时延时所进行的不必要重传会引起路由器利用其链路带宽来转发不必要的分组副本</p>
 <p>当一个分组沿一条路径被丢弃时，每个上游路由器用于转发该分组到丢弃该分组而使用的传输流量最终被浪费了</p>
-<h3 id="362-">3.6.2 拥塞控制办法<a href="#362-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="362-">3.6.2 拥塞控制办法</h3>
 <ul>
 <li>端到端拥塞控制：网络层没有对运输层控制提供显式支持，即使网络中存在拥塞端系统也必须通过对网络行为的观察来推断。TCP报文段的丢失被认为是网络拥塞的一个征兆</li>
 <li>网络辅助的拥塞控制：路由器向发送方提供关于网络中拥塞状态的显式反馈信息。例如在ATM可用比特率拥塞控制中，路由器显式的通知发送方路由器能够在输出链路上支持的最大主机发送速率
@@ -567,7 +548,7 @@ loop(永远){
 </ul>
 </li>
 </ul>
-<h2 id="37-tcp">3.7 TCP拥塞控制<a href="#37-tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="37-tcp">3.7 TCP拥塞控制</h2>
 <p>TCP：让每一个发送方根据所感知到的网络拥塞程度来限制其能向连接发送流量的速率</p>
 <p>运行在发送方的TCP用户拥塞控制机制额外跟踪一个变量，也就是<strong>拥塞窗口(cwnd)</strong>.在一个发送方中未确定的数据量不能够超过cwnd和rwnd的最小值</p>
 <p>如何控制速率：每个RTT的起始点，允许发送cwnd个字节的数据，该RTT结束的时候收到确认报文，因此该发送方的发送速率是cwnd/RTT字节/秒</p>
@@ -580,35 +561,35 @@ loop(永远){
 <li>带宽探测，增加速率以响应到达的ACK，除非出现丢包事件才减小速率</li>
 </ul>
 <p>TCP拥塞控制算法：慢启动，拥塞避免，快速恢复</p>
-<h4 id="heading-5">慢启动<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-5">慢启动</h4>
 <p>cwnd的初始值通常设置一个MSS的比较小的值，使得初始速率大概只有MSS/RTT，在慢启动状态，cwnd以一个MSS开始并且每当传输的报文段首次被确认就增加一个MSS。之后每过一个RTT，发送速率就翻番。</p>
 <p>如果存在一个丢包事件就把cwnd设置为1并重新启动慢启动过程，并且把<strong>慢启动阈值ssthresh</strong>置为拥塞窗口值的一半·</p>
 <p>当cwnd上升到ssthresh时，将结束慢启动并且将TCP转移到拥塞避免模式。另一种结束方式是如果是三个冗余ACK，TCP将执行一种快速重传并进入快速恢复状态</p>
-<h4 id="heading-6">拥塞避免<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-6">拥塞避免</h4>
 <p>cwnd在每个RTT线性增加</p>
 <p>超时后，cwnd设置为一个MSS，丢包后ssthresh被设置为原来cwnd的一半。</p>
 <p>如果是三个冗余ACK导致的超时，则将cwnd减半后加三，并且当收到三个冗余ACK，将ssthresh设置为cwnd的一半，然后进入快速恢复状态</p>
-<h4 id="heading-7">快速恢复<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-7">快速恢复</h4>
 <p>对每个冗余的ACK增加一个MSS，当对丢失报文段的一个ACK到达后，TCP降低cwnd后进入拥塞避免状态。如果在快速恢复种遇到了超时事件，将迁移到慢启动状态并将cwnd设置为1，ssthresh设置为一半</p>
 <p>早期的TCP Tahoe版本是没有快速恢复的，3个冗余ACK也进入慢启动，TCP Reno版本有</p>
-<h4 id="heading-8">回顾<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-8">回顾</h4>
 <p>加性增，乘性减</p>
 <p>TCP Vegas算法：</p>
 <ul>
 <li>分组丢失之前在源和目的地之间检测路由器种的拥塞</li>
 <li>检测出快要发生的分组丢失时，线性的降低发送速率，快要发生的分组丢失通过观察RTT来预测</li>
 </ul>
-<h4 id="heading-9">吞吐量的宏观描述<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-9">吞吐量的宏观描述</h4>
 <p>TCP的传输速率在$W/(2*RTT)$和$W/RTT$之间变化（W：当前窗口长度）</p>
 <p>平均吞吐量：$$\frac{0.75*W}{RTT}$$</p>
-<h4 id="tcp">经高带宽路径的TCP<a href="#tcp" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="tcp">经高带宽路径的TCP</h4>
 <p>$$平均吞吐量 = \frac{1.22<em>MSS}{RTT</em>\sqrt{L}}$$ 其中，L为丢包率，MSS为最大报文段长度</p>
-<h3 id="371-">3.7.1 公平性<a href="#371-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="371-">3.7.1 公平性</h3>
 <p>如果K条连接都经过一个传输速率为R bps的瓶颈链路，如果每个传输的平均传输速率都接近R/K，那么认为这个拥塞机制是公平的</p>
 <p>实际上那些具有更小的RTT的传输能够更快的抢到可用带宽，因而比那些具有较大RTT的连接先用更高的吞吐量</p>
 <p>由于UDP没有拥塞控制，将挤压TCP资源</p>
 <p>如今许多Web应用使用多个并行TCP连接来抢占链路传输中的带宽</p>
-<h3 id="372-">3.7.2 明确拥塞警告:网络辅助拥塞控制<a href="#372-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="372-">3.7.2 明确拥塞警告:网络辅助拥塞控制</h3>
 <p>允许网络明确向TCP发送方和接收方发出拥塞信号，这种形式的网络辅助拥塞控制称为<strong>明确拥塞通告(ECN)</strong></p>
 <p>在IP数据报的首部服务类型字段中2个比特用于ECN(4种状态)</p>
 <p>路由器判断拥塞后使用ECN比特设置指示该路由器正在历经拥塞，接受主机收到报文后在TCP ACK中设置ECE发送到主机，通知发送方TCP收到拥塞指示，接下来TCPP发送方通过减半cwnd来对一个具有ECE拥塞指示的ACK作出反应。并在下一个发送给接收方的报文首部中设置CWR比特</p>
@@ -617,14 +598,19 @@ loop(永远){
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
 						<div class="btn-group-vertical w-100 my-3">
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
-        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
-    </a>
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
-        target="_blank">
-        <i class="iconfont icon-discussion"></i><br />纠错与咨询
-    </a>
+    
+
+    
+    
+    
+    
+        <a class="btn btn-outline-secondary text-dark w-100 p-2" href="#" onclick="window.print()">
+            <i class="iconfont icon-dayin"></i><br />打印本页
+        </a>
+    
+    
 </div>
+						<h4 class="card-title pb-0">目录</h4>
 						<nav id="TableOfContents">
   <ul>
     <li><a href="#31-">3.1 概述与运输层服务</a>
@@ -666,72 +652,62 @@ loop(永远){
     </li>
   </ul>
 </nav>
+						
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="/js/leon.js"></script>
-<script type="text/javascript" src="/js/TweenMax.min.js "></script>
-<script type="text/javascript" src="/js/search.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script>
 
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-    
+<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        renderMathInElement(
-            document.body, {
-                delimiters: [{
-                        left: "$$",
-                        right: "$$",
-                        display: true
-                    },
-                    {
-                        left: "\\[",
-                        right: "\\]",
-                        display: true
-                    },
-                    {
-                        left: "$",
-                        right: "$",
-                        display: false
-                    },
-                    {
-                        left: "\\(",
-                        right: "\\)",
-                        display: false
-                    }
-                ]
-            }
-        );
-    });
-</script>
 
-<script type="text/javascript">
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(
+        document.body, {
+            delimiters: [
+                {
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "\\[",
+                    right: "\\]",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                },
+                {
+                    left: "\\(",
+                    right: "\\)",
+                    display: false
+                }
+            ],
+            strict: false
+        }
+    );
+});
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-    });
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
 </script>
 
 
-<script type="text/javascript">
-    $(function () {
-        $("[data-toggle='tooltip']").tooltip();
-    });
-</script>
 
 
 </body>

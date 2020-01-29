@@ -6,9 +6,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="TristonK ">
+<meta name="description" content="场效应管 场效应管的结构，基本的名词，三极管的区别，为什么能实现电压控制电流，特性曲线（输出与转移），曲线上的分区，不同类型的管子有什么区别，" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 
-
-
+<link rel="canonical" href="http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/" />
 
 <meta itemprop="name" content="场效应管">
 <meta itemprop="description" content="场效应管 场效应管的结构，基本的名词，三极管的区别，为什么能实现电压控制电流，特性曲线（输出与转移），曲线上的分区，不同类型的管子有什么区别，">
@@ -30,13 +33,30 @@
 <meta name="twitter:title" content="场效应管"/>
 <meta name="twitter:description" content="场效应管 场效应管的结构，基本的名词，三极管的区别，为什么能实现电压控制电流，特性曲线（输出与转移），曲线上的分区，不同类型的管子有什么区别，"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title>场效应管</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<title>场效应管</title>
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_st54q8xrgt9.css">
+
+
+    <link rel="stylesheet" href="/katex.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq">
+
+
+
+    
+    <link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+
 </head>
 
 <body style="overflow-x: unset;">
@@ -52,7 +72,7 @@
                 TristonK's
             </small>
             <a class="text-dark" href="/notes/">
-                Documents
+                Notes
             </a>
         </span>
         <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
@@ -69,10 +89,6 @@
         <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             Google代码规范
         </a>
@@ -83,10 +99,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
-            
-                
-                    <span class="icontext">M</span>
-                
             
             
             问题求解（三）
@@ -99,10 +111,6 @@
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             问题求解（四）
         </a>
@@ -114,10 +122,6 @@
         <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
             
-                
-                    <span class="icontext">C</span>
-                
-            
             
             操作系统
         </a>
@@ -128,10 +132,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             私人生活的变革
@@ -231,10 +231,6 @@
         <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             强化学习
         </a>
@@ -245,10 +241,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             社会学概论
@@ -261,10 +253,6 @@
         <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             组合数学
         </a>
@@ -275,10 +263,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">C</span>
-                
             
             
             数据库概论
@@ -291,10 +275,6 @@
         <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             计算机网络
         </a>
@@ -305,10 +285,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             伟大传统系列
@@ -326,24 +302,29 @@
 							<h2>场效应管</h2>
 							<footer>
 								<span>
-									<i class="fad fa-calendar-alt mr-2"></i>
+									<i class="iconfont icon-NewFile mr-2"></i>
 									2020-01-04 19:25 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-calendar-edit mr-2"></i>
+									<i class="iconfont icon-modify mr-2"></i>
 									2020-01-04 19:25 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-copyright mr-2"></i>
+									<i class="iconfont icon-copyright mr-2"></i>
 									CC BY-NC 4.0
-									<a class="float-right" href="#" onclick="window.print()">
-											打印本页
-									</a>
 								</span>
 							</footer>
 						</div>
 						<div id="content" class="hl-h2">
-							<h1 id="heading">场效应管<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+							
+							
+							
+							
+							
+							
+							
+							
+							<h1 id="heading">场效应管</h1>
 <blockquote>
 <p>场效应管的结构，基本的名词，三极管的区别，为什么能实现电压控制电流，特性曲线（输出与转移），曲线上的分区，不同类型的管子有什么区别，参数，包括符号有什么不一样（上面/下面，左边/右边），主要参数什么意思（交流参数不做要求）
 JFET的结构，工作原理，特性曲线
@@ -378,14 +359,14 @@ JFET的结构，工作原理，特性曲线
 <p>耗尽型：场效应管没有加偏置电压时，就有导电沟道存在
 增强型：场效应管没有加偏置电压时，没有导电沟道</p>
 <img src="../images/5-0.jpg">
-<h2 id="mosfet---">MOSFET: 金属-氧化物-半导体场效应管<a href="#mosfet---" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="mosfet---">MOSFET: 金属-氧化物-半导体场效应管</h2>
 <p>是利用半导体表面电场效应进行工作，故而又称为<strong>表面场效应器件</strong></p>
-<h3 id="nmosfet">N沟道增强型MOSFET<a href="#nmosfet" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<h4 id="heading-1">结构<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h3 id="nmosfet">N沟道增强型MOSFET</h3>
+<h4 id="heading-1">结构</h4>
 <img src="../images/5-1.png">
 <img src="../images/5-2.png">
-<h4 id="heading-2">工作原理<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
-<h5 id="v-gs">$V_{GS}$对沟道的控制作用<a href="#v-gs" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h5>
+<h4 id="heading-2">工作原理</h4>
+<h5 id="v-gs">$V_{GS}$对沟道的控制作用</h5>
 <ul>
 <li>$V_{GS}\leq 0$时，没有导电沟道的产生，d、s间加电压也无电流产生</li>
 <li>$0&lt;V_{GS}&lt;V_{TN}$时，产生了电场但是未形成导电沟道(反型层)，此时ds间仍无电流</li>
@@ -393,12 +374,12 @@ JFET的结构，工作原理，特性曲线
 <li>其中$V_{TN}$代表的是N沟道增强型MOSFET的开启电压</li>
 <li>产生沟道过程：使栅极接正，源极接负，形成了从栅极到P型硅片的以二氧化硅为截止的平板电容器，产生了一个垂直于半导体表面的电场，使得P极衬底中的空穴被排斥留下不能移动的受主离子(负离子)，形成耗尽层，同时P型衬底中的少子(电子)被吸引到栅极下的衬底表面，栅源电压达到一定值后，在栅极附近的P型硅表面形成了一个N形薄层,称为<strong>反型层</strong>，实际上也就形成了<strong>感生沟道</strong></li>
 </ul>
-<h5 id="v-ds">$V_{DS}$对沟道的控制作用<a href="#v-ds" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h5>
+<h5 id="v-ds">$V_{DS}$对沟道的控制作用</h5>
 <p>当$V_{GS}$一定时(即大于开启电压)，$V_{DS}$电压上升将会导致$I_{D}$增大，从而使得沟道电位梯度上升，靠近漏极d处的电位升高，使电场强度减小，从而使沟道变薄。</p>
 <p>当$V_{DS}$增长到使得$V_{GD}=V_{TN}$的时候，在紧靠漏极处会出现预夹断。</p>
 <p>预夹断之后，若$V_{DS}$继续上升，那么夹断区延长，导致沟道电阻上升，使得$I_D$基本不变</p>
 <img src="../images/5-3.png">
-<h5 id="heading-3">同时作用<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h5>
+<h5 id="heading-3">同时作用</h5>
 <p>给定一个$V_{GS}$,就有一个不同的$i_D-V_{DS}$曲线</p>
 <ul>
 <li>沟道中只有一种类型的载流子参与导电，所以场效应管也被称为<strong>单极型三极管</strong></li>
@@ -407,7 +388,7 @@ JFET的结构，工作原理，特性曲线
 <li>只有当$v_{GS}&gt;V_{TN}$时，增强型MOSFET的ds端才能导通</li>
 <li>预夹断前$i_D$和$V_{DS}$接近线性关系，预夹断后，趋近饱和</li>
 </ul>
-<h4 id="i-v">I-V特性曲线<a href="#i-v" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="i-v">I-V特性曲线</h4>
 <img src="../images/5-4.png">
 <ul>
 <li>输出特性曲线 $i_D=f(v_{DS})|_{v_{GS}=const}$
@@ -433,21 +414,21 @@ JFET的结构，工作原理，特性曲线
 </ul>
 <p>转移特性 $i_D=f(v_{GS})|_{v_{DS}=const}$</p>
 <img src="../images/5-5.png">
-<h3 id="nmosfet-1">N沟道耗尽型MOSFET<a href="#nmosfet-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<h4 id="heading-4">结构与工作原理<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h3 id="nmosfet-1">N沟道耗尽型MOSFET</h3>
+<h4 id="heading-4">结构与工作原理</h4>
 <p>在二氧化硅绝缘层中掺有大量的正离子，已存在导电沟道可以在正或负的栅极电压下工作，而且基本无栅流</p>
 <img src="../images/5-6.png">
 <ul>
 <li>当$V_{GS}&gt;0$时，沟道中感生出更多的负电荷，使得沟道变宽，在$v_{DS}$作用下，$i_D$有着更大的数值</li>
 <li>当其小于0时，沟道中负电荷减少，沟道变窄，从而使得漏极电流减小。当负电压到达某值时，耗尽区扩展到这个沟道，沟道被完全夹断，此时$i_D$不存在，这是的栅源电压称为<strong>夹断电压(截止电压)$V_P$</strong></li>
 </ul>
-<h4 id="i-v-1">I-V特性曲线<a href="#i-v-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="i-v-1">I-V特性曲线</h4>
 <img src="../images/5-7.png">
-<h3 id="pmosfet">P沟道MOSFET<a href="#pmosfet" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="pmosfet">P沟道MOSFET</h3>
 <img src="../images/5-8.png">
 <p>电路符号和N型的区别在于<strong>代表衬底的B的箭头方向</strong></p>
-<p>为能正常工作，PMOS管的$v_{DS}$必须为负值，开启电压$V_T$也是负值，**实际电流方向为流出漏极，但是我们假定流入漏极的电流方向为正**</p>
-<h3 id="heading-5">沟道调制效应等几种效应<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>为能正常工作，PMOS管的$v_{DS}$必须为负值，开启电压$V_T$也是负值，<strong>实际电流方向为流出漏极，但是我们假定流入漏极的电流方向为正</strong></p>
+<h3 id="heading-5">沟道调制效应等几种效应</h3>
 <ul>
 <li>沟道长度调制效应
 <ul>
@@ -476,7 +457,7 @@ JFET的结构，工作原理，特性曲线
 </ul>
 </li>
 </ul>
-<h3 id="heading-6">主要参数<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-6">主要参数</h3>
 <ul>
 <li>直流参数
 <ul>
@@ -501,21 +482,21 @@ JFET的结构，工作原理，特性曲线
 </ul>
 </li>
 </ul>
-<h2 id="jeft">JEFT<a href="#jeft" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<h3 id="heading-7">结构<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="jeft">JEFT</h2>
+<h3 id="heading-7">结构</h3>
 <img src="../images/5-9.png">
 <img src="../images/5-10.png">
 <p><strong>箭头的方向表示栅极正向偏置时，栅极电流方向从P到N</strong>，由此可以区分N沟道和P沟道</p>
-<h3 id="-n">工作原理分析-以N沟道为例<a href="#-n" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<h4 id="v-gs-1">$v_{GS}$对沟道的控制作用<a href="#v-gs-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h3 id="-n">工作原理分析-以N沟道为例</h3>
+<h4 id="v-gs-1">$v_{GS}$对沟道的控制作用</h4>
 <p>其小于0时，PN结反偏，耗尽层加厚，使得沟道变窄</p>
 <p>但他减小到一定值时，沟道夹断，对应的栅源电压$v_{GS}$称为夹断电压$V_{P}$</p>
 <p>N沟道的JEFT夹断电压小于0</p>
 <p>上述分析表明，改变$v_{GS}$大小，可以有效控制沟道电阻的大小。$|v_{GS}|$增大，沟道电阻增大，$i_D$减小</p>
-<h4 id="v-ds-1">$v_{DS}$对沟道的控制作用<a href="#v-ds-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="v-ds-1">$v_{DS}$对沟道的控制作用</h4>
 <p>考虑$v_{GS}$为0的情况，随着$v_{DS}$的增加，一方面沟道电场强度增加，漏极电流增加，另一方面gd间的PN结方向电压增加，在经过源极到沟道的N型半导体区域中形成了沿沟道的电位梯度，靠近漏层的耗尽层加宽，沟道变窄，从上到下呈楔形分布</p>
 <p>$v_{GD}=V_p$时出现预夹断，此时虽然$v_{GD}$上升，但是夹断区延长导致电阻上升，使得$i_D$基本不变</p>
-<h4 id="heading-8">共同作用<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-8">共同作用</h4>
 <p>当$V_p&lt;V_{GS}&lt;0$，导电沟道更容易被夹断，对于同样的$v_{DS}$，$i_D$更小</p>
 <p>预夹断处$v_{GD}=v_{GS}-v_{DS}=V_P$</p>
 <p>综上可知</p>
@@ -525,9 +506,9 @@ JFET的结构，工作原理，特性曲线
 <li>预夹断前$i_D$与$v_{DS}$呈近似线性关系；预夹断后，$i_D$趋于饱和</li>
 </ul>
 <p><strong>为什么JFET的输入电阻比BJT高得多？</strong></p>
-<h3 id="heading-9">特性曲线与参数<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-9">特性曲线与参数</h3>
 <img src="../images/5-11.png">
-<h2 id="fetbjt">FET和BJT的比较<a href="#fetbjt" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="fetbjt">FET和BJT的比较</h2>
 <ol>
 <li>FET和BJT内部都含有两个PN结，外部都有3个电极。它们有如下的对应关系：</li>
 </ol>
@@ -553,14 +534,19 @@ JFET的结构，工作原理，特性曲线
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
 						<div class="btn-group-vertical w-100 my-3">
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
-        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
-    </a>
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
-        target="_blank">
-        <i class="iconfont icon-discussion"></i><br />纠错与咨询
-    </a>
+    
+
+    
+    
+    
+    
+        <a class="btn btn-outline-secondary text-dark w-100 p-2" href="#" onclick="window.print()">
+            <i class="iconfont icon-dayin"></i><br />打印本页
+        </a>
+    
+    
 </div>
+						<h4 class="card-title pb-0">目录</h4>
 						<nav id="TableOfContents">
   <ul>
     <li><a href="#mosfet---">MOSFET: 金属-氧化物-半导体场效应管</a>
@@ -582,72 +568,62 @@ JFET的结构，工作原理，特性曲线
     <li><a href="#fetbjt">FET和BJT的比较</a></li>
   </ul>
 </nav>
+						
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="/js/leon.js"></script>
-<script type="text/javascript" src="/js/TweenMax.min.js "></script>
-<script type="text/javascript" src="/js/search.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script>
 
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-    
+<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        renderMathInElement(
-            document.body, {
-                delimiters: [{
-                        left: "$$",
-                        right: "$$",
-                        display: true
-                    },
-                    {
-                        left: "\\[",
-                        right: "\\]",
-                        display: true
-                    },
-                    {
-                        left: "$",
-                        right: "$",
-                        display: false
-                    },
-                    {
-                        left: "\\(",
-                        right: "\\)",
-                        display: false
-                    }
-                ]
-            }
-        );
-    });
-</script>
 
-<script type="text/javascript">
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(
+        document.body, {
+            delimiters: [
+                {
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "\\[",
+                    right: "\\]",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                },
+                {
+                    left: "\\(",
+                    right: "\\)",
+                    display: false
+                }
+            ],
+            strict: false
+        }
+    );
+});
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-    });
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
 </script>
 
 
-<script type="text/javascript">
-    $(function () {
-        $("[data-toggle='tooltip']").tooltip();
-    });
-</script>
 
 
 </body>

@@ -6,9 +6,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="TristonK ">
+<meta name="description" content="二极管：功能，结构类型，符号， 重点：PN结的结构形成与他的工作原理，伏安特性 二极管的简化模型，如何运用模型分析 齐纳二极管的工作原理 二极管 在P" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 
-
-
+<link rel="canonical" href="http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/" />
 
 <meta itemprop="name" content="二极管">
 <meta itemprop="description" content="二极管：功能，结构类型，符号， 重点：PN结的结构形成与他的工作原理，伏安特性 二极管的简化模型，如何运用模型分析 齐纳二极管的工作原理 二极管 在P">
@@ -30,13 +33,30 @@
 <meta name="twitter:title" content="二极管"/>
 <meta name="twitter:description" content="二极管：功能，结构类型，符号， 重点：PN结的结构形成与他的工作原理，伏安特性 二极管的简化模型，如何运用模型分析 齐纳二极管的工作原理 二极管 在P"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title>二极管</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<title>二极管</title>
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_st54q8xrgt9.css">
+
+
+    <link rel="stylesheet" href="/katex.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq">
+
+
+
+    
+    <link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+
 </head>
 
 <body style="overflow-x: unset;">
@@ -52,7 +72,7 @@
                 TristonK's
             </small>
             <a class="text-dark" href="/notes/">
-                Documents
+                Notes
             </a>
         </span>
         <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
@@ -69,10 +89,6 @@
         <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             Google代码规范
         </a>
@@ -83,10 +99,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
-            
-                
-                    <span class="icontext">M</span>
-                
             
             
             问题求解（三）
@@ -99,10 +111,6 @@
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             问题求解（四）
         </a>
@@ -114,10 +122,6 @@
         <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
             
-                
-                    <span class="icontext">C</span>
-                
-            
             
             操作系统
         </a>
@@ -128,10 +132,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             私人生活的变革
@@ -231,10 +231,6 @@
         <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             强化学习
         </a>
@@ -245,10 +241,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             社会学概论
@@ -261,10 +253,6 @@
         <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             组合数学
         </a>
@@ -275,10 +263,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">C</span>
-                
             
             
             数据库概论
@@ -291,10 +275,6 @@
         <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             计算机网络
         </a>
@@ -305,10 +285,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             伟大传统系列
@@ -326,38 +302,43 @@
 							<h2>二极管</h2>
 							<footer>
 								<span>
-									<i class="fad fa-calendar-alt mr-2"></i>
+									<i class="iconfont icon-NewFile mr-2"></i>
 									2020-01-04 19:24 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-calendar-edit mr-2"></i>
+									<i class="iconfont icon-modify mr-2"></i>
 									2020-01-04 19:24 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-copyright mr-2"></i>
+									<i class="iconfont icon-copyright mr-2"></i>
 									CC BY-NC 4.0
-									<a class="float-right" href="#" onclick="window.print()">
-											打印本页
-									</a>
 								</span>
 							</footer>
 						</div>
 						<div id="content" class="hl-h2">
+							
+							
+							
+							
+							
+							
+							
+							
 							<blockquote>
 <p>二极管：功能，结构类型，符号，
 重点：PN结的结构形成与他的工作原理，伏安特性
 二极管的简化模型，如何运用模型分析
 齐纳二极管的工作原理</p>
 </blockquote>
-<h1 id="heading">二极管<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<h1 id="heading">二极管</h1>
 <p>在PN结上加上引线和封装，就成为一个二极管</p>
-<h2 id="heading-1">二极管的功能<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-1">二极管的功能</h2>
 <ul>
 <li>PN结单向导电性：整流、检波、开关</li>
 <li>PN结压降：温度传感器、参考电压</li>
 <li>非线性电流-电压特性：调节电压、限制电压、无线电调谐、产生射频振荡、发光</li>
 </ul>
-<h2 id="heading-2">二极管的分类<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-2">二极管的分类</h2>
 <ul>
 <li>结构：
 <ul>
@@ -367,7 +348,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="heading-3">二极管的伏安特性<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-3">二极管的伏安特性</h2>
 <ul>
 <li>二极管的伏安特性曲线和PN结的伏安特性曲线接近，但是有所变化
 <ul>
@@ -392,13 +373,13 @@
 <p>室温下，上升一度，正向压降2-2.5mv，上升十度，反向电流增大一倍</p>
 </li>
 </ul>
-<h2 id="heading-4">二极管的主要参数<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-4">二极管的主要参数</h2>
 <ul>
 <li><strong>最大整流电流$I_F$</strong>: 二极管连续工作时，允许流过的最大整流电流的平均值</li>
-<li>**反向击穿电压$V_{BR}$和最大反向工作电压$V_{RM}$**: 二极管反向电流急剧增加对应的反向电压值为反向击穿电压，为安全，最大反向工作电压为反向击穿电压的一半</li>
+<li><strong>反向击穿电压$V_{BR}$和最大反向工作电压$V_{RM}$</strong>: 二极管反向电流急剧增加对应的反向电压值为反向击穿电压，为安全，最大反向工作电压为反向击穿电压的一半</li>
 <li><strong>反向电流$I_R$</strong>: 室温下最大反向工作电压的反向电流值。硅二极管一般时纳安级，锗二极管时微安级</li>
 <li>极间电容$C_d=C_B+C_D$</li>
-<li>**反向恢复时间$T_{RR}$**:从正向偏置的导通状态转为反向偏置状态，需要一定的时间才能变成截止状态。 主要原因时扩散电容的影响</li>
+<li><strong>反向恢复时间$T_{RR}$</strong>:从正向偏置的导通状态转为反向偏置状态，需要一定的时间才能变成截止状态。 主要原因时扩散电容的影响</li>
 <li><strong>正向压降$V_F$</strong>：规定正向点留下，二极管的正向电压降
 <ul>
 <li>Si:0.6-0.8V</li>
@@ -406,12 +387,12 @@
 </ul>
 </li>
 </ul>
-<h2 id="heading-5">二极管基本电路与分析<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<h3 id="heading-6">图解分析<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="heading-5">二极管基本电路与分析</h2>
+<h3 id="heading-6">图解分析</h3>
 <p>使用欧姆原理得到的直线与二极管V-I特性曲线的交点</p>
 <p>数学上将方程与指数模型联立，使用迭代法求解</p>
-<h3 id="heading-7">简化模型<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<h4 id="heading-8">理想模型<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h3 id="heading-7">简化模型</h3>
+<h4 id="heading-8">理想模型</h4>
 <ul>
 <li>近似条件：电源电压远大于电压降</li>
 <li>正向偏置：管压降为0V</li>
@@ -419,7 +400,7 @@
 <li>理想二极管和实际的二极管的符号差别在于没有中间那条线</li>
 <li>（但是ppt上原本也没有，用涂色表示</li>
 </ul>
-<h4 id="heading-9">恒压降模型<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-9">恒压降模型</h4>
 <ul>
 <li>管的恒压降恒定：
 <ul>
@@ -429,27 +410,27 @@
 <li>近似条件：$i_D$近似等于或者大于1mA</li>
 <li>相当于理想模型和一个电压串联</li>
 </ul>
-<h4 id="heading-10">折线模型<a href="#heading-10" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-10">折线模型</h4>
 <p>$v_D=0.5V$（硅管）</p>
 <p>相当于理想二极管、电源、电阻串联</p>
-<h4 id="heading-11">小信号模型<a href="#heading-11" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-11">小信号模型</h4>
 <p>二极管在正向特性的某一小范围内时，正向特性可以等效为一个微变电阻</p>
 <p>$r_d = \frac{V_T}{I_D}$，常温下$V_T=26mV$</p>
-<h3 id="heading-12">模型分析法的应用<a href="#heading-12" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
-<h4 id="heading-13">整流电路<a href="#heading-13" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h3 id="heading-12">模型分析法的应用</h3>
+<h4 id="heading-13">整流电路</h4>
 <p>利用二极管的单向导电性</p>
-<h4 id="heading-14">静态工作状态分析<a href="#heading-14" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
-<h4 id="heading-15">限幅电路<a href="#heading-15" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
-<h4 id="heading-16">开关电路<a href="#heading-16" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-14">静态工作状态分析</h4>
+<h4 id="heading-15">限幅电路</h4>
+<h4 id="heading-16">开关电路</h4>
 <p>判断二极管处于导通还是截止状态，然后观察阳、阴两极之间时正向电压还是反向电压，前者则二极管导通，否则二极管截止</p>
-<h4 id="heading-17">低电压稳压电路<a href="#heading-17" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="heading-17">低电压稳压电路</h4>
 <p>利用二极管的正向压降特性获得较好的稳压性能</p>
 <ul>
 <li>硅管：0.7V</li>
 <li>锗管：0.3V</li>
 </ul>
-<h4 id="heading-18">小信号工作情况<a href="#heading-18" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
-<h2 id="heading-19">齐纳二极管(稳压管)<a href="#heading-19" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h4 id="heading-18">小信号工作情况</h4>
+<h2 id="heading-19">齐纳二极管(稳压管)</h2>
 <img src="../images/2-1.png">
 <p>图中的$V_Z$表示反向击穿电压，即稳压管的稳定电压</p>
 <p>作用在于：$\Delta I_Z$ 很大，但是只引起很小的电压变化$\Delta V_z$, 动态电阻越小，稳压管的稳压性能越好</p>
@@ -461,14 +442,19 @@
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
 						<div class="btn-group-vertical w-100 my-3">
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
-        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
-    </a>
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
-        target="_blank">
-        <i class="iconfont icon-discussion"></i><br />纠错与咨询
-    </a>
+    
+
+    
+    
+    
+    
+        <a class="btn btn-outline-secondary text-dark w-100 p-2" href="#" onclick="window.print()">
+            <i class="iconfont icon-dayin"></i><br />打印本页
+        </a>
+    
+    
 </div>
+						<h4 class="card-title pb-0">目录</h4>
 						<nav id="TableOfContents">
   <ul>
     <li><a href="#heading-1">二极管的功能</a></li>
@@ -485,72 +471,62 @@
     <li><a href="#heading-19">齐纳二极管(稳压管)</a></li>
   </ul>
 </nav>
+						
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="/js/leon.js"></script>
-<script type="text/javascript" src="/js/TweenMax.min.js "></script>
-<script type="text/javascript" src="/js/search.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script>
 
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-    
+<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        renderMathInElement(
-            document.body, {
-                delimiters: [{
-                        left: "$$",
-                        right: "$$",
-                        display: true
-                    },
-                    {
-                        left: "\\[",
-                        right: "\\]",
-                        display: true
-                    },
-                    {
-                        left: "$",
-                        right: "$",
-                        display: false
-                    },
-                    {
-                        left: "\\(",
-                        right: "\\)",
-                        display: false
-                    }
-                ]
-            }
-        );
-    });
-</script>
 
-<script type="text/javascript">
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(
+        document.body, {
+            delimiters: [
+                {
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "\\[",
+                    right: "\\]",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                },
+                {
+                    left: "\\(",
+                    right: "\\)",
+                    display: false
+                }
+            ],
+            strict: false
+        }
+    );
+});
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-    });
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
 </script>
 
 
-<script type="text/javascript">
-    $(function () {
-        $("[data-toggle='tooltip']").tooltip();
-    });
-</script>
 
 
 </body>

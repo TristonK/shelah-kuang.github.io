@@ -6,9 +6,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="TristonK ">
+<meta name="description" content="关系数据库规范化理论 8.1 概述 模式设计质量的评价指标：数据冗余度，插入/删除等更新异常 为什么要研究关系的规划化设计：规范化的目的与手段 8.2 规范化理" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 
-
-
+<link rel="canonical" href="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/" />
 
 <meta itemprop="name" content="关系数据库规范化理论">
 <meta itemprop="description" content="关系数据库规范化理论 8.1 概述 模式设计质量的评价指标：数据冗余度，插入/删除等更新异常 为什么要研究关系的规划化设计：规范化的目的与手段 8.2 规范化理">
@@ -30,13 +33,30 @@
 <meta name="twitter:title" content="关系数据库规范化理论"/>
 <meta name="twitter:description" content="关系数据库规范化理论 8.1 概述 模式设计质量的评价指标：数据冗余度，插入/删除等更新异常 为什么要研究关系的规划化设计：规范化的目的与手段 8.2 规范化理"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title>关系数据库规范化理论</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<title>关系数据库规范化理论</title>
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_st54q8xrgt9.css">
+
+
+    <link rel="stylesheet" href="/katex.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq">
+
+
+
+    
+    <link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+
 </head>
 
 <body style="overflow-x: unset;">
@@ -52,7 +72,7 @@
                 TristonK's
             </small>
             <a class="text-dark" href="/notes/">
-                Documents
+                Notes
             </a>
         </span>
         <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
@@ -69,10 +89,6 @@
         <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             Google代码规范
         </a>
@@ -83,10 +99,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
-            
-                
-                    <span class="icontext">M</span>
-                
             
             
             问题求解（三）
@@ -99,10 +111,6 @@
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             问题求解（四）
         </a>
@@ -113,10 +121,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
-            
-                
-                    <span class="icontext">C</span>
-                
             
             
             操作系统
@@ -129,10 +133,6 @@
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             私人生活的变革
         </a>
@@ -143,10 +143,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             微电子与电路
@@ -159,10 +155,6 @@
         <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             强化学习
         </a>
@@ -174,10 +166,6 @@
         <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             社会学概论
         </a>
@@ -188,10 +176,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
-            
-                
-                    <span class="icontext">M</span>
-                
             
             
             组合数学
@@ -285,10 +269,6 @@
         <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             计算机网络
         </a>
@@ -299,10 +279,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             伟大传统系列
@@ -320,24 +296,29 @@
 							<h2>关系数据库规范化理论</h2>
 							<footer>
 								<span>
-									<i class="fad fa-calendar-alt mr-2"></i>
+									<i class="iconfont icon-NewFile mr-2"></i>
 									2020-01-01 00:13 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-calendar-edit mr-2"></i>
+									<i class="iconfont icon-modify mr-2"></i>
 									2020-01-01 00:13 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-copyright mr-2"></i>
+									<i class="iconfont icon-copyright mr-2"></i>
 									CC BY-NC 4.0
-									<a class="float-right" href="#" onclick="window.print()">
-											打印本页
-									</a>
 								</span>
 							</footer>
 						</div>
 						<div id="content" class="hl-h2">
-							<h1 id="heading">关系数据库规范化理论<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+							
+							
+							
+							
+							
+							
+							
+							
+							<h1 id="heading">关系数据库规范化理论</h1>
 <blockquote>
 <p>8.1 概述</p>
 <ul>
@@ -408,24 +389,24 @@
 </li>
 </ul>
 </blockquote>
-<h2 id="heading-1">概述<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-1">概述</h2>
 <p>好的关系模型设计：有合理的数据冗余度，又没有插入和删除等操作异常现象</p>
 <p>在一个关系中，属性之间的内在依赖有两种：函数依赖与多值依赖</p>
 <p>在每个关系中，属性与属性之间的语义连续需要满足一定的要求，称为关系的规范化</p>
 <p>对属性间所存在的内在语义的不同可以将关系的规范化分为几个等级，称为范式。</p>
-<h2 id="heading-2">规范化理论<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-2">规范化理论</h2>
 <p>规范化的途径：将一个关系分解成多个子关系</p>
 <p>规范化的途径：</p>
 <ul>
 <li>竖向规范化：采用投影和联接运算，将一个关系模式的属性集分解成若干个子关系模式，有关理论形成了关系数据库的规范化理论，模式分解理论有：<strong>无损联接性</strong>和<strong>依赖保持性</strong></li>
 <li>水平规范化：采用选择和并运算，将一个关系元组集合分解成若干个子集，从而构成若干个与原来关系模式相同的子模式，尚未形成成熟的规范化理论</li>
 </ul>
-<h3 id="fd">函数依赖（FD）<a href="#fd" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="fd">函数依赖（FD）</h3>
 <p>函数依赖： 一个关系中两组属性之间的某种取值约束</p>
 <p>给定一个关系R，X和Y是关系R的两个子集，如果说每一个X值都有唯一的一个Y值与之对应(即如果两元组X值相同则Y值相同，反之则不一定)，那么我们说<strong>X函数决定Y(Y函数依赖于X)</strong>，其中X称为决定因素，Y称为依赖因素</p>
 <p>如果一个函数依赖关系$X \rightarrow Y$ 满足Y不是X的子集，则称这个函数依赖为<strong>非平凡的函数依赖</strong>，否则为<strong>平凡函数依赖</strong></p>
 <p>在关系函数R(U)中，如果有$X\subset U,Y\subset U$,且$X\rightarrow Y$ ,并且对于任何X的真子集X'有$X&rsquo;\nrightarrow Y$ ,则称Y完全函数依赖于X，并记作$X\overset{f}{\to} Y$ .如满足前者而不完全依赖则称为部分依赖，并记作$X \overset{P}{\to} Y$（注意此处的真子集不是针对元组讨论，而是针对属性讨论）</p>
-<h4 id="armstrong">Armstrong公理系统<a href="#armstrong" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
+<h4 id="armstrong">Armstrong公理系统</h4>
 <p>基本规则：</p>
 <ul>
 <li>自反规则：若Y是X子集，则Y依赖于X</li>
@@ -444,10 +425,10 @@
 <p>如何寻找关键字：</p>
 <ul>
 <li>利用Armstrong公理系统推导</li>
-<li>利用属性集闭包的概念，寻找满足$K_F^+ = U$ 的最小属性集合K</li>
+<li>利用属性集闭包的概念，寻找满足$K\_F^+ = U$ 的最小属性集合K</li>
 <li>利用最小函数依赖集来优化方法二</li>
 </ul>
-<p><strong>属性集闭包</strong>：$X_F^+ = {A | F\models X\to A}$</p>
+<p><strong>属性集闭包</strong>：$X\_F^+ = {A | F\models X\to A}$</p>
 <p>计算属性集X在函数依赖F上的闭包算法（就是对于F中的每一个依赖关系的决定因素，如果决定因素是X+的子集就把对应的依赖因素加入X+，一直重复循环到无法有加入为止）</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">输入：关系模式R(U,F),属性集X
 
@@ -463,12 +444,12 @@ return X+;
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">set K := U－UR ;
 for each attribute A in UA
 {
-    compute $(K – {A})_F^+$ ;
-    if  $(K – {A})_F^+$ contains all the attributes in R
+    compute $(K – {A})\_F^+$ ;
+    if  $(K – {A})\_F^+$ contains all the attributes in R
         then   set K := K – { A } ;
 }
 return K ;
-</code></pre></div><h3 id="heading-3">与函数依赖有关的范式<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+</code></pre></div><h3 id="heading-3">与函数依赖有关的范式</h3>
 <p>第一范式：关系R(U)中的每个属性都不可分割，则称关系模式满足第一范式。每一个关系都必须满足第一范式1NF</p>
 <p>第二范式：如果有关系$R(U) \in 1NF$,且其每个非主属性都完全函数依赖于关键字，则称关系满足第二范式（判断第二范式：判断每一个非主属性A与每一个关键字之间是否存在部分函数依赖）</p>
 <p>不满足第二范式的：存在非主属性对关键字的部分函数依赖导致出现了数据冗余导致了产生更新异常</p>
@@ -504,7 +485,7 @@ return K ;
 </ul>
 <p>BCNF:若关系R(U)满足1NF，且若$X\to Y$时X必含有该关系模式的关键字，则称其满足BCNF</p>
 <p>满足BCNF的必然是3CNF，但是满足3CNF的不一定是BCNF</p>
-<h3 id="heading-4">多值依赖与第四范式<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-4">多值依赖与第四范式</h3>
 <p>多值依赖(MVD): 设有关系模式R(U)，X, Y是U的子集,如果关系模式R(U)满足下述要求：对X的一个确定值，存在Y的一组值与之对应；且Y的这组值又与关系中的其他属性(U-X-Y)(此处是减号)的取值不相关。此时称Y多值依赖于X，并记为：X→→Y</p>
 <p>如果$U-X-Y$是不是空集，则为<strong>非平凡的多值依赖</strong>，否则为<strong>平凡的空值依赖</strong></p>
 <p>多值依赖的性质：</p>
@@ -525,7 +506,7 @@ return K ;
 </ul>
 <p>第四范式：如果在关系模式$R(U)$中，$X\to\to Y$ 是非平凡多值依赖，则X必含有关键字，则称R满足第四范式</p>
 <p>满足第四范式的必然满足BCNF，同时意味着对于不是函数依赖的多值依赖必须是平凡多值依赖</p>
-<h2 id="heading-5">规范化所引起的一些问题<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-5">规范化所引起的一些问题</h2>
 <p>如果两个函数依赖集的闭包相等，则称这两个函数依赖集<strong>等价</strong></p>
 <p>与函数依赖集F相等价的所有函数依赖集中最小者被称为函数依赖集F的<strong>最小函数依赖集</strong>(也称<strong>最小覆盖</strong>)</p>
 <p>输入函数依赖集F，找到与F等价的最小的函数依赖集G：</p>
@@ -536,13 +517,13 @@ return K ;
 </ul>
 <p>具体算法如下： 1. 令 G := F 将 G 中每一个形如 $X\to (A1,A2,…,An)$ 的函数依赖替换为如下一组依赖因素为单个属性的函数依赖：$X\to A1, X\to A2, …, X\to An$</p>
 <ol>
-<li>对 G 中的每一个函数依赖 $X\to A$ 作如下的处理： 对决定因素 X 中的每一个属性 B 作如下处理： 计算属性集的闭包 $(X – B)_G^+$； 如果 $A\in (X – B)G+$, 则用新的函数依赖 $(X – B)\to A$ 替换原来的函数依赖 $X\to A$;</li>
-<li>对 G 中的每一个函数依赖 $X\to A$ 作如下处理： 令 $N := G – { X\to A }$ ; 计算属性集的闭包 $X_N^+$ ; 如果 $A\in X_N^+$ , 那么从G中删去函数依赖 $X\in A$；</li>
+<li>对 G 中的每一个函数依赖 $X\to A$ 作如下的处理： 对决定因素 X 中的每一个属性 B 作如下处理： 计算属性集的闭包 $(X – B)\_G^+$； 如果 $A\in (X – B)G+$, 则用新的函数依赖 $(X – B)\to A$ 替换原来的函数依赖 $X\to A$;</li>
+<li>对 G 中的每一个函数依赖 $X\to A$ 作如下处理： 令 $N := G – { X\to A }$ ; 计算属性集的闭包 $X\_N^+$ ; 如果 $A\in X\_N^+$ , 那么从G中删去函数依赖 $X\in A$；</li>
 <li>将 G 中每一组形如 $X\to A1, X\to A2, …, X\to An$(决定因素相同)的函数依赖合并为一个函数依赖: $X\to (A1,A2,…,An)$</li>
 </ol>
-<p><strong>无损联接性</strong>:分解后，原关系中的信息不会丢失.设R是一个关系模式，F是关系模式上R的函数依赖集，$\rho ={R1,R2,…,Rk}$ 是对R的一个分解。如果对R中满足F的每一个关系实例 r 都有：$r = \pi_{R1}(r)\bowtie \pi_{R2}(r) \bowtie …… \bowtie \pi_{Rk}(r)$ 则称该分解 $\rho$ 相对于F是“无损联接分解”，或称分解 $\rho$ 具有无损联接性。</p>
+<p><strong>无损联接性</strong>:分解后，原关系中的信息不会丢失.设R是一个关系模式，F是关系模式上R的函数依赖集，$\rho ={R1,R2,…,Rk}$ 是对R的一个分解。如果对R中满足F的每一个关系实例 r 都有：$r = \pi_{R1}(r)\bowtie \pi_{R2}(r) \bowtie …… \bowtie \pi\_{Rk}(r)$ 则称该分解 $\rho$ 相对于F是“无损联接分解”，或称分解 $\rho$ 具有无损联接性。</p>
 <p>如果R的分解为 $\rho = {R1,R2}$，F为R所满足的函数依赖集合，分解$\rho$具有无损联接性的充分必要条件是：$R1 \cap R2 \to (R1 – R2)$ 或 $R1 \cap R2 \to (R2 – R1)$</p>
-<p><strong>依赖保持性</strong>：原有的函数依赖关系再分解后的关系模式上仍然存在.用 $\pi_Z(F)$ 来表示函数依赖集F在子关系Z上的投影： $\pi_Z(F) = { X\to Y | X\to Y\in F+ 且 (X∪Y) \subseteq Z }$ 如果有：$F+ = (\pi_{R1}(F) \cup \pi_{R2}(F) \cup … \cup \pi_{Rk}(F))^+$. 则称 “分解具有依赖保持性”</p>
+<p><strong>依赖保持性</strong>：原有的函数依赖关系再分解后的关系模式上仍然存在.用 $\pi_Z(F)$ 来表示函数依赖集F在子关系Z上的投影： $\pi\_Z(F) = { X\to Y | X\to Y\in F+ 且 (X∪Y) \subseteq Z }$ 如果有：$F+ = (\pi_{R1}(F) \cup \pi_{R2}(F) \cup … \cup \pi_{Rk}(F))^+$. 则称 “分解具有依赖保持性”</p>
 <p>在必须同时满足无损连接性和依赖保持性的要求下，一个关系模式<strong>最高可以被分解到满足3NF</strong>,分解方法如下：</p>
 <ul>
 <li>
@@ -572,14 +553,19 @@ return K ;
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
 						<div class="btn-group-vertical w-100 my-3">
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
-        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
-    </a>
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
-        target="_blank">
-        <i class="iconfont icon-discussion"></i><br />纠错与咨询
-    </a>
+    
+
+    
+    
+    
+    
+        <a class="btn btn-outline-secondary text-dark w-100 p-2" href="#" onclick="window.print()">
+            <i class="iconfont icon-dayin"></i><br />打印本页
+        </a>
+    
+    
 </div>
+						<h4 class="card-title pb-0">目录</h4>
 						<nav id="TableOfContents">
   <ul>
     <li><a href="#heading-1">概述</a></li>
@@ -593,72 +579,62 @@ return K ;
     <li><a href="#heading-5">规范化所引起的一些问题</a></li>
   </ul>
 </nav>
+						
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="/js/leon.js"></script>
-<script type="text/javascript" src="/js/TweenMax.min.js "></script>
-<script type="text/javascript" src="/js/search.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script>
 
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-    
+<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        renderMathInElement(
-            document.body, {
-                delimiters: [{
-                        left: "$$",
-                        right: "$$",
-                        display: true
-                    },
-                    {
-                        left: "\\[",
-                        right: "\\]",
-                        display: true
-                    },
-                    {
-                        left: "$",
-                        right: "$",
-                        display: false
-                    },
-                    {
-                        left: "\\(",
-                        right: "\\)",
-                        display: false
-                    }
-                ]
-            }
-        );
-    });
-</script>
 
-<script type="text/javascript">
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(
+        document.body, {
+            delimiters: [
+                {
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "\\[",
+                    right: "\\]",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                },
+                {
+                    left: "\\(",
+                    right: "\\)",
+                    display: false
+                }
+            ],
+            strict: false
+        }
+    );
+});
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-    });
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
 </script>
 
 
-<script type="text/javascript">
-    $(function () {
-        $("[data-toggle='tooltip']").tooltip();
-    });
-</script>
 
 
 </body>

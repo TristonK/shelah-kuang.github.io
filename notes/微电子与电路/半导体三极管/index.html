@@ -6,9 +6,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="TristonK ">
+<meta name="description" content="三极管的结构，工作原理，三种组态起码要认识（如何工作与分析不做太高要求），放大作用如何实现，伏安特性曲线（尤其输出，各种区与每种线的含义），" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 
-
-
+<link rel="canonical" href="http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%89%E6%9E%81%E7%AE%A1/" />
 
 <meta itemprop="name" content="半导体三极管">
 <meta itemprop="description" content="三极管的结构，工作原理，三种组态起码要认识（如何工作与分析不做太高要求），放大作用如何实现，伏安特性曲线（尤其输出，各种区与每种线的含义），">
@@ -30,13 +33,30 @@
 <meta name="twitter:title" content="半导体三极管"/>
 <meta name="twitter:description" content="三极管的结构，工作原理，三种组态起码要认识（如何工作与分析不做太高要求），放大作用如何实现，伏安特性曲线（尤其输出，各种区与每种线的含义），"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title>半导体三极管</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<title>半导体三极管</title>
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_st54q8xrgt9.css">
+
+
+    <link rel="stylesheet" href="/katex.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq">
+
+
+
+    
+    <link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+
 </head>
 
 <body style="overflow-x: unset;">
@@ -52,7 +72,7 @@
                 TristonK's
             </small>
             <a class="text-dark" href="/notes/">
-                Documents
+                Notes
             </a>
         </span>
         <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
@@ -69,10 +89,6 @@
         <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             Google代码规范
         </a>
@@ -83,10 +99,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
-            
-                
-                    <span class="icontext">M</span>
-                
             
             
             问题求解（三）
@@ -99,10 +111,6 @@
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             问题求解（四）
         </a>
@@ -114,10 +122,6 @@
         <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
             
-                
-                    <span class="icontext">C</span>
-                
-            
             
             操作系统
         </a>
@@ -128,10 +132,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             私人生活的变革
@@ -231,10 +231,6 @@
         <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             强化学习
         </a>
@@ -245,10 +241,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             社会学概论
@@ -261,10 +253,6 @@
         <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             组合数学
         </a>
@@ -275,10 +263,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">C</span>
-                
             
             
             数据库概论
@@ -291,10 +275,6 @@
         <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             计算机网络
         </a>
@@ -305,10 +285,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             伟大传统系列
@@ -326,27 +302,32 @@
 							<h2>半导体三极管</h2>
 							<footer>
 								<span>
-									<i class="fad fa-calendar-alt mr-2"></i>
+									<i class="iconfont icon-NewFile mr-2"></i>
 									2020-01-04 19:24 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-calendar-edit mr-2"></i>
+									<i class="iconfont icon-modify mr-2"></i>
 									2020-01-04 19:24 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-copyright mr-2"></i>
+									<i class="iconfont icon-copyright mr-2"></i>
 									CC BY-NC 4.0
-									<a class="float-right" href="#" onclick="window.print()">
-											打印本页
-									</a>
 								</span>
 							</footer>
 						</div>
 						<div id="content" class="hl-h2">
+							
+							
+							
+							
+							
+							
+							
+							
 							<blockquote>
 <p>三极管的结构，工作原理，三种组态起码要认识（如何工作与分析不做太高要求），放大作用如何实现，伏安特性曲线（尤其输出，各种区与每种线的含义），各种基本参数</p>
 </blockquote>
-<h1 id="heading">半导体三极管<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
+<h1 id="heading">半导体三极管</h1>
 <p>三极管：双极结型三极管(BJT，又叫双极晶体管)</p>
 <img src="../images/3-1.png">
 <p>发射结上的箭头的方向指向发射结导通的方向(P指向N)，由此可以区分NPN型和PNP型</p>
@@ -359,10 +340,10 @@
 <li>集电区的掺杂浓度低于发射区，且面积大</li>
 <li>基区很薄，一般在几个微米，且掺杂浓度最低</li>
 </ul>
-<h2 id="heading-1">电流放大<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-1">电流放大</h2>
 <p>放大实际上是通过核心元件三极管控制能量的新的变化来实现放大</p>
 <p>实现放大的外部条件：发射结正偏，集电结反偏</p>
-<h3 id="-npn">载流子内部传播过程-以NPN型为例<a href="#-npn" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="-npn">载流子内部传播过程-以NPN型为例</h3>
 <img src="../images/3-2.png">
 <ul>
 <li>发射结正偏，发射区的自由电子扩散到基区
@@ -383,7 +364,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="bjt">BJT电流分配关系<a href="#bjt" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="bjt">BJT电流分配关系</h3>
 <p>共基极直流放大系数 $\hat{\alpha}$
 $$\hat{\alpha}=\frac{传输到集电极电流}{发射极注入电流}=\frac{I_C-I_{CBO}}{I_E}\approx \frac{I_C}{I_E}$$</p>
 <p>他通常只与管子的结构尺寸和掺杂浓度有关，与外加电压无关，一般为0.9-0.99</p>
@@ -395,14 +376,14 @@ $$\hat{\beta} = \frac{I_{CN}}{I_{BN}} = \frac{I_C-I_{CBO}}{I_B+I_{CBO}}\approx \
 <li>内部条件：发射区杂质浓度远大于基区浓度，并且基区很薄</li>
 <li>外部条件：发射结正向偏置，集电结反向偏置</li>
 </ul>
-<h3 id="heading-2">三种组态<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-2">三种组态</h3>
 <img src="../images/3-3.png">
 <p>看除去用于输入和输出之外共用的是哪个极</p>
 <p>可以发现输入要么在基极就是在发射极</p>
-<h2 id="bjti-v">BJT的I-V特性曲线<a href="#bjti-v" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="bjti-v">BJT的I-V特性曲线</h2>
 <p>现在考虑共射极连接的BJT曲线</p>
 <img src="../images/3-4.png">
-<h3 id="heading-3">输入特性<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-3">输入特性</h3>
 <p>$$i_B=f(v_{BE})|_{V_{CE}=const}$$</p>
 <img src="../images/3-5.png">
 <p>当$V_{CE}=0$时，就相当于发射结的正向伏安特性曲线，当其大于1V时，$V_{CB}=V_{CE}-V_{BE}&gt;0$,集电结反偏，收集载流子能力增强，基区复合减少，这使得同样的$V_{BE}$下的$I_B$减少，也就是曲线右移</p>
@@ -421,7 +402,7 @@ $$\hat{\beta} = \frac{I_{CN}}{I_{BN}} = \frac{I_C-I_{CBO}}{I_B+I_{CBO}}\approx \
 </ul>
 </li>
 </ul>
-<h3 id="heading-4">输出特性<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-4">输出特性</h3>
 <p>$$i_c=f(V_{CE})|_{i_B=const}$$</p>
 <img src="../images/3-6.png">
 <ul>
@@ -442,8 +423,8 @@ $$\hat{\beta} = \frac{I_{CN}}{I_{BN}} = \frac{I_C-I_{CBO}}{I_B+I_{CBO}}\approx \
 </ul>
 </li>
 </ul>
-<h2 id="bjt-1">BJT的主要参数<a href="#bjt-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<h3 id="heading-5">基本参数<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="bjt-1">BJT的主要参数</h2>
+<h3 id="heading-5">基本参数</h3>
 <ul>
 <li>电流放大系数
 <ul>
@@ -474,7 +455,7 @@ $$\hat{\beta} = \frac{I_{CN}}{I_{BN}} = \frac{I_C-I_{CBO}}{I_B+I_{CBO}}\approx \
 </li>
 </ul>
 <img src="../images/3-7.png">
-<h3 id="bjt-2">温度对BJT参数及其特性的影响<a href="#bjt-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="bjt-2">温度对BJT参数及其特性的影响</h3>
 <p>温度每升高10度，$I_{CBO}$约增加一倍</p>
 <p>温度每升高1度，$\beta$值增大$0.5%-1%$</p>
 <p>温度对反向击穿电压中的$V_{(BR)CBO}$和$V_{(BR)CEO}$都有影响，温度升高，两者增大</p>
@@ -488,14 +469,19 @@ $$\hat{\beta} = \frac{I_{CN}}{I_{BN}} = \frac{I_C-I_{CBO}}{I_B+I_{CBO}}\approx \
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
 						<div class="btn-group-vertical w-100 my-3">
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
-        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
-    </a>
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
-        target="_blank">
-        <i class="iconfont icon-discussion"></i><br />纠错与咨询
-    </a>
+    
+
+    
+    
+    
+    
+        <a class="btn btn-outline-secondary text-dark w-100 p-2" href="#" onclick="window.print()">
+            <i class="iconfont icon-dayin"></i><br />打印本页
+        </a>
+    
+    
 </div>
+						<h4 class="card-title pb-0">目录</h4>
 						<nav id="TableOfContents">
   <ul>
     <li><a href="#heading-1">电流放大</a>
@@ -519,72 +505,62 @@ $$\hat{\beta} = \frac{I_{CN}}{I_{BN}} = \frac{I_C-I_{CBO}}{I_B+I_{CBO}}\approx \
     </li>
   </ul>
 </nav>
+						
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="/js/leon.js"></script>
-<script type="text/javascript" src="/js/TweenMax.min.js "></script>
-<script type="text/javascript" src="/js/search.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script>
 
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-    
+<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        renderMathInElement(
-            document.body, {
-                delimiters: [{
-                        left: "$$",
-                        right: "$$",
-                        display: true
-                    },
-                    {
-                        left: "\\[",
-                        right: "\\]",
-                        display: true
-                    },
-                    {
-                        left: "$",
-                        right: "$",
-                        display: false
-                    },
-                    {
-                        left: "\\(",
-                        right: "\\)",
-                        display: false
-                    }
-                ]
-            }
-        );
-    });
-</script>
 
-<script type="text/javascript">
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(
+        document.body, {
+            delimiters: [
+                {
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "\\[",
+                    right: "\\]",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                },
+                {
+                    left: "\\(",
+                    right: "\\)",
+                    display: false
+                }
+            ],
+            strict: false
+        }
+    );
+});
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-    });
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
 </script>
 
 
-<script type="text/javascript">
-    $(function () {
-        $("[data-toggle='tooltip']").tooltip();
-    });
-</script>
 
 
 </body>

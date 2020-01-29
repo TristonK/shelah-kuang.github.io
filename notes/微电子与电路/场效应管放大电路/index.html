@@ -6,9 +6,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="TristonK ">
+<meta name="description" content="认识基本的共源极，知道工作原理就行了，公式不会要求记忆 图解法求静态工作点，工作的时候是怎么移动的，失真对于图像的影响 场效应管放大电路 基本共源" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 
-
-
+<link rel="canonical" href="http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/" />
 
 <meta itemprop="name" content="场效应管放大电路">
 <meta itemprop="description" content="认识基本的共源极，知道工作原理就行了，公式不会要求记忆 图解法求静态工作点，工作的时候是怎么移动的，失真对于图像的影响 场效应管放大电路 基本共源">
@@ -30,13 +33,30 @@
 <meta name="twitter:title" content="场效应管放大电路"/>
 <meta name="twitter:description" content="认识基本的共源极，知道工作原理就行了，公式不会要求记忆 图解法求静态工作点，工作的时候是怎么移动的，失真对于图像的影响 场效应管放大电路 基本共源"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-<title>场效应管放大电路</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.b85c780ce29d94800879b7f7d03bdbd1ed6e538ce8a520b9c374570f8c6ce49a.min.8e2aeef93a541530729538cb32ede52cfe40cf74307f450f1a6e5a4acd47ebb0.css" integity="sha256-jiru&#43;TpUFTBylTjLMu3lLP5Az3Qwf0UPGm5aSs1H67A=">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<title>场效应管放大电路</title>
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_st54q8xrgt9.css">
+
+
+    <link rel="stylesheet" href="/katex.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq">
+
+
+
+    
+    <link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+
 </head>
 
 <body style="overflow-x: unset;">
@@ -52,7 +72,7 @@
                 TristonK's
             </small>
             <a class="text-dark" href="/notes/">
-                Documents
+                Notes
             </a>
         </span>
         <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
@@ -69,10 +89,6 @@
         <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
-                
-                    <span class="icontext">O</span>
-                
-            
             
             Google代码规范
         </a>
@@ -83,10 +99,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
-            
-                
-                    <span class="icontext">M</span>
-                
             
             
             问题求解（三）
@@ -99,10 +111,6 @@
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             问题求解（四）
         </a>
@@ -114,10 +122,6 @@
         <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
             
-                
-                    <span class="icontext">C</span>
-                
-            
             
             操作系统
         </a>
@@ -128,10 +132,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             私人生活的变革
@@ -231,10 +231,6 @@
         <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
-                
-                    <span class="icontext">A</span>
-                
-            
             
             强化学习
         </a>
@@ -245,10 +241,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             社会学概论
@@ -261,10 +253,6 @@
         <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             组合数学
         </a>
@@ -275,10 +263,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             
-            
-                
-                    <span class="icontext">C</span>
-                
             
             
             数据库概论
@@ -291,10 +275,6 @@
         <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
-                
-                    <span class="icontext">M</span>
-                
-            
             
             计算机网络
         </a>
@@ -305,10 +285,6 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
-            
-                
-                    <span class="icontext">O</span>
-                
             
             
             伟大传统系列
@@ -326,29 +302,34 @@
 							<h2>场效应管放大电路</h2>
 							<footer>
 								<span>
-									<i class="fad fa-calendar-alt mr-2"></i>
+									<i class="iconfont icon-NewFile mr-2"></i>
 									2020-01-04 19:25 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-calendar-edit mr-2"></i>
+									<i class="iconfont icon-modify mr-2"></i>
 									2020-01-04 19:25 CST
 								</span> <br />
 								<span>
-									<i class="fad fa-copyright mr-2"></i>
+									<i class="iconfont icon-copyright mr-2"></i>
 									CC BY-NC 4.0
-									<a class="float-right" href="#" onclick="window.print()">
-											打印本页
-									</a>
 								</span>
 							</footer>
 						</div>
 						<div id="content" class="hl-h2">
+							
+							
+							
+							
+							
+							
+							
+							
 							<blockquote>
 <p>认识基本的共源极，知道工作原理就行了，公式不会要求记忆
 图解法求静态工作点，工作的时候是怎么移动的，失真对于图像的影响</p>
 </blockquote>
-<h1 id="heading">场效应管放大电路<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
-<h2 id="heading-1">基本共源极电路的组成<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h1 id="heading">场效应管放大电路</h1>
+<h2 id="heading-1">基本共源极电路的组成</h2>
 <img src="../images/6-1.png">
 <p>如何让MOS管工作在饱和区：</p>
 <ul>
@@ -363,28 +344,28 @@
 <li>因为在饱和区的$i_D=K_n(v_{GS}-V_{TN})^2$,所以可以根据MOS的控制关系得到上面的式子</li>
 <li>信号由栅源回路输入，漏源回路输出，所以源极时公共端，，所以称为<strong>共源回路</strong></li>
 </ul>
-<h2 id="heading-2">基本共源极放大电路工作原理<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<h3 id="heading-3">放大电路的静态和动态<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="heading-2">基本共源极放大电路工作原理</h2>
+<h3 id="heading-3">放大电路的静态和动态</h3>
 <p>静态：输入信号为0时的工作状态，也叫<strong>直流工作状态</strong></p>
 <p>静态工作点$Q(I_{DQ},V_{GSQ},V_{DSQ})$</p>
 <p>输入信号不为0时，放大电路的工作状态称为<strong>交流工作状态</strong></p>
-<h3 id="heading-4">放大电路的直流通路和交流通路<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-4">放大电路的直流通路和交流通路</h3>
 <p>仅有直流电流流经的叫做直流通路</p>
 <p>直流电流电压源的内阻为0，交流电流流经直流电压源时不产生任何交流压降，所以<strong>直流电压源对于交流相当于短路</strong></p>
-<h3 id="heading-5">放大电路的静态工作点估算<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-5">放大电路的静态工作点估算</h3>
 <p>先假设工作在饱和区，利用FET特性方程求解后，需要检验是否满足$V_{DSQ}&gt;V_{GSQ}-V_{TN}&gt;0$，不满足则说明工作在可变电阻区或者截止区</p>
 <p><strong>这是增强型NMOS管</strong>的计算方法，其他管型的静态工作点方法需要归纳</p>
-<h3 id="heading-6">放大电路的动态工作情况<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-6">放大电路的动态工作情况</h3>
 <img src="../images/6-2.png">
-<h2 id="heading-7">放大电路的习惯画法<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-7">放大电路的习惯画法</h2>
 <p>省略工作电源的直流电压符号，仅保留电压源非接地端子，并标注电压源名称</p>
 <img src="../images/6-3.png">
 <img src="../images/6-4.png">
-<h2 id="heading-8">图解法确定静态工作点<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-8">图解法确定静态工作点</h2>
 <p>利用直线方程$V_{DS}=V_{DD}-i_DR_d$,$v_{GS}=V_{GG}$</p>
 <img src="../images/6-5.png">
-<h2 id="heading-9">动态工作情况的图解分析<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<h3 id="heading-10">正常工作情况<a href="#heading-10" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h2 id="heading-9">动态工作情况的图解分析</h2>
+<h3 id="heading-10">正常工作情况</h3>
 <p>由于$v_{GS}=V_{GSQ}+v_i$</p>
 <p>我们可以得到以下结论：</p>
 <ul>
@@ -394,7 +375,7 @@
 <li>可以确定最大不失真输出幅度</li>
 </ul>
 <img src="../images/6-6.png">
-<h3 id="heading-11">静态工作点对于波形失真的影响<a href="#heading-11" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h3 id="heading-11">静态工作点对于波形失真的影响</h3>
 <p>截止失真(NMOS)</p>
 <img src="../images/6-7.png">
 <p>饱和失真(NMOS)</p>
@@ -403,14 +384,19 @@
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
 						<div class="btn-group-vertical w-100 my-3">
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
-        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
-    </a>
-    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
-        target="_blank">
-        <i class="iconfont icon-discussion"></i><br />纠错与咨询
-    </a>
+    
+
+    
+    
+    
+    
+        <a class="btn btn-outline-secondary text-dark w-100 p-2" href="#" onclick="window.print()">
+            <i class="iconfont icon-dayin"></i><br />打印本页
+        </a>
+    
+    
 </div>
+						<h4 class="card-title pb-0">目录</h4>
 						<nav id="TableOfContents">
   <ul>
     <li><a href="#heading-1">基本共源极电路的组成</a></li>
@@ -432,72 +418,62 @@
     </li>
   </ul>
 </nav>
+						
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="/js/leon.js"></script>
-<script type="text/javascript" src="/js/TweenMax.min.js "></script>
-<script type="text/javascript" src="/js/search.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script>
 
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-    
+<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        renderMathInElement(
-            document.body, {
-                delimiters: [{
-                        left: "$$",
-                        right: "$$",
-                        display: true
-                    },
-                    {
-                        left: "\\[",
-                        right: "\\]",
-                        display: true
-                    },
-                    {
-                        left: "$",
-                        right: "$",
-                        display: false
-                    },
-                    {
-                        left: "\\(",
-                        right: "\\)",
-                        display: false
-                    }
-                ]
-            }
-        );
-    });
-</script>
 
-<script type="text/javascript">
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(
+        document.body, {
+            delimiters: [
+                {
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "\\[",
+                    right: "\\]",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                },
+                {
+                    left: "\\(",
+                    right: "\\)",
+                    display: false
+                }
+            ],
+            strict: false
+        }
+    );
+});
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-    });
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
 </script>
 
 
-<script type="text/javascript">
-    $(function () {
-        $("[data-toggle='tooltip']").tooltip();
-    });
-</script>
 
 
 </body>
