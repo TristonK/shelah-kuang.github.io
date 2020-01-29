@@ -6,12 +6,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="author" content="TristonK ">
-<meta name="description" content="SQL语言 3.4 关系数据库语言SQL’92 3.4.1 SQL概貌 SQL的基本概念与使用方式：表（基表/虚表），行，列 3.4.2 SQL数据定义功能 3.4.3 SQL数据操纵功" />
-<meta name="keywords" content="" />
-<meta name="robots" content="noodp" />
 
-<link rel="canonical" href="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/" />
+
+
 
 <meta itemprop="name" content="SQL语言">
 <meta itemprop="description" content="SQL语言 3.4 关系数据库语言SQL’92 3.4.1 SQL概貌 SQL的基本概念与使用方式：表（基表/虚表），行，列 3.4.2 SQL数据定义功能 3.4.3 SQL数据操纵功">
@@ -33,30 +30,13 @@
 <meta name="twitter:title" content="SQL语言"/>
 <meta name="twitter:description" content="SQL语言 3.4 关系数据库语言SQL’92 3.4.1 SQL概貌 SQL的基本概念与使用方式：表（基表/虚表），行，列 3.4.2 SQL数据定义功能 3.4.3 SQL数据操纵功"/>
 
-
-<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-<link rel="manifest" href="/icons/site.webmanifest">
-<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/icons/favicon.ico">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-config" content="/icons/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
-
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
 <title>SQL语言</title>
+<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1559566_st54q8xrgt9.css">
-
-
-    <link rel="stylesheet" href="/katex.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq">
-
-
-
-    
-    <link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
-
+<link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
 </head>
 
 <body style="overflow-x: unset;">
@@ -72,7 +52,7 @@
                 TristonK's
             </small>
             <a class="text-dark" href="/notes/">
-                Notes
+                Documents
             </a>
         </span>
         <button class="btn btn-link text-dark d-md-none p-0 ml-3" type="button" data-toggle="collapse"
@@ -89,6 +69,10 @@
         <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
+                
+                    <span class="icontext">O</span>
+                
+            
             
             Google代码规范
         </a>
@@ -99,6 +83,10 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
+            
+                
+                    <span class="icontext">M</span>
+                
             
             
             问题求解（三）
@@ -111,6 +99,10 @@
         <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
+                
+                    <span class="icontext">A</span>
+                
+            
             
             问题求解（四）
         </a>
@@ -121,6 +113,10 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
+            
+                
+                    <span class="icontext">C</span>
+                
             
             
             操作系统
@@ -133,6 +129,10 @@
         <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
+                
+                    <span class="icontext">O</span>
+                
+            
             
             私人生活的变革
         </a>
@@ -143,6 +143,10 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
             
+            
+                
+                    <span class="icontext">O</span>
+                
             
             
             微电子与电路
@@ -155,6 +159,10 @@
         <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
+                
+                    <span class="icontext">A</span>
+                
+            
             
             强化学习
         </a>
@@ -166,6 +174,10 @@
         <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
             
+                
+                    <span class="icontext">O</span>
+                
+            
             
             社会学概论
         </a>
@@ -176,6 +188,10 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
+            
+                
+                    <span class="icontext">M</span>
+                
             
             
             组合数学
@@ -269,6 +285,10 @@
         <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
+                
+                    <span class="icontext">M</span>
+                
+            
             
             计算机网络
         </a>
@@ -279,6 +299,10 @@
     <div class="bd-toc-item">
         <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
+            
+                
+                    <span class="icontext">O</span>
+                
             
             
             伟大传统系列
@@ -586,17 +610,13 @@
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
 						<div class="btn-group-vertical w-100 my-3">
-    
-
-    
-    
-    
-    
-        <a class="btn btn-outline-secondary text-dark w-100 p-2" href="#" onclick="window.print()">
-            <i class="iconfont icon-dayin"></i><br />打印本页
-        </a>
-    
-    
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="https://github.com/shelah-kuang/shelah-kuang.github.io/issues" target="_blank">
+        <i class="iconfont icon-LC_icon_list_line"></i><br />待更新列表
+    </a>
+    <a class="btn btn-outline-secondary text-dark w-100 p-2" href="mailto:kuangsl@foxmail.com"
+        target="_blank">
+        <i class="iconfont icon-discussion"></i><br />纠错与咨询
+    </a>
 </div>
 						<h4 class="card-title pb-0">目录</h4>
 						<nav id="TableOfContents">
