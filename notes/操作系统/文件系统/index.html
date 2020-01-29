@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
 
 <head>
 	<meta name="generator" content="Hugo 0.62.0" />
@@ -13,7 +13,7 @@
 <meta itemprop="name" content="文件系统">
 <meta itemprop="description" content="基本概念 每一个file都有一个low-level name， 一般我们指inode number, directory：存储a list of pairs (user-readable name, low-level name) UNIX/Linux">
 
-<meta itemprop="wordCount" content="2335">
+<meta itemprop="wordCount" content="2330">
 
 
 
@@ -21,20 +21,20 @@
 <meta property="og:title" content="文件系统" />
 <meta property="og:description" content="基本概念 每一个file都有一个low-level name， 一般我们指inode number, directory：存储a list of pairs (user-readable name, low-level name) UNIX/Linux" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" />
+<meta property="og:url" content="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" />
 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="文件系统"/>
 <meta name="twitter:description" content="基本概念 每一个file都有一个low-level name， 一般我们指inode number, directory：存储a list of pairs (user-readable name, low-level name) UNIX/Linux"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tristonk.com/images/favicon.ico">
 <title>文件系统</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="http://tristonk.com/css/bootstrap.materia.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+<link rel="stylesheet" href="http://tristonk.com/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
 </head>
 
 <body style="overflow-x: unset;">
@@ -44,12 +44,12 @@
 				<div class="d-flex mt-3 border-bottom">
         <span class="navbar-brand w-100" style="display: grid;">
             <small>
-                <a href="/" class="text-black-50">
+                <a href="http://tristonk.com/" class="text-black-50">
                     <i class="iconfont icon-back-arrow-"></i>
                 </a>
                 TristonK's
             </small>
-            <a class="text-dark" href="/notes/">
+            <a class="text-dark" href="http://tristonk.com/notes/">
                 Documents
             </a>
         </span>
@@ -64,7 +64,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
                 
@@ -79,7 +79,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
             
                 
@@ -94,7 +94,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
                 
@@ -109,7 +109,7 @@
     
     
     <div class="bd-toc-item active bg-light">
-        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             <i class="iconfont icon-back-arrow-reverse"></i>
             操作系统
         </a>
@@ -117,31 +117,31 @@
             
             
             <li>
-                <a href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/fat%E4%B8%8Eext2/">FAT与ext2</a>
+                <a href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/fat%E4%B8%8Eext2/">FAT与ext2</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/io%E8%AE%BE%E5%A4%87%E4%B8%8E%E9%A9%B1%E5%8A%A8/">IO设备与驱动</a>
+                <a href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/io%E8%AE%BE%E5%A4%87%E4%B8%8E%E9%A9%B1%E5%8A%A8/">IO设备与驱动</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%B4%A9%E6%BA%83%E6%81%A2%E5%A4%8D%E4%B8%8E%E6%97%A5%E5%BF%97/">崩溃恢复与日志</a>
+                <a href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%B4%A9%E6%BA%83%E6%81%A2%E5%A4%8D%E4%B8%8E%E6%97%A5%E5%BF%97/">崩溃恢复与日志</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%8C%81%E4%B9%85%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/">持久数据的可靠性</a>
+                <a href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%8C%81%E4%B9%85%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/">持久数据的可靠性</a>
             </li>
             
             
             
             <li class="active">
-                <a href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
+                <a href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
                     <i class="fad fa-chevron-right mr-1"></i>
                     文件系统
                 </a>
@@ -150,7 +150,7 @@
             
             
             <li>
-                <a href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%BB%88%E7%AB%AF%E4%B8%8Eshell/">终端与shell</a>
+                <a href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%BB%88%E7%AB%AF%E4%B8%8Eshell/">终端与shell</a>
             </li>
             
             
@@ -160,7 +160,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
                 
@@ -175,7 +175,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
             
             
                 
@@ -190,7 +190,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
                 
@@ -205,7 +205,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
             
                 
@@ -220,7 +220,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
                 
@@ -235,7 +235,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             
             
                 
@@ -250,7 +250,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
                 
@@ -265,7 +265,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
             
                 
@@ -310,67 +310,71 @@
 							
 							
 							
-							<h2 id="heading">基本概念</h2>
+							
+							
+							
+							
+							<h2 id="heading">基本概念<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>每一个file都有一个<code>low-level name</code>， 一般我们指<strong><code>inode number</code></strong>,</p>
 <p><strong><code>directory</code></strong>：存储a list of pairs  (user-readable name, low-level name)</p>
 <blockquote>
 <p>UNIX/Linux的File System Hierarchy标准规定了文件系统目录树中各个目录的功能：</p>
 <ul>
 <li>/boot - 系统启动数据</li>
-<li>/bin - 应用程序 (bash, ps, grep, &hellip;)</li>
+<li>/bin - 应用程序 (bash, ps, grep, ...)</li>
 <li>/dev - 设备文件</li>
-<li>/sbin - 系统程序 (mkfs, fdisk, ifconfig, dhclient, &hellip;)</li>
-<li>/etc - 配置文件 (= &ldquo;etcetera&rdquo;)</li>
+<li>/sbin - 系统程序 (mkfs, fdisk, ifconfig, dhclient, ...)</li>
+<li>/etc - 配置文件 (= &quot;etcetera&quot;)</li>
 <li>/home - 用户目录</li>
-<li>/lib - 库文件 (libc.so, libpthread.so, &hellip;)</li>
-<li>/media - 可移动设备 (cdrom, USB flash ,&hellip;)</li>
+<li>/lib - 库文件 (libc.so, libpthread.so, ...)</li>
+<li>/media - 可移动设备 (cdrom, USB flash ,...)</li>
 <li>/usr - 用户程序 (/usr/bin/, /usr/lib/, /usr/local/)</li>
-<li>/var - 可变文件 (logs, snapshots, &hellip;)</li>
+<li>/var - 可变文件 (logs, snapshots, ...)</li>
 <li>/tmp - 临时文件</li>
 </ul>
 </blockquote>
-<h2 id="file-system-interface">File System Interface</h2>
-<h3 id="creating-files">Creating files</h3>
-<p>int fd = <strong><code>open</code></strong>(&ldquo;foo&rdquo;, O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR|S_IWUSR);</p>
+<h2 id="file-system-interface">File System Interface<a href="#file-system-interface" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="creating-files">Creating files<a href="#creating-files" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>int fd = <strong><code>open</code></strong>(&quot;foo&quot;, O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR|S_IWUSR);</p>
 <p>O_CREAT :creates the file  if it does not exist,
 O_WRONLY: ensures that the file can only be written to, and,
 O_TRUNC: if the file already exists, truncates it to a size of zero bytes thus removing any existing
 content</p>
-<h3 id="reading-and-writing-files">Reading And Writing Files</h3>
+<h3 id="reading-and-writing-files">Reading And Writing Files<a href="#reading-and-writing-files" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p><strong><code>cat</code></strong> :dump the contents of the file to the screen.</p>
-<p>&hellip;(还有一些 不想抄了)</p>
-<h3 id="shared-file-table-entries-fork-and-dup">Shared File Table Entries: fork() And dup()</h3>
+<p>...(还有一些 不想抄了)</p>
+<h3 id="shared-file-table-entries-fork-and-dup">Shared File Table Entries: fork() And dup()<a href="#shared-file-table-entries-fork-and-dup" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>dup() call allows a process to create a new file descriptor that refers to the same underlying open file as an existing descriptor.</p>
-<h3 id="writing-immediately-with-fsync">Writing Immediately With fsync()</h3>
+<h3 id="writing-immediately-with-fsync">Writing Immediately With fsync()<a href="#writing-immediately-with-fsync" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p><strong><code>fsync(int fd)</code></strong>. When a process calls fsync() for a particular file descriptor, the file system responds by forcing all dirty (i.e., not yet written) data to disk, for the file referred to by the specified file descriptor.</p>
-<h3 id="rename">rename</h3>
+<h3 id="rename">rename<a href="#rename" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p><strong><code>rename(char*old, char *new),</code></strong> call is that it is (usually) implemented as an atomic call</p>
-<h3 id="getting-information-about-files">Getting Information About Files</h3>
+<h3 id="getting-information-about-files">Getting Information About Files<a href="#getting-information-about-files" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p><strong><code>stat()</code></strong> or <strong><code>fstat()</code></strong></p>
-<h3 id="reading-directories">Reading Directories</h3>
+<h3 id="reading-directories">Reading Directories<a href="#reading-directories" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>opendir(), readdir(), and closedir()</p>
 <p>readdir()得到以下结构体：
 <img src="../文件系统/dirent.png"></p>
-<h3 id="hard-links">Hard Links</h3>
+<h3 id="hard-links">Hard Links<a href="#hard-links" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p><strong><code>link()</code></strong> system call takes two arguments, an old pathname and a new one; when you “link” a new file name to an old one, you essentially create another way to refer to the same file. The command-line program <code>ln</code> is used to do this</p>
 <p>link后的两个指向相同的inode number，对于文件系统而言，对用户可见的名字不同没有关系，因为他们指向相同的内部的结构metadata，这个是根据inode number来查找的</p>
 <p>当你删除一个文件的时候，会调用unlink()，将检查对应inode number对应的reference count（link count），并将其减少1，只有其变为0的时候，才会free掉对应的数据结构</p>
-<h3 id="symbolic-linkssoft-links">Symbolic Links(soft links)</h3>
+<h3 id="symbolic-linkssoft-links">Symbolic Links(soft links)<a href="#symbolic-linkssoft-links" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>The way a symbolic link is formed is by holding the pathname of the linked-to file as the data of the
 link file</p>
-<h3 id="making-and-mounting-a-file-system">Making And Mounting A File System</h3>
+<h3 id="making-and-mounting-a-file-system">Making And Mounting A File System<a href="#making-and-mounting-a-file-system" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p><strong><code>mkfs</code></strong>：give the tool, as input, a device (such as a disk partition, e.g., /dev/sda1) and a file system type (e.g., ext3), and it simply writes an empty file system, starting with a root directory, onto that disk partition.</p>
 <p><strong><code>mount</code></strong>完成的工作是<strong>把一个设备和一个文件系统实现联系起来，在设备上创建一个文件系统实例，并且把创建的文件系统“放置”到文件系统中的一个路径里</strong>。</p>
-<h2 id="heading-1">文件系统实现</h2>
-<h3 id="vsfsvery-simple-file-system">VSFS(Very Simple File System)</h3>
-<h4 id="overall-organization">Overall Organization</h4>
+<h2 id="heading-1">文件系统实现<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="vsfsvery-simple-file-system">VSFS(Very Simple File System)<a href="#vsfsvery-simple-file-system" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<h4 id="overall-organization">Overall Organization<a href="#overall-organization" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
 <img src="../文件系统/rg.png">
 <p>我们假设以4kb为一个block，现在我们假设有一个非常小的disk，只有64个block，考虑其应该有的组成
 a)  首先必然存储数据且应该是大部分block都存储数据
 b）对于每一个文件，都应该有一个inode
 c）需要有一个分配结构来追踪每一个data或者inode的block是否为free，有多种实现方式，如链表，此处采用<code>bitmap</code>的方式，每一个bit为0/1表示对应的block是否被占用，此处应有两个bitmap，data和inode各一个
 d）一个superblock， 用于存储关于这个文件系统的信息，如有多少各inode和data blocks，inode table从哪里开始等（当挂载一个文件系统的时候，首先读superblock的信息来初始化各种参数）</p>
-<h4 id="file-organization-the-inode">File Organization: The Inode</h4>
+<h4 id="file-organization-the-inode">File Organization: The Inode<a href="#file-organization-the-inode" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
 <p><strong><code>Inode</code></strong>: index node</p>
 <p>每一个inode都会被一个数字所指代（i-number），在操作系统中，给你这个数字，你可以直接计算出在这个磁盘中对应inode的位置</p>
 <img src="../文件系统/nt.png">
@@ -395,16 +399,16 @@ d）一个superblock， 用于存储关于这个文件系统的信息，如有�
 <p>一种inode存储的信息示例如下：</p>
 <img src="../文件系统/inode.png" height=75% width=75%>
 <p>在inode中有一个重要信息是指向文件data所在block的地址的指针，一种实现方式是采用<strong><code>direct pointer</code></strong>，但是这样对于较大的文件，存储在多个不同的block中时会比较麻烦，此时一种方式时采用<strong><code>indirect pointer</code></strong>,这个指针指向一个全部存储对应的direct pointer的block，而如果还要更大的话，则可以采用<strong><code>double indirect pointer</code></strong>(即指向一个全是indirect pointer的block)，如果还要更多，可以以此类推<strong><code>triple indirect pointer</code></strong></p>
-<h4 id="directory-organization">Directory Organization</h4>
+<h4 id="directory-organization">Directory Organization<a href="#directory-organization" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
 <p>each entry has an inode number, record length (the total bytes for the name plus any left over space), string length (the actual length of the name), and finally the name of the entry.</p>
 <p>目录同样被操作系统认为是一个文件，有对应的inode，只是inode中其类型为directory</p>
-<h4 id="free-space-management">Free Space Management</h4>
+<h4 id="free-space-management">Free Space Management<a href="#free-space-management" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
 <p>在vsfs中，用的是bitmap，还可以用链表来实现，现代操作系统中有更多的实现方式如b-tree</p>
-<h4 id="access-paths-reading-and-writing">Access Paths: Reading and Writing</h4>
+<h4 id="access-paths-reading-and-writing">Access Paths: Reading and Writing<a href="#access-paths-reading-and-writing" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
 <p>对于一个路径，如果我们想找到对应的文件或目录的inode值，其值一般会存储在其父目录中，而**/**没有父目录，故而一般在unix系统中设置其inode值为2，找到父目录的inode之后，就根据指针找到其data区域，在data中找到其对应文件的入口，找到后，文件系统就获取的该文件的inode number，之后类似的重复直到找到对应文件为止。在open（）操作中，找到文件后，会把文件的inode读入，并在pre-process open-file table中分配一个fd给这个process。</p>
 <p>打开文件后如执行read操作，则会更新inode中的存储的时间变量，然后回更新fd对应的in-memory open file table，修改文件偏移量</p>
 <p>如果要写文件的话，要先读inode，再读bitmap，再写bitmap，分配后再写data，写完后更新inode</p>
-<h3 id="fatext2">FAT与ext2</h3>
+<h3 id="fatext2">FAT与ext2<a href="#fatext2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>断章了，见下一篇blog</p>
 
 						</div>
@@ -453,11 +457,15 @@ d）一个superblock， 用于存储关于这个文件系统的信息，如有�
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload="renderMathInElement(document.body);"></script>
 
-<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
+<script type="text/javascript" src="http://tristonk.com/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
 
 document.addEventListener("DOMContentLoaded", function () {

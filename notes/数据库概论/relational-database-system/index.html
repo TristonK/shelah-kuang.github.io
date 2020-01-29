@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
 
 <head>
 	<meta name="generator" content="Hugo 0.62.0" />
@@ -14,7 +14,7 @@
 <meta itemprop="description" content="关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论">
 <meta itemprop="datePublished" content="2020-01-01T00:13:14&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-01T00:13:14&#43;08:00" />
-<meta itemprop="wordCount" content="3250">
+<meta itemprop="wordCount" content="3232">
 
 
 
@@ -22,7 +22,7 @@
 <meta property="og:title" content="关系数据库系统" />
 <meta property="og:description" content="关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/" />
+<meta property="og:url" content="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/" />
 <meta property="article:published_time" content="2020-01-01T00:13:14+08:00" />
 <meta property="article:modified_time" content="2020-01-01T00:13:14+08:00" />
 
@@ -30,13 +30,13 @@
 <meta name="twitter:title" content="关系数据库系统"/>
 <meta name="twitter:description" content="关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tristonk.com/images/favicon.ico">
 <title>关系数据库系统</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="http://tristonk.com/css/bootstrap.materia.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+<link rel="stylesheet" href="http://tristonk.com/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
 </head>
 
 <body style="overflow-x: unset;">
@@ -46,12 +46,12 @@
 				<div class="d-flex mt-3 border-bottom">
         <span class="navbar-brand w-100" style="display: grid;">
             <small>
-                <a href="/" class="text-black-50">
+                <a href="http://tristonk.com/" class="text-black-50">
                     <i class="iconfont icon-back-arrow-"></i>
                 </a>
                 TristonK's
             </small>
-            <a class="text-dark" href="/notes/">
+            <a class="text-dark" href="http://tristonk.com/notes/">
                 Documents
             </a>
         </span>
@@ -66,7 +66,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
                 
@@ -81,7 +81,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
             
                 
@@ -96,7 +96,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
                 
@@ -111,7 +111,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
             
                 
@@ -126,7 +126,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
                 
@@ -141,7 +141,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
             
             
                 
@@ -156,7 +156,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
                 
@@ -171,7 +171,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
             
                 
@@ -186,7 +186,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
                 
@@ -201,7 +201,7 @@
     
     
     <div class="bd-toc-item active bg-light">
-        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             <i class="iconfont icon-back-arrow-reverse"></i>
             数据库概论
         </a>
@@ -209,19 +209,19 @@
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/">数据库系统概述</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/">数据库系统概述</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/">数据模型</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/">数据模型</a>
             </li>
             
             
             
             <li class="active">
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/">
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/">
                     <i class="fad fa-chevron-right mr-1"></i>
                     关系数据库系统
                 </a>
@@ -230,49 +230,49 @@
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/">SQL语言</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/">SQL语言</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/">数据库安全性与完整性</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/">数据库安全性与完整性</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/">事务管理、并发控制与故障恢复</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/">事务管理、并发控制与故障恢复</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/">关系数据库规范化理论</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/">关系数据库规范化理论</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/">思考题与作业题</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/">思考题与作业题</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/">样卷整理</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/">样卷整理</a>
             </li>
             
             
@@ -282,7 +282,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
                 
@@ -297,7 +297,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
             
                 
@@ -342,7 +342,11 @@
 							
 							
 							
-							<h1 id="heading">关系数据库系统</h1>
+							
+							
+							
+							
+							<h1 id="heading">关系数据库系统<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
 <blockquote>
 <p>关系数据库系统</p>
 <p>3.1 关系数据库系统概述</p>
@@ -404,7 +408,7 @@
 <li>基于关系演算的数据查询表示：单表查询，多表连接查询，复杂查询的表示（逻辑非、蕴涵操作符）</li>
 </ul>
 </blockquote>
-<h2 id="heading-1">关系数据库系统衡量准则</h2>
+<h2 id="heading-1">关系数据库系统衡量准则<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>十二条标准：</p>
 <ul>
 <li>信息准则（关系数据库中的所有信息都能在逻辑一级唯一的用表中的值显示表示，结构描述信息在逻辑上组织成关系形式）</li>
@@ -420,8 +424,8 @@
 <li>分布独立性</li>
 <li>无损害准则</li>
 </ul>
-<h2 id="heading-2">关系代数</h2>
-<h3 id="heading-3">关系模型</h3>
+<h2 id="heading-2">关系代数<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="heading-3">关系模型<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>二维表的组成：</p>
 <ul>
 <li>表框架（n个命名的属性，n被称为表的<strong>元数</strong>）</li>
@@ -458,24 +462,24 @@
 <p>键：minimal superkey</p>
 <p>候选关键字，主关键字，外关键字</p>
 <p><strong>待补充：关系数据库：关系子模式-视图（view）</strong></p>
-<h4 id="heading-4">关系操纵</h4>
+<h4 id="heading-4">关系操纵<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
 <p>查询：单表查询可以有<strong>纵向定位（行选择）<strong>和</strong>横向定位（选择列）</strong>，多表查询先将多张表合并再用单表查询操作。可以被分解为三个基本操作：两个关系的合并，单个关系内元组指定，单个关系内属性指定</p>
 <p>插入：一条数据插入操作只能向一个关系中增加元组</p>
 <p>删除：删除的基本单位是元组，一次操作只能删除一个关系内的元组</p>
 <p>修改：不是一个基本操作，可以通过先删再插的操作实现</p>
 <p>操纵对象是关系</p>
-<h4 id="heading-5">空值处理</h4>
+<h4 id="heading-5">空值处理<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
 <p>关系的主键中不允许出现空值（完整性约束）</p>
 <p>算数表达式中出现空值，结果为空值</p>
 <p>逻辑表达式中出现空值，为逻辑假</p>
 <p>如果是出现了集合中的空值元素，那么仍可使用SUM,AVG,MAX,MIN,COUNT等统计运算，空值不被计算</p>
 <p>如果是对空集进行统计运算，则SUM,AVG,MAX,MIN为空值,COUNT为0</p>
 <p>注意：COUNT(*)是统计元组个数，不存在空值元素问题</p>
-<h4 id="heading-6">三类数据完整性约束</h4>
+<h4 id="heading-6">三类数据完整性约束<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h4>
 <p>实体完整性约束：主键中的属性不为空</p>
 <p>参照完整性约束：外键要么取空值，要么是被引用表中当前存在的某元组上的主键值</p>
 <p>用户定义的完整性：用户自己定义的属性取值约束</p>
-<h3 id="heading-7">关系操纵的表示</h3>
+<h3 id="heading-7">关系操纵的表示<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>n元关系R是一个n元有序组的集合，关系R是n个属性的属性域的笛卡尔乘积的子集</p>
 <p>关系上的基本操作与关系代数中的五种基本运算：</p>
 <ul>
@@ -508,12 +512,12 @@
 <p>可以解和投影与选择来实现单张表中的数据查询，在没有括号的情况下，运算顺序从右到左</p>
 <p><strong>笛卡尔乘积</strong>：两个关系的合并运算，$R\times S$,若R，S分别有n,m个属性，p,q个元组，则笛卡尔乘积有$n+m$ 个属性，$pq$ 个元组</p>
 <p><strong>如果笛卡尔乘积中存在相同的属性名，必须在结果中选择一个进行换名</strong></p>
-<h3 id="heading-8">关系模型与关系代数</h3>
+<h3 id="heading-8">关系模型与关系代数<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>关系：n元有序组的集合</p>
 <p>关系操纵：关系上的集合运算</p>
 <p>关系代数：$(A,\pi,\sigma,\times,\cup,-)$</p>
 <p><strong>注意最大最小的比较的时候用$&lt; \text{or},\leq$</strong>.</p>
-<h3 id="heading-9">关系代数中的扩充运算</h3>
+<h3 id="heading-9">关系代数中的扩充运算<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>交运算：</p>
 <ul>
 <li>条件：同类关系</li>
@@ -533,9 +537,9 @@
 <li>推导：$\sigma_F(R\times S)$</li>
 </ul>
 <p>自然连接：( $R\bowtie S$ ):自动根据两个关系中的同名属性进行等值连接(即把R和S中同名属性相同的连接在一起)</p>
-<h3 id="heading-10">关系代数的应用</h3>
+<h3 id="heading-10">关系代数的应用<a href="#heading-10" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>在订单类的题目中，如果需要使用减法，注意从订单中减还是顾客/供应商减</p>
-<h2 id="heading-11">关系演算</h2>
+<h2 id="heading-11">关系演算<a href="#heading-11" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <blockquote>
 <p>原子公式，公式的定义</p>
 </blockquote>
@@ -550,7 +554,7 @@
 <li>$u(i)\theta a$是原子公式，其中a为常量</li>
 </ul>
 <p>所有的目标属性以自由变元的形式出现，其他属性以约束变元的形式出现，如检索学生的学号姓名，可以$\exist sd,sa(S(sno,sn,sd,sa))$.</p>
-<p>当变元与常量进行<strong>相等</strong>比较的时候，可以直接用常量值代替变元出现在谓词中，如$\exist cn,pno(C(cno,cn,pno)\wedge pno='C2&rsquo;)$和$\exist cn(C(cno,cn,&lsquo;C2&rsquo;))$是等价的</p>
+<p>当变元与常量进行<strong>相等</strong>比较的时候，可以直接用常量值代替变元出现在谓词中，如$\exist cn,pno(C(cno,cn,pno)\wedge pno='C2')$和$\exist cn(C(cno,cn,'C2'))$是等价的</p>
 <p>关系的联结：</p>
 <ul>
 <li>可以通过相关谓词的逻辑与运算实现两个关系的笛卡儿乘积：R(p) ∧ S(q)</li>
@@ -605,11 +609,15 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload="renderMathInElement(document.body);"></script>
 
-<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
+<script type="text/javascript" src="http://tristonk.com/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
 
 document.addEventListener("DOMContentLoaded", function () {

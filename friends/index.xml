@@ -2,13 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Friend&#39;s Links on Tristonk</title>
-    <link>http://shelah-kuang.github.io/friends/</link>
+    <link>http://tristonk.com/friends/</link>
     <description>Recent content in Friend&#39;s Links on Tristonk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <copyright>CC BY-NC 4.0</copyright>
     
-	<atom:link href="http://shelah-kuang.github.io/friends/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tristonk.com/friends/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

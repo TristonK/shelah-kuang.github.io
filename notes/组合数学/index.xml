@@ -2,77 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>组合数学 on Tristonk</title>
-    <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
+    <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
     <description>Recent content in 组合数学 on Tristonk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <copyright>CC BY-NC 4.0</copyright>
     <lastBuildDate>Fri, 03 Jan 2020 20:11:23 +0800</lastBuildDate>
     
-	<atom:link href="http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Basic Enumeration</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/</link>
       <pubDate>Fri, 03 Jan 2020 20:11:54 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/</guid>
       <description>Twelvfold way Elements of N Elements of M Any f (unstricted) Injective (1-1) f Surjective (on-to) f 不同的 不同的 $m^n$ $(m)_n$ $m!{{n \atop m}}$ 相同的 不同的 $\big(\binom{m}{n}\big)$ $\binom{m}{n}$ $\binom{n-1}{m-1}$ 不同的 相同的 $\sum_{k=1}^m{{n \atop k}}$ $\begin{cases} 1&amp;amp;\text{if } n\leq m\0&amp;amp;\text{if }n&amp;gt;m \end{cases}$ ${{n \atop m}}$ 相同的 相同的 $\sum_{k=1}^mp_k(n)$ $\begin{cases} 1&amp;amp;\text{if } n\leq m\0&amp;amp;\text{if }n&amp;gt;m \end{cases}$</description>
     </item>
     
     <item>
       <title>Generating Functions</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</link>
       <pubDate>Fri, 03 Jan 2020 20:12:08 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</guid>
-      <description>Generating functions 生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数 orinary generating function(OGF): $G(x)=\sum_{n\geq 0 }a_nx^n$ using &amp;ldquo;+&amp;rdquo; to represent &amp;ldquo;OR&amp;rdquo;, using the multiplication to denote &amp;ldquo;AND&amp;rdquo; 例如如果</description>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</guid>
+      <description>Generating functions 生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数 orinary generating function(OGF): $G(x)=\sum_{n\geq 0 }a_nx^n$ using &amp;quot;+&amp;quot; to represent &amp;quot;OR&amp;quot;, using the multiplication to denote &amp;quot;AND&amp;quot; 例如如果</description>
     </item>
     
     <item>
       <title>Sieve Methods</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/sieve-methods/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/sieve-methods/</link>
       <pubDate>Fri, 03 Jan 2020 20:12:24 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/sieve-methods/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/sieve-methods/</guid>
       <description>Sieve methods Principle of Inclusion-Exclusion PIE用于计算n个有限集合的并的大小 : $$ {\begin{aligned}\left|\bigcup {i=1}^{n}A{i}\right|&amp;amp;=\sum _{I\subseteq {1,\ldots ,n}}(-1)^{|I|-1}\left|\bigcap {i\in I}A{i}\right|.\end{aligned}}$$ 我们在组合中，通常将我们不希望看到的坏事件定义为$A_i$,这样的话我们所希</description>
     </item>
     
     <item>
       <title>Existence Problemms</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/existence-problemms/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/existence-problemms/</link>
       <pubDate>Fri, 03 Jan 2020 20:12:40 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/existence-problemms/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/existence-problemms/</guid>
       <description>Existence problems Existence by counting shannon&#39;s circuit lower bound double counting 对同样的东西以不同的方式计数两次，得到的结果相同 handshaking lemma Handshaking Lemma: At a party, the number of guests who shake hands an odd number of times is even. 等价于以下的计数方式：构建一</description>
     </item>
     
     <item>
       <title>Probablistic Methods</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/probablistic-methods/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/probablistic-methods/</link>
       <pubDate>Fri, 03 Jan 2020 20:13:04 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/probablistic-methods/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/probablistic-methods/</guid>
       <description>The probabilistic method The probabilistic method 性质1：需要证明某种东西存在，我们可以证明如果一个东西随机的选择出来的概率是正数，那么这个东西必然存在 性质2：任何一个随机变量都</description>
     </item>
     
     <item>
       <title>Extremal Graph Theroy</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-graph-theroy/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-graph-theroy/</link>
       <pubDate>Fri, 03 Jan 2020 20:13:25 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-graph-theroy/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-graph-theroy/</guid>
       <description>Mantel&#39;s Theorem: Suppose G(V,E) is a graph on n vertices without triangles, then $|E|\leq \frac{n^2}{4}$
 Turan&#39;s Theorem: Let $G(V,E)$ be a graph with $|V| = n$. If G has no r-clique, $r \geqslant 2$, then $|E| \leqslant \dfrac{r-2}{2(r-1)} n^2$</description>
     </item>
     
     <item>
       <title>Extremal Set Theroy</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-set-theroy/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-set-theroy/</link>
       <pubDate>Fri, 03 Jan 2020 20:13:32 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-set-theroy/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-set-theroy/</guid>
       <description>Extremal Set Theroy Sunflowers Definition (sunflower): A set family $ {\mathcal {F}}\subseteq 2^{X}$ is a sunflower of size $ r$ with a core $ C\subseteq X$ if $ \forall S,T\in {\mathcal {F}}$ that $ S\neq T$, $ S\cap T=C$.
 Sunflower Lemma (Erdős-Rado) Let $ {\mathcal {F}}\subseteq {X \choose k}$. If $ |{\mathcal {F}}|&amp;gt;k!(r-1)^{k}$, then $ {\mathcal {F}}$ contains a sunflower of size $ r$.
 Erdős–Ko–Rado theorem Erdős–Ko–Rado theorem (proved in 1938, published in 1961): Let $ {\mathcal {F}}\subseteq {X \choose k}$ where $ |X|=n$ and $ n\geq 2k$.</description>
@@ -80,20 +79,20 @@ Erdős–Ko–Rado theorem Erdős–Ko–Rado theorem (proved in 1938, published
     
     <item>
       <title>Ramsey Theroy</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/ramsey-theroy/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/ramsey-theroy/</link>
       <pubDate>Fri, 03 Jan 2020 20:13:43 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/ramsey-theroy/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/ramsey-theroy/</guid>
       <description>Ramsey theory Ramsey&#39;s theorem ramsey&#39;s theorem for graph Let $ k,\ell $ be positive integers. Then there exists an integer $ R(k,\ell )$ satisfying: If $ n\geq R(k,\ell )$, for any coloring of edges of $ K_{n}$ with two colors red and blue, there exists a red $ K_{k}$ or a blue $ K_{\ell }$ .
 Ramsey&#39;s Theorem (graph, multicolor) Let $ r,k_{1},k_{2},\ldots ,k_{r}$ be positive integers. Then there exists an integer $ R(r;k_{1},k_{2},\ldots ,k_{r})$ satisfying: For any $ r$ -coloring of a complete graph of $ n\geq R(r;k_{1},k_{2},\ldots ,k_{r})$ vertices, there exists a monochromatic $ k_{i}$-clique with the $ i$ th color for some $ i\in {1,2,\ldots ,r}$.</description>
     </item>
     
     <item>
       <title>Matching Theroy</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/</link>
       <pubDate>Fri, 03 Jan 2020 20:13:54 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/</guid>
       <description>Matching theroy Systems of Distinct Representatives (SDR) A system of distinct representatives (SDR) (also called a transversal) for a sequence of (not necessarily distinct) sets $ S_{1},S_{2},\ldots ,S_{m}$ is a sequence of distinct elements $ x_{1},x_{2},\ldots ,x_{m}$ such that $ x_{i}\in S_{i}$ for all $i=1,2,\ldots ,m$. 就是指每个集合中找到一个代表的元素，这些元素各不</description>
     </item>
     

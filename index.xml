@@ -2,625 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tristonk</title>
-    <link>http://shelah-kuang.github.io/</link>
+    <link>http://tristonk.com/</link>
     <description>Recent content on Tristonk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <copyright>CC BY-NC 4.0</copyright>
     <lastBuildDate>Thu, 09 Jan 2020 20:52:26 +0800</lastBuildDate>
     
-	<atom:link href="http://shelah-kuang.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tristonk.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>导论：中国家庭模式与私人生活的研究</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/section1/</link>
+      <link>http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/section1/</link>
       <pubDate>Thu, 09 Jan 2020 20:52:26 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/section1/</guid>
+      <guid>http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/section1/</guid>
       <description>他们都把家庭看作是实现个人幸福的地方，而且家庭成员之间的情感是维系家庭的主要途径。同时，他们还相信理想的家庭幸福可以通过家庭成员之间努力增进</description>
     </item>
     
     <item>
       <title>半导体物理基础</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</link>
+      <link>http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Sat, 04 Jan 2020 19:23:07 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</guid>
       <description>根据物体导电能力(电阻率)的不同，来划分导体、绝缘体、半导体 半导体是一种导电能力介于导体和绝缘体之间的物质，他的导电能力和温度，光照或掺杂浓</description>
     </item>
     
     <item>
       <title>Basic Enumeration</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/</link>
       <pubDate>Fri, 03 Jan 2020 20:11:54 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/</guid>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/basic-enumeration/</guid>
       <description>Twelvfold way Elements of N Elements of M Any f (unstricted) Injective (1-1) f Surjective (on-to) f 不同的 不同的 $m^n$ $(m)_n$ $m!{{n \atop m}}$ 相同的 不同的 $\big(\binom{m}{n}\big)$ $\binom{m}{n}$ $\binom{n-1}{m-1}$ 不同的 相同的 $\sum_{k=1}^m{{n \atop k}}$ $\begin{cases} 1&amp;amp;\text{if } n\leq m\0&amp;amp;\text{if }n&amp;gt;m \end{cases}$ ${{n \atop m}}$ 相同的 相同的 $\sum_{k=1}^mp_k(n)$ $\begin{cases} 1&amp;amp;\text{if } n\leq m\0&amp;amp;\text{if }n&amp;gt;m \end{cases}$</description>
     </item>
     
     <item>
       <title>计算机网络与因特网</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/</link>
+      <link>http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/</link>
       <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/</guid>
+      <guid>http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-yu-yin-te-wang/</guid>
       <description>计算机网络与因特网 1.1 什么是因特网 回答什么是因特网： 因特网的具体构成，即因特网的基本硬件与软件组件 根据为分布式应用提供服务的联网基础设施来描述</description>
     </item>
     
     <item>
       <title>数据库系统概述</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</link>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</link>
       <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</guid>
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</guid>
       <description>数据库系统概述 复习重点 1.1基本概念 数据库，数据库管理系统，数据库系统，数据库管理员 相互之间的关系 1.2数据库系统的特点 数据集成化，数据独立</description>
     </item>
     
     <item>
       <title>Java代码规范</title>
-      <link>http://shelah-kuang.github.io/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/style-javaguide/</link>
+      <link>http://tristonk.com/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/style-javaguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/style-javaguide/</guid>
+      <guid>http://tristonk.com/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/style-javaguide/</guid>
       <description>1 Introduction 本文档中的示例代码并不作为规范。即虽然示例代码是遵循 Google 编程风格，但并不意味着这就是是展现这些代码的唯一方式。 2 Src基础 2.1 文件名 根据最顶</description>
     </item>
     
     <item>
       <title>社会学概论-社会学的视角</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/</link>
+      <link>http://tristonk.com/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/</guid>
+      <guid>http://tristonk.com/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/</guid>
       <description>{% note info no-icon %} 社会学的学习是激情之旅，让我们一起努力，接触那些饱受争议的概念与理论，试图打开那些紧闭着的大门，去发现我们非常熟悉的日常世界之幽暗</description>
     </item>
     
     <item>
       <title>二极管</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/</link>
+      <link>http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/</link>
       <pubDate>Sat, 04 Jan 2020 19:24:29 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/</guid>
+      <guid>http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/</guid>
       <description>二极管：功能，结构类型，符号， 重点：PN结的结构形成与他的工作原理，伏安特性 二极管的简化模型，如何运用模型分析 齐纳二极管的工作原理 二极管 在P</description>
     </item>
     
     <item>
       <title>Generating Functions</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</link>
+      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</link>
       <pubDate>Fri, 03 Jan 2020 20:12:08 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</guid>
-      <description>Generating functions 生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数 orinary generating function(OGF): $G(x)=\sum_{n\geq 0 }a_nx^n$ using &amp;ldquo;+&amp;rdquo; to represent &amp;ldquo;OR&amp;rdquo;, using the multiplication to denote &amp;ldquo;AND&amp;rdquo; 例如如果</description>
+      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</guid>
+      <description>Generating functions 生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数 orinary generating function(OGF): $G(x)=\sum_{n\geq 0 }a_nx^n$ using &amp;quot;+&amp;quot; to represent &amp;quot;OR&amp;quot;, using the multiplication to denote &amp;quot;AND&amp;quot; 例如如果</description>
     </item>
     
     <item>
       <title>应用层</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</link>
+      <link>http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</link>
       <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</guid>
+      <guid>http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</guid>
       <description>应用层 不考</description>
-    </item>
-    
-    <item>
-      <title>数据模型</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/</guid>
-      <description>数据模型 第二章 数据模型 2.1 数据模型的基本概念 数据模型及其组成成分：数据结构，数据操作，数据约束 数据模型的核心，不同类型数据模型的区分依据 三个抽</description>
-    </item>
-    
-    <item>
-      <title>Multi-armed Bandits</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl2/</guid>
-      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 2 这个读书笔记建立在已经看完了西瓜书第16章的基础上，略过了很多</description>
-    </item>
-    
-    <item>
-      <title>社会学概论-社会与文化</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl2/</guid>
-      <description>{% note primary %} 阅读文献 金耀基：“中国人对私隐权的-中国人文鼎细等线的公私观念” 林语堂：《中国人》第四章 “人生的理想” Horace Miner. Body Ritual among the Nacirema {% endnote %} 汉语中的社</description>
-    </item>
-    
-    <item>
-      <title>半导体三极管</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%89%E6%9E%81%E7%AE%A1/</link>
-      <pubDate>Sat, 04 Jan 2020 19:24:39 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%89%E6%9E%81%E7%AE%A1/</guid>
-      <description>三极管的结构，工作原理，三种组态起码要认识（如何工作与分析不做太高要求），放大作用如何实现，伏安特性曲线（尤其输出，各种区与每种线的含义），</description>
-    </item>
-    
-    <item>
-      <title>Sieve Methods</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/sieve-methods/</link>
-      <pubDate>Fri, 03 Jan 2020 20:12:24 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/sieve-methods/</guid>
-      <description>Sieve methods Principle of Inclusion-Exclusion PIE用于计算n个有限集合的并的大小 : $$ {\begin{aligned}\left|\bigcup {i=1}^{n}A{i}\right|&amp;amp;=\sum _{I\subseteq {1,\ldots ,n}}(-1)^{|I|-1}\left|\bigcap {i\in I}A{i}\right|.\end{aligned}}$$ 我们在组合中，通常将我们不希望看到的坏事件定义为$A_i$,这样的话我们所希</description>
-    </item>
-    
-    <item>
-      <title>运输层</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/</link>
-      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/yun-shu-ceng/</guid>
-      <description>运输层 该层位运行在不同主机上的应用经称提供直接的通信服务 3.1 概述与运输层服务 运输层协议位不同主机上的应用进程提供了逻辑通信的功能 网络路由器不实</description>
-    </item>
-    
-    <item>
-      <title>关系数据库系统</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/</guid>
-      <description>关系数据库系统 关系数据库系统 3.1 关系数据库系统概述 3.2 关系数据库系统的衡量准则 完全关系型的十二条衡量准则 空值（NULL）的定义 3.3 关系模型数学理论</description>
-    </item>
-    
-    <item>
-      <title>Finite Markov Decision Processes</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl3/</guid>
-      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 3 感觉这一章就给了一些基础概念，看西瓜书也成啊 3.1 The Agent–E</description>
-    </item>
-    
-    <item>
-      <title>三极管放大电路</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/</link>
-      <pubDate>Sat, 04 Jan 2020 19:24:51 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/</guid>
-      <description>基本的共射级，工作原理，如何估算静态工作点， 重要：负载线怎么来的，怎么画 失真与静态工作点的关系 温度的影响（定性的把握） 基极分压式要认识，稳定</description>
-    </item>
-    
-    <item>
-      <title>网络层-数据平面</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-shu-ju-ping-mian/</link>
-      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-shu-ju-ping-mian/</guid>
-      <description>网络层：数据平面 重点：4.2、4.3 网络传输中ipv4报文首部哪些不会改变 网络层：实现主机到主机之间的通信服务，与运输层和应用层不同的是，网</description>
-    </item>
-    
-    <item>
-      <title>SQL语言</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/</guid>
-      <description>SQL语言 3.4 关系数据库语言SQL’92 3.4.1 SQL概貌 SQL的基本概念与使用方式：表（基表/虚表），行，列 3.4.2 SQL数据定义功能 3.4.3 SQL数据操纵功</description>
-    </item>
-    
-    <item>
-      <title>Dynamic Programming</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl4/</guid>
-      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 4 The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies. 如果看完了西</description>
-    </item>
-    
-    <item>
-      <title>场效应管</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/</link>
-      <pubDate>Sat, 04 Jan 2020 19:25:11 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/</guid>
-      <description>场效应管 场效应管的结构，基本的名词，三极管的区别，为什么能实现电压控制电流，特性曲线（输出与转移），曲线上的分区，不同类型的管子有什么区别，</description>
-    </item>
-    
-    <item>
-      <title>Existence Problemms</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/existence-problemms/</link>
-      <pubDate>Fri, 03 Jan 2020 20:12:40 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/existence-problemms/</guid>
-      <description>Existence problems Existence by counting shannon&#39;s circuit lower bound double counting 对同样的东西以不同的方式计数两次，得到的结果相同 handshaking lemma Handshaking Lemma: At a party, the number of guests who shake hands an odd number of times is even. 等价于以下的计数方式：构建一</description>
-    </item>
-    
-    <item>
-      <title>网络层-控制平面</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/</link>
-      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wang-luo-ceng-kong-zhi-ping-mian/</guid>
-      <description>网络层：控制平面 5.2 路由选择算法 BGP协议报文使用TCP报文封装，RIP使用UDP，OSPF使用IP报文封装 路由选择算法的目的：从发送方到接收</description>
-    </item>
-    
-    <item>
-      <title>数据库安全性与完整性</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/</guid>
-      <description>数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S</description>
-    </item>
-    
-    <item>
-      <title>Monte Carlo Methods</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl5/</guid>
-      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 5 蒙特卡洛方法不需要环境的信息，只需要经验（experience</description>
-    </item>
-    
-    <item>
-      <title>场效应管放大电路</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/</link>
-      <pubDate>Sat, 04 Jan 2020 19:25:48 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/</guid>
-      <description>认识基本的共源极，知道工作原理就行了，公式不会要求记忆 图解法求静态工作点，工作的时候是怎么移动的，失真对于图像的影响 场效应管放大电路 基本共源</description>
-    </item>
-    
-    <item>
-      <title>Probablistic Methods</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/probablistic-methods/</link>
-      <pubDate>Fri, 03 Jan 2020 20:13:04 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/probablistic-methods/</guid>
-      <description>The probabilistic method The probabilistic method 性质1：需要证明某种东西存在，我们可以证明如果一个东西随机的选择出来的概率是正数，那么这个东西必然存在 性质2：任何一个随机变量都</description>
-    </item>
-    
-    <item>
-      <title>链路层与局域网</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/lian-lu-ceng-yu-ju-yu-wang/</link>
-      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/lian-lu-ceng-yu-ju-yu-wang/</guid>
-      <description>链路层与局域网 两种链路层信道： 广播信道：连接有线局域网、卫星网和混合光纤同轴电缆(HFC)接入网中的多台主机，因为许多主机与相同广播信道连接</description>
-    </item>
-    
-    <item>
-      <title>事务管理、并发控制与故障恢复</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/</guid>
-      <description>事务管理、并发与故障处理 5.1 事务处理（概念） 事务的定义与ACID性质 事务活动及其状态转换图 事务控制及相关的参数设置语句：事务的提交与回滚，事务</description>
-    </item>
-    
-    <item>
-      <title>Temporal-Difference Learning</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl6/</guid>
-      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 6 TD：时序差分方法，是一种综合了蒙特卡洛与DP的特点的方法 6.1 TD</description>
-    </item>
-    
-    <item>
-      <title>放大电路模型</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E6%A8%A1%E5%9E%8B/</link>
-      <pubDate>Sat, 04 Jan 2020 19:25:57 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E6%A8%A1%E5%9E%8B/</guid>
-      <description>放大电路模型，基本定义，符号，几种争议的定义，主要的性能指标，频率响应的定义，认识图和图上的点，知道失真与非线性失真的概念（看到图知道什么回</description>
-    </item>
-    
-    <item>
-      <title>Extremal Graph Theroy</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-graph-theroy/</link>
-      <pubDate>Fri, 03 Jan 2020 20:13:25 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-graph-theroy/</guid>
-      <description>Mantel&#39;s Theorem: Suppose G(V,E) is a graph on n vertices without triangles, then $|E|\leq \frac{n^2}{4}$
-Turan&#39;s Theorem: Let $G(V,E)$ be a graph with $|V| = n$. If G has no r-clique, $r \geqslant 2$, then $|E| \leqslant \dfrac{r-2}{2(r-1)} n^2$</description>
-    </item>
-    
-    <item>
-      <title>无线网络与移动网络</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</link>
-      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/wu-xian-wang-luo-yu-yi-dong-wang-luo/</guid>
-      <description>无线网络与移动网络 7.1 概述 无线主机(wireless host): 类似于有线主机，运行应用程序的端设备。 无线链路： 主机通过无线通信链路来连接到一个基站。 基</description>
-    </item>
-    
-    <item>
-      <title>游标管理与索引</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/</guid>
-      <description>游标管理与索引 游标管理 游标的作用 游标的定义、打开、使用、关闭 可滚动游标的定义及其在数据更新命令中的使用 索引 (index) B+索引的数据结构，搜索算法 游标</description>
-    </item>
-    
-    <item>
-      <title>n-step Bootstraping</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/rl7/</guid>
-      <description>对应章节：《Reinforcement Learning: An Introduction》第二版 Chap 7</description>
-    </item>
-    
-    <item>
-      <title>运算放大器</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/</link>
-      <pubDate>Sat, 04 Jan 2020 19:26:06 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/</guid>
-      <description>运算放大器:组成单元，参数特点，什么是理想运放与其模型，反馈的概念（不要求分析，即不要求判断正反），深度负反馈是什么回事 重要：虚断等 求差求和</description>
-    </item>
-    
-    <item>
-      <title>Extremal Set Theroy</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-set-theroy/</link>
-      <pubDate>Fri, 03 Jan 2020 20:13:32 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/extremal-set-theroy/</guid>
-      <description>Extremal Set Theroy Sunflowers Definition (sunflower): A set family $ {\mathcal {F}}\subseteq 2^{X}$ is a sunflower of size $ r$ with a core $ C\subseteq X$ if $ \forall S,T\in {\mathcal {F}}$ that $ S\neq T$, $ S\cap T=C$.
-Sunflower Lemma (Erdős-Rado) Let $ {\mathcal {F}}\subseteq {X \choose k}$. If $ |{\mathcal {F}}|&amp;gt;k!(r-1)^{k}$, then $ {\mathcal {F}}$ contains a sunflower of size $ r$.
-Erdős–Ko–Rado theorem Erdős–Ko–Rado theorem (proved in 1938, published in 1961): Let $ {\mathcal {F}}\subseteq {X \choose k}$ where $ |X|=n$ and $ n\geq 2k$.</description>
-    </item>
-    
-    <item>
-      <title>计算机网络中的安全</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-zhong-de-an-quan/</link>
-      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ji-suan-ji-wang-luo-zhong-de-an-quan/</guid>
-      <description>计算机网络中的安全 RSA MD5</description>
-    </item>
-    
-    <item>
-      <title>关系数据库规范化理论</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/</guid>
-      <description>关系数据库规范化理论 8.1 概述 模式设计质量的评价指标：数据冗余度，插入/删除等更新异常 为什么要研究关系的规划化设计：规范化的目的与手段 8.2 规范化理</description>
-    </item>
-    
-    <item>
-      <title>数字逻辑</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/</link>
-      <pubDate>Sat, 04 Jan 2020 19:26:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/</guid>
-      <description>ppt上的概念怎么回事，基本运算的逻辑符号 与逻辑表达式认识就够了 数字逻辑 数字集成电路的分类 根据结构特点和输入信号的响应规则的不同 组合逻辑电路</description>
-    </item>
-    
-    <item>
-      <title>多媒体网络</title>
-      <link>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/duo-mei-ti-wang-luo/</link>
-      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/duo-mei-ti-wang-luo/</guid>
-      <description>多媒体网络 9.1 多媒体网络应用 视频最显著的特点：高比特率 9.2 流式存储视频 流式存储视频：UDP流、HTTP流、适应性HTTP流 广泛应用客户端应用缓存</description>
-    </item>
-    
-    <item>
-      <title>数据库设计</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/</guid>
-      <description>数据库设计 9.1 数据库设计概述 数据库设计的基本任务 数据库的生命周期 9.2 数据库设计的需求分析 需求说明书 9.3 数据库的概念设计 数据库概念设计的过程 E-R模</description>
-    </item>
-    
-    <item>
-      <title>逻辑门电路</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF/</link>
-      <pubDate>Sat, 04 Jan 2020 19:26:23 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF/</guid>
-      <description>逻辑门电路：基本参数知道叫什么，不要求分析，但是反相器，与非门，或非门的电路要认识（不要求异或门），传输门要知道怎么回时，不要求分析TTL的</description>
-    </item>
-    
-    <item>
-      <title>Ramsey Theroy</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/ramsey-theroy/</link>
-      <pubDate>Fri, 03 Jan 2020 20:13:43 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/ramsey-theroy/</guid>
-      <description>Ramsey theory Ramsey&#39;s theorem ramsey&#39;s theorem for graph Let $ k,\ell $ be positive integers. Then there exists an integer $ R(k,\ell )$ satisfying: If $ n\geq R(k,\ell )$, for any coloring of edges of $ K_{n}$ with two colors red and blue, there exists a red $ K_{k}$ or a blue $ K_{\ell }$ .
-Ramsey&#39;s Theorem (graph, multicolor) Let $ r,k_{1},k_{2},\ldots ,k_{r}$ be positive integers. Then there exists an integer $ R(r;k_{1},k_{2},\ldots ,k_{r})$ satisfying: For any $ r$ -coloring of a complete graph of $ n\geq R(r;k_{1},k_{2},\ldots ,k_{r})$ vertices, there exists a monochromatic $ k_{i}$-clique with the $ i$ th color for some $ i\in {1,2,\ldots ,r}$.</description>
-    </item>
-    
-    <item>
-      <title>半导体存储器</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/</link>
-      <pubDate>Sat, 04 Jan 2020 19:26:30 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8/</guid>
-      <description>半导体存储器是一种能大量存储二值信息的半导体器件 半导体存储器： RAM(Random-Access Memory)：在运行状态可以随时进行读/写操作，必须有电源供应才能保存，掉</description>
-    </item>
-    
-    <item>
-      <title>Matching Theroy</title>
-      <link>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/</link>
-      <pubDate>Fri, 03 Jan 2020 20:13:54 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/matching-theroy/</guid>
-      <description>Matching theroy Systems of Distinct Representatives (SDR) A system of distinct representatives (SDR) (also called a transversal) for a sequence of (not necessarily distinct) sets $ S_{1},S_{2},\ldots ,S_{m}$ is a sequence of distinct elements $ x_{1},x_{2},\ldots ,x_{m}$ such that $ x_{i}\in S_{i}$ for all $i=1,2,\ldots ,m$. 就是指每个集合中找到一个代表的元素，这些元素各不</description>
-    </item>
-    
-    <item>
-      <title>微电子学的新发展</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%AD%A6%E7%9A%84%E6%96%B0%E5%8F%91%E5%B1%95/</link>
-      <pubDate>Sat, 04 Jan 2020 19:26:43 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E5%BE%AE%E7%94%B5%E5%AD%90%E5%AD%A6%E7%9A%84%E6%96%B0%E5%8F%91%E5%B1%95/</guid>
-      <description>微电子学的新发展 生物探测芯片 神经网络计算（人工智能） 忆阻器 超高频电路 石墨烯 超低功耗逻辑/存储 量子隧穿晶体管 自旋电子学晶体管 量子计算 自旋电子学</description>
-    </item>
-    
-    <item>
-      <title>Now</title>
-      <link>http://shelah-kuang.github.io/blog/now/</link>
-      <pubDate>Thu, 02 Jan 2020 15:06:37 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/blog/now/</guid>
-      <description>正在迁移中，之后就好</description>
-    </item>
-    
-    <item>
-      <title>思考题与作业题</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/</guid>
-      <description>思考题与作业题 出于考虑，我们删掉了此部分</description>
-    </item>
-    
-    <item>
-      <title>样卷整理</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/</link>
-      <pubDate>Wed, 01 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/</guid>
-      <description>样卷复习法 出于考虑，我们删掉了此部分</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>http://shelah-kuang.github.io/about/</link>
-      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/about/</guid>
-      <description>当我痛苦地站在你的面前 你不能说我一无所有 你不能说我两手空空。 博客迁移中，稍后再补</description>
-    </item>
-    
-    <item>
-      <title>FAT与ext2</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/fat%E4%B8%8Eext2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/fat%E4%B8%8Eext2/</guid>
-      <description>本blog基本搬运jyy的讲义和slides FAT FAT文件系统的基本思想是使用链表管理所有的数据块。FAT文件系统把若干个连续的扇区(sect</description>
-    </item>
-    
-    <item>
-      <title>IO设备与驱动</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/io%E8%AE%BE%E5%A4%87%E4%B8%8E%E9%A9%B1%E5%8A%A8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/io%E8%AE%BE%E5%A4%87%E4%B8%8E%E9%A9%B1%E5%8A%A8/</guid>
-      <description>System Architecture A Canonical device 硬件接口 + 内部结构 A Canonical protocol 如上图，一个I/O设备的寄存器分为三类：状态寄存器、控制寄存器、数据寄存器。 一种典型的协议如下： 对于第一步</description>
-    </item>
-    
-    <item>
-      <title>Search Results</title>
-      <link>http://shelah-kuang.github.io/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
-    </item>
-    
-    <item>
-      <title>崩溃恢复与日志</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%B4%A9%E6%BA%83%E6%81%A2%E5%A4%8D%E4%B8%8E%E6%97%A5%E5%BF%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%B4%A9%E6%BA%83%E6%81%A2%E5%A4%8D%E4%B8%8E%E6%97%A5%E5%BF%97/</guid>
-      <description>FSCK(The File System Checker) 检查的对象： superblock: making sure the file system size is greater than the number of blocks that have been allocated free blocks: 检查inode指向的block和inode本身的状态，确认和bitmap一致，如</description>
-    </item>
-    
-    <item>
-      <title>平面图与图着色</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%8E%E5%9B%BE%E7%9D%80%E8%89%B2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%8E%E5%9B%BE%E7%9D%80%E8%89%B2/</guid>
-      <description>CZ 9.1 平面图 若G能够花在一个平面上使得任何两条边都不交叉，称G为一个平面图(planar graph)，若G已经被画在了一个平面上，且任意两条边</description>
-    </item>
-    
-    <item>
-      <title>强化学习-介绍</title>
-      <link>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A01/</guid>
-      <description>对应教材：Sutton &amp;amp; Barto&#39;s book Reinforcement Learning: An Introduction (2nd Edition) Chap1 Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numerical reward signal The history is the sequence of observations, actions, rewards $$Ht = O_1, R_1, A_1, &amp;hellip;, A</description>
-    </item>
-    
-    <item>
-      <title>持久数据的可靠性</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%8C%81%E4%B9%85%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%8C%81%E4%B9%85%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/</guid>
-      <description>Redundant Array of Inexpensive Disks(RAID): 独立磁盘冗余阵列，通常简称为磁盘阵列 评价维度 capacity：given a set of N disks each with B blocks, how much useful capacity is available to clients of the RAID reliabili</description>
-    </item>
-    
-    <item>
-      <title>数论基础及数论算法</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80%E5%8F%8A%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80%E5%8F%8A%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95/</guid>
-      <description>一些基本定理 除法定理 ： 对于任何整数a与任何正整数n，存在唯一整数q和r，满足$0 \leq r &amp;lt; n$, 且 $a = qn +r$ $gcd(a,b) = ar+bs$ 如果任意整数a，b都不为0，那么$g</description>
-    </item>
-    
-    <item>
-      <title>文件系统</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</guid>
-      <description>基本概念 每一个file都有一个low-level name， 一般我们指inode number, directory：存储a list of pairs (user-readable name, low-level name) UNIX/Linux</description>
-    </item>
-    
-    <item>
-      <title>矩阵计算</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97/</guid>
-      <description>这一章 毫无打字的想法 最讨厌打公式了的说(╯°Д°)╯︵┻━┻ 28.1 求解线性方程组 对于线性方程组，设$A=(a_{ij}),x=(x_i),b=(</description>
-    </item>
-    
-    <item>
-      <title>终端与shell</title>
-      <link>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%BB%88%E7%AB%AF%E4%B8%8Eshell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%BB%88%E7%AB%AF%E4%B8%8Eshell/</guid>
-      <description>参考阅读 终端默认是“cooked mode”，即自带一个“行编辑器”，只有按下回车键，read系统调用才返回 shell执行程序 int pid = fork(); if (pid == 0)</description>
-    </item>
-    
-    <item>
-      <title>群论基础</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E7%BE%A4%E8%AE%BA%E5%9F%BA%E7%A1%80/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E7%BE%A4%E8%AE%BA%E5%9F%BA%E7%A1%80/</guid>
-      <description>参考书籍： 群论-李新征讲义 Thomas Judson: Abstract Algebra - Theory and Applications, 2018. 群 群：设𝐆是一些元素（操作）的集合，记为𝐆 = {⋯，g，⋯}，在𝐆中定义了乘运算，如果𝐆中元素对这</description>
-    </item>
-    
-    <item>
-      <title>近似算法</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95/</guid>
-      <description>基本概念 $$ε_A(x)=\dfrac{|cost(A(x))−OptU(x)∣}{Opt_U(x)}$$ $$R_A(x)=max{OptU(x)/cost(A(x)),costA(x)/OptU(x)}.$$ NPO问题分类 NPO(I): NPO中所有存在</description>
-    </item>
-    
-    <item>
-      <title>随机算法</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</guid>
-      <description>基本概念 $RandomA(x):$ 对于所有A在x上的随机计算中使用的random bits的最大数量 $Prob_{A,x}(C)$: 某一次AA对输入xx的计算CC, 由相应的随机序列的概率决定 $Prob(A(x)=y)$: A 对</description>
     </item>
     
   </channel>

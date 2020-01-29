@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
 
 <head>
 	<meta name="generator" content="Hugo 0.62.0" />
@@ -14,7 +14,7 @@
 <meta itemprop="description" content="数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S">
 <meta itemprop="datePublished" content="2020-01-01T00:13:14&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-01T00:13:14&#43;08:00" />
-<meta itemprop="wordCount" content="2714">
+<meta itemprop="wordCount" content="2704">
 
 
 
@@ -22,7 +22,7 @@
 <meta property="og:title" content="数据库安全性与完整性" />
 <meta property="og:description" content="数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/" />
+<meta property="og:url" content="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/" />
 <meta property="article:published_time" content="2020-01-01T00:13:14+08:00" />
 <meta property="article:modified_time" content="2020-01-01T00:13:14+08:00" />
 
@@ -30,13 +30,13 @@
 <meta name="twitter:title" content="数据库安全性与完整性"/>
 <meta name="twitter:description" content="数据库安全性与完整性 4.1 数据库的安全性保护 数据库安全的基本概念与内容：主体，客体，身份标识与鉴别，自主访问控制，审计 SQL对数据库安全的支持 S"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tristonk.com/images/favicon.ico">
 <title>数据库安全性与完整性</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="http://tristonk.com/css/bootstrap.materia.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+<link rel="stylesheet" href="http://tristonk.com/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
 </head>
 
 <body style="overflow-x: unset;">
@@ -46,12 +46,12 @@
 				<div class="d-flex mt-3 border-bottom">
         <span class="navbar-brand w-100" style="display: grid;">
             <small>
-                <a href="/" class="text-black-50">
+                <a href="http://tristonk.com/" class="text-black-50">
                     <i class="iconfont icon-back-arrow-"></i>
                 </a>
                 TristonK's
             </small>
-            <a class="text-dark" href="/notes/">
+            <a class="text-dark" href="http://tristonk.com/notes/">
                 Documents
             </a>
         </span>
@@ -66,7 +66,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
                 
@@ -81,7 +81,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             
             
                 
@@ -96,7 +96,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
                 
@@ -111,7 +111,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
             
                 
@@ -126,7 +126,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
                 
@@ -141,7 +141,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
             
             
                 
@@ -156,7 +156,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
                 
@@ -171,7 +171,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
             
                 
@@ -186,7 +186,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
                 
@@ -201,7 +201,7 @@
     
     
     <div class="bd-toc-item active bg-light">
-        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             <i class="iconfont icon-back-arrow-reverse"></i>
             数据库概论
         </a>
@@ -209,31 +209,31 @@
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/">数据库系统概述</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/">数据库系统概述</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/">数据模型</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-model/">数据模型</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/">关系数据库系统</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/relational-database-system/">关系数据库系统</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/">SQL语言</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sql/">SQL语言</a>
             </li>
             
             
             
             <li class="active">
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/">
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/security-and-integrity/">
                     <i class="fad fa-chevron-right mr-1"></i>
                     数据库安全性与完整性
                 </a>
@@ -242,37 +242,37 @@
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/">事务管理、并发控制与故障恢复</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/transaction/">事务管理、并发控制与故障恢复</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/data-exchange/">游标管理与索引</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/">关系数据库规范化理论</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/normal-form/">关系数据库规范化理论</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/db-design/">数据库设计</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/">思考题与作业题</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/homework/">思考题与作业题</a>
             </li>
             
             
             
             <li>
-                <a href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/">样卷整理</a>
+                <a href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/sample-exam/">样卷整理</a>
             </li>
             
             
@@ -282,7 +282,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
                 
@@ -297,7 +297,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
             
                 
@@ -342,7 +342,11 @@
 							
 							
 							
-							<h1 id="heading">数据库安全性与完整性</h1>
+							
+							
+							
+							
+							<h1 id="heading">数据库安全性与完整性<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h1>
 <blockquote>
 <p>4.1 数据库的安全性保护</p>
 <ul>
@@ -365,7 +369,7 @@
 </ul>
 </blockquote>
 <p>数据库的保护：在数据库的管理系统内部设置一些必要的软件以达到数据保护的目的</p>
-<h2 id="heading-1">数据库的安全性保护</h2>
+<h2 id="heading-1">数据库的安全性保护<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>数据库的安全要求用户：通过规定的访问途径，按照规定的访问规则</p>
 <p>可信计算基TCB：为实现数据库安全所采用的所有实施策略与机制的集合</p>
 <p><strong>主体</strong>：数据库中数据的访问者</p>
@@ -377,25 +381,25 @@
 <p>强制访问控制：主体无权将任何权限授予他人</p>
 <p><strong>审计</strong>：跟踪用户对数据的访问操作，如访问时间/访问内容/用户名/终端名/操作类型/操作结果，并可以根据审计结果给出报警信息</p>
 <p>这个安全策略需要一个网络中的实体完成，即访问监控器，在TCB中实现</p>
-<h3 id="heading-2">安全标准</h3>
+<h3 id="heading-2">安全标准<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>用户自主保护级：自主访问控制、身份鉴别、数据完整性</p>
 <p>系统审计保护级：自主访问控制、身份鉴别、客体重用、审计、数据完整性</p>
 <p>安全标记保护级：自主访问控制、强制访问控制、标记、身份鉴别、客体重用、审计、数据完整性</p>
 <p>结构化保护级：自主访问控制、强制访问控制、标记、身份鉴别、客体重用、审计、数据完整性、隐蔽信道分析、可信路径</p>
 <p>访问验证保护级：自主访问控制、强制访问控制、标记、身份鉴别、客体重用、审计、数据完整性、隐蔽信道分析、可信路径、可信恢复</p>
-<h3 id="sql">SQL对安全的支持</h3>
+<h3 id="sql">SQL对安全的支持<a href="#sql" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>自主访问控制通过(用户，操作对象，操作权限)这样的三元组来定义用户对数据的访问权限</p>
 <p>授权范围：SELECT权、INSERT权、DELETE权、UPDATE权、REFERENCE权、EXECUTE权、USAGE权</p>
 <p>授权：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#080;font-weight:bold">Grant</span>  <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">权</span><span style="color:#f00;background-color:#faa">限</span><span style="color:#333">&gt;</span>  <span style="color:#080;font-weight:bold">on</span>  <span style="color:#f00;background-color:#faa">表</span><span style="color:#f00;background-color:#faa">名</span>[(<span style="color:#f00;background-color:#faa">列</span><span style="color:#f00;background-color:#faa">名</span>)]  <span style="color:#080;font-weight:bold">to</span>  <span style="color:#f00;background-color:#faa">用</span><span style="color:#f00;background-color:#faa">户</span> <span style="color:#080;font-weight:bold">With</span>  <span style="color:#080;font-weight:bold">grant</span>  <span style="color:#080;font-weight:bold">option</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#204a87;font-weight:bold">Grant</span>  <span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">权</span><span style="color:#a40000">限</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>  <span style="color:#204a87;font-weight:bold">on</span>  <span style="color:#a40000">表</span><span style="color:#a40000">名</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">列</span><span style="color:#a40000">名</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">]</span>  <span style="color:#204a87;font-weight:bold">to</span>  <span style="color:#a40000">用</span><span style="color:#a40000">户</span> <span style="color:#204a87;font-weight:bold">With</span>  <span style="color:#204a87;font-weight:bold">grant</span>  <span style="color:#204a87;font-weight:bold">option</span>
 
-<span style="color:#080;font-weight:bold">GRANT</span> <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">权</span><span style="color:#f00;background-color:#faa">限</span><span style="color:#333">&gt;</span> <span style="color:#080;font-weight:bold">ON</span> <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">数</span><span style="color:#f00;background-color:#faa">据</span><span style="color:#f00;background-color:#faa">对</span><span style="color:#f00;background-color:#faa">象</span><span style="color:#333">&gt;</span> <span style="color:#080;font-weight:bold">FROM</span> <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">数</span><span style="color:#f00;background-color:#faa">据</span><span style="color:#f00;background-color:#faa">库</span><span style="color:#f00;background-color:#faa">用</span><span style="color:#f00;background-color:#faa">户</span><span style="color:#333">&gt;</span>
+<span style="color:#204a87;font-weight:bold">GRANT</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">权</span><span style="color:#a40000">限</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#204a87;font-weight:bold">ON</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">数</span><span style="color:#a40000">据</span><span style="color:#a40000">对</span><span style="color:#a40000">象</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#204a87;font-weight:bold">FROM</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">数</span><span style="color:#a40000">据</span><span style="color:#a40000">库</span><span style="color:#a40000">用</span><span style="color:#a40000">户</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
 </code></pre></div><p>回收语句：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#080;font-weight:bold">REVOKE</span>  <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">操</span><span style="color:#f00;background-color:#faa">作</span><span style="color:#f00;background-color:#faa">权</span><span style="color:#f00;background-color:#faa">限</span><span style="color:#f00;background-color:#faa">列</span><span style="color:#f00;background-color:#faa">表</span><span style="color:#333">&gt;</span>  <span style="color:#080;font-weight:bold">ON</span>  <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">操</span><span style="color:#f00;background-color:#faa">作</span><span style="color:#f00;background-color:#faa">对</span><span style="color:#f00;background-color:#faa">象</span><span style="color:#333">&gt;</span>
-<span style="color:#080;font-weight:bold">FROM</span>  <span style="color:#333">&lt;</span><span style="color:#f00;background-color:#faa">用</span><span style="color:#f00;background-color:#faa">户</span><span style="color:#f00;background-color:#faa">名</span><span style="color:#f00;background-color:#faa">列</span><span style="color:#f00;background-color:#faa">表</span><span style="color:#333">&gt;</span>  [<span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">CASCADE</span>]
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#204a87;font-weight:bold">REVOKE</span>  <span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">操</span><span style="color:#a40000">作</span><span style="color:#a40000">权</span><span style="color:#a40000">限</span><span style="color:#a40000">列</span><span style="color:#a40000">表</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>  <span style="color:#204a87;font-weight:bold">ON</span>  <span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">操</span><span style="color:#a40000">作</span><span style="color:#a40000">对</span><span style="color:#a40000">象</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+<span style="color:#204a87;font-weight:bold">FROM</span>  <span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">用</span><span style="color:#a40000">户</span><span style="color:#a40000">名</span><span style="color:#a40000">列</span><span style="color:#a40000">表</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>  <span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">RESTRICT</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">CASCADE</span><span style="color:#000;font-weight:bold">]</span>
 </code></pre></div><p>CASCADE：连锁回收</p>
 <p>RESTRICT：在不存在连锁回收问题时才能回收权限，否则拒绝回收</p>
-<h2 id="heading-3">数据库的完整性保护</h2>
+<h2 id="heading-3">数据库的完整性保护<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 <p>完整性包括了正确性(数据有效有意义)与一致性（多用户访问时保证对数据的更新与访问保持一致）</p>
 <p>数据库完整性保护：</p>
 <ul>
@@ -448,33 +452,33 @@
 <li>表级（元组级）的数据约束定义(见下)</li>
 </ul>
 <p>属性的约束定义：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f00;background-color:#faa">{</span>    <span style="color:#080;font-weight:bold">NOT</span> <span style="color:#080;font-weight:bold">NULL</span>   <span style="color:#333">|</span>
-     [ <span style="color:#080;font-weight:bold">CONSTRAINT</span> <span style="color:#080;font-weight:bold">constraint</span><span style="color:#f00;background-color:#faa">\</span>_name ]
-          <span style="color:#080;font-weight:bold">UNIQUE</span>
-        <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">PRIMARY</span> <span style="color:#080;font-weight:bold">KEY</span>
-        <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">CHECK</span> ( <span style="color:#080;font-weight:bold">search</span><span style="color:#f00;background-color:#faa">\</span>_condition )
-        <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">REFERENCES</span> <span style="color:#080;font-weight:bold">table</span><span style="color:#f00;background-color:#faa">\</span>_name [ ( <span style="color:#080;font-weight:bold">column</span><span style="color:#f00;background-color:#faa">\</span>_name ) ]
-            [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">DELETE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]
-            [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">UPDATE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ] <span style="color:#f00;background-color:#faa">}</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#a40000">{</span>    <span style="color:#204a87;font-weight:bold">NOT</span> <span style="color:#204a87;font-weight:bold">NULL</span>   <span style="color:#ce5c00;font-weight:bold">|</span>
+     <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">CONSTRAINT</span> <span style="color:#204a87;font-weight:bold">constraint</span><span style="color:#a40000">\</span><span style="color:#000">_name</span> <span style="color:#000;font-weight:bold">]</span>
+          <span style="color:#204a87;font-weight:bold">UNIQUE</span>
+        <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">PRIMARY</span> <span style="color:#204a87;font-weight:bold">KEY</span>
+        <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">CHECK</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#204a87;font-weight:bold">search</span><span style="color:#a40000">\</span><span style="color:#000">_condition</span> <span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">REFERENCES</span> <span style="color:#204a87;font-weight:bold">table</span><span style="color:#a40000">\</span><span style="color:#000">_name</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#204a87;font-weight:bold">column</span><span style="color:#a40000">\</span><span style="color:#000">_name</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">]</span>
+            <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">ON</span> <span style="color:#204a87;font-weight:bold">DELETE</span> <span style="color:#204a87;font-weight:bold">CASCADE</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">RESTRICT</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">SET</span> <span style="color:#204a87;font-weight:bold">NULL</span> <span style="color:#000;font-weight:bold">]</span>
+            <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">ON</span> <span style="color:#204a87;font-weight:bold">UPDATE</span> <span style="color:#204a87;font-weight:bold">CASCADE</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">RESTRICT</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">SET</span> <span style="color:#204a87;font-weight:bold">NULL</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#a40000">}</span>
 </code></pre></div><p>多个属性取值约束定义（表级约束定义），需要另起一行</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">[ <span style="color:#080;font-weight:bold">CONSTRAINT</span> <span style="color:#080;font-weight:bold">constraint</span><span style="color:#f00;background-color:#faa">\</span>_name ]
-   <span style="color:#f00;background-color:#faa">{</span>   <span style="color:#080;font-weight:bold">UNIQUE</span> ( colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> )
-    <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">PRIMARY</span> <span style="color:#080;font-weight:bold">KEY</span> ( colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> )
-    <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">CHECK</span> ( <span style="color:#080;font-weight:bold">search</span><span style="color:#f00;background-color:#faa">\</span>_condition )
-    <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">FOREIGN</span> <span style="color:#080;font-weight:bold">KEY</span> ( colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> )
-        <span style="color:#080;font-weight:bold">REFERENCES</span> <span style="color:#080;font-weight:bold">table</span><span style="color:#f00;background-color:#faa">\</span>_name [ ( colname <span style="color:#f00;background-color:#faa">{</span> ,colname... <span style="color:#f00;background-color:#faa">}</span> ) ]
-            [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">DELETE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]
-            [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">UPDATE</span> <span style="color:#080;font-weight:bold">CASCADE</span><span style="color:#333">|</span><span style="color:#080;font-weight:bold">RESTRICT</span><span style="color:#333">|</span><span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]   <span style="color:#f00;background-color:#faa">}</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">CONSTRAINT</span> <span style="color:#204a87;font-weight:bold">constraint</span><span style="color:#a40000">\</span><span style="color:#000">_name</span> <span style="color:#000;font-weight:bold">]</span>
+   <span style="color:#a40000">{</span>   <span style="color:#204a87;font-weight:bold">UNIQUE</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">colname</span> <span style="color:#a40000">{</span> <span style="color:#000;font-weight:bold">,</span> <span style="color:#000">colname</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">PRIMARY</span> <span style="color:#204a87;font-weight:bold">KEY</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">colname</span> <span style="color:#a40000">{</span> <span style="color:#000;font-weight:bold">,</span> <span style="color:#000">colname</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">CHECK</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#204a87;font-weight:bold">search</span><span style="color:#a40000">\</span><span style="color:#000">_condition</span> <span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">FOREIGN</span> <span style="color:#204a87;font-weight:bold">KEY</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">colname</span> <span style="color:#a40000">{</span> <span style="color:#000;font-weight:bold">,</span> <span style="color:#000">colname</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#204a87;font-weight:bold">REFERENCES</span> <span style="color:#204a87;font-weight:bold">table</span><span style="color:#a40000">\</span><span style="color:#000">_name</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">colname</span> <span style="color:#a40000">{</span> <span style="color:#000;font-weight:bold">,</span><span style="color:#000">colname</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">]</span>
+            <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">ON</span> <span style="color:#204a87;font-weight:bold">DELETE</span> <span style="color:#204a87;font-weight:bold">CASCADE</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">RESTRICT</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">SET</span> <span style="color:#204a87;font-weight:bold">NULL</span> <span style="color:#000;font-weight:bold">]</span>
+            <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">ON</span> <span style="color:#204a87;font-weight:bold">UPDATE</span> <span style="color:#204a87;font-weight:bold">CASCADE</span><span style="color:#ce5c00;font-weight:bold">|</span><span style="color:#204a87;font-weight:bold">RESTRICT</span><span style="color:#ce5c00;font-weight:bold">|</span><span style="color:#204a87;font-weight:bold">SET</span> <span style="color:#204a87;font-weight:bold">NULL</span> <span style="color:#000;font-weight:bold">]</span>   <span style="color:#a40000">}</span>
 </code></pre></div><p>UNIQUE可以取空值</p>
 <p>候选键：UNIQUE + NOT NULL</p>
 <p>对于外键REFERENCES KEY后面会加上取值约束与保证一致性的保证措施</p>
 <p>Forengen Key约束：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#080;font-weight:bold">FOREIGN</span> <span style="color:#080;font-weight:bold">KEY</span> ( colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> )
-  <span style="color:#080;font-weight:bold">REFERENCES</span> <span style="color:#080;font-weight:bold">table</span><span style="color:#f00;background-color:#faa">\</span>_name [ ( colname <span style="color:#f00;background-color:#faa">{</span> ,colname... <span style="color:#f00;background-color:#faa">}</span> ) ]
-    [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">DELETE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]
-    [ <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">UPDATE</span> <span style="color:#080;font-weight:bold">CASCADE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">RESTRICT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">SET</span> <span style="color:#080;font-weight:bold">NULL</span> ]   <span style="color:#f00;background-color:#faa">}</span>
-</code></pre></div><p>Foreign key &hellip;&hellip; References &hellip;&hellip;:定义主外键的引用关系。当对引用表中的外键进行赋值时，需要检查外键值的正确性。</p>
-<p>on delete &hellip;&hellip; / on update &hellip;&hellip;: 当在被引用表中删除元组或修改主键值时，需要维护引用表中外键值的正确性，具体方式如下：</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#204a87;font-weight:bold">FOREIGN</span> <span style="color:#204a87;font-weight:bold">KEY</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">colname</span> <span style="color:#a40000">{</span> <span style="color:#000;font-weight:bold">,</span> <span style="color:#000">colname</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#204a87;font-weight:bold">REFERENCES</span> <span style="color:#204a87;font-weight:bold">table</span><span style="color:#a40000">\</span><span style="color:#000">_name</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">colname</span> <span style="color:#a40000">{</span> <span style="color:#000;font-weight:bold">,</span><span style="color:#000">colname</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">]</span>
+    <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">ON</span> <span style="color:#204a87;font-weight:bold">DELETE</span> <span style="color:#204a87;font-weight:bold">CASCADE</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">RESTRICT</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">SET</span> <span style="color:#204a87;font-weight:bold">NULL</span> <span style="color:#000;font-weight:bold">]</span>
+    <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">ON</span> <span style="color:#204a87;font-weight:bold">UPDATE</span> <span style="color:#204a87;font-weight:bold">CASCADE</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">RESTRICT</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">SET</span> <span style="color:#204a87;font-weight:bold">NULL</span> <span style="color:#000;font-weight:bold">]</span>   <span style="color:#a40000">}</span>
+</code></pre></div><p>Foreign key ...... References ......:定义主外键的引用关系。当对引用表中的外键进行赋值时，需要检查外键值的正确性。</p>
+<p>on delete ...... / on update ......: 当在被引用表中删除元组或修改主键值时，需要维护引用表中外键值的正确性，具体方式如下：</p>
 <ul>
 <li>Cascade：同步做连带删除/更新</li>
 <li>Restrict：如果在引用表中存在与被删除或修改的主键相关的元组，则拒绝本次对被引用表的delete/update操作 (缺省的维护模式)</li>
@@ -491,34 +495,34 @@
 <li>触发过程：DBMS自动调用并执行</li>
 </ul>
 <p>创建命令：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#080;font-weight:bold">CREATE</span> <span style="color:#080;font-weight:bold">TRIGGER</span> <span style="color:#080;font-weight:bold">trigger</span><span style="color:#f00;background-color:#faa">\</span>_name <span style="color:#f00;background-color:#faa">{</span> <span style="color:#080;font-weight:bold">BEFORE</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">AFTER</span> <span style="color:#f00;background-color:#faa">}</span>
-<span style="color:#f00;background-color:#faa">{</span> <span style="color:#080;font-weight:bold">INSERT</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">DELETE</span>
-  <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">UPDATE</span> [ <span style="color:#080;font-weight:bold">OF</span> colname <span style="color:#f00;background-color:#faa">{</span> , colname ... <span style="color:#f00;background-color:#faa">}</span> ] <span style="color:#f00;background-color:#faa">}</span>
-    <span style="color:#080;font-weight:bold">ON</span> <span style="color:#080;font-weight:bold">table</span><span style="color:#f00;background-color:#faa">\</span>_name 
-[ <span style="color:#080;font-weight:bold">REFERENCING</span> corr<span style="color:#f00;background-color:#faa">\</span>_name<span style="color:#f00;background-color:#faa">\</span>_def <span style="color:#f00;background-color:#faa">{</span> , ...... <span style="color:#f00;background-color:#faa">}</span> ] <span style="color:#888">/*</span><span style="color:#888">给新</span><span style="color:#888">/</span><span style="color:#888">之前的命名</span><span style="color:#888">*/</span>
-<span style="color:#888">/*</span><span style="color:#888">执行事件</span><span style="color:#888">*/</span>
-[ <span style="color:#080;font-weight:bold">FOR</span> <span style="color:#080;font-weight:bold">EACH</span> <span style="color:#080;font-weight:bold">ROW</span> <span style="color:#333">|</span> <span style="color:#080;font-weight:bold">FOR</span> <span style="color:#080;font-weight:bold">EACH</span> <span style="color:#080;font-weight:bold">STATEMENT</span> ]
-[ <span style="color:#080;font-weight:bold">WHEN</span> ( <span style="color:#080;font-weight:bold">search</span><span style="color:#f00;background-color:#faa">\</span>_condition ) ]
-<span style="color:#f00;background-color:#faa">{</span> <span style="color:#080;font-weight:bold">statement</span>
-<span style="color:#333">|</span> <span style="color:#080;font-weight:bold">BEGIN</span> <span style="color:#080;font-weight:bold">ATOMIC</span> <span style="color:#080;font-weight:bold">statement</span>; <span style="color:#f00;background-color:#faa">{</span> <span style="color:#080;font-weight:bold">statement</span>; ... <span style="color:#f00;background-color:#faa">}</span> <span style="color:#080;font-weight:bold">END</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#204a87;font-weight:bold">CREATE</span> <span style="color:#204a87;font-weight:bold">TRIGGER</span> <span style="color:#204a87;font-weight:bold">trigger</span><span style="color:#a40000">\</span><span style="color:#000">_name</span> <span style="color:#a40000">{</span> <span style="color:#204a87;font-weight:bold">BEFORE</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">AFTER</span> <span style="color:#a40000">}</span>
+<span style="color:#a40000">{</span> <span style="color:#204a87;font-weight:bold">INSERT</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">DELETE</span>
+  <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">UPDATE</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">OF</span> <span style="color:#000">colname</span> <span style="color:#a40000">{</span> <span style="color:#000;font-weight:bold">,</span> <span style="color:#000">colname</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#a40000">}</span>
+    <span style="color:#204a87;font-weight:bold">ON</span> <span style="color:#204a87;font-weight:bold">table</span><span style="color:#a40000">\</span><span style="color:#000">_name</span> 
+<span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">REFERENCING</span> <span style="color:#000">corr</span><span style="color:#a40000">\</span><span style="color:#000">_name</span><span style="color:#a40000">\</span><span style="color:#000">_def</span> <span style="color:#a40000">{</span> <span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#8f5902;font-style:italic">/*</span><span style="color:#8f5902;font-style:italic">给新</span><span style="color:#8f5902;font-style:italic">/</span><span style="color:#8f5902;font-style:italic">之前的命名</span><span style="color:#8f5902;font-style:italic">*/</span>
+<span style="color:#8f5902;font-style:italic">/*</span><span style="color:#8f5902;font-style:italic">执行事件</span><span style="color:#8f5902;font-style:italic">*/</span>
+<span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">FOR</span> <span style="color:#204a87;font-weight:bold">EACH</span> <span style="color:#204a87;font-weight:bold">ROW</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">FOR</span> <span style="color:#204a87;font-weight:bold">EACH</span> <span style="color:#204a87;font-weight:bold">STATEMENT</span> <span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">WHEN</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#204a87;font-weight:bold">search</span><span style="color:#a40000">\</span><span style="color:#000">_condition</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">]</span>
+<span style="color:#a40000">{</span> <span style="color:#204a87;font-weight:bold">statement</span>
+<span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">BEGIN</span> <span style="color:#204a87;font-weight:bold">ATOMIC</span> <span style="color:#204a87;font-weight:bold">statement</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#a40000">{</span> <span style="color:#204a87;font-weight:bold">statement</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#a40000">}</span> <span style="color:#204a87;font-weight:bold">END</span>
 </code></pre></div><p>命名方式：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f00;background-color:#faa">{</span>       <span style="color:#080;font-weight:bold">OLD</span> [ <span style="color:#080;font-weight:bold">ROW</span> ] [ <span style="color:#080;font-weight:bold">AS</span> ] <span style="color:#080;font-weight:bold">old</span><span style="color:#f00;background-color:#faa">\</span>_row<span style="color:#f00;background-color:#faa">\</span>_corr<span style="color:#f00;background-color:#faa">\</span>_name
-<span style="color:#333">|</span> <span style="color:#080;font-weight:bold">NEW</span> [ <span style="color:#080;font-weight:bold">ROW</span> ] [ <span style="color:#080;font-weight:bold">AS</span> ] <span style="color:#080;font-weight:bold">new</span><span style="color:#f00;background-color:#faa">\</span>_row<span style="color:#f00;background-color:#faa">\</span>_corr<span style="color:#f00;background-color:#faa">\</span>_name
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#a40000">{</span>       <span style="color:#204a87;font-weight:bold">OLD</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">ROW</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">AS</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#204a87;font-weight:bold">old</span><span style="color:#a40000">\</span><span style="color:#000">_row</span><span style="color:#a40000">\</span><span style="color:#000">_corr</span><span style="color:#a40000">\</span><span style="color:#000">_name</span>
+<span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">NEW</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">ROW</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">AS</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#204a87;font-weight:bold">new</span><span style="color:#a40000">\</span><span style="color:#000">_row</span><span style="color:#a40000">\</span><span style="color:#000">_corr</span><span style="color:#a40000">\</span><span style="color:#000">_name</span>
 
-<span style="color:#333">|</span> <span style="color:#080;font-weight:bold">OLD</span> <span style="color:#080;font-weight:bold">TABLE</span> [ <span style="color:#080;font-weight:bold">AS</span> ] <span style="color:#080;font-weight:bold">old</span><span style="color:#f00;background-color:#faa">\</span>_table<span style="color:#f00;background-color:#faa">\</span>_corr<span style="color:#f00;background-color:#faa">\</span>_name
-<span style="color:#333">|</span> <span style="color:#080;font-weight:bold">NEW</span> <span style="color:#080;font-weight:bold">TABLE</span> [ <span style="color:#080;font-weight:bold">AS</span> ] <span style="color:#080;font-weight:bold">new</span><span style="color:#f00;background-color:#faa">\</span>_table<span style="color:#f00;background-color:#faa">\</span>_corr<span style="color:#f00;background-color:#faa">\</span>_name    <span style="color:#f00;background-color:#faa">}</span>
+<span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">OLD</span> <span style="color:#204a87;font-weight:bold">TABLE</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">AS</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#204a87;font-weight:bold">old</span><span style="color:#a40000">\</span><span style="color:#000">_table</span><span style="color:#a40000">\</span><span style="color:#000">_corr</span><span style="color:#a40000">\</span><span style="color:#000">_name</span>
+<span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#204a87;font-weight:bold">NEW</span> <span style="color:#204a87;font-weight:bold">TABLE</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#204a87;font-weight:bold">AS</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#204a87;font-weight:bold">new</span><span style="color:#a40000">\</span><span style="color:#000">_table</span><span style="color:#a40000">\</span><span style="color:#000">_corr</span><span style="color:#a40000">\</span><span style="color:#000">_name</span>    <span style="color:#a40000">}</span>
 </code></pre></div><p>删除触发器： <code>DROP TRIGGER trigger\_name</code></p>
 <p>举例：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#888">/*</span><span style="color:#888">删除一个客户元组时，需要将该客户所有订单上的cid置为空值(set  null)</span><span style="color:#888">*/</span>
-<span style="color:#080;font-weight:bold">create</span>  <span style="color:#080;font-weight:bold">trigger</span>  <span style="color:#080;font-weight:bold">foreign</span><span style="color:#f00;background-color:#faa">\</span>_cid  
-<span style="color:#080;font-weight:bold">after</span>  <span style="color:#080;font-weight:bold">delete</span>  <span style="color:#080;font-weight:bold">on</span>  customers
-<span style="color:#080;font-weight:bold">referencing</span>  <span style="color:#080;font-weight:bold">old</span>  <span style="color:#080;font-weight:bold">as</span>  <span style="color:#080;font-weight:bold">old</span><span style="color:#f00;background-color:#faa">\</span>_custom
-<span style="color:#080;font-weight:bold">for</span>  <span style="color:#080;font-weight:bold">each</span>  <span style="color:#080;font-weight:bold">row</span>
-<span style="color:#080;font-weight:bold">begin</span>
-<span style="color:#080;font-weight:bold">update</span>  orders
-<span style="color:#080;font-weight:bold">set</span>  cid <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">null</span>
-<span style="color:#080;font-weight:bold">where</span>  cid <span style="color:#333">=</span> :<span style="color:#080;font-weight:bold">old</span><span style="color:#f00;background-color:#faa">\</span>_custom.cid ;
-<span style="color:#080;font-weight:bold">end</span>;
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8f5902;font-style:italic">/*</span><span style="color:#8f5902;font-style:italic">删除一个客户元组时，需要将该客户所有订单上的cid置为空值(set  null)</span><span style="color:#8f5902;font-style:italic">*/</span>
+<span style="color:#204a87;font-weight:bold">create</span>  <span style="color:#204a87;font-weight:bold">trigger</span>  <span style="color:#204a87;font-weight:bold">foreign</span><span style="color:#a40000">\</span><span style="color:#000">_cid</span>  
+<span style="color:#204a87;font-weight:bold">after</span>  <span style="color:#204a87;font-weight:bold">delete</span>  <span style="color:#204a87;font-weight:bold">on</span>  <span style="color:#000">customers</span>
+<span style="color:#204a87;font-weight:bold">referencing</span>  <span style="color:#204a87;font-weight:bold">old</span>  <span style="color:#204a87;font-weight:bold">as</span>  <span style="color:#204a87;font-weight:bold">old</span><span style="color:#a40000">\</span><span style="color:#000">_custom</span>
+<span style="color:#204a87;font-weight:bold">for</span>  <span style="color:#204a87;font-weight:bold">each</span>  <span style="color:#204a87;font-weight:bold">row</span>
+<span style="color:#204a87;font-weight:bold">begin</span>
+<span style="color:#204a87;font-weight:bold">update</span>  <span style="color:#000">orders</span>
+<span style="color:#204a87;font-weight:bold">set</span>  <span style="color:#000">cid</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">null</span>
+<span style="color:#204a87;font-weight:bold">where</span>  <span style="color:#000">cid</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">old</span><span style="color:#a40000">\</span><span style="color:#000">_custom</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cid</span> <span style="color:#000;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">end</span><span style="color:#000;font-weight:bold">;</span>
 </code></pre></div>
 						</div>
 					</main>
@@ -552,11 +556,15 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload="renderMathInElement(document.body);"></script>
 
-<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
+<script type="text/javascript" src="http://tristonk.com/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
 
 document.addEventListener("DOMContentLoaded", function () {

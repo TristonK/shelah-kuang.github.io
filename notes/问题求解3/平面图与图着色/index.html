@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
 
 <head>
 	<meta name="generator" content="Hugo 0.62.0" />
@@ -13,7 +13,7 @@
 <meta itemprop="name" content="平面图与图着色">
 <meta itemprop="description" content="CZ 9.1 平面图 若G能够花在一个平面上使得任何两条边都不交叉，称G为一个平面图(planar graph)，若G已经被画在了一个平面上，且任意两条边">
 
-<meta itemprop="wordCount" content="1755">
+<meta itemprop="wordCount" content="1744">
 
 
 
@@ -21,20 +21,20 @@
 <meta property="og:title" content="平面图与图着色" />
 <meta property="og:description" content="CZ 9.1 平面图 若G能够花在一个平面上使得任何两条边都不交叉，称G为一个平面图(planar graph)，若G已经被画在了一个平面上，且任意两条边" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%8E%E5%9B%BE%E7%9D%80%E8%89%B2/" />
+<meta property="og:url" content="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%8E%E5%9B%BE%E7%9D%80%E8%89%B2/" />
 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="平面图与图着色"/>
 <meta name="twitter:description" content="CZ 9.1 平面图 若G能够花在一个平面上使得任何两条边都不交叉，称G为一个平面图(planar graph)，若G已经被画在了一个平面上，且任意两条边"/>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tristonk.com/images/favicon.ico">
 <title>平面图与图着色</title>
-<link rel="stylesheet" href="/css/bootstrap.materia.min.css">
+<link rel="stylesheet" href="http://tristonk.com/css/bootstrap.materia.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
 
-<link rel="stylesheet" href="/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
+<link rel="stylesheet" href="http://tristonk.com/sass/main.min.8b65c41481eca5e77b1b5b1d62fdac20073e0b9bfdcba7497c50e773f61cc2cd.min.ffa84b8aebfb7bfa7bf67cadd8d153d6a4d0c616a8613d4743dca98e9db9447c.css" integity="sha256-/6hLiuv7e/p79nyt2NFT1qTQxhaoYT1HQ9ypjp25RHw=">
 </head>
 
 <body style="overflow-x: unset;">
@@ -44,12 +44,12 @@
 				<div class="d-flex mt-3 border-bottom">
         <span class="navbar-brand w-100" style="display: grid;">
             <small>
-                <a href="/" class="text-black-50">
+                <a href="http://tristonk.com/" class="text-black-50">
                     <i class="iconfont icon-back-arrow-"></i>
                 </a>
                 TristonK's
             </small>
-            <a class="text-dark" href="/notes/">
+            <a class="text-dark" href="http://tristonk.com/notes/">
                 Documents
             </a>
         </span>
@@ -64,7 +64,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
             
             
                 
@@ -79,7 +79,7 @@
     
     
     <div class="bd-toc-item active bg-light">
-        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/">
             <i class="iconfont icon-back-arrow-reverse"></i>
             问题求解（三）
         </a>
@@ -87,7 +87,7 @@
             
             
             <li class="active">
-                <a href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%8E%E5%9B%BE%E7%9D%80%E8%89%B2/">
+                <a href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%8E%E5%9B%BE%E7%9D%80%E8%89%B2/">
                     <i class="fad fa-chevron-right mr-1"></i>
                     平面图与图着色
                 </a>
@@ -96,7 +96,7 @@
             
             
             <li>
-                <a href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97/">矩阵计算</a>
+                <a href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A33/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97/">矩阵计算</a>
             </li>
             
             
@@ -106,7 +106,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/">
             
             
                 
@@ -121,7 +121,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
             
             
                 
@@ -136,7 +136,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/">
             
             
                 
@@ -151,7 +151,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/">
             
             
                 
@@ -166,7 +166,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
             
             
                 
@@ -181,7 +181,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/">
             
             
                 
@@ -196,7 +196,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
             
             
                 
@@ -211,7 +211,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/">
             
             
                 
@@ -226,7 +226,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             
             
                 
@@ -241,7 +241,7 @@
     
     
     <div class="bd-toc-item">
-        <a class="bd-toc-link" href="/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
+        <a class="bd-toc-link" href="http://tristonk.com/notes/%E4%BC%9F%E5%A4%A7%E4%BC%A0%E7%BB%9F%E7%B3%BB%E5%88%97-%E5%8D%8E%E5%A4%8F%E5%87%BA%E7%89%88%E7%A4%BE/">
             
             
                 
@@ -286,7 +286,11 @@
 							
 							
 							
-							<h3 id="cz-91-">CZ 9.1 平面图</h3>
+							
+							
+							
+							
+							<h3 id="cz-91-">CZ 9.1 平面图<a href="#cz-91-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>若G<strong>能够</strong>花在一个平面上使得任何两条边都不交叉，称G为一个<strong><code>平面图(planar graph)</code></strong>，若G<strong>已经</strong>被画在了一个平面上，且任意两条边不交叉，则称G为	<strong><code>平图(plane graph)</code></strong>。</p>
 <p>一个平图把平面分为一些连通片，这些连通片被称为<strong><code>区域(regions)</code></strong>, 在每个平图中总有一个区域是无界的，该区域称为<strong>外区域</strong>，在一个平图中，顶点与边都与某个给定区域R相关联的子图称为是R的<strong><code>边界</code></strong>.</p>
 <blockquote>
@@ -297,8 +301,8 @@
 <p>如果G是一个阶为n，边数为m且含有r个区域的连通平图，则n-m+r = 2</p>
 </blockquote>
 <p>​     [最小反例证法]</p>
-<p>​     &ndash;&gt; 若G是树，显然成立</p>
-<p>​    &mdash;&gt; 若G不是树，取一个含有最小边数且不满足Euler等式的图G，则存在一不是割边的边e，而G-e满足Euler等式，&hellip;</p>
+<p>​     --&gt; 若G是树，显然成立</p>
+<p>​    ---&gt; 若G不是树，取一个含有最小边数且不满足Euler等式的图G，则存在一不是割边的边e，而G-e满足Euler等式，...</p>
 <blockquote>
 <p><strong>定理9.2</strong></p>
 <p>如果G是一个阶为$n\geq 3$且边数为m的平面图，则有$m\leq 3n-6$</p>
@@ -325,7 +329,7 @@
 <p><strong>定理9.7 Kuratowski定理</strong></p>
 <p>一个图G是平面的当且仅当G不含$K_5，K_{3，3}$，或者是$K_5，K_{3，3}$的一个细分作为子图</p>
 </blockquote>
-<h3 id="cz-101-">CZ 10.1 顶点染色</h3>
+<h3 id="cz-101-">CZ 10.1 顶点染色<a href="#cz-101-" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
 <p>地图的<strong><code>对偶</code></strong>是指将一个地图上的一个区域视为图G中的一个点，区域相邻即对应的两个顶点是邻接的，每张地图的对偶都是平面图</p>
 <p>图的一个<strong><code>真染色(proper coloring)</code></strong>,或简称为<strong><code>染色(coloring)</code></strong>，指的是给图G每个顶点分配颜色且邻接顶点颜色不同，在所有染色中，使用颜色最少的颜色数称为是<strong><code>色数(chromatic number)</code></strong>, 记为<strong>$\chi (G)$</strong>, 若能用k中颜色的集合给G染色，则称G是<strong><code>k可染色的(k-colorable)</code></strong>,若$\chi(G)=k$,则也称G是<strong><code>k色的(k-chromatic)</code></strong>的，且G的每个k染色都是G的<strong><code>最小染色(minimum coloring)</code></strong></p>
 <blockquote>
@@ -361,7 +365,7 @@
 <p>​				$\chi(G)\leq 1+max{\delta(H)}$    	（$\delta(G)$表示G的最小度）</p>
 <p>其中max取遍G的所有诱导子图H</p>
 </blockquote>
-<p>图G的<strong><code>影子图(shadow graph)</code></strong>S(G) 是指通过在G中，对每个顶点v，增加一个顶点v&rsquo;，称为v的<strong><code>影子顶点(shadow vertex)</code></strong>，并连接v’在v中的所有邻点所得到的图（此时v不与原本G中对应的邻点相连）</p>
+<p>图G的<strong><code>影子图(shadow graph)</code></strong>S(G) 是指通过在G中，对每个顶点v，增加一个顶点v'，称为v的<strong><code>影子顶点(shadow vertex)</code></strong>，并连接v’在v中的所有邻点所得到的图（此时v不与原本G中对应的邻点相连）</p>
 <blockquote>
 <p><strong>定理 10.10</strong></p>
 <p>对于每个整数$k\geq 3$,都存在 一个色数为k的无三角的图</p>
@@ -398,11 +402,15 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/jquery.min.07215acd0f8985210d3d19ffd365d89d1a38612a5609bbb0d736efa9073e9d25173b2d133e16bb2f4692d082841262e5464ec62a38169dfda7e631e62a8799e3.js" integrity="sha512-ByFazQ&#43;JhSENPRn/02XYnRo4YSpWCbuw1zbvqQc&#43;nSUXOy0TPha7L0aS0IKEEmLlRk7GKjgWnf2n5jHmKoeZ4w=="></script><script type="text/javascript" src="/bootstrap.min.94cdf6adacf71def2df3c6ad389ad4ffab5384da3c495482462a211f4c91d5dae543a7b97baac3b345b964af4dee64d85f550ed232decc8dda1162fccc7e9f93.js" integrity="sha512-lM32raz3He8t88atOJrU/6tThNo8SVSCRiohH0yR1drlQ6e5e6rDs0W5ZK9N7mTYX1UO0jLezI3aEWL8zH6fkw=="></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload="renderMathInElement(document.body);"></script>
 
-<script type="text/javascript" src="/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
+<script type="text/javascript" src="http://tristonk.com/custom.min.d3e1b7647f32dbe7e0140398739a26dad3f3470fc1eebe0741ef33668f1b7bd0b2917dc6efb9f0d9f1092b91dca502cab1b883863f02530133a8a8ef609926af.js" integrity="sha512-0&#43;G3ZH8y2&#43;fgFAOYc5om2tPzRw/B7r4HQe8zZo8be9CykX3G77nw2fEJK5HcpQLKsbiDhj8CUwEzqKjvYJkmrw=="></script>
 <script type="text/javascript">
 
 document.addEventListener("DOMContentLoaded", function () {

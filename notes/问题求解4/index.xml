@@ -2,49 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>问题求解（四） on Tristonk</title>
-    <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/</link>
+    <link>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/</link>
     <description>Recent content in 问题求解（四） on Tristonk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <copyright>CC BY-NC 4.0</copyright>
     <lastBuildDate>Wed, 15 Jan 2020 20:25:46 +0800</lastBuildDate>
     
-	<atom:link href="http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>数论基础及数论算法</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80%E5%8F%8A%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95/</link>
+      <link>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80%E5%8F%8A%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80%E5%8F%8A%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80%E5%8F%8A%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95/</guid>
       <description>一些基本定理 除法定理 ： 对于任何整数a与任何正整数n，存在唯一整数q和r，满足$0 \leq r &amp;lt; n$, 且 $a = qn +r$ $gcd(a,b) = ar+bs$ 如果任意整数a，b都不为0，那么$g</description>
     </item>
     
     <item>
       <title>群论基础</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E7%BE%A4%E8%AE%BA%E5%9F%BA%E7%A1%80/</link>
+      <link>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E7%BE%A4%E8%AE%BA%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E7%BE%A4%E8%AE%BA%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E7%BE%A4%E8%AE%BA%E5%9F%BA%E7%A1%80/</guid>
       <description>参考书籍： 群论-李新征讲义 Thomas Judson: Abstract Algebra - Theory and Applications, 2018. 群 群：设𝐆是一些元素（操作）的集合，记为𝐆 = {⋯，g，⋯}，在𝐆中定义了乘运算，如果𝐆中元素对这</description>
     </item>
     
     <item>
       <title>近似算法</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95/</link>
+      <link>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95/</guid>
       <description>基本概念 $$ε_A(x)=\dfrac{|cost(A(x))−OptU(x)∣}{Opt_U(x)}$$ $$R_A(x)=max{OptU(x)/cost(A(x)),costA(x)/OptU(x)}.$$ NPO问题分类 NPO(I): NPO中所有存在</description>
     </item>
     
     <item>
       <title>随机算法</title>
-      <link>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</link>
+      <link>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://shelah-kuang.github.io/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://tristonk.com/notes/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A34/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</guid>
       <description>基本概念 $RandomA(x):$ 对于所有A在x上的随机计算中使用的random bits的最大数量 $Prob_{A,x}(C)$: 某一次AA对输入xx的计算CC, 由相应的随机序列的概率决定 $Prob(A(x)=y)$: A 对</description>
     </item>
     
