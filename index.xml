@@ -6,17 +6,62 @@
     <description>Recent content on Tristonk</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY-NC 4.0</copyright>
-    <lastBuildDate>Thu, 09 Jan 2020 20:52:26 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 17:24:24 +0800</lastBuildDate>
     
 	<atom:link href="http://tristonk.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>导论</title>
+      <link>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/section1/</link>
+      <pubDate>Wed, 26 Feb 2020 10:22:08 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/section1/</guid>
+      <description>程序语言 理论 语言设计 类型系统 环境 编译器 Runtime system 应用 程序分析 程序验证 背景：过去几十年，语言的内核只有很少的变化，但是语用环境变化，程序变得越来越大</description>
+    </item>
+    
+    <item>
+      <title>绪论</title>
+      <link>http://tristonk.com/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/chap0/</link>
+      <pubDate>Fri, 21 Feb 2020 10:44:43 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/chap0/</guid>
+      <description>两种人工智能 强人工智能 弱人工智能：（“科学人工智能”） 人工智能不是人造智能，是受智能启发的计算 典型的机器学习过程：训练数据(类别标记) -&amp;gt; 使用</description>
+    </item>
+    
+    <item>
+      <title>1. Name</title>
+      <link>http://tristonk.com/notes/compiler/lesson1/</link>
+      <pubDate>Thu, 20 Feb 2020 09:02:00 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/compiler/lesson1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/introduction/</link>
+      <pubDate>Wed, 19 Feb 2020 14:05:26 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/introduction/</guid>
+      <description>数据挖掘是从巨量数据中获取正确的、新颖的、潜在有用的、最终可理解的模式的非平凡过程 可以用于数据挖掘的数据类型 &amp;quot;flat&amp;quot; data: table or data matrix data warehouse</description>
+    </item>
+    
+    <item>
+      <title>1. Name</title>
+      <link>http://tristonk.com/notes/csmissingsemester/section1/</link>
+      <pubDate>Fri, 07 Feb 2020 11:48:38 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/csmissingsemester/section1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>导论：中国家庭模式与私人生活的研究</title>
-      <link>http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/section1/</link>
+      <link>http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/chap0/</link>
       <pubDate>Thu, 09 Jan 2020 20:52:26 +0800</pubDate>
       
-      <guid>http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/section1/</guid>
+      <guid>http://tristonk.com/notes/%E7%A7%81%E4%BA%BA%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%98%E9%9D%A9/chap0/</guid>
       <description>他们都把家庭看作是实现个人幸福的地方，而且家庭成员之间的情感是维系家庭的主要途径。同时，他们还相信理想的家庭幸福可以通过家庭成员之间努力增进</description>
     </item>
     
@@ -54,51 +99,6 @@
       
       <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/introduction/</guid>
       <description>数据库系统概述 复习重点 1.1基本概念 数据库，数据库管理系统，数据库系统，数据库管理员 相互之间的关系 1.2数据库系统的特点 数据集成化，数据独立</description>
-    </item>
-    
-    <item>
-      <title>Java代码规范</title>
-      <link>http://tristonk.com/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/style-javaguide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tristonk.com/notes/google%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/style-javaguide/</guid>
-      <description>1 Introduction 本文档中的示例代码并不作为规范。即虽然示例代码是遵循 Google 编程风格，但并不意味着这就是是展现这些代码的唯一方式。 2 Src基础 2.1 文件名 根据最顶</description>
-    </item>
-    
-    <item>
-      <title>社会学概论-社会学的视角</title>
-      <link>http://tristonk.com/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tristonk.com/notes/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%A6%82%E8%AE%BA/shxgl1/</guid>
-      <description>{% note info no-icon %} 社会学的学习是激情之旅，让我们一起努力，接触那些饱受争议的概念与理论，试图打开那些紧闭着的大门，去发现我们非常熟悉的日常世界之幽暗</description>
-    </item>
-    
-    <item>
-      <title>二极管</title>
-      <link>http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/</link>
-      <pubDate>Sat, 04 Jan 2020 19:24:29 +0800</pubDate>
-      
-      <guid>http://tristonk.com/notes/%E5%BE%AE%E7%94%B5%E5%AD%90%E4%B8%8E%E7%94%B5%E8%B7%AF/%E4%BA%8C%E6%9E%81%E7%AE%A1/</guid>
-      <description>二极管：功能，结构类型，符号， 重点：PN结的结构形成与他的工作原理，伏安特性 二极管的简化模型，如何运用模型分析 齐纳二极管的工作原理 二极管 在P</description>
-    </item>
-    
-    <item>
-      <title>Generating Functions</title>
-      <link>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</link>
-      <pubDate>Fri, 03 Jan 2020 20:12:08 +0800</pubDate>
-      
-      <guid>http://tristonk.com/notes/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/generating-functions/</guid>
-      <description>Generating functions 生成函数的作用：在计数问题中，利用性质构造生成函数，利用生成函数求解系数，系数对应了选择的种数 orinary generating function(OGF): $G(x)=\sum_{n\geq 0 }a_nx^n$ using &amp;quot;+&amp;quot; to represent &amp;quot;OR&amp;quot;, using the multiplication to denote &amp;quot;AND&amp;quot; 例如如果</description>
-    </item>
-    
-    <item>
-      <title>应用层</title>
-      <link>http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</link>
-      <pubDate>Thu, 02 Jan 2020 00:13:14 +0800</pubDate>
-      
-      <guid>http://tristonk.com/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ying-yong-ceng/</guid>
-      <description>应用层 不考</description>
     </item>
     
   </channel>

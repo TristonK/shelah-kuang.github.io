@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Name on Tristonk</title>
+    <link>http://tristonk.com/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in Name on Tristonk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY-NC 4.0</copyright>
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tristonk.com/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>绪论</title>
+      <link>http://tristonk.com/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/chap0/</link>
+      <pubDate>Fri, 21 Feb 2020 10:44:43 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/chap0/</guid>
+      <description>两种人工智能 强人工智能 弱人工智能：（“科学人工智能”） 人工智能不是人造智能，是受智能启发的计算 典型的机器学习过程：训练数据(类别标记) -&amp;gt; 使用</description>
+    </item>
+    
+    <item>
+      <title>模型选择</title>
+      <link>http://tristonk.com/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/chap1/</link>
+      <pubDate>Wed, 26 Feb 2020 13:31:05 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/chap1/</guid>
+      <description>泛化误差：在“未来”样本上的误差 经验误差：在训练集上的误差，也称为训练误差 泛化误差越小越好，但是经验误差不一定越小越好，因为可能出现过拟合 留</description>
+    </item>
+    
+  </channel>
+</rss>

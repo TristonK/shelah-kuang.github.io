@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据挖掘导论 on Tristonk</title>
+    <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/</link>
+    <description>Recent content in 数据挖掘导论 on Tristonk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY-NC 4.0</copyright>
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction</title>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/introduction/</link>
+      <pubDate>Wed, 19 Feb 2020 14:05:26 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/introduction/</guid>
+      <description>数据挖掘是从巨量数据中获取正确的、新颖的、潜在有用的、最终可理解的模式的非平凡过程 可以用于数据挖掘的数据类型 &amp;quot;flat&amp;quot; data: table or data matrix data warehouse</description>
+    </item>
+    
+    <item>
+      <title>Data Cube and OLAP</title>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap2/</link>
+      <pubDate>Wed, 26 Feb 2020 13:30:45 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap2/</guid>
+      <description>数据仓库： subject-oriented：面向主题的 integrated time-variant nonvolatile Data Cube: The lattice of cuboids 多维数据模型： 每一维都被存储在维表中，数据存储在事实表中，多张表通过</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap1/</link>
+      <pubDate>Wed, 26 Feb 2020 13:30:41 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap1/</guid>
+      <description>常见的数据挖掘任务： 描述型数据挖掘 characterization：刻画主要特征 discrimination：找到对比类相对之下的主要特征 A</description>
+    </item>
+    
+  </channel>
+</rss>
