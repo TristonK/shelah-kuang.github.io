@@ -21,21 +21,21 @@
     </item>
     
     <item>
+      <title>Data Processing</title>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap3/</link>
+      <pubDate>Wed, 26 Feb 2020 13:30:49 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap3/</guid>
+      <description>数据质量 不完整性： 数据噪声： 仪器本身的误差 使用了不恰当的仪器 数据传输或存储过程中的差错 不一致性： 来源于不同数据源头 采用不同的度量衡 No data quality, no mining</description>
+    </item>
+    
+    <item>
       <title>Data Cube and OLAP</title>
       <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap2/</link>
       <pubDate>Wed, 26 Feb 2020 13:30:45 +0800</pubDate>
       
       <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap2/</guid>
       <description>数据仓库： subject-oriented：面向主题的 integrated time-variant nonvolatile Data Cube: The lattice of cuboids 多维数据模型： 每一维都被存储在维表中，数据存储在事实表中，多张表通过</description>
-    </item>
-    
-    <item>
-      <title>Introduction</title>
-      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap1/</link>
-      <pubDate>Wed, 26 Feb 2020 13:30:41 +0800</pubDate>
-      
-      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap1/</guid>
-      <description>常见的数据挖掘任务： 描述型数据挖掘 characterization：刻画主要特征 discrimination：找到对比类相对之下的主要特征 A</description>
     </item>
     
   </channel>

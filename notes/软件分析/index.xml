@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Name on Tristonk</title>
+    <title>软件分析 on Tristonk</title>
     <link>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/</link>
-    <description>Recent content in Name on Tristonk</description>
+    <description>Recent content in 软件分析 on Tristonk</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY-NC 4.0</copyright>
     <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
@@ -13,11 +13,30 @@
     
     <item>
       <title>导论</title>
-      <link>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/section1/</link>
+      <link>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/chap1/</link>
       <pubDate>Wed, 26 Feb 2020 10:22:08 +0800</pubDate>
       
-      <guid>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/section1/</guid>
+      <guid>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/chap1/</guid>
       <description>程序语言 理论 语言设计 类型系统 环境 编译器 Runtime system 应用 程序分析 程序验证 背景：过去几十年，语言的内核只有很少的变化，但是语用环境变化，程序变得越来越大</description>
+    </item>
+    
+    <item>
+      <title>Intermediate Representation</title>
+      <link>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/chap2/</link>
+      <pubDate>Wed, 04 Mar 2020 09:59:18 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/chap2/</guid>
+      <description>Compilers and Static Analyzers Source Code
+AST vs. IR IR: Three-Address Code(3AC) 3AC in Real Static Analyzer: Soot Static Single Assignment(SSA) Basic Blocks(BB) Control Flow Graphs </description>
+    </item>
+    
+    <item>
+      <title>Data Flow Analysis - Applications</title>
+      <link>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/chap3/</link>
+      <pubDate>Wed, 04 Mar 2020 09:59:23 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/chap3/</guid>
+      <description></description>
     </item>
     
   </channel>
