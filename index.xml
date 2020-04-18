@@ -6,7 +6,7 @@
     <description>Recent content on Tristonk</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY-NC 4.0</copyright>
-    <lastBuildDate>Sat, 21 Mar 2020 14:15:41 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2020 09:59:23 +0800</lastBuildDate>
     
 	<atom:link href="http://tristonk.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,10 +40,10 @@
     
     <item>
       <title>Introduction</title>
-      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/introduction/</link>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/1introduction/</link>
       <pubDate>Wed, 19 Feb 2020 14:05:26 +0800</pubDate>
       
-      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/introduction/</guid>
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/1introduction/</guid>
       <description>数据挖掘是从巨量数据中获取正确的、新颖的、潜在有用的、最终可理解的模式的非平凡过程 可以用于数据挖掘的数据类型 &amp;quot;flat&amp;quot; data: table or data matrix data warehouse</description>
     </item>
     

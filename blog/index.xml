@@ -2,45 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>博客目录 on Tristonk</title>
   <link rel="self" href="http://tristonk.com/blog/"/>
-  <updated>2020-03-21T14:15:41+08:00</updated>
+  <updated>2020-02-16T14:59:53+08:00</updated>
   <author>
     <name>TristonK</name>
     <email></email>
     <uri>http://tristonk.com/blog/</uri>
   </author>
   <id>http://tristonk.com/blog/</id>
-  
-  <entry>
-    <title>微软暑期实习面经</title>
-    <link rel="alternate" href="http://tristonk.com/blog/microsoftinterview-200321/"/>
-    <id>http://tristonk.com/blog/microsoftinterview-200321/</id>
-    <published>2020-03-21T14:15:41+08:00</published>
-    <updated>2020-03-21T14:15:41+08:00</updated>
-		<summary>流程： 一面前HR打电话过来问我明天后天是否有空进行面试，建议第二天面试但我很方于是选择了后天。 一面： 先和面试官唠嗑了一会 自我介绍 介绍了一下做</summary>
-    
-    <content type="html"><![CDATA[<p>流程：</p>
-<p>一面前HR打电话过来问我明天后天是否有空进行面试，建议第二天面试但我很方于是选择了后天。</p>
-<p>一面：</p>
-<ol>
-<li>
-<p>先和面试官唠嗑了一会</p>
-</li>
-<li>
-<p>自我介绍</p>
-</li>
-<li>
-<p>介绍了一下做的项目，问了一下自己有没有什么觉得印象比较深刻或者有意思的细节或者算法实现</p>
-</li>
-<li>
-<p>做题：类似与老年手机的那种数字键盘，可以跳马步（日字步），要求跳n步，可以重复的来回跳，问从0跳到1刚好n步有多少种跳跃方式。dp一下即可。</p>
-</li>
-</ol>
-<p>大概十几分钟后，hr打电话过来说一面过了安排三面。当天下午面完一面两个小时后开始三面。</p>
-<p>三面：</p>
-<p>一道题，有一堆数，有一个目标target，你要删去最少数量的数，使得你任意的从这堆数里面挑出若干个数，都无法通过或操作来得到这个target。简单的位运算一下计数就可了。</p>
-<p>大概一周后出了结果。</p>
-]]></content>
-  </entry>
   
   <entry>
     <title>Leetcode 2020年2月周赛题解</title>

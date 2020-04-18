@@ -13,28 +13,28 @@
     
     <item>
       <title>Introduction</title>
-      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/introduction/</link>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/1introduction/</link>
       <pubDate>Wed, 19 Feb 2020 14:05:26 +0800</pubDate>
       
-      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/introduction/</guid>
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/1introduction/</guid>
       <description>数据挖掘是从巨量数据中获取正确的、新颖的、潜在有用的、最终可理解的模式的非平凡过程 可以用于数据挖掘的数据类型 &amp;quot;flat&amp;quot; data: table or data matrix data warehouse</description>
     </item>
     
     <item>
       <title>Data Processing</title>
-      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap3/</link>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/3dataprocessing/</link>
       <pubDate>Wed, 26 Feb 2020 13:30:49 +0800</pubDate>
       
-      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap3/</guid>
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/3dataprocessing/</guid>
       <description>数据质量 不完整性： 数据噪声： 仪器本身的误差 使用了不恰当的仪器 数据传输或存储过程中的差错 不一致性： 来源于不同数据源头 采用不同的度量衡 No data quality, no mining</description>
     </item>
     
     <item>
       <title>Data Cube and OLAP</title>
-      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap2/</link>
+      <link>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/2datacubeandolap/</link>
       <pubDate>Wed, 26 Feb 2020 13:30:45 +0800</pubDate>
       
-      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/chap2/</guid>
+      <guid>http://tristonk.com/notes/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/2datacubeandolap/</guid>
       <description>数据仓库： subject-oriented：面向主题的 integrated time-variant nonvolatile Data Cube: The lattice of cuboids 多维数据模型： 每一维都被存储在维表中，数据存储在事实表中，多张表通过</description>
     </item>
     
