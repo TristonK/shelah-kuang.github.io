@@ -6,7 +6,7 @@
     <description>Recent content on Tristonk</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY-NC 4.0</copyright>
-    <lastBuildDate>Wed, 04 Mar 2020 09:59:23 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2020 15:46:08 +0800</lastBuildDate>
     
 	<atom:link href="http://tristonk.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,12 +30,12 @@
     </item>
     
     <item>
-      <title>1. Name</title>
+      <title>引论</title>
       <link>http://tristonk.com/notes/compiler/lesson1/</link>
       <pubDate>Thu, 20 Feb 2020 09:02:00 +0800</pubDate>
       
       <guid>http://tristonk.com/notes/compiler/lesson1/</guid>
-      <description></description>
+      <description>编译器的作用 编译器： 读入某种语言（源语言）编写的程序，输出等价的用另一种语言（目标语言）编写的程序 解释器 ：直接利用用户的输入，执行源程序中指</description>
     </item>
     
     <item>

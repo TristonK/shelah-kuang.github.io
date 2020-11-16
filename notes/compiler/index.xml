@@ -12,12 +12,21 @@
     
     
     <item>
-      <title>1. Name</title>
+      <title>引论</title>
       <link>http://tristonk.com/notes/compiler/lesson1/</link>
       <pubDate>Thu, 20 Feb 2020 09:02:00 +0800</pubDate>
       
       <guid>http://tristonk.com/notes/compiler/lesson1/</guid>
-      <description></description>
+      <description>编译器的作用 编译器： 读入某种语言（源语言）编写的程序，输出等价的用另一种语言（目标语言）编写的程序 解释器 ：直接利用用户的输入，执行源程序中指</description>
+    </item>
+    
+    <item>
+      <title>词法分析</title>
+      <link>http://tristonk.com/notes/compiler/lesson2/</link>
+      <pubDate>Thu, 20 Feb 2020 09:03:00 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/compiler/lesson2/</guid>
+      <description>词法分析器的作用 读入字符流，组成词素，输出词法单元序列 过滤空白，换行，制表符，注释等 将词素添加到符号表中 逻辑上独立于语法分析，但是通常在同一</description>
     </item>
     
   </channel>

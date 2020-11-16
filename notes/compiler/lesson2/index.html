@@ -7,31 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="author" content="TristonK ">
-<meta name="description" content="简而言之，如果国家的基础条件同时存在有利与不利的情况，一个好的宪法设计就会有利于民主制度的生存；反之，一个坏的宪法设计可能导致民主制度的崩溃" />
+<meta name="description" content="词法分析器的作用 读入字符流，组成词素，输出词法单元序列 过滤空白，换行，制表符，注释等 将词素添加到符号表中 逻辑上独立于语法分析，但是通常在同一" />
 <meta name="keywords" content="blog" />
 <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap6/" />
+<link rel="canonical" href="http://tristonk.com/notes/compiler/lesson2/" />
 
-<meta itemprop="name" content="政府结构和政治制度">
-<meta itemprop="description" content="简而言之，如果国家的基础条件同时存在有利与不利的情况，一个好的宪法设计就会有利于民主制度的生存；反之，一个坏的宪法设计可能导致民主制度的崩溃">
-<meta itemprop="datePublished" content="2020-02-28T16:36:36&#43;08:00" />
-<meta itemprop="dateModified" content="2020-02-28T16:36:36&#43;08:00" />
-<meta itemprop="wordCount" content="380">
+<meta itemprop="name" content="词法分析">
+<meta itemprop="description" content="词法分析器的作用 读入字符流，组成词素，输出词法单元序列 过滤空白，换行，制表符，注释等 将词素添加到符号表中 逻辑上独立于语法分析，但是通常在同一">
+<meta itemprop="datePublished" content="2020-02-20T09:03:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-20T09:03:00&#43;08:00" />
+<meta itemprop="wordCount" content="531">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta property="og:title" content="政府结构和政治制度" />
-<meta property="og:description" content="简而言之，如果国家的基础条件同时存在有利与不利的情况，一个好的宪法设计就会有利于民主制度的生存；反之，一个坏的宪法设计可能导致民主制度的崩溃" />
+<meta property="og:title" content="词法分析" />
+<meta property="og:description" content="词法分析器的作用 读入字符流，组成词素，输出词法单元序列 过滤空白，换行，制表符，注释等 将词素添加到符号表中 逻辑上独立于语法分析，但是通常在同一" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap6/" />
-<meta property="article:published_time" content="2020-02-28T16:36:36+08:00" />
-<meta property="article:modified_time" content="2020-02-28T16:36:36+08:00" />
+<meta property="og:url" content="http://tristonk.com/notes/compiler/lesson2/" />
+<meta property="article:published_time" content="2020-02-20T09:03:00+08:00" />
+<meta property="article:modified_time" content="2020-02-20T09:03:00+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="政府结构和政治制度"/>
-<meta name="twitter:description" content="简而言之，如果国家的基础条件同时存在有利与不利的情况，一个好的宪法设计就会有利于民主制度的生存；反之，一个坏的宪法设计可能导致民主制度的崩溃"/>
+<meta name="twitter:title" content="词法分析"/>
+<meta name="twitter:description" content="词法分析器的作用 读入字符流，组成词素，输出词法单元序列 过滤空白，换行，制表符，注释等 将词素添加到符号表中 逻辑上独立于语法分析，但是通常在同一"/>
 
 
 <link rel="apple-touch-icon" sizes="60x60" href="http://tristonk.com/icons/favi60.jpg">
@@ -44,7 +44,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-<title>政府结构和政治制度</title>
+<title>词法分析</title>
 
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
@@ -227,89 +227,13 @@ pagead/js/adsbygoogle.js"></script>
     
     
     
-    <div class="bd-toc-item active bg-light">
+    <div class="bd-toc-item">
         <a class="bd-toc-link" href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/">
-            <i class="iconfont icon-back-arrow-reverse"></i>
+            
+                <i class="iconfont icon-target"></i>
+            
             政治学通识
         </a>
-        <ul class="nav bd-sidenav">
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap2/">政治学：智者如何思考</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap3/">意识形态大论战</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap4/">政治生活中的国家</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap5/">不同的政体：民主、威权与极权</a>
-            </li>
-            
-            
-            
-            <li class="active">
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap6/">
-                    <i class="fad fa-chevron-right mr-1"></i>
-                    政府结构和政治制度
-                </a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap7/">法治与公民权</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap8/">民主转型的政治逻辑</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap9/">如何参与，如何抗争</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap10/">政治文化真的起作用吗？</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap11/">民族主义与族群政治</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap12/">暴力、革命与内战</a>
-            </li>
-            
-            
-            
-            <li>
-                <a href="http://tristonk.com/notes/%E6%94%BF%E6%B2%BB%E5%AD%A6%E9%80%9A%E8%AF%86/chap13/">经济增长与国家治理的政治学</a>
-            </li>
-            
-            
-        </ul>
     </div>
     
     
@@ -325,13 +249,29 @@ pagead/js/adsbygoogle.js"></script>
     
     
     
-    <div class="bd-toc-item">
+    <div class="bd-toc-item active bg-light">
         <a class="bd-toc-link" href="http://tristonk.com/notes/compiler/">
-            
-                <i class="iconfont icon-target"></i>
-            
+            <i class="iconfont icon-back-arrow-reverse"></i>
             编译原理
         </a>
+        <ul class="nav bd-sidenav">
+            
+            
+            <li>
+                <a href="http://tristonk.com/notes/compiler/lesson1/">引论</a>
+            </li>
+            
+            
+            
+            <li class="active">
+                <a href="http://tristonk.com/notes/compiler/lesson2/">
+                    <i class="fad fa-chevron-right mr-1"></i>
+                    词法分析
+                </a>
+            </li>
+            
+            
+        </ul>
     </div>
     
     
@@ -374,16 +314,16 @@ pagead/js/adsbygoogle.js"></script>
 				<div class="row d-print-block">
 					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content d-print-block" role="main">
 						<div id="title" class="my-4 border-bottom">
-							<span>政治学通识</span>
-							<h2>政府结构和政治制度</h2>
+							<span>编译原理</span>
+							<h2>词法分析</h2>
 							<footer>
 								<span>
 									<i class="iconfont icon-NewFile mr-2"></i>
-									2020-02-28 16:36 CST
+									2020-02-20 09:03 CST
 								</span> <br />
 								<span>
 									<i class="iconfont icon-modify mr-2"></i>
-									2020-02-28 16:36 CST
+									2020-02-20 09:03 CST
 								</span> <br />
 								<span>
 									<i class="iconfont icon-copyright mr-2"></i>
@@ -404,17 +344,44 @@ pagead/js/adsbygoogle.js"></script>
 							
 							
 							
-							<blockquote>
-<p>简而言之，如果国家的基础条件同时存在有利与不利的情况，一个好的宪法设计就会有利于民主制度的生存；反之，一个坏的宪法设计可能导致民主制度的崩溃。——罗伯特·达尔</p>
-</blockquote>
-<h2 id="heading">如何理解政府机构<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
-<p>一个国家政治生活的重要方面就是政府机构的设置，政府机构设置还对应着一整套政治制度的安排。一国政府机构设置的不同意味着该国政治制度安排的不同。</p>
-<p>从概念上说，政府是制定和实施公共决策与政策的机构，政府履行着国家的基本职能。</p>
-<p>政府正是由很多不同类型和层级的政府机构组成的。从政府机构类型来说，可以从两个维度进行分类：一个是职能维度，一个是层级维度。</p>
-<p>从职能维度来说，政府机构主要有三类：行政机构、立法机构和司法机构</p>
-<p>行政机构是政府的核心。对行政机构来说，除了个别国家的最高行政长官职位实行委员会制度以外，绝大多数国家都拥有单一最高行政长官。</p>
-<p>另一个方面是政府机构不同层级的划分。</p>
-<h2 id="heading-1">政治系统和官僚系统的比较<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+							<h2 id="heading">词法分析器的作用<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>读入字符流，组成词素，输出<strong>词法单元</strong>序列</p>
+<p>过滤空白，换行，制表符，注释等</p>
+<p>将词素添加到符号表中</p>
+<p>逻辑上独立于语法分析，但是通常在同一趟完成</p>
+<p><strong>词法单元</strong>：&lt;词法单元名，属性值（可选）&gt;</p>
+<p><strong>模式</strong>：描述了一类词法单元的词素可能具有的形式</p>
+<p><strong>词素</strong>：源程序中的字符序列</p>
+<p>一个模式匹配多个词素的时候，必须通过<strong>属性</strong>来传递附加的信息，属性值用来语义分析、代码生成，属性值通常是一个结构化数据。比如词法单元id的属性有词素，类型，第一次出现的位置等。</p>
+<h2 id="heading-1">词法单元的规约（正则表达式）<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>正则表达式可以高效简洁的描述词法单元式用到的模式类型。</p>
+<p>字符表：一个有穷的符号集合</p>
+<p>串：字母表中符号的有穷序列</p>
+<p>语言：某个给定字母表上的串的可数集合</p>
+<p>L的Kleene闭包：$L^*=\cup_{i=0}^{∞}L^i$</p>
+<p>正则运算的优先级：* &gt; 连接 &gt; |</p>
+<p><strong>正则集合</strong>：可以用一个正则表达式定义的语言</p>
+<p>正则定义</p>
+<p>正则表达式的基本运算符：选择，连接，Kleene闭包</p>
+<p>扩展的运算符：</p>
+<ul>
+<li>单目后缀：+</li>
+<li>零个或一个实例：？</li>
+<li>字符类：[a1a2..an]等价于a1|a2|..|an</li>
+</ul>
+<h2 id="heading-2">词法单元的规约（状态转换图）<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h3 id="heading-3">状态转换图<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<ul>
+<li>状态：在识别词素时可能出现的情况
+<ul>
+<li>可以看作已处理部分的总结</li>
+<li>某些状态为<strong>接受状态</strong>或<strong>最终状态</strong></li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-4">词法分析器生成工具及设计<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-5">有穷自动机<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
 
 						</div>
 					</main>
@@ -444,8 +411,15 @@ pagead/js/adsbygoogle.js"></script>
 						<h4 class="card-title pb-0">目录</h4>
 						<nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">如何理解政府机构</a></li>
-    <li><a href="#heading-1">政治系统和官僚系统的比较</a></li>
+    <li><a href="#heading">词法分析器的作用</a></li>
+    <li><a href="#heading-1">词法单元的规约（正则表达式）</a></li>
+    <li><a href="#heading-2">词法单元的规约（状态转换图）</a>
+      <ul>
+        <li><a href="#heading-3">状态转换图</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-4">词法分析器生成工具及设计</a></li>
+    <li><a href="#heading-5">有穷自动机</a></li>
   </ul>
 </nav>
 						

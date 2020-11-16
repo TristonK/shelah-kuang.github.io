@@ -2,13 +2,68 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>博客目录 on Tristonk</title>
   <link rel="self" href="http://tristonk.com/blog/"/>
-  <updated>2020-02-16T14:59:53+08:00</updated>
+  <updated>2020-10-17T15:46:08+08:00</updated>
   <author>
     <name>TristonK</name>
     <email></email>
     <uri>http://tristonk.com/blog/</uri>
   </author>
   <id>http://tristonk.com/blog/</id>
+  
+  <entry>
+    <title>MongoDB的事务，复制与分片</title>
+    <link rel="alternate" href="http://tristonk.com/blog/mongodbsi/"/>
+    <id>http://tristonk.com/blog/mongodbsi/</id>
+    <published>2020-10-17T15:46:08+08:00</published>
+    <updated>2020-10-17T15:46:08+08:00</updated>
+		<summary>原文链接：https://mongoing.com/archives/38461 MongoDB副本事务集 副本集的复制基于raft协议，只支持</summary>
+    
+    <content type="html"><![CDATA[<p>原文链接：https://mongoing.com/archives/38461</p>
+<h2 id="mongodb">MongoDB副本事务集</h2>
+<ul>
+<li>副本集的复制基于<strong>raft</strong>协议，只支持<strong>single-master</strong>，对应的，MongoDB的副本集是主从架构，而且只有<strong>主节点支持写入操作</strong>。MongoDB副本集的事务管理，包括冲突检测，事务提交等关键操作，都只在主节点上完成。</li>
+<li>使用SI作为事务的隔离急别</li>
+</ul>
+<h2 id="si">SI简介</h2>
+<p><strong>SI</strong>：Snapshot Isolation，即快照隔离，一种MVVC的实现机制</p>
+<p>根据快照时间点的选取：</p>
+<ul>
+<li><strong>CSI（convensional SI）</strong>
+<ul>
+<li>选取最新的系统快照作为事务的读取快照</li>
+<li>一般说一个数据库支持SI隔离级别，其实默认是说CSI</li>
+</ul>
+</li>
+<li><strong>GSI（Generalized SI）</strong>
+<ul>
+<li>GSI选择历史上的数据库快照作为事务的读取快照，因此CSI可以看作GSI的一个特例。</li>
+<li>对主节点来说每次事务开始选取最新的快照，但是对于其他节点没有统一的最新的概念。</li>
+<li>关于时间点的选择，有以下的规则 (其中Ti表示事务i，Xi表示被事务i修改过的X变量)
+<ul>
+<li>
+<img src="/blog/mongodbsi/https://mongoing.com/wp-content/uploads/2020/05/c81e728d9d4c2f6-1.png">
+</li>
+<li><strong>读规则</strong>
+<ul>
+<li>G1.1,如果变量X被本事务修改了值且读取到了新的值， 那么 读操作一定在写操作后面;</li>
+<li>G1.2, 如果事务i读取了事务j更新的变量的X， 那么一定不会有事务i更新X的操作，在事务i读取了事务j更新的变量的X这个操作前面;</li>
+<li>G1.3, 事务j的提交时间早于事务i的快照时间；</li>
+<li>G1.4, 对于任意一个会更新变量X的事务k， 那么这个事务k一定满足， 要么事务k的提交时间小于事务j， 要么这个事务k的提交时间大于事务i。</li>
+</ul>
+</li>
+<li><strong>写规则</strong>
+<ul>
+<li>G2, 对于任意已经在提交历史里的两个事务，Ci, Cj, 那么一定可以保证当 事务j的commit时间戳在 事务i的观测时间段内时(snapshot(Ti), commit(Ti))， 那么他们更新的变量交集一定为空。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>PCSI</strong></li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title>Leetcode 2020年2月周赛题解</title>

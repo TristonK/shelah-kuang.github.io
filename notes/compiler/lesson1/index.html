@@ -7,31 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="author" content="TristonK ">
-<meta name="description" content="" />
+<meta name="description" content="编译器的作用 编译器： 读入某种语言（源语言）编写的程序，输出等价的用另一种语言（目标语言）编写的程序 解释器 ：直接利用用户的输入，执行源程序中指" />
 <meta name="keywords" content="blog" />
 <meta name="robots" content="noodp" />
 
 <link rel="canonical" href="http://tristonk.com/notes/compiler/lesson1/" />
 
-<meta itemprop="name" content="1. Name">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="引论">
+<meta itemprop="description" content="编译器的作用 编译器： 读入某种语言（源语言）编写的程序，输出等价的用另一种语言（目标语言）编写的程序 解释器 ：直接利用用户的输入，执行源程序中指">
 <meta itemprop="datePublished" content="2020-02-20T09:02:00&#43;08:00" />
 <meta itemprop="dateModified" content="2020-02-20T09:02:00&#43;08:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="741">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta property="og:title" content="1. Name" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="引论" />
+<meta property="og:description" content="编译器的作用 编译器： 读入某种语言（源语言）编写的程序，输出等价的用另一种语言（目标语言）编写的程序 解释器 ：直接利用用户的输入，执行源程序中指" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tristonk.com/notes/compiler/lesson1/" />
 <meta property="article:published_time" content="2020-02-20T09:02:00+08:00" />
 <meta property="article:modified_time" content="2020-02-20T09:02:00+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1. Name"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="引论"/>
+<meta name="twitter:description" content="编译器的作用 编译器： 读入某种语言（源语言）编写的程序，输出等价的用另一种语言（目标语言）编写的程序 解释器 ：直接利用用户的输入，执行源程序中指"/>
 
 
 <link rel="apple-touch-icon" sizes="60x60" href="http://tristonk.com/icons/favi60.jpg">
@@ -44,7 +44,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-<title>1. Name</title>
+<title>引论</title>
 
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1604402_jsamxf8dml9.css">
@@ -64,6 +64,9 @@
     
     <link rel="stylesheet" href="http://tristonk.com/sass/main_cdn.min.b8209e60e6fa71b6aea68f9916efec89f754f9bfce454534a6e19c19243024c5.min.b14128c186a32f49f813b7eb9d1fa95180bf2223b331355b837b07e1f81bbeb1.css" integity="sha256-sUEowYajL0n4E7frnR&#43;pUYC/IiOzMTVbg3sH4fgbvrE=">
 
+
+<script data-ad-client="pub-2356829494971208" async src="https://pagead2.googlesyndication.com/
+pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body style="overflow-x: unset;">
@@ -257,8 +260,14 @@
             <li class="active">
                 <a href="http://tristonk.com/notes/compiler/lesson1/">
                     <i class="fad fa-chevron-right mr-1"></i>
-                    1. Name
+                    引论
                 </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="http://tristonk.com/notes/compiler/lesson2/">词法分析</a>
             </li>
             
             
@@ -306,7 +315,7 @@
 					<main class="col-12 col-md-10 col-lg-9 py-md-3 pl-md-5 bd-content d-print-block" role="main">
 						<div id="title" class="my-4 border-bottom">
 							<span>编译原理</span>
-							<h2>1. Name</h2>
+							<h2>引论</h2>
 							<footer>
 								<span>
 									<i class="iconfont icon-NewFile mr-2"></i>
@@ -335,10 +344,50 @@
 							
 							
 							
-							<hr>
-<h2 id="weight-1">title: 1. Name
-date: 2020-02-20T09:02:00+08:00
-weight: 1</h2>
+							<h2 id="heading">编译器的作用<a href="#heading" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p><strong>编译器</strong>： 读入某种语言（源语言）编写的程序，输出等价的用另一种语言（目标语言）编写的程序</p>
+<p><strong>解释器</strong> ：直接利用用户的输入，执行源程序中指定的操作</p>
+<p>Java语言结合了编译（用javac编译成class文件）与解释</p>
+<h2 id="heading-1">编译器的结构<a href="#heading-1" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>编译器：分为分析和综合部分</p>
+<h3 id="heading-2">前端<a href="#heading-2" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>分析部分</p>
+<p>机器无关</p>
+<p>把源程序分成组成要素和相应语法结构，利用结构构建源程序的中间表示，同时收集相关信息存放到符号表</p>
+<p>字符流 --词法分析--&gt; 符号流 --语法分析--&gt;语法树 --语义分析--&gt; 语法树 --中间代码生成器--&gt; 中间表示形式</p>
+<p>在前端和后端之间，有一个可选的机器无关的代码优化。</p>
+<h3 id="heading-3">后端<a href="#heading-3" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h3>
+<p>综合部分</p>
+<p>机器相关</p>
+<p>根据中间表示和符号表信息构造目标程序</p>
+<p>中间表示形式--代码生成器--&gt;目标机器语言--机器相关代码优化--&gt;目标机器语言</p>
+<h2 id="heading-4">词法分析<a href="#heading-4" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>读入源程序字符流，输出有意义的<strong>词素 (Lexeme)</strong></p>
+<p><code>词素</code>： &lt;token-name, attribute-value&gt;, 如变量position可能为&lt;id, 1&gt;, 其中1是指向符号表对应的条目</p>
+<h2 id="heading-5">语法分析<a href="#heading-5" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>根据各个词法单元的第一个分量来创建树形的中间表示形式，通常是<strong>语法树</strong></p>
+<h2 id="heading-6">语义分析<a href="#heading-6" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>利用语法树和符号表中的信息，检查源程序是否满足语言定义的语义约束</p>
+<p>同时收集类型信息，用于代码生成，类型检查，类型转换</p>
+<h2 id="heading-7">中间代码生成<a href="#heading-7" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>根据语义分析输出来生成类机器语言的中间表示</p>
+<h2 id="heading-8">中间代码优化<a href="#heading-8" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<h2 id="heading-9">代码生成<a href="#heading-9" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>把中间表示形式映射到目标语言</p>
+<ul>
+<li>寄存器的分配</li>
+<li>指令选择</li>
+</ul>
+<p>强制式语言：指明如何完成，如C，java</p>
+<p>声明式语言：指明要完成哪些计算，如Prolog</p>
+<h2 id="heading-10">程序设计语言的基础概念<a href="#heading-10" class="anchor" aria-hidden="true"><i class="iconfont icon-link"></i></a></h2>
+<p>静态语言：支持编译器静态决定某个问题</p>
+<p>动态语言：允许在程序运行时刻做出决定</p>
+<p>作用域：变量的一个声明的作用域指程序文本的一个区域，对这个变量的使用都指向这个声明</p>
+<p>环境：名字到存储位置的映射</p>
+<p>状态：存储位置到他们值的映射</p>
+<p>C语言使用静态作用域</p>
+
 						</div>
 					</main>
 					<div class="d-none d-lg-block col-lg-3 bd-toc d-print-none">
@@ -365,7 +414,24 @@ weight: 1</h2>
     
 </div>
 						<h4 class="card-title pb-0">目录</h4>
-						<nav id="TableOfContents"></nav>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">编译器的作用</a></li>
+    <li><a href="#heading-1">编译器的结构</a>
+      <ul>
+        <li><a href="#heading-2">前端</a></li>
+        <li><a href="#heading-3">后端</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-4">词法分析</a></li>
+    <li><a href="#heading-5">语法分析</a></li>
+    <li><a href="#heading-6">语义分析</a></li>
+    <li><a href="#heading-7">中间代码生成</a></li>
+    <li><a href="#heading-8">中间代码优化</a></li>
+    <li><a href="#heading-9">代码生成</a></li>
+    <li><a href="#heading-10">程序设计语言的基础概念</a></li>
+  </ul>
+</nav>
 						
 						
 					</div>
