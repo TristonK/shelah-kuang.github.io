@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>人工智能 on Tristonk</title>
+    <link>http://tristonk.com/notes/ai/lesson1/</link>
+    <description>Recent content in 人工智能 on Tristonk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY-NC 4.0</copyright>
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tristonk.com/notes/ai/lesson1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1.搜索</title>
+      <link>http://tristonk.com/notes/ai/lesson1/search/</link>
+      <pubDate>Wed, 06 Jan 2021 09:45:05 +0800</pubDate>
+      
+      <guid>http://tristonk.com/notes/ai/lesson1/search/</guid>
+      <description>状态空间搜索 状态空间图：节点N和连接弧A 初始状态S是N的非空子集 目标状态G是N的非空子集 状态空间搜索就是寻找初始状态到目标状态的解路径 搜索树</description>
+    </item>
+    
+  </channel>
+</rss>

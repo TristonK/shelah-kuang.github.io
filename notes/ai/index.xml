@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>课程笔记 on Tristonk</title>
+    <link>http://tristonk.com/notes/ai/</link>
+    <description>Recent content in 课程笔记 on Tristonk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY-NC 4.0</copyright>
+    
+	<atom:link href="http://tristonk.com/notes/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
